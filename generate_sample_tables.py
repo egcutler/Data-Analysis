@@ -55,6 +55,43 @@ def generate_company_name():
     keyword = random.choice(keywords)
     return f"{adjective} {keyword} {noun}"
 
+# Function to generate random date
+def generate_date(min_date, max_date):
+      if not isinstance(min_date, datetime):
+            raise Exception("min_date is not in the format of datetime objects")
+      if not isinstance(max_date, datetime):
+            raise Exception("min_date is not in the format of datetime objects")
+      date_range = max_date - min_date
+      random_days = random.randint(0, date_range.days)
+      random_date = min_date + timedelta(days=random_days)
+      return random_date
+# Function to convert date into datetime format
+def function_date_int_to_datetime(date):
+      if isinstance(date, int) and len(str(date)) <= 8 and len(str(date)) >= 6:
+            date = str(date)
+            yyyy = date[0:4]
+            if len(date[4:]) == 2:
+                  mm = date[4:5]
+                  dd = date[5:]
+            elif len(date[4:]) == 4:
+                  mm = date[4:6]
+                  dd = date[6:]
+            elif date[4:5] == '0':
+                  mm = date[4:6]
+                  dd = date[6:]
+            else:
+                  mm = date[4:5]
+                  dd = date[5:]
+            yyyy = int(yyyy)
+            mm = int(mm)
+            dd = int(dd)
+            return datetime(yyyy,mm,dd)
+      elif isinstance(date, datetime):
+            return date
+      else:
+            raise Exception(f'{date} cannot be converted to datetime')
+      
+
 #----------------------------------------------------------------------------------
 # Generate the business account field
 def generate_field_account_field(dict_list_id, num_records):
@@ -103,6 +140,34 @@ def generate_random_account_type_field(num_records, num_acct_types = 10):
             dict_list.append(random.choice(acct_type_list))
       return dict_list
 
+# Generate the Business Creation Date field
+def generate_random_creation_date_field(num_records, min_date = datetime(1990,1,1), max_date = datetime.now()):
+      min_date = function_date_int_to_datetime(min_date)
+      max_date = function_date_int_to_datetime(max_date)
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(generate_date(min_date, max_date))
+      return dict_list
+
+# ---
+def generate_random_modified_date_field(num_records, created_date_list, max_date = datetime.now()):
+      max_date = function_date_int_to_datetime(max_date)
+      dict_list = []
+      for x in range(0, num_records):
+            dict_list.append(generate_date(created_date_list[x], max_date))
+      return dict_list
+
+# ---
+def generate_random_closed_date_field(num_records, status_list, mod_date_list, max_date = datetime.now()):
+      max_date = function_date_int_to_datetime(max_date)
+      dict_list = []
+      for x in range(0, num_records):
+            if status_list[x] == 'CLOSED' or status_list[x] == 'HISTORY':
+                  dict_list.append(generate_date(mod_date_list[x], max_date))
+            else:
+                  dict_list.append(None)
+      return dict_list
+
 
 #---------------------------------------------------------------------------------- 
 # Generate the Business Table
@@ -115,11 +180,17 @@ def table_generate_branch_account(dict, num_records):
       dict['Business Status'] = generate_random_status_field(num_records)
       dict['Company Name'] = generate_random_company_name_field(num_records)
       dict['Account Type'] = generate_random_account_type_field(num_records,9)
+      #Date Format: YYYYMMDD
+      dict['Creation Date'] = generate_random_creation_date_field(num_records)
+      dict['Last Modified Date'] = generate_random_modified_date_field(num_records, dict['Creation Date'])
+      dict['Closed Date'] = generate_random_closed_date_field(num_records, dict['Business Status'], dict['Last Modified Date'])
+
+     
       return dict
 
 #------------------------------------------------------------------------------     
 
-num_records = generate_random_record_length()
+num_records = generate_random_record_length(1, 66)
 data = table_generate_id_records(num_records)
 data = table_generate_branch_account(data, num_records)
 
