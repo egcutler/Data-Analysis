@@ -1,18 +1,14 @@
 import random
-import string
 
-def generate_random_string():
-    # Generate a random integer as the first character
-    random_integer = random.randint(0, 9)
+def random_string_selection_with_weights(strings, weights):
+    selected_string = random.choices(strings, weights=weights, k=1)[0]
+    return selected_string
 
-    # Generate three random letters
-    random_letters = ''.join(random.choice(string.ascii_letters) for _ in range(3))
+# Example usage with three strings and weights:
+strings = ["Hello", "World", "Python"]
+weights = [50, 30, 20]
 
-    # Concatenate the random integer and letters
-    result = str(random_integer) + random_letters
-
-    return result
-
-# Example usage:
-random_value = generate_random_string()
-print(random_value)
+# Generate 5 random selections
+for _ in range(5):
+    selected_value = random_string_selection_with_weights(strings, weights)
+    print(f"Selected value: {selected_value}")
