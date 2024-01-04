@@ -1,6 +1,7 @@
 import pandas as pd
 import random
 import string
+from datetime import datetime, timedelta
 
 # Generate a random record limit for the data frame
 def generate_random_record_length(min = 500, max = 100000, seed_val = 50):
@@ -76,7 +77,7 @@ def generate_field_branch_field(num_records):
             dict_list.append( str(generate_random_int(0,9)) + generate_random_letter(3) )
       return dict_list
 
-# Generate the business status field
+# Generate the Business Status field
 def generate_random_status_field(num_records, weightAct = 60, weightCls = 10, weightHis = 10):
       dict_list = []
       status_list = ['ACTIVE', 'CLOSED', 'HISTORY']
@@ -85,11 +86,23 @@ def generate_random_status_field(num_records, weightAct = 60, weightCls = 10, we
             dict_list.append(generate_random_weighted_string_list(status_list, weight_list))
       return dict_list
 
+# Generate the Business Company Name field
 def generate_random_company_name_field(num_records):
       dict_list = []
       for _ in range(num_records):
             dict_list.append(generate_company_name())
       return dict_list
+
+# Generate the Business Account Type field
+def generate_random_account_type_field(num_records, num_acct_types = 10):
+      dict_list = []
+      acct_type_list = []
+      for _ in range(num_acct_types):
+            acct_type_list.append(generate_random_letter(4))
+      for _ in range(num_records):
+            dict_list.append(random.choice(acct_type_list))
+      return dict_list
+
 
 #---------------------------------------------------------------------------------- 
 # Generate the Business Table
@@ -101,6 +114,7 @@ def table_generate_branch_account(dict, num_records):
       dict['External ID'] = [branch + account for branch, account in zip(dict['Branch'], dict['Account'])]
       dict['Business Status'] = generate_random_status_field(num_records)
       dict['Company Name'] = generate_random_company_name_field(num_records)
+      dict['Account Type'] = generate_random_account_type_field(num_records,9)
       return dict
 
 #------------------------------------------------------------------------------     
