@@ -168,6 +168,16 @@ def generate_random_closed_date_field(num_records, status_list, mod_date_list, m
                   dict_list.append(None)
       return dict_list
 
+# Generate the Business TAG field
+def generate_random_tag_field(num_records, num_tag = 10):
+      dict_list = []
+      tag_list = []
+      for _ in range(num_tag):
+            tag_list.append(generate_random_letter(3))
+      for _ in range(num_records):
+            dict_list.append(random.choice(tag_list))
+      return dict_list
+
 
 #---------------------------------------------------------------------------------- 
 # Generate the Business Table
@@ -184,8 +194,8 @@ def table_generate_branch_account(dict, num_records):
       dict['Creation Date'] = generate_random_creation_date_field(num_records)
       dict['Last Modified Date'] = generate_random_modified_date_field(num_records, dict['Creation Date'])
       dict['Closed Date'] = generate_random_closed_date_field(num_records, dict['Business Status'], dict['Last Modified Date'])
+      dict['Business TAG'] = generate_random_tag_field(num_records,3)
 
-     
       return dict
 
 #------------------------------------------------------------------------------     
