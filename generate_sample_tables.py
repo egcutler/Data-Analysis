@@ -93,8 +93,12 @@ def function_date_int_to_datetime(date):
       
 
 #----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+
+#----------              Business Functions for Generator                ---------- 
+
 # Generate the business account field
-def generate_field_account_field(dict_list_id, num_records):
+def generate_account_field(dict_list_id, num_records):
       dict_list = []
       # Generating the Account Column
       for x in dict_list_id:
@@ -107,7 +111,7 @@ def generate_field_account_field(dict_list_id, num_records):
       return dict_list
 
 # Generate the business branch field
-def generate_field_branch_field(num_records):
+def generate_random_branch_field(num_records):
       dict_list = []
       # Generating the Account Column
       for _ in range(num_records):
@@ -185,14 +189,22 @@ def generate_random_system_cat_field(num_records, min_cat = 0, max_cat = 5):
             dict_list.append(random.randint(min_cat, max_cat))
       return dict_list
 
+#----------              Legal Functions for Generator                   ---------- 
 
+
+#----------              Tax Functions for Generator                     ---------- 
+
+
+#----------              Employee Functions for Generator                ---------- 
+
+#----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
+
 # Generate the Business Table
-def table_generate_branch_account(dict, num_records):  
+def generate_table_business(dict, num_records):  
       dict_list_id = dict['ID_Record']
-      
-      dict['Account'] = generate_field_account_field(dict_list_id, num_records)
-      dict['Branch'] = generate_field_branch_field(num_records)
+      dict['Account'] = generate_account_field(dict_list_id, num_records)
+      dict['Branch'] = generate_random_branch_field(num_records)
       dict['External ID'] = [branch + account for branch, account in zip(dict['Branch'], dict['Account'])]
       dict['Business Status'] = generate_random_status_field(num_records)
       dict['Company Name'] = generate_random_company_name_field(num_records)
@@ -203,14 +215,18 @@ def table_generate_branch_account(dict, num_records):
       dict['Closed Date'] = generate_random_closed_date_field(num_records, dict['Business Status'], dict['Last Modified Date'])
       dict['Business TAG'] = generate_random_tag_field(num_records,3)
       dict['Security Category'] = generate_random_system_cat_field(num_records)
-
       return dict
+
+# Generate the Legal Table
+#def generate_table
+# Generate the Tax Table
+# Generate the Employee Table
 
 #------------------------------------------------------------------------------     
 
 num_records = generate_random_record_length(1, 100000)
 data = table_generate_id_records(num_records)
-data = table_generate_branch_account(data, num_records)
+data = generate_table_business(data, num_records)
 
 # Convert to DataFram and export
 df = pd.DataFrame(data)
