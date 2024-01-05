@@ -178,6 +178,13 @@ def generate_random_tag_field(num_records, num_tag = 10):
             dict_list.append(random.choice(tag_list))
       return dict_list
 
+# Generate the business security category field
+def generate_random_system_cat_field(num_records, min_cat = 0, max_cat = 5):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(random.randint(min_cat, max_cat))
+      return dict_list
+
 
 #---------------------------------------------------------------------------------- 
 # Generate the Business Table
@@ -195,12 +202,13 @@ def table_generate_branch_account(dict, num_records):
       dict['Last Modified Date'] = generate_random_modified_date_field(num_records, dict['Creation Date'])
       dict['Closed Date'] = generate_random_closed_date_field(num_records, dict['Business Status'], dict['Last Modified Date'])
       dict['Business TAG'] = generate_random_tag_field(num_records,3)
+      dict['Security Category'] = generate_random_system_cat_field(num_records)
 
       return dict
 
 #------------------------------------------------------------------------------     
 
-num_records = generate_random_record_length(1, 66)
+num_records = generate_random_record_length(1, 100000)
 data = table_generate_id_records(num_records)
 data = table_generate_branch_account(data, num_records)
 
