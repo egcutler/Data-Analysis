@@ -11,8 +11,8 @@ def generate_random_record_length(min = 500, max = 100000, seed_val = 50):
       return random.randint(min, max)
 
 # Generate a DataFrame with a random ID Column
-def table_generate_id_records(num_records):
-      return {'ID_Record': [random.randint(1, num_records) for _ in range(num_records)]}
+def table_generate_id_records(num_records, min_num = 1):
+      return {'ID_Record': [random.randint(min_num, num_records) for _ in range(num_records)]}
 
 # Random Integer Generator
 def generate_random_int(min, max):
@@ -26,7 +26,7 @@ def generate_random_letter(num_letters):
 def generate_random_weighted_string_list(string_list, weight_list):
       return random.choices(string_list,weights = weight_list, k=1)[0]
 
-# Lists of words for company name generation
+# Company Name Part1: lists of words for company name generation
 adjectives = [
     "Acme", "Apex", "Global", "Infinite", "Dynamic", "Epic", "Swift", "Mega", 
     "Prime", "Tech", "Fusion", "Alpha", "Omega", "Brilliant", "Vibrant", 
@@ -48,7 +48,7 @@ keywords = [
     "Evolve", "Evolution", "Impactful", "Forward", "Strive", "Strive", "Vision", "Visionary"
 ]
 
-# Function to generate a random company name
+# Company Name Part2: function to generate a random company name
 def generate_company_name():
     adjective = random.choice(adjectives)
     noun = random.choice(nouns)
@@ -65,6 +65,7 @@ def generate_date(min_date, max_date):
       random_days = random.randint(0, date_range.days)
       random_date = min_date + timedelta(days=random_days)
       return random_date
+
 # Function to convert date into datetime format
 def function_date_int_to_datetime(date):
       if isinstance(date, int) and len(str(date)) <= 8 and len(str(date)) >= 6:
@@ -91,13 +92,45 @@ def function_date_int_to_datetime(date):
       else:
             raise Exception(f'{date} cannot be converted to datetime')
       
+# Company Name Part1: Lists of words for legal firm name generation
+surnames = [
+    "Anderson", "Baker", "Carter", "Davis", "Evans", "Fisher", "Garcia", 
+    "Harris", "Jackson", "King", "Lewis", "Martin", "Nelson", "Owens", 
+    "Parker", "Quinn", "Roberts", "Smith", "Taylor", "Underwood", "Vasquez", 
+    "Williams", "Young", "Zimmerman"
+]
+
+legal_terms = [
+    "Legal", "Law", "Justice", "Advocates", "Solicitors", "Counsel", 
+    "Barristers", "Attorneys", "Partners", "Associates", "Consultants", 
+    "Advisors", "Counselors", "Litigators", "Defenders", "Prosecutors"
+]
+
+# Company Name Part2: function to generate a random legal firm name
+def generate_legal_firm_name():
+    surname1 = random.choice(surnames)
+    surname2 = random.choice(surnames)
+    legal_term = random.choice(legal_terms)
+    # Ensure that the two surnames are not the same
+    while surname1 == surname2:
+        surname2 = random.choice(surnames)
+    return f"{surname1} & {surname2} {legal_term}"
+
+# Type Part 1: list of words for legal type generator
+types = ['BANK', 'CREDIT', 'TRADR', 'AFFRS', 'AFF', 'CORP', 'AG',
+         'ADVIS', 'BENE', 'AGENT', 'GUNTE', 'TTEE', 'AFD'
+]
+
+# Type Part 2: function to generate a random legal type
+def generate_legal_type():
+      return random.choice(types)
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
 #----------              Business Functions for Generator                ---------- 
 
-# Generate the business account field
+# Generate the Business Account field
 def generate_account_field(dict_list_id, num_records):
       dict_list = []
       # Generating the Account Column
@@ -110,7 +143,7 @@ def generate_account_field(dict_list_id, num_records):
                   dict_list.append(zero_addon + str(x))
       return dict_list
 
-# Generate the business branch field
+# Generate the Business Branch field
 def generate_random_branch_field(num_records):
       dict_list = []
       # Generating the Account Column
@@ -153,7 +186,7 @@ def generate_random_creation_date_field(num_records, min_date = datetime(1990,1,
             dict_list.append(generate_date(min_date, max_date))
       return dict_list
 
-# ---
+# Generate the Business Modified Date field
 def generate_random_modified_date_field(num_records, created_date_list, max_date = datetime.now()):
       max_date = function_date_int_to_datetime(max_date)
       dict_list = []
@@ -161,7 +194,7 @@ def generate_random_modified_date_field(num_records, created_date_list, max_date
             dict_list.append(generate_date(created_date_list[x], max_date))
       return dict_list
 
-# ---
+# Generate the Business Closed Date field
 def generate_random_closed_date_field(num_records, status_list, mod_date_list, max_date = datetime.now()):
       max_date = function_date_int_to_datetime(max_date)
       dict_list = []
@@ -182,14 +215,45 @@ def generate_random_tag_field(num_records, num_tag = 10):
             dict_list.append(random.choice(tag_list))
       return dict_list
 
-# Generate the business security category field
+# Generate the Business Security Category field
 def generate_random_system_cat_field(num_records, min_cat = 0, max_cat = 5):
       dict_list = []
       for _ in range(num_records):
             dict_list.append(random.randint(min_cat, max_cat))
       return dict_list
 
+
+
 #----------              Legal Functions for Generator                   ---------- 
+# Generate the Legal ID Field
+def generate_legal_account_field(num_records, len_id_char):
+      dict_list = []
+      if type(len_id_char) == str:
+            if len_id_char.isdigit():
+                  zeros_req = int(len_id_char)-1
+            else:
+                  return Exception(f'Cannot convert the numeric string to a numeric value: {len_id_char}')
+      else:
+            zeros_req = len_id_char - 1
+            
+      zeros = "0" * zeros_req
+      min = int("1"+zeros)
+      max = int("9"*len_id_char) 
+      for _ in range(num_records):
+            dict_list.append(random.randint(min, max))
+      return dict_list
+
+def generate_legal_firm_field(num_records):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(generate_legal_firm_name())
+      return dict_list
+
+def generate_legal_type_field(num_records):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(generate_legal_type())
+      return dict_list
 
 
 #----------              Tax Functions for Generator                     ---------- 
@@ -200,7 +264,7 @@ def generate_random_system_cat_field(num_records, min_cat = 0, max_cat = 5):
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
 
-# Generate the Business Table
+#----------              Generate the Business Table                     ---------- 
 def generate_table_business(dict, num_records):  
       dict_list_id = dict['ID_Record']
       dict['Account'] = generate_account_field(dict_list_id, num_records)
@@ -209,7 +273,7 @@ def generate_table_business(dict, num_records):
       dict['Business Status'] = generate_random_status_field(num_records)
       dict['Company Name'] = generate_random_company_name_field(num_records)
       dict['Account Type'] = generate_random_account_type_field(num_records,9)
-      #Date Format: YYYYMMDD
+      # Date Format: YYYYMMDD
       dict['Creation Date'] = generate_random_creation_date_field(num_records)
       dict['Last Modified Date'] = generate_random_modified_date_field(num_records, dict['Creation Date'])
       dict['Closed Date'] = generate_random_closed_date_field(num_records, dict['Business Status'], dict['Last Modified Date'])
@@ -217,18 +281,48 @@ def generate_table_business(dict, num_records):
       dict['Security Category'] = generate_random_system_cat_field(num_records)
       return dict
 
-# Generate the Legal Table
-#def generate_table
+bus_num_records = generate_random_record_length(1, 10)
+bus_data = table_generate_id_records(bus_num_records)
+bus_data = generate_table_business(bus_data, bus_num_records)
+
+bus_df = pd.DataFrame(bus_data)
+#print(bus_df)
+bus_df.to_csv("data archive/business data.csv", index=False)
+
+
+
+#----------              Generate the Legal Table                       ---------- 
+def generate_table_legal(dict, num_records):
+      dict_list_id = dict['ID_Record']
+      
+      dict['Legal Account'] = generate_legal_account_field(num_records, 8)
+      dict['Legal Firm'] = generate_legal_firm_field(num_records)
+      dict['Legal Type'] = generate_legal_type_field(num_records)
+      return dict
+
+      
+
+le_num_records = generate_random_record_length(1, 10)
+le_data = table_generate_id_records(le_num_records)
+le_data = generate_table_legal(le_data, le_num_records)
+
+le_df = pd.DataFrame(le_data)
+print(le_df)
+le_df.to_csv("data archive/legal data.csv", index=False)
+
+
+
 # Generate the Tax Table
+def generate_table_tax():
+      pass
+
+
+
+
 # Generate the Employee Table
+def generate_table_emp():
+      pass
 
-#------------------------------------------------------------------------------     
-
-num_records = generate_random_record_length(1, 100000)
-data = table_generate_id_records(num_records)
-data = generate_table_business(data, num_records)
-
+#----------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------- 
 # Convert to DataFram and export
-df = pd.DataFrame(data)
-print(df)
-df.to_csv("data archive/test.csv", index=False)
