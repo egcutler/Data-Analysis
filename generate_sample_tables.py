@@ -117,13 +117,35 @@ def generate_legal_firm_name():
     return f"{surname1} & {surname2} {legal_term}"
 
 # Type Part 1: list of words for legal type generator
-types = ['BANK', 'CREDIT', 'TRADR', 'AFFRS', 'AFF', 'CORP', 'AG',
-         'ADVIS', 'BENE', 'AGENT', 'GUNTE', 'TTEE', 'AFD'
-]
+
+dict_leg_type = {
+      'BANK' : 'Bank Division',
+      'CREDIT' : 'Credit Account',
+      'TRADR' : 'Trader credential account',
+      'AFFRS' : 'Affairs',
+      'AFF' : 'Available Funds File',
+      'CORP' : 'Corporation Division',
+      'AG' : 'Agriculture',
+      'ADVIS' : 'Legal Advisor',
+      'BENE' : 'Beneficiary credentail for investment',
+      'AGENT' : 'An agent bank acts as a bank performing some \
+specific duties on behalf of another party',
+      'GUNTE' : 'The bank guarantee means that the lender will \
+ensure that the liabilities of a debtor will be met. In other \
+words, if the debtor fails to settle a debt, the bank will cover it',
+      'TTEE' : 'In the case of the certificate of deposit, the \
+trustee is most likely someone charged with taking care of the \
+money until the person it is intended for comes of an age to receive it',
+      'AFD' : 'Allowance For Depreciation'
+}
+
 
 # Type Part 2: function to generate a random legal type
-def generate_legal_type():
-      return random.choice(types)
+def generate_legal_type_and_def():
+      type = random.choice(list(dict_leg_type))
+      type_def = dict_leg_type[type]
+      return type, type_def
+
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -249,11 +271,17 @@ def generate_legal_firm_field(num_records):
             dict_list.append(generate_legal_firm_name())
       return dict_list
 
-def generate_legal_type_field(num_records):
-      dict_list = []
+def generate_legal_type_and_def_field(num_records):
+      dict_list_type = []
+      dict_list_def = []
       for _ in range(num_records):
-            dict_list.append(generate_legal_type())
-      return dict_list
+            le_type, le_type_def = generate_legal_type_and_def()
+            dict_list_type.append(le_type)
+            dict_list_def.append(le_type_def)
+      return dict_list_type, dict_list_def
+
+def generate_legal__field(num_records):
+      pass
 
 
 #----------              Tax Functions for Generator                     ---------- 
@@ -297,7 +325,7 @@ def generate_table_legal(dict, num_records):
       
       dict['Legal Account'] = generate_legal_account_field(num_records, 8)
       dict['Legal Firm'] = generate_legal_firm_field(num_records)
-      dict['Legal Type'] = generate_legal_type_field(num_records)
+      dict['Legal Type'], dict['Legal Type Def'] = generate_legal_type_and_def_field(num_records)
       return dict
 
       
