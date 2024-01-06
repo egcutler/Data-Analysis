@@ -475,7 +475,7 @@ bus_df.to_csv("data archive/business data.csv", index=False)
 def generate_table_legal(dict, num_records):
       dict_list_id = dict['ID_Record']
       
-      dict['Legal Account'] = generate_legal_account_field(num_records, 8)
+      dict['Legal Account'] = generate_legal_account_field(num_records, 8)S
       dict['Legal Firm'] = generate_legal_firm_field(num_records)
       dict['Legal Type'], dict['Legal Type Def'] = generate_legal_type_and_def_field(num_records)
       dict['Legal Status'] = generate_legal_status_field(num_records)
@@ -504,14 +504,14 @@ le_df.to_csv("data archive/legal data.csv", index=False)
 
 
 
-# Generate the Tax Table
+#----------              Generate the Tax Table                          ---------- 
 def generate_table_tax():
       pass
 
 
 
 
-# Generate the Employee Table
+#----------              Generate the Employee Table                     ---------- 
 def generate_table_emp():
       pass
 

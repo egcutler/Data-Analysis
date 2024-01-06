@@ -6,8 +6,9 @@ import generate_tables_support_functions as gtsf
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
-
 #----------              Business Functions for Generator                ---------- 
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
 
 # Generate the Business Account field
 def generate_account_field(dict_list_id, num_records):
@@ -105,8 +106,10 @@ def generate_random_system_cat_field(num_records, min_cat = 0, max_cat = 5):
 
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
-
 #----------              Generate the Business Table                     ---------- 
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+
 def generate_table_business_build(dict, num_records):  
       dict_list_id = dict['ID_Record']
       dict['Account'] = generate_account_field(dict_list_id, num_records)
@@ -132,9 +135,5 @@ def generate_table_business(min_rand_record_lim = 1, max_rand_record_lim = 10000
       bus_data = generate_table_business_build(bus_data, bus_num_records)
       return bus_data
 
-bus_df = pd.DataFrame(generate_table_business())
-bus_df.to_csv("data archive/business data.csv", index=False)
-
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
-# Convert to DataFram and export
