@@ -227,3 +227,6 @@ def generate_table_legal(min_rand_record_lim = 1, max_rand_record_lim = 100000):
       le_data = gtsf.table_generate_id_records(le_num_records)
       le_data = generate_table_legal_build(le_data, le_num_records)
       return le_data
+
+#----------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------- 

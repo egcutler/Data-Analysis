@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 # Generate a random record limit for the data frame
 def generate_random_record_length(min = 500, max = 100000, seed_val = 50):
-      # Set the seed for reproducibility
+      # Set the seed for reproducibilityS
       random.seed(seed_val)
       # Number of records
       return random.randint(min, max)
