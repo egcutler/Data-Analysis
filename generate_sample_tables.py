@@ -280,8 +280,42 @@ def generate_legal_type_and_def_field(num_records):
             dict_list_def.append(le_type_def)
       return dict_list_type, dict_list_def
 
-def generate_legal__field(num_records):
-      pass
+# Generate the Legal Status field
+def generate_legal_status_field(num_records, weightAct = 60, weightCls = 10, weightHis = 10):
+      dict_list = []
+      status_list = ['ACTIVE', 'CLOSED', 'HISTORY']
+      weight_list = [weightAct, weightCls, weightHis]
+      for _ in range(num_records):
+            dict_list.append(generate_random_weighted_string_list(status_list, weight_list))
+      return dict_list
+
+# Generate the Legal Creation Date field
+def generate_legal_creation_date_field(num_records, min_date = datetime(1990,1,1), max_date = datetime.now()):
+      min_date = function_date_int_to_datetime(min_date)
+      max_date = function_date_int_to_datetime(max_date)
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(generate_date(min_date, max_date))
+      return dict_list
+
+# Generate the Legal Modified Date field
+def generate_legal_modified_date_field(num_records, created_date_list, max_date = datetime.now()):
+      max_date = function_date_int_to_datetime(max_date)
+      dict_list = []
+      for x in range(0, num_records):
+            dict_list.append(generate_date(created_date_list[x], max_date))
+      return dict_list
+
+# Generate the Legal Closed Date field
+def generate_legal_closed_date_field(num_records, status_list, mod_date_list, max_date = datetime.now()):
+      max_date = function_date_int_to_datetime(max_date)
+      dict_list = []
+      for x in range(0, num_records):
+            if status_list[x] == 'CLOSED' or status_list[x] == 'HISTORY':
+                  dict_list.append(generate_date(mod_date_list[x], max_date))
+            else:
+                  dict_list.append(None)
+      return dict_list
 
 
 #----------              Tax Functions for Generator                     ---------- 
@@ -303,8 +337,9 @@ def generate_table_business(dict, num_records):
       dict['Account Type'] = generate_random_account_type_field(num_records,9)
       # Date Format: YYYYMMDD
       dict['Creation Date'] = generate_random_creation_date_field(num_records)
-      dict['Last Modified Date'] = generate_random_modified_date_field(num_records, dict['Creation Date'])
-      dict['Closed Date'] = generate_random_closed_date_field(num_records, dict['Business Status'], dict['Last Modified Date'])
+      dict['Modified Date'] = generate_random_modified_date_field(num_records, dict['Creation Date'])
+      dict['Closed Date'] = generate_random_closed_date_field(num_records, dict['Business Status'], dict['Modified Date'])
+      # - - - - - - - - - - -
       dict['Business TAG'] = generate_random_tag_field(num_records,3)
       dict['Security Category'] = generate_random_system_cat_field(num_records)
       return dict
@@ -326,6 +361,11 @@ def generate_table_legal(dict, num_records):
       dict['Legal Account'] = generate_legal_account_field(num_records, 8)
       dict['Legal Firm'] = generate_legal_firm_field(num_records)
       dict['Legal Type'], dict['Legal Type Def'] = generate_legal_type_and_def_field(num_records)
+      dict['Legal Status'] = generate_legal_status_field(num_records)
+      # Date Format: YYYYMMDD
+      dict['LE Creation Date'] = generate_legal_creation_date_field(num_records)
+      dict['LE Modified Date'] = generate_legal_modified_date_field(num_records, dict['LE Creation Date'])
+      dict['LE Closed Date'] = generate_legal_closed_date_field(num_records, dict['Legal Status'], dict['LE Modified Date'])
       return dict
 
       
