@@ -379,6 +379,60 @@ def generate_legal_giin_id_field(num_records, len_id_char = 7):
             dict_list.append(generate_random_int(min, max))
       return dict_list
 
+# Generate the Legal FACTA ID field
+def generate_legal_facta_id_field(num_records, len_id_char = 7):
+      dict_list = []
+      if type(len_id_char) == str:
+            if len_id_char.isdigit():
+                  zeros_req = int(len_id_char)-1
+            else:
+                  return Exception(f'Cannot convert the numeric string to a numeric value: {len_id_char}')
+      else:
+            zeros_req = len_id_char - 1
+            
+      zeros = "0" * zeros_req
+      min = int("1"+zeros)
+      max = int("9"*len_id_char) 
+      for _ in range(num_records):
+            dict_list.append(generate_random_int(min, max))
+      return dict_list
+
+# Generate the Legal WCIS field
+def generate_legal_wcis_id_field(num_records, len_id_char = 7):
+      dict_list = []
+      if type(len_id_char) == str:
+            if len_id_char.isdigit():
+                  zeros_req = int(len_id_char)-1
+            else:
+                  return Exception(f'Cannot convert the numeric string to a numeric value: {len_id_char}')
+      else:
+            zeros_req = len_id_char - 1
+            
+      zeros = "0" * zeros_req
+      min = int("1"+zeros)
+      max = int("9"*len_id_char) 
+      for _ in range(num_records):
+            dict_list.append(generate_random_int(min, max))
+      return dict_list
+
+# Generate the Legal TEFRA ID field
+def generate_legal_tefra_id_field(num_records, len_id_char = 7):
+      dict_list = []
+      if type(len_id_char) == str:
+            if len_id_char.isdigit():
+                  zeros_req = int(len_id_char)-1
+            else:
+                  return Exception(f'Cannot convert the numeric string to a numeric value: {len_id_char}')
+      else:
+            zeros_req = len_id_char - 1
+            
+      zeros = "0" * zeros_req
+      min = int("1"+zeros)
+      max = int("9"*len_id_char) 
+      for _ in range(num_records):
+            dict_list.append(generate_random_int(min, max))
+      return dict_list
+
 
 
 #----------              Tax Functions for Generator                     ---------- 
@@ -407,7 +461,7 @@ def generate_table_business(dict, num_records):
       dict['Security Category'] = generate_random_system_cat_field(num_records)
       return dict
 
-bus_num_records = generate_random_record_length(1, 10)
+bus_num_records = generate_random_record_length(1, 100000)
 bus_data = table_generate_id_records(bus_num_records)
 bus_data = generate_table_business(bus_data, bus_num_records)
 
@@ -433,11 +487,14 @@ def generate_table_legal(dict, num_records):
       dict['IRS TIN ID'] = generate_legal_irs_tin_id_field(num_records)
       dict['MPID'] = generate_legal_mpid_field(num_records, 6)
       dict['GIIN ID'] = generate_legal_giin_id_field(num_records, 6)
+      dict['FACTA ID'] = generate_legal_facta_id_field(num_records, 9)
+      dict['WCIS ID'] = generate_legal_wcis_id_field(num_records, 5)
+      dict['TEFRA ID'] = generate_legal_tefra_id_field(num_records)
       return dict
 
       
 
-le_num_records = generate_random_record_length(1, 10)
+le_num_records = generate_random_record_length(1, 100000)
 le_data = table_generate_id_records(le_num_records)
 le_data = generate_table_legal(le_data, le_num_records)
 
