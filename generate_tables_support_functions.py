@@ -146,3 +146,12 @@ def generate_legal_type_and_def():
       type_def = dict_leg_type[type]
       return type, type_def
 
+
+# Function to generate a random address
+def generate_random_address(street_names, city_names, states):
+    street_name = random.choice(street_names)
+    city_name = random.choice(city_names)
+    state = random.choice(states)
+    street_number = random.randint(100, 9999)
+    zip_code = f"{random.randint(10000, 99999)}"
+    return f"{street_number} {street_name} St., {city_name}, {state}, {zip_code}"

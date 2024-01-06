@@ -10,7 +10,7 @@ import generate_tables_support_functions as gtsf
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 # Generate the Address - field
-def generate_legal__field(num_records):
+def generate_tax__field(num_records):
       dict_list = []
       for _ in range(num_records):
             dict_list.append()
