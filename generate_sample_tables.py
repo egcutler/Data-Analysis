@@ -248,7 +248,7 @@ def generate_random_system_cat_field(num_records, min_cat = 0, max_cat = 5):
 
 #----------              Legal Functions for Generator                   ---------- 
 # Generate the Legal ID Field
-def generate_legal_account_field(num_records, len_id_char):
+def generate_legal_account_field(num_records, len_id_char = 8):
       dict_list = []
       if type(len_id_char) == str:
             if len_id_char.isdigit():
@@ -317,6 +317,33 @@ def generate_legal_closed_date_field(num_records, status_list, mod_date_list, ma
                   dict_list.append(None)
       return dict_list
 
+# Generate the Legal Tax Category Field
+def generate_legal_tax_cat_field(num_records):
+      dict_list=[]
+      le_tax_cat_list = ['G','M','N','I','D','Ba', 'Bt']
+      for _ in range(num_records):
+            dict_list.append(random.choice(le_tax_cat_list))
+      return dict_list
+
+# Generate the Legal IRS TIN ID field
+def generate_legal_irs_tin_id_field(num_records, len_id_char = 7):
+      dict_list = []
+      if type(len_id_char) == str:
+            if len_id_char.isdigit():
+                  zeros_req = int(len_id_char)-1
+            else:
+                  return Exception(f'Cannot convert the numeric string to a numeric value: {len_id_char}')
+      else:
+            zeros_req = len_id_char - 1
+            
+      zeros = "0" * zeros_req
+      min = int("1"+zeros)
+      max = int("9"*len_id_char) 
+      for _ in range(num_records):
+            dict_list.append(generate_random_int(min, max))
+      return dict_list
+
+
 
 #----------              Tax Functions for Generator                     ---------- 
 
@@ -366,6 +393,8 @@ def generate_table_legal(dict, num_records):
       dict['LE Creation Date'] = generate_legal_creation_date_field(num_records)
       dict['LE Modified Date'] = generate_legal_modified_date_field(num_records, dict['LE Creation Date'])
       dict['LE Closed Date'] = generate_legal_closed_date_field(num_records, dict['Legal Status'], dict['LE Modified Date'])
+      dict['Legal Tax Category'] = generate_legal_tax_cat_field(num_records)
+      dict['IRS TIN ID'] = generate_legal_irs_tin_id_field(num_records)
       return dict
 
       
