@@ -1,12 +1,5 @@
 import pandas as pd
-import random
-import string
-from datetime import datetime, timedelta
+import generate_sample_table_business as gstb
 
-zeros_req = 4
-zeros_list = "0"*zeros_req
-val = "1"+zeros_list
-
-
-max = int("9"*6)
-print(max)
+bus_df = pd.DataFrame(gstb.generate_table_business())
+bus_df.to_csv("data archive/business data.csv", index=False)

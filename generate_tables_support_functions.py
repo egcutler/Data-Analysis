@@ -11,8 +11,8 @@ def generate_random_record_length(min = 500, max = 100000, seed_val = 50):
       return random.randint(min, max)
 
 # Generate a DataFrame with a random ID Column
-def table_generate_id_records(num_records):
-      return {'ID_Record': [random.randint(1, num_records) for _ in range(num_records)]}
+def table_generate_id_records(num_records, min_num = 1):
+      return {'ID_Record': [random.randint(min_num, num_records) for _ in range(num_records)]}
 
 # Random Integer Generator
 def generate_random_int(min, max):
@@ -26,7 +26,7 @@ def generate_random_letter(num_letters):
 def generate_random_weighted_string_list(string_list, weight_list):
       return random.choices(string_list,weights = weight_list, k=1)[0]
 
-# Lists of words for company name generation
+# Company Name Part1: lists of words for company name generation
 adjectives = [
     "Acme", "Apex", "Global", "Infinite", "Dynamic", "Epic", "Swift", "Mega", 
     "Prime", "Tech", "Fusion", "Alpha", "Omega", "Brilliant", "Vibrant", 
@@ -48,7 +48,7 @@ keywords = [
     "Evolve", "Evolution", "Impactful", "Forward", "Strive", "Strive", "Vision", "Visionary"
 ]
 
-# Function to generate a random company name
+# Company Name Part2: function to generate a random company name
 def generate_company_name():
     adjective = random.choice(adjectives)
     noun = random.choice(nouns)
@@ -65,6 +65,7 @@ def generate_date(min_date, max_date):
       random_days = random.randint(0, date_range.days)
       random_date = min_date + timedelta(days=random_days)
       return random_date
+
 # Function to convert date into datetime format
 def function_date_int_to_datetime(date):
       if isinstance(date, int) and len(str(date)) <= 8 and len(str(date)) >= 6:
@@ -91,51 +92,57 @@ def function_date_int_to_datetime(date):
       else:
             raise Exception(f'{date} cannot be converted to datetime')
       
+# Company Name Part1: Lists of words for legal firm name generation
+surnames = [
+    "Anderson", "Baker", "Carter", "Davis", "Evans", "Fisher", "Garcia", 
+    "Harris", "Jackson", "King", "Lewis", "Martin", "Nelson", "Owens", 
+    "Parker", "Quinn", "Roberts", "Smith", "Taylor", "Underwood", "Vasquez", 
+    "Williams", "Young", "Zimmerman"
+]
 
-#----------------------------------------------------------------------------------
-# Generate the business account field
-def generate_field_account_field(dict_list_id, num_records):
-      dict_list = []
-      # Generating the Account Column
-      for x in dict_list_id:
-            zero_count = len(str(num_records)) - len(str(x))
-            if zero_count == 0:
-                  dict_list.append(str(x))
-            else: 
-                  zero_addon = '0' * zero_count
-                  dict_list.append(zero_addon + str(x))
-      return dict_list
+legal_terms = [
+    "Legal", "Law", "Justice", "Advocates", "Solicitors", "Counsel", 
+    "Barristers", "Attorneys", "Partners", "Associates", "Consultants", 
+    "Advisors", "Counselors", "Litigators", "Defenders", "Prosecutors"
+]
 
-# Generate the business branch field
-def generate_field_branch_field(num_records):
-      dict_list = []
-      # Generating the Account Column
-      for _ in range(num_records):
-            dict_list.append( str(generate_random_int(0,9)) + generate_random_letter(3) )
-      return dict_list
+# Company Name Part2: function to generate a random legal firm name
+def generate_legal_firm_name():
+    surname1 = random.choice(surnames)
+    surname2 = random.choice(surnames)
+    legal_term = random.choice(legal_terms)
+    # Ensure that the two surnames are not the same
+    while surname1 == surname2:
+        surname2 = random.choice(surnames)
+    return f"{surname1} & {surname2} {legal_term}"
+
+# Type Part 1: list of words for legal type generator
+
+dict_leg_type = {
+      'BANK' : 'Bank Division',
+      'CREDIT' : 'Credit Account',
+      'TRADR' : 'Trader credential account',
+      'AFFRS' : 'Affairs',
+      'AFF' : 'Available Funds File',
+      'CORP' : 'Corporation Division',
+      'AG' : 'Agriculture',
+      'ADVIS' : 'Legal Advisor',
+      'BENE' : 'Beneficiary credentail for investment',
+      'AGENT' : 'An agent bank acts as a bank performing some \
+specific duties on behalf of another party',
+      'GUNTE' : 'The bank guarantee means that the lender will \
+ensure that the liabilities of a debtor will be met. In other \
+words, if the debtor fails to settle a debt, the bank will cover it',
+      'TTEE' : 'In the case of the certificate of deposit, the \
+trustee is most likely someone charged with taking care of the \
+money until the person it is intended for comes of an age to receive it',
+      'AFD' : 'Allowance For Depreciation'
+}
 
 
+# Type Part 2: function to generate a random legal type
+def generate_legal_type_and_def():
+      type = random.choice(list(dict_leg_type))
+      type_def = dict_leg_type[type]
+      return type, type_def
 
-
-#---------------------------------------------------------------------------------- 
-# Generate the Business Table
-def table_generate_branch_account(dict, num_records):  
-      dict_list_id = dict['ID_Record']
-      
-      dict['Account'] = generate_field_account_field(dict_list_id, num_records)
-      dict['Branch'] = generate_field_branch_field(num_records)
-      dict['External ID'] = [branch + account for branch, account in zip(dict['Branch'], dict['Account'])]
-
-
-      return dict
-
-#------------------------------------------------------------------------------     
-
-num_records = generate_random_record_length(1, 66)
-data = table_generate_id_records(num_records)
-data = table_generate_branch_account(data, num_records)
-
-# Convert to DataFram and export
-df = pd.DataFrame(data)
-print(df)
-df.to_csv("data archive/test.csv", index=False)
