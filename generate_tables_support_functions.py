@@ -74,6 +74,14 @@ def generate_full_name(first_name_list, last_name_list):
       first_name = random.choice(first_name_list)
       last_name = random.choice(last_name_list)
       return f"{first_name} {last_name}"
+
+# Function to generate a random fake phone number
+# (to ensure avoidance of pulling a real number, 
+# all numbers are uplicated on the same random digit)
+def generate_phone_number():
+      digit = str(random.randint(0,9))
+      return digit*10
+
 # ---------------------------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------
 # --------------                    Business Support Fields                                  --------------
