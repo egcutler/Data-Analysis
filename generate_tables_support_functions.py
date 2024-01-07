@@ -146,6 +146,7 @@ def generate_legal_type_and_def():
       type_def = dict_leg_type[type]
       return type, type_def
 
+# -------- Address Functions ---------------
 
 # Function to generate a random address
 def generate_random_address(street_names, city_names, states):
@@ -155,3 +156,31 @@ def generate_random_address(street_names, city_names, states):
     street_number = random.randint(100, 9999)
     zip_code = f"{random.randint(10000, 99999)}"
     return f"{street_number} {street_name} St., {city_name}, {state}, {zip_code}"
+
+import random
+
+
+
+
+
+# ---
+def prioritize_element(item, priority_item):
+      return (item != priority_item, item)
+
+# Selecting a random country abbreviation with weights
+def generate_random_country_list(ctry_abbr_list, priority_item = 'US', weight_us = 10, weight_oth = 1):
+      weight_list = []
+
+      if 'USA' in ctry_abbr_list:
+            weight_list.append(weight_us)
+            priority_item = 'USA'
+            ctry_abbr_list.sort(key=lambda item: prioritize_element(item, priority_item))
+      elif 'US' in ctry_abbr_list:
+            weight_list.append(weight_us)
+            ctry_abbr_list.sort(key=lambda item: prioritize_element(item, priority_item))
+      else:
+            weight_list.append(weight_oth)
+            
+      for _ in range(len(ctry_abbr_list) - 1):
+            weight_list.append(weight_oth)    
+      return random.choices(ctry_abbr_list, weight_list, k=1)[0]

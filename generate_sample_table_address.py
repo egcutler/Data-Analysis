@@ -32,6 +32,9 @@ states = [
     "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
 ]
 
+country_abbreviations = ['US', 'UK', 'CAN', 'AUS', 'GER', 'FRA', 'JPN', 'CHN', 'RUS', 'BRA', 'IND']
+
+
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Address Functions for Generator                 ---------- 
@@ -55,6 +58,7 @@ def generate_address_account_field(num_records, len_id_char = 8):
             dict_list.append(random.randint(min, max))
       return dict_list
 
+# ---
 def generate_address_fields(num_records):
       dict_addr_street_list = []
       dict_addr_city_list = []
@@ -69,18 +73,20 @@ def generate_address_fields(num_records):
             dict_addr_zipcode_list.append(addr[3])
       return dict_addr_street_list, dict_addr_city_list, dict_addr_state_list, dict_addr_zipcode_list
 
-            
+# ---
+def generate_address_original_country_field(num_records, priority_item = 'US', weight_us = 10, weight_oth = 1):
+      dict_list = []
       
-      
-def generate_address__field(num_records):
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_random_country_list(country_abbreviations, priority_item, weight_us, weight_oth))
+      return dict_list
+     
+# --- 
+def generate_address_registered_country_field(num_records):
       dict_list = []
       for _ in range(num_records):
-            dict_list.append()
+            dict_list.append('US')
       return dict_list
-
-
-
-
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -88,13 +94,17 @@ def generate_address__field(num_records):
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
+# ---
 def generate_table_address_build(dict, num_records):  
       
       dict['Address ID'] = generate_address_account_field(num_records)
       dict['Address Street'], dict['City'], dict['State'], dict['Zip Code'] = generate_address_fields(num_records)
+      dict['Registered Country'] = generate_address_registered_country_field(num_records)
+      dict['Original Country'] = generate_address_original_country_field(num_records, weight_us=20)
       
       return dict
 
+# ---
 def generate_table_address(min_rand_record_lim = 1, max_rand_record_lim = 100000):
       addr_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       addr_data = gtsf.table_generate_id_records(addr_num_records)
@@ -103,7 +113,3 @@ def generate_table_address(min_rand_record_lim = 1, max_rand_record_lim = 100000
 
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
-
-addr_df = pd.DataFrame(generate_table_address(max_rand_record_lim = 10))
-addr_df.to_csv("data archive/address data.csv", index=False)
-print(addr_df)
