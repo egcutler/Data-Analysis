@@ -75,6 +75,8 @@ list_entrycd = [
 list_cur = [
       'USD', 'EUR', 'JPY', 'GBP', 'AUD', 'CAD', 'CHF', 'CNY', 'SEK', 'NZD'
 ]
+
+list_debit_and_credit = ['Debit','Credit']
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Tax Functions for Generator                     ---------- 
@@ -138,12 +140,27 @@ def generate_address_original_country_field(num_records, priority_item = 'USD', 
             dict_list.append(gtsf.generate_random_unique_weighted_list(list_cur, priority_item, weight_usd, weight_oth))
       return dict_list
 
-# Generate the Tax SNet Amount field
+# Generate the Tax Net Amount field
 def generate_tax_net_amount_field(num_records, min = 1, max = 99999):
       dict_list = []
       for _ in range(num_records):
             dict_list.append(gtsf.generate_random_int(min, max))
       return dict_list
+
+# Generate the Tax Withholding Amount field
+def generate_tax_withholding_amount_field(num_records, min = 1, max = 9999):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_random_int(min, max))
+      return dict_list
+
+# Generate the Tax Debit and Credit field
+def generate_tax_debit_and_credit_field(num_records):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(random.choice(list_debit_and_credit))
+      return dict_list
+
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -158,8 +175,8 @@ def generate_table_tax_build(dict, num_records):
       dict['Entry CD'] = generate_tax_entrycd_field(num_records)
       dict['Currency'] = generate_address_original_country_field(num_records)
       dict['Net Amount'] = generate_tax_net_amount_field(num_records)
-      #dict['Withholding Amount'] = 
-      #dict['Credit and Debit'] =
+      dict['Withholding Amount'] = generate_tax_withholding_amount_field(num_records)
+      dict['Credit and Debit'] = generate_tax_debit_and_credit_field(num_records)
       #dict['Finance Type'] = 
       #dict['Finance Definition'] = 
       #dict['Transaction Date'] =
