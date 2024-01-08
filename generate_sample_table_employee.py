@@ -80,6 +80,12 @@ def generate_emp_job_title_field(num_records):
             dict_list.append(random.choice(job_titles))
       return dict_list
 
+# Generate the Employee Email field
+def generate_emp_email_field(num_records, first_name, last_name):
+      dict_list = []
+      for x in range(num_records):
+            dict_list.append(f'{last_name[x]}.{first_name[x]}@fakemail.com')
+      return dict_list
 
 
 #----------------------------------------------------------------------------------
@@ -95,6 +101,12 @@ def generate_table_employee_build(dict, num_records):
       dict['Emp Last Name'] = generate_emp_last_name_field(num_records)
       dict['Emp Phone Number'] = generate_emp_phone_number_field(num_records)
       dict['Job Title'] = generate_emp_job_title_field(num_records)
+      dict['Employee Email'] = generate_emp_email_field(num_records, dict['Emp First Name'], dict['Emp Last Name'])
+      #dict['Hire Date'] = 
+      #dict['Manager'] = 
+      #dict['Employee Status'] = 
+      #dict['Work Authorization'] =
+
       
       return dict
 
