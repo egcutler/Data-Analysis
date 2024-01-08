@@ -113,6 +113,15 @@ def generate_emp_email_field(num_records, first_name, last_name):
             dict_list.append(f'{last_name[x]}.{first_name[x]}@fakemail.com')
       return dict_list
 
+# Generate the Employee Status field
+def generate_emp_status_field(num_records, weightY = 90, weightN = 10):
+      dict_list = []
+      status_list = ['EMPLOYEED', 'TERMINATED']
+      weight_list = [weightY, weightN]
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_random_weighted_string_list(status_list, weight_list))
+      return dict_list
+
 # Generate the Employee Hire Date field
 def generate_emp_hire_date_field(num_records, min_date = datetime(1990,1,1), max_date = datetime.now()):
       min_date = gtsf.function_date_int_to_datetime(min_date)
@@ -120,6 +129,17 @@ def generate_emp_hire_date_field(num_records, min_date = datetime(1990,1,1), max
       dict_list = []
       for _ in range(num_records):
             dict_list.append(gtsf.generate_date(min_date, max_date))
+      return dict_list
+
+# Generate the Employee Termination field
+def generate_emp_termination_field(num_records, status_list, hire_date_list, max_date = datetime.now()):
+      max_date = gtsf.function_date_int_to_datetime(max_date)
+      dict_list = []
+      for x in range(0, num_records):
+            if status_list[x] == 'TERMINATED':
+                  dict_list.append(gtsf.generate_date(hire_date_list[x], max_date))
+            else:
+                  dict_list.append(None)
       return dict_list
 
 # Generate the Employee Manager First name Field
@@ -143,6 +163,12 @@ def generate_emp_manager_fields(num_records, emp_first_name, emp_last_name, emp_
             
       return dict_list_firstname, dict_list_lastname, dict_list_manager
 
+# Generate the Employee Manager Security Clearance field
+def generate_emp_security_clearance_field(num_records, min = 1, max = 5):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_random_int(min, max))
+      return dict_list
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -158,10 +184,11 @@ def generate_table_employee_build(dict, num_records):
       dict['Emp Phone Number'] = generate_emp_phone_number_field(num_records)
       dict['Job Title'] = generate_emp_job_title_field(num_records)
       dict['Employee Email'] = generate_emp_email_field(num_records, dict['Emp First Name'], dict['Emp Last Name'])
+      dict['Employee Status'] = generate_emp_status_field(num_records)
       dict['Hire Date'] = generate_emp_hire_date_field(num_records)
+      dict['Termination Date'] = generate_emp_termination_field(num_records, dict['Employee Status'], dict['Hire Date'])
       dict['Manager First Name'], dict['Manager Last Name'], dict['Manager Position'] = generate_emp_manager_fields(num_records, dict['Emp First Name'], dict['Emp Last Name'], dict['Job Title'])
-      #dict['Employee Status'] = 
-      #dict['Work Authorization'] =
+      dict['Security Clearance'] = generate_emp_security_clearance_field(num_records)
 
       
       return dict
