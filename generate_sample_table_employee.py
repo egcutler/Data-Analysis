@@ -26,8 +26,33 @@ job_titles = ['Software Engineer','Marketing Manager','Sales Representative',
               'Operations Manager','Product Manager','Business Analyst','Web Developer',
               'Social Media Specialist','Data Engineer','Administrative Assistant',
               'Financial Analyst','IT Specialist','Legal Assistant','Research Scientist',
-              'Supply Chain Coordinator','Quality Assurance Tester',
+              'Supply Chain Coordinator','Quality Assurance Tester'
 ]
+
+dict_jobs = {
+'Business Analyst' : ['Operations Manager', 'Project Manager'],
+'Data Engineer' : ['Operations Manager', 'Project Manager', 'Engineer Manager'],
+'Data Analyst' : ['Operations Manager', 'Project Manager'],
+'Dev Ops Engineer' : ['Operations Manager', 'Project Manager'],
+'Financial Analyst' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Finance manager', ''],
+'IT Specialist' : ['IT Manager'],
+'Engineer Specialist' : ['Engineer Manager'],
+'Sales and Stragety' : ['Sales Manager'],
+'Supply Chain Coordinator' : ['Project Manager', 'Product Manager'],
+'Quality Assurance Tester' : ['Project Manager', 'Product Manager'],
+'Web Developer' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Marketing Manager', ''],
+'Social Media Specialist' : ['Marketing Manager'],
+'Customer Service Representative' : ['Customer Success Manager'],
+'Human Resources' : ['Human Resources Manager'],
+'Administrative Assistant' : ['IT Manager'],
+'Legal Assistant' : ['Legal Manager'],
+'Software Engineer' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Engineer Manager', ''],
+'Graphic Designer' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Engineer Manager', ''],
+'Sales Representative' : ['Sales Manager'],
+'Research Scientist' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Marketing Manager', 'Engineer Manager'],
+'Accountant' : ['Finance manager']  
+}
+
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -76,6 +101,7 @@ def generate_emp_phone_number_field(num_records):
 # Generate the Employee Job Title field
 def generate_emp_job_title_field(num_records):
       dict_list = []
+      job_titles = list(dict_jobs.keys())
       for _ in range(num_records):
             dict_list.append(random.choice(job_titles))
       return dict_list
@@ -86,6 +112,36 @@ def generate_emp_email_field(num_records, first_name, last_name):
       for x in range(num_records):
             dict_list.append(f'{last_name[x]}.{first_name[x]}@fakemail.com')
       return dict_list
+
+# Generate the Employee Hire Date field
+def generate_emp_hire_date_field(num_records, min_date = datetime(1990,1,1), max_date = datetime.now()):
+      min_date = gtsf.function_date_int_to_datetime(min_date)
+      max_date = gtsf.function_date_int_to_datetime(max_date)
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_date(min_date, max_date))
+      return dict_list
+
+# Generate the Employee Manager First name Field
+def generate_emp_manager_fields(num_records, emp_first_name, emp_last_name, emp_job_title_list):
+      dict_list_firstname = []
+      dict_list_lastname = []
+      dict_list_manager = []
+      
+      for x in range(num_records):
+            mang_first_name = random.choice(first_names)
+            while mang_first_name == emp_first_name[x]:
+                  mang_first_name = random.choice(first_names)        
+            dict_list_firstname.append(mang_first_name)
+            
+            mang_last_name = random.choice(last_names)
+            while mang_last_name == emp_last_name[x]:
+                  mang_last_name = random.choice(last_names)        
+            dict_list_lastname.append(mang_last_name)
+            
+            dict_list_manager.append(random.choice(dict_jobs[emp_job_title_list[x]]))
+            
+      return dict_list_firstname, dict_list_lastname, dict_list_manager
 
 
 #----------------------------------------------------------------------------------
@@ -102,8 +158,8 @@ def generate_table_employee_build(dict, num_records):
       dict['Emp Phone Number'] = generate_emp_phone_number_field(num_records)
       dict['Job Title'] = generate_emp_job_title_field(num_records)
       dict['Employee Email'] = generate_emp_email_field(num_records, dict['Emp First Name'], dict['Emp Last Name'])
-      #dict['Hire Date'] = 
-      #dict['Manager'] = 
+      dict['Hire Date'] = generate_emp_hire_date_field(num_records)
+      dict['Manager First Name'], dict['Manager Last Name'], dict['Manager Position'] = generate_emp_manager_fields(num_records, dict['Emp First Name'], dict['Emp Last Name'], dict['Job Title'])
       #dict['Employee Status'] = 
       #dict['Work Authorization'] =
 
@@ -123,3 +179,5 @@ def generate_table_employee(min_rand_record_lim = 1, max_rand_record_lim = 10000
 emp_df = pd.DataFrame(generate_table_employee())
 emp_df.to_csv("data archive/employee data.csv", index=False)
 print(emp_df)
+
+count_temp = 0

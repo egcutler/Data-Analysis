@@ -79,7 +79,7 @@ def generate_full_name(first_name_list, last_name_list):
 # (to ensure avoidance of pulling a real number, 
 # all numbers are uplicated on the same random digit)
 def generate_phone_number():
-      digit = str(random.randint(0,9))
+      digit = str(random.randint(1,9))
       return digit*10
 
 # ---------------------------------------------------------------------------------------------------------
