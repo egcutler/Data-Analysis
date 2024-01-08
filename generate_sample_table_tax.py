@@ -9,7 +9,7 @@ import generate_tables_support_functions as gtsf
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-dict_finance_types = {
+dict_tax_types = {
       'ADJ' : 'Adjustment',
       'BEN/BENF' : 'Benefit(s)',
       'LTI' : 'Loan to Income',
@@ -161,6 +161,20 @@ def generate_tax_debit_and_credit_field(num_records):
             dict_list.append(random.choice(list_debit_and_credit))
       return dict_list
 
+# Generate the Tax Type field
+def generate_tax_type_field(num_records):
+      dict_list = []
+      tax_types = list(dict_tax_types.keys())
+      for _ in range(num_records):
+            dict_list.append(random.choice(tax_types))
+      return dict_list
+
+# Generate the Tax Type Description field
+def generate_tax_type_desc_field(num_records, tax_type_list):
+      dict_list = []
+      for x in range(num_records):
+            dict_list.append(dict_tax_types[tax_type_list[x]])
+      return dict_list
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -177,8 +191,8 @@ def generate_table_tax_build(dict, num_records):
       dict['Net Amount'] = generate_tax_net_amount_field(num_records)
       dict['Withholding Amount'] = generate_tax_withholding_amount_field(num_records)
       dict['Credit and Debit'] = generate_tax_debit_and_credit_field(num_records)
-      #dict['Finance Type'] = 
-      #dict['Finance Definition'] = 
+      dict['Tax Type'] = generate_tax_type_field(num_records)
+      dict['Tax Type Definition'] = generate_tax_type_desc_field(num_records, dict['Tax Type'])
       #dict['Transaction Date'] =
       return dict
 
