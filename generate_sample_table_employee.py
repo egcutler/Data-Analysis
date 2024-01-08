@@ -8,6 +8,7 @@ import generate_tables_support_functions as gtsf
 #----------              Employee List for Support Functions              ---------
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
+
 # Expanded lists of first and last names
 first_names = ["John", "Jane", "Alex", "Emily", "David", "Sarah", "Michael", "Olivia", 
                "Daniel", "Emma", "Chris", "Anna", "James", "Sophia", "Robert", "Isabella", 
@@ -20,39 +21,29 @@ last_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis
               "Lopez", "Lee", "Gonzalez", "Harris", "Clark", "Lewis", "Robinson", 
               "Walker", "Perez", "Hall"]
 
-job_titles = ['Software Engineer','Marketing Manager','Sales Representative',
-              'Graphic Designer','Data Analyst','Human Resources Manager',
-              'Project Manager','Accountant','Customer Service Representative',
-              'Operations Manager','Product Manager','Business Analyst','Web Developer',
-              'Social Media Specialist','Data Engineer','Administrative Assistant',
-              'Financial Analyst','IT Specialist','Legal Assistant','Research Scientist',
-              'Supply Chain Coordinator','Quality Assurance Tester'
-]
-
 dict_jobs = {
-'Business Analyst' : ['Operations Manager', 'Project Manager'],
-'Data Engineer' : ['Operations Manager', 'Project Manager', 'Engineer Manager'],
-'Data Analyst' : ['Operations Manager', 'Project Manager'],
-'Dev Ops Engineer' : ['Operations Manager', 'Project Manager'],
-'Financial Analyst' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Finance manager', ''],
-'IT Specialist' : ['IT Manager'],
-'Engineer Specialist' : ['Engineer Manager'],
-'Sales and Stragety' : ['Sales Manager'],
-'Supply Chain Coordinator' : ['Project Manager', 'Product Manager'],
-'Quality Assurance Tester' : ['Project Manager', 'Product Manager'],
-'Web Developer' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Marketing Manager', ''],
-'Social Media Specialist' : ['Marketing Manager'],
-'Customer Service Representative' : ['Customer Success Manager'],
-'Human Resources' : ['Human Resources Manager'],
-'Administrative Assistant' : ['IT Manager'],
-'Legal Assistant' : ['Legal Manager'],
-'Software Engineer' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Engineer Manager', ''],
-'Graphic Designer' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Engineer Manager', ''],
-'Sales Representative' : ['Sales Manager'],
-'Research Scientist' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Marketing Manager', 'Engineer Manager'],
-'Accountant' : ['Finance manager']  
+      'Business Analyst' : ['Operations Manager', 'Project Manager'],
+      'Data Engineer' : ['Operations Manager', 'Project Manager', 'Engineer Manager'],
+      'Data Analyst' : ['Operations Manager', 'Project Manager'],
+      'Dev Ops Engineer' : ['Operations Manager', 'Project Manager'],
+      'Financial Analyst' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Finance manager'],
+      'IT Specialist' : ['IT Manager'],
+      'Engineer Specialist' : ['Engineer Manager'],
+      'Sales and Stragety' : ['Sales Manager'],
+      'Supply Chain Coordinator' : ['Project Manager', 'Product Manager'],
+      'Quality Assurance Tester' : ['Project Manager', 'Product Manager'],
+      'Web Developer' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Marketing Manager'],
+      'Social Media Specialist' : ['Marketing Manager'],
+      'Customer Service Representative' : ['Customer Success Manager'],
+      'Human Resources' : ['Human Resources Manager'],
+      'Administrative Assistant' : ['IT Manager'],
+      'Legal Assistant' : ['Legal Manager'],
+      'Software Engineer' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Engineer Manager'],
+      'Graphic Designer' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Engineer Manager'],
+      'Sales Representative' : ['Sales Manager'],
+      'Research Scientist' : ['Operations Manager', 'Project Manager', 'Product Manager', 'Marketing Manager', 'Engineer Manager'],
+      'Accountant' : ['Finance manager']  
 }
-
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -177,7 +168,6 @@ def generate_emp_security_clearance_field(num_records, min = 1, max = 5):
 #----------------------------------------------------------------------------------
 
 def generate_table_employee_build(dict, num_records):  
-      
       dict['Employee ID'] = generate_emp_id_field(num_records)
       dict['Emp First Name'] = generate_emp_first_name_field(num_records)
       dict['Emp Last Name'] = generate_emp_last_name_field(num_records)
@@ -189,8 +179,6 @@ def generate_table_employee_build(dict, num_records):
       dict['Termination Date'] = generate_emp_termination_field(num_records, dict['Employee Status'], dict['Hire Date'])
       dict['Manager First Name'], dict['Manager Last Name'], dict['Manager Position'] = generate_emp_manager_fields(num_records, dict['Emp First Name'], dict['Emp Last Name'], dict['Job Title'])
       dict['Security Clearance'] = generate_emp_security_clearance_field(num_records)
-
-      
       return dict
 
 def generate_table_employee(min_rand_record_lim = 1, max_rand_record_lim = 100000):
@@ -199,12 +187,6 @@ def generate_table_employee(min_rand_record_lim = 1, max_rand_record_lim = 10000
       emp_data = generate_table_employee_build(emp_data, emp_num_records)
       return emp_data
 
-
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
 
-emp_df = pd.DataFrame(generate_table_employee())
-emp_df.to_csv("data archive/employee data.csv", index=False)
-print(emp_df)
-
-count_temp = 0
