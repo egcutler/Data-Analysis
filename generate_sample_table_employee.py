@@ -20,7 +20,14 @@ last_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis
               "Lopez", "Lee", "Gonzalez", "Harris", "Clark", "Lewis", "Robinson", 
               "Walker", "Perez", "Hall"]
 
-
+job_titles = ['Software Engineer','Marketing Manager','Sales Representative',
+              'Graphic Designer','Data Analyst','Human Resources Manager',
+              'Project Manager','Accountant','Customer Service Representative',
+              'Operations Manager','Product Manager','Business Analyst','Web Developer',
+              'Social Media Specialist','Data Engineer','Administrative Assistant',
+              'Financial Analyst','IT Specialist','Legal Assistant','Research Scientist',
+              'Supply Chain Coordinator','Quality Assurance Tester',
+]
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -66,7 +73,12 @@ def generate_emp_phone_number_field(num_records):
             dict_list.append(gtsf.generate_phone_number())
       return dict_list
 
-
+# Generate the Employee Job Title field
+def generate_emp_job_title_field(num_records):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(random.choice(job_titles))
+      return dict_list
 
 
 
@@ -82,6 +94,7 @@ def generate_table_employee_build(dict, num_records):
       dict['Emp First Name'] = generate_emp_first_name_field(num_records)
       dict['Emp Last Name'] = generate_emp_last_name_field(num_records)
       dict['Emp Phone Number'] = generate_emp_phone_number_field(num_records)
+      dict['Job Title'] = generate_emp_job_title_field(num_records)
       
       return dict
 
@@ -96,5 +109,5 @@ def generate_table_employee(min_rand_record_lim = 1, max_rand_record_lim = 10000
 #---------------------------------------------------------------------------------- 
 
 emp_df = pd.DataFrame(generate_table_employee())
-emp_df.to_csv("data archive/address data.csv", index=False)
+emp_df.to_csv("data archive/employee data.csv", index=False)
 print(emp_df)
