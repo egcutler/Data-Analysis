@@ -176,6 +176,15 @@ def generate_tax_type_desc_field(num_records, tax_type_list):
             dict_list.append(dict_tax_types[tax_type_list[x]])
       return dict_list
 
+# Generate the Tax Transaction Date field
+def generate_tax_trans_date_field(num_records, min_date = datetime(2010,1,1), max_date = datetime.now()):
+      min_date = gtsf.function_date_int_to_datetime(min_date)
+      max_date = gtsf.function_date_int_to_datetime(max_date)
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_date(min_date, max_date))
+      return dict_list
+
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Generate the Tax Table                          ---------- 
@@ -193,7 +202,7 @@ def generate_table_tax_build(dict, num_records):
       dict['Credit and Debit'] = generate_tax_debit_and_credit_field(num_records)
       dict['Tax Type'] = generate_tax_type_field(num_records)
       dict['Tax Type Definition'] = generate_tax_type_desc_field(num_records, dict['Tax Type'])
-      #dict['Transaction Date'] =
+      dict['Transaction Date'] = generate_tax_trans_date_field(num_records)
       return dict
 
 def generate_table_tax(min_rand_record_lim = 1, max_rand_record_lim = 100000):
