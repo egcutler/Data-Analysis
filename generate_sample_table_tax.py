@@ -68,7 +68,13 @@ dict_finance_types = {
       'ADMIN' : 'Administrative'
 }
 
-list_entrycd = ['DIV', 'INT']
+list_entrycd = [
+      'DIV', 'INT'
+]
+
+list_cur = [
+      'USD', 'EUR', 'JPY', 'GBP', 'AUD', 'CAD', 'CHF', 'CNY', 'SEK', 'NZD'
+]
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Tax Functions for Generator                     ---------- 
@@ -125,9 +131,19 @@ def generate_tax_entrycd_field(num_records):
             dict_list.append(random.choice(list_entrycd))
       return dict_list
 
+# Generate the Tax Currency field
+def generate_address_original_country_field(num_records, priority_item = 'USD', weight_usd = 10, weight_oth = 1):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_random_unique_weighted_list(list_cur, priority_item, weight_usd, weight_oth))
+      return dict_list
 
-
-
+# Generate the Tax SNet Amount field
+def generate_tax_net_amount_field(num_records, min = 1, max = 99999):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_random_int(min, max))
+      return dict_list
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -140,10 +156,8 @@ def generate_table_tax_build(dict, num_records):
       dict['Sec ID'] = generate_tax_sec_id_field(num_records)
       dict['CUSIP'] = generate_tax_cusip_field(num_records)
       dict['Entry CD'] = generate_tax_entrycd_field(num_records)
-      #dict['Currency'] =
-      #dict[''] =
-      #dict[''] =
-      #dict['Net Amount'] =
+      dict['Currency'] = generate_address_original_country_field(num_records)
+      dict['Net Amount'] = generate_tax_net_amount_field(num_records)
       #dict['Withholding Amount'] = 
       #dict['Credit and Debit'] =
       #dict['Finance Type'] = 
@@ -160,6 +174,6 @@ def generate_table_tax(min_rand_record_lim = 1, max_rand_record_lim = 100000):
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
 
-tax_df = pd.DataFrame(generate_table_tax(1,10))
+tax_df = pd.DataFrame(generate_table_tax(1,100))
 tax_df.to_csv("data archive/tax data.csv", index=False)
 print(tax_df)

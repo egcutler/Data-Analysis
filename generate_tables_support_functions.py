@@ -196,29 +196,17 @@ def generate_random_address(street_names, city_names, states):
 import random
 
 
-# Random Country Abbreviation Part 1: setting the priorization
+# Priorization function for weighted function support giving one element priority
 def prioritize_element(item, priority_item):
       return (item != priority_item, item)
 
-# Random Country Abbreviation Part 2: selecting a random country abbreviation with weights
-def generate_random_country_list(ctry_abbr_list, priority_item = 'US', weight_us = 10, weight_oth = 1):
+# Selecting a random value from a list with priorization on a single value
+def generate_random_unique_weighted_list(random_list, priority_item, weight_pri = 10, weight_oth = 1):
       weight_list = []
-
-      if 'USA' in ctry_abbr_list:
-            weight_list.append(weight_us)
-            priority_item = 'USA'
-            ctry_abbr_list.sort(key=lambda item: prioritize_element(item, priority_item))
-      elif 'US' in ctry_abbr_list:
-            weight_list.append(weight_us)
-            ctry_abbr_list.sort(key=lambda item: prioritize_element(item, priority_item))
-      else:
-            weight_list.append(weight_oth)
-            
-      for _ in range(len(ctry_abbr_list) - 1):
-            weight_list.append(weight_oth)    
-      return random.choices(ctry_abbr_list, weight_list, k=1)[0]
-
-
+      
+      weight_list = [weight_pri if item == priority_item else weight_oth for item in random_list]
+      return random.choices(random_list, weights=weight_list, k=1)[0]
+      
 # ---------------------------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------
 # --------------                    Employee Support Fields                                  --------------

@@ -40,7 +40,8 @@ country_abbreviations = ['US', 'UK', 'CAN', 'AUS', 'GER', 'FRA', 'JPN', 'CHN', '
 #----------              Address Functions for Generator                 ---------- 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
-# Generate the Address - field
+
+# Generate the Address Account field
 def generate_address_account_field(num_records, len_id_char = 8):
       dict_list = []
       if type(len_id_char) == str:
@@ -58,7 +59,7 @@ def generate_address_account_field(num_records, len_id_char = 8):
             dict_list.append(random.randint(min, max))
       return dict_list
 
-# ---
+# Generate the Address line fields
 def generate_address_fields(num_records):
       dict_addr_street_list = []
       dict_addr_city_list = []
@@ -73,15 +74,15 @@ def generate_address_fields(num_records):
             dict_addr_zipcode_list.append(addr[3])
       return dict_addr_street_list, dict_addr_city_list, dict_addr_state_list, dict_addr_zipcode_list
 
-# ---
+# Generate the Address Original Country field
 def generate_address_original_country_field(num_records, priority_item = 'US', weight_us = 10, weight_oth = 1):
       dict_list = []
       
       for _ in range(num_records):
-            dict_list.append(gtsf.generate_random_country_list(country_abbreviations, priority_item, weight_us, weight_oth))
+            dict_list.append(gtsf.generate_random_unique_weighted_list(country_abbreviations, priority_item, weight_us, weight_oth))
       return dict_list
      
-# --- 
+# Generate the Address Registered Country field 
 def generate_address_registered_country_field(num_records):
       dict_list = []
       for _ in range(num_records):
