@@ -68,13 +68,14 @@ dict_finance_types = {
       'ADMIN' : 'Administrative'
 }
 
+list_entrycd = ['DIV', 'INT']
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Tax Functions for Generator                     ---------- 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 # Generate the Tax Account field
-def generate_tax_account_field(num_records, len_id_char = 7):
+def generate_tax_account_field(num_records, len_id_char = 8):
       dict_list = []
 
       if type(len_id_char) == str:
@@ -92,6 +93,37 @@ def generate_tax_account_field(num_records, len_id_char = 7):
             dict_list.append(random.randint(min, max))
       return dict_list
 
+# Generate the Tax Security ID field
+def generate_tax_sec_id_field(num_records, min = 100000, max = 9999999):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_random_int(min, max))
+      return dict_list
+
+# Generate the Tax CUSIP field
+def generate_tax_cusip_field(num_records, len_id_char = 7):
+      dict_list = []
+      if type(len_id_char) == str:
+            if len_id_char.isdigit():
+                  zeros_req = int(len_id_char)-1
+            else:
+                  return Exception(f'Cannot convert the numeric string to a numeric value: {len_id_char}')
+      else:
+            zeros_req = len_id_char - 1
+            
+      zeros = "0" * zeros_req
+      min = int("1"+zeros)
+      max = int("9"*len_id_char) 
+      for _ in range(num_records):
+            dict_list.append(random.randint(min, max))
+      return dict_list
+
+# Generate the Tax Entry CD field
+def generate_tax_entrycd_field(num_records):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(random.choice(list_entrycd))
+      return dict_list
 
 
 
@@ -105,9 +137,9 @@ def generate_tax_account_field(num_records, len_id_char = 7):
 
 def generate_table_tax_build(dict, num_records):  
       dict['Tax Account'] = generate_tax_account_field(num_records)
-      #dict['Sec ID'] =
-      #dict['CUSIP'] = DIV or INT
-      #dict['Entry CD'] =
+      dict['Sec ID'] = generate_tax_sec_id_field(num_records)
+      dict['CUSIP'] = generate_tax_cusip_field(num_records)
+      dict['Entry CD'] = generate_tax_entrycd_field(num_records)
       #dict['Currency'] =
       #dict[''] =
       #dict[''] =
