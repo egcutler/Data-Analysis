@@ -20,6 +20,10 @@ finance_dict_desc = {
       'Other Expenses' : ['Shipping', 'Repairs']
 }
 
+finance_list_type = [
+      'Savings', 'Checking'
+]
+
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Financial Functions for Generator               ---------- 
@@ -85,6 +89,11 @@ def generate_random_financial_ammount_field(num_records, financial_cat_list, min
       return dict_list
 
 # Generate the Financial Account Type field
+def generate_random_financial_type_field(num_records):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(random.choice(finance_list_type))
+      return dict_list
 
 # Generate the Financial Category field
 
@@ -106,19 +115,6 @@ def generate_random_financial_ammount_field(num_records, financial_cat_list, min
 
 # Generate the Financial Comments field
 
-def temp(num_records, min_emp = 50000, max_emp = 150000, min_oth = 100, max_oth = 10000):
-      dict_list_cat = []
-      dict_list_desc = []
-      temp_list_cat = list(finance_dict_desc.keys())
-      for _ in range(num_records):
-            temp_random_cat = random.choice(temp_list_cat)
-            dict_list_cat.append(temp_random_cat)
-            if temp_list_cat == 'Employee':
-                  dict_list_desc.append(random.randint(min_emp, max_emp))
-            else:
-                  dict_list_desc.append(random.randint(min_oth, max_oth))
-      return dict_list_cat, dict_list_desc
-
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Generate the Financial Table                    ---------- 
@@ -130,7 +126,8 @@ def generate_table_finance_build(dict, num_records):
       dict['Transaction ID'] = generate_finance_trans_id_field(num_records)
       dict['Financial Date'] = generate_random_financial_date_field(num_records)
       dict['Category'], dict['Description'] = generate_random_financial_desc_fields(num_records)
-      dict['Amount Type'] = generate_random_financial_ammount_field(num_records, dict['Category'])
+      dict['Amount'] = generate_random_financial_ammount_field(num_records, dict['Category'])
+      dict['Amount Type'] = generate_random_financial_type_field(num_records)
       #dict['Client Name'] =
       #dict['Payment Method'] =
       #dict['Currency'] =
