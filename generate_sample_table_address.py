@@ -76,8 +76,7 @@ def generate_address_fields(num_records):
 
 # Generate the Address Original Country field
 def generate_address_original_country_field(num_records, priority_item = 'US', weight_us = 10, weight_oth = 1):
-      dict_list = []
-      
+      dict_list = [] 
       for _ in range(num_records):
             dict_list.append(gtsf.generate_random_unique_weighted_list(country_abbreviations, priority_item, weight_us, weight_oth))
       return dict_list

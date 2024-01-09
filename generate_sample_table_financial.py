@@ -9,8 +9,15 @@ import generate_tables_support_functions as gtsf
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-dict_finance_types = {
-
+finance_dict_desc = {
+      'Rent' : ['Rent payment'],
+      'Office' : ['Office supplies', 'Office furniture', 'Office Repair'],
+      'Utilities' : ['Electricity bill', 'Internet bill', 'Water Bill'],
+      'Software' : ['Coding Software', 'Document Software', 'Data Software', 'Media Software'],
+      'Travel' : ['Travel reimbursement'],
+      'Marketing' : ['Advertising campaign', 'Annual advertising'],
+      'Employee' : ['Employee salaries', 'Contract Payment', 'Bonus'],
+      'Other Expenses' : ['Shipping', 'Repairs']
 }
 
 #----------------------------------------------------------------------------------
@@ -56,10 +63,26 @@ def generate_random_financial_date_field(num_records, min_date = datetime(2010,1
             dict_list.append(gtsf.generate_date(min_date, max_date))
       return dict_list
 
-# Generate the Financial Description field
-
+# Generate the Financial Description fields
+def generate_random_financial_desc_fields(num_records):
+      dict_list_cat = []
+      dict_list_desc = []
+      temp_list_cat = list(finance_dict_desc.keys())
+      for _ in range(num_records):
+            temp_random_cat = random.choice(temp_list_cat)
+            dict_list_cat.append(temp_random_cat)
+            dict_list_desc.append(random.choice(finance_dict_desc[temp_random_cat]))
+      return dict_list_cat, dict_list_desc
 
 # Generate the Financial Amount field
+def generate_random_financial_ammount_field(num_records, financial_cat_list, min_emp = 50000, max_emp = 150000, min_oth = 100, max_oth = 10000):
+      dict_list = []
+      for x in range(num_records):
+            if financial_cat_list[x] == "Employee":
+                  dict_list.append(random.randint(min_emp, max_emp))
+            else:
+                  dict_list.append(random.randint(min_oth, max_oth))
+      return dict_list
 
 # Generate the Financial Account Type field
 
@@ -83,8 +106,18 @@ def generate_random_financial_date_field(num_records, min_date = datetime(2010,1
 
 # Generate the Financial Comments field
 
-
-
+def temp(num_records, min_emp = 50000, max_emp = 150000, min_oth = 100, max_oth = 10000):
+      dict_list_cat = []
+      dict_list_desc = []
+      temp_list_cat = list(finance_dict_desc.keys())
+      for _ in range(num_records):
+            temp_random_cat = random.choice(temp_list_cat)
+            dict_list_cat.append(temp_random_cat)
+            if temp_list_cat == 'Employee':
+                  dict_list_desc.append(random.randint(min_emp, max_emp))
+            else:
+                  dict_list_desc.append(random.randint(min_oth, max_oth))
+      return dict_list_cat, dict_list_desc
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -96,9 +129,8 @@ def generate_table_finance_build(dict, num_records):
       dict['Finance Account'] = generate_finance_account_field(num_records)
       dict['Transaction ID'] = generate_finance_trans_id_field(num_records)
       dict['Financial Date'] = generate_random_financial_date_field(num_records)
-      #dict['Description'] = DIV or INT
-      #dict['Amount Type'] =
-      #dict['Category'] =
+      dict['Category'], dict['Description'] = generate_random_financial_desc_fields(num_records)
+      dict['Amount Type'] = generate_random_financial_ammount_field(num_records, dict['Category'])
       #dict['Client Name'] =
       #dict['Payment Method'] =
       #dict['Currency'] =
@@ -119,6 +151,6 @@ def generate_table_finance(min_rand_record_lim = 1, max_rand_record_lim = 100000
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
 
-finance_df = pd.DataFrame(generate_table_finance(1,10))
+finance_df = pd.DataFrame(generate_table_finance(1,100))
 finance_df.to_csv("data archive/finance data.csv", index=False)
 print(finance_df)
