@@ -31,6 +31,10 @@ finance_list_payment_method = [
 finance_list_cur = [
       'USD', 'EUR', 'JPY', 'GBP', 'AUD', 'CAD', 'CHF', 'CNY', 'SEK', 'NZD'
 ]
+
+finance_list_approval_status = [
+      'Approved', 'Rejected', 'Pending'
+]
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Financial Functions for Generator               ---------- 
@@ -120,8 +124,21 @@ def generate_finance_currency_field(num_records, priority_item = 'USD', weight_u
 # Generate the Financial Reference Number field
 
 # Generate the Financial Budget Code field
+def generate_finance_budget_code_field(num_records, min_dig_id = 1, max_dig_id = 100000):
+      dict_list = []
+      for _ in range(num_records):
+            temp_dig_id = str(random.randint(min_dig_id,max_dig_id))
+            zero_count = len(str(max_dig_id))-len(temp_dig_id)
+            dict_list.append("B" + "0"*zero_count + temp_dig_id)
+      return dict_list
 
 # Generate the Financial Approval Status field
+def generate_finance_approval_status_field(num_records, weight_a = 10, weight_r = 1, weight_p = 1):
+      dict_list = []
+      weight_list = [weight_a, weight_r, weight_p]
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_random_weighted_string_list(finance_list_approval_status,weight_list))
+      return dict_list
 
 # Generate the Financial Comments field
 
@@ -144,8 +161,8 @@ def generate_table_finance_build(dict, num_records):
       #dict['Balance'] = 
       #dict['Tax Amount'] =
       #dict['Reference Number'] = 
-      #dict['Budget Code'] = 
-      #dict['Approval Status'] =
+      dict['Budget Code'] = generate_finance_budget_code_field(num_records)
+      dict['Approval Status'] = generate_finance_approval_status_field(num_records)
       #dict['Comments'] =
       return dict
 
