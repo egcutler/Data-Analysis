@@ -125,10 +125,11 @@ def generate_finance_currency_field(num_records, priority_item = 'USD', weight_u
       return dict_list
 
 # Generate the Financial Balance field
-
-# Generate the Financial Tax Amount field
-
-# Generate the Financial Reference Number field
+def generate_finance_budget_field(num_records, min_budg = 1000, max_budg = 100000):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(random.randint(min_budg, max_budg))
+      return dict_list
 
 # Generate the Financial Budget Code field
 def generate_finance_budget_code_field(num_records, min_dig_id = 1, max_dig_id = 100000):
@@ -137,6 +138,15 @@ def generate_finance_budget_code_field(num_records, min_dig_id = 1, max_dig_id =
             temp_dig_id = str(random.randint(min_dig_id,max_dig_id))
             zero_count = len(str(max_dig_id))-len(temp_dig_id)
             dict_list.append("B" + "0"*zero_count + temp_dig_id)
+      return dict_list
+
+# Generate the Financial Reference Number field
+def generate_finance_reference_number_field(num_records, min_dig_id = 1, max_dig_id = 100000):
+      dict_list = []
+      for _ in range(num_records):
+            temp_dig_id = str(random.randint(min_dig_id,max_dig_id))
+            zero_count = len(str(max_dig_id))-len(temp_dig_id)
+            dict_list.append("R" + "0"*zero_count + temp_dig_id)
       return dict_list
 
 # Generate the Financial Approval Status field
@@ -165,11 +175,10 @@ def generate_table_finance_build(dict, num_records):
       #dict['Client Name'] =
       dict['Payment Method'] = generate_finance_payment_method_field(num_records)
       dict['Currency'] = generate_finance_currency_field(num_records)
-      #dict['Balance'] = 
-      #dict['Tax Amount'] =
-      #dict['Reference Number'] = 
+      dict['Balance'] = generate_finance_budget_field(num_records)
       dict['Budget Code'] = generate_finance_budget_code_field(num_records)
       dict['Approval Status'] = generate_finance_approval_status_field(num_records)
+      dict['Reference Number'] = generate_finance_reference_number_field(num_records)
       #dict['Comments'] =
       return dict
 
