@@ -24,6 +24,13 @@ finance_list_type = [
       'Savings', 'Checking'
 ]
 
+finance_list_payment_method = [
+      
+]
+
+finance_list_cur = [
+      'USD', 'EUR', 'JPY', 'GBP', 'AUD', 'CAD', 'CHF', 'CNY', 'SEK', 'NZD'
+]
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Financial Functions for Generator               ---------- 
@@ -95,13 +102,16 @@ def generate_random_financial_type_field(num_records):
             dict_list.append(random.choice(finance_list_type))
       return dict_list
 
-# Generate the Financial Category field
-
 # Generate the Financial Client field
 
 # Generate the Financial Payment Method field
 
 # Generate the Financial Currency field
+def generate_finance_currency_field(num_records, priority_item = 'USD', weight_usd = 10, weight_oth = 1):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_random_unique_weighted_list(finance_list_cur, priority_item, weight_usd, weight_oth))
+      return dict_list
 
 # Generate the Financial Balance field
 
@@ -130,7 +140,7 @@ def generate_table_finance_build(dict, num_records):
       dict['Amount Type'] = generate_random_financial_type_field(num_records)
       #dict['Client Name'] =
       #dict['Payment Method'] =
-      #dict['Currency'] =
+      dict['Currency'] = generate_finance_currency_field(num_records)
       #dict['Balance'] = 
       #dict['Tax Amount'] =
       #dict['Reference Number'] = 
@@ -148,6 +158,6 @@ def generate_table_finance(min_rand_record_lim = 1, max_rand_record_lim = 100000
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
 
-finance_df = pd.DataFrame(generate_table_finance(1,100))
+finance_df = pd.DataFrame(generate_table_finance(1,1000))
 finance_df.to_csv("data archive/finance data.csv", index=False)
 print(finance_df)

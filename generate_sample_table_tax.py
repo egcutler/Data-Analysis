@@ -134,7 +134,7 @@ def generate_tax_entrycd_field(num_records):
       return dict_list
 
 # Generate the Tax Currency field
-def generate_address_original_country_field(num_records, priority_item = 'USD', weight_usd = 10, weight_oth = 1):
+def generate_tax_currency_field(num_records, priority_item = 'USD', weight_usd = 10, weight_oth = 1):
       dict_list = []
       for _ in range(num_records):
             dict_list.append(gtsf.generate_random_unique_weighted_list(list_cur, priority_item, weight_usd, weight_oth))
@@ -196,7 +196,7 @@ def generate_table_tax_build(dict, num_records):
       dict['Sec ID'] = generate_tax_sec_id_field(num_records)
       dict['CUSIP'] = generate_tax_cusip_field(num_records)
       dict['Entry CD'] = generate_tax_entrycd_field(num_records)
-      dict['Currency'] = generate_address_original_country_field(num_records)
+      dict['Currency'] = generate_tax_currency_field(num_records)
       dict['Net Amount'] = generate_tax_net_amount_field(num_records)
       dict['Withholding Amount'] = generate_tax_withholding_amount_field(num_records)
       dict['Credit and Debit'] = generate_tax_debit_and_credit_field(num_records)
