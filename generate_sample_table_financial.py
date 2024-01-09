@@ -9,6 +9,7 @@ import generate_tables_support_functions as gtsf
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
+# Finance description dictionary for random generator
 finance_dict_desc = {
       'Rent' : ['Rent payment'],
       'Office' : ['Office supplies', 'Office furniture', 'Office Repair'],
@@ -20,23 +21,50 @@ finance_dict_desc = {
       'Other Expenses' : ['Shipping', 'Repairs']
 }
 
+# Finance account type list for random generator
 finance_list_type = [
       'Savings', 'Checking'
 ]
 
+# Finance payment method list for random generator
 finance_list_payment_method = [
       'Bank transfer', 'Credit card', 'Bank transfer', 'Credit card', 
       'PayPal', 'Cash', 'Bank transfer', 'Credit card', 'Bank transfer', 
       'Bank transfer'
 ]
 
+# Finance currency list for random generator
 finance_list_cur = [
       'USD', 'EUR', 'JPY', 'GBP', 'AUD', 'CAD', 'CHF', 'CNY', 'SEK', 'NZD'
 ]
 
+# Finance status list for random generator
 finance_list_approval_status = [
       'Approved', 'Rejected', 'Pending'
 ]
+
+# Finance client name 3 list for random generator
+adjectives = [
+    "Acme", "Apex", "Global", "Infinite", "Dynamic", "Epic", "Swift", "Mega", 
+    "Prime", "Tech", "Fusion", "Alpha", "Omega", "Brilliant", "Vibrant", 
+    "Ultimate", "Superior", "Elite", "Innovative", "Creative", "Excellent", 
+    "Proactive", "Strategic", "Diverse", "Flexible", "Pioneer", "Visionary"
+]
+nouns = [
+    "Solutions", "Systems", "Enterprises", "Innovations", "Industries", 
+    "Services", "Technologies", "Ventures", "Group", "Labs", "Corp", "Co", 
+    "Networks", "Enterprises", "Enterprises", "Consulting", "Solutions", 
+    "Dynamics", "Solutions", "Solutions", "Technologies", "Group", "Innovations", 
+    "Enterprises", "Enterprises", "Enterprises", "Consulting"
+]
+keywords = [
+    "Advanced", "Digital", "Tech", "Innovative", "Global", "Sustainable", 
+    "Creative", "Power", "Future", "Precision", "First", "Smart", "Synergy", 
+    "Synergistic", "Strategic", "Revolutionary", "Cutting-Edge", "Dynamic", 
+    "Dynamic", "Ingenious", "Transformative", "Inspire", "Inspiration", "Progressive", 
+    "Evolve", "Evolution", "Impactful", "Forward", "Strive", "Strive", "Vision", "Visionary"
+]
+
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Financial Functions for Generator               ---------- 
@@ -109,6 +137,14 @@ def generate_random_financial_type_field(num_records):
       return dict_list
 
 # Generate the Financial Client field
+def generate_random_financial_client_name_field(num_records):
+      dict_list = []
+      for _ in range(num_records):
+            adjective = random.choice(adjectives)
+            noun = random.choice(nouns)
+            keyword = random.choice(keywords)
+            dict_list.append(f"{adjective} {keyword} {noun}")
+      return dict_list
 
 # Generate the Financial Payment Method field
 def generate_finance_payment_method_field(num_records):
@@ -172,7 +208,7 @@ def generate_table_finance_build(dict, num_records):
       dict['Category'], dict['Description'] = generate_random_financial_desc_fields(num_records)
       dict['Amount'] = generate_random_financial_ammount_field(num_records, dict['Category'])
       dict['Amount Type'] = generate_random_financial_type_field(num_records)
-      #dict['Client Name'] =
+      dict['Client Name'] = generate_random_financial_client_name_field(num_records)
       dict['Payment Method'] = generate_finance_payment_method_field(num_records)
       dict['Currency'] = generate_finance_currency_field(num_records)
       dict['Balance'] = generate_finance_budget_field(num_records)
