@@ -44,25 +44,40 @@ finance_list_approval_status = [
 ]
 
 # Finance client name 3 list for random generator
-adjectives = [
+finance_list_name_adjectives = [
     "Acme", "Apex", "Global", "Infinite", "Dynamic", "Epic", "Swift", "Mega", 
     "Prime", "Tech", "Fusion", "Alpha", "Omega", "Brilliant", "Vibrant", 
     "Ultimate", "Superior", "Elite", "Innovative", "Creative", "Excellent", 
     "Proactive", "Strategic", "Diverse", "Flexible", "Pioneer", "Visionary"
 ]
-nouns = [
+finance_list_name_nouns = [
     "Solutions", "Systems", "Enterprises", "Innovations", "Industries", 
     "Services", "Technologies", "Ventures", "Group", "Labs", "Corp", "Co", 
     "Networks", "Enterprises", "Enterprises", "Consulting", "Solutions", 
     "Dynamics", "Solutions", "Solutions", "Technologies", "Group", "Innovations", 
     "Enterprises", "Enterprises", "Enterprises", "Consulting"
 ]
-keywords = [
+finance_list_name_keywords = [
     "Advanced", "Digital", "Tech", "Innovative", "Global", "Sustainable", 
     "Creative", "Power", "Future", "Precision", "First", "Smart", "Synergy", 
     "Synergistic", "Strategic", "Revolutionary", "Cutting-Edge", "Dynamic", 
     "Dynamic", "Ingenious", "Transformative", "Inspire", "Inspiration", "Progressive", 
     "Evolve", "Evolution", "Impactful", "Forward", "Strive", "Strive", "Vision", "Visionary"
+]
+
+# Finance comments list for random generator
+finance_comment_list = [
+    'Monthly rent, For office stationery', 'Monthly bill, Business dinner', 
+    'Annual subscription', 'Team travel expense', 'Online ads, New chairs & desks', 
+    'Monthly internet', 'Monthly payroll processing', 'Quarterly tax payments',
+    'Annual software licensing fees', 'Office renovation costs', 
+    'Client entertainment expenses', 'Employee training and development', 
+    'Insurance premiums, Monthly cleaning services', 'Marketing campaign expenses',
+    'Technology upgrades, Hardware purchases', 'Legal consultation fees',
+    'Utilities and maintenance', 'Conference and event sponsorships',
+    'Employee health and wellness programs', 'Transportation and logistics costs',
+    'Research and development investments', 'Charitable donations and sponsorships',
+    'Security services, Emergency funds allocation'
 ]
 
 #----------------------------------------------------------------------------------
@@ -140,9 +155,9 @@ def generate_random_financial_type_field(num_records):
 def generate_random_financial_client_name_field(num_records):
       dict_list = []
       for _ in range(num_records):
-            adjective = random.choice(adjectives)
-            noun = random.choice(nouns)
-            keyword = random.choice(keywords)
+            adjective = random.choice(finance_list_name_adjectives)
+            noun = random.choice(finance_list_name_nouns)
+            keyword = random.choice(finance_list_name_keywords)
             dict_list.append(f"{adjective} {keyword} {noun}")
       return dict_list
 
@@ -194,6 +209,11 @@ def generate_finance_approval_status_field(num_records, weight_a = 10, weight_r 
       return dict_list
 
 # Generate the Financial Comments field
+def generate_finance_comment_field(num_records):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(random.choice(finance_comment_list))
+      return dict_list
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -215,7 +235,7 @@ def generate_table_finance_build(dict, num_records):
       dict['Budget Code'] = generate_finance_budget_code_field(num_records)
       dict['Approval Status'] = generate_finance_approval_status_field(num_records)
       dict['Reference Number'] = generate_finance_reference_number_field(num_records)
-      #dict['Comments'] =
+      dict['Comments'] = generate_finance_comment_field(num_records)
       return dict
 
 def generate_table_finance(min_rand_record_lim = 1, max_rand_record_lim = 100000):
