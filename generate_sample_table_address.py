@@ -9,7 +9,7 @@ import generate_tables_support_functions as gtsf
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-# Address Components
+# Address (street line, city, state and country) Components for random generator
 street_names = [
     "Maple", "Oak", "Pine", "Cedar", "Elm", "Willow", "Peach", "Cherry", 
     "Magnolia", "Walnut", "Poplar", "Aspen", "Birch", "Spruce", "Hickory",
@@ -32,7 +32,9 @@ states = [
     "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
 ]
 
-country_abbreviations = ['US', 'UK', 'CAN', 'AUS', 'GER', 'FRA', 'JPN', 'CHN', 'RUS', 'BRA', 'IND']
+country_abbreviations = [
+      'US', 'UK', 'CAN', 'AUS', 'GER', 'FRA', 'JPN', 'CHN', 'RUS', 'BRA', 'IND'
+]
 
 
 #----------------------------------------------------------------------------------
@@ -94,17 +96,15 @@ def generate_address_registered_country_field(num_records):
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-# ---
+# Function to run each field to build the address table
 def generate_table_address_build(dict, num_records):  
-      
       dict['Address ID'] = generate_address_account_field(num_records)
       dict['Address Street'], dict['City'], dict['State'], dict['Zip Code'] = generate_address_fields(num_records)
       dict['Registered Country'] = generate_address_registered_country_field(num_records)
       dict['Original Country'] = generate_address_original_country_field(num_records, weight_us=20)
-      
       return dict
 
-# ---
+# Main function to run the address table generator
 def generate_table_address(min_rand_record_lim = 1, max_rand_record_lim = 100000):
       addr_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       addr_data = gtsf.table_generate_id_records(addr_num_records)

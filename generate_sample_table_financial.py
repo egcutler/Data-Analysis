@@ -1,6 +1,5 @@
-import pandas as pd
 import random
-from datetime import datetime, timedelta
+from datetime import datetime
 import generate_tables_support_functions as gtsf
 
 #----------------------------------------------------------------------------------
@@ -221,6 +220,7 @@ def generate_finance_comment_field(num_records):
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
+# Function to run each field to build the finance table
 def generate_table_finance_build(dict, num_records):  
       dict['Finance Account'] = generate_finance_account_field(num_records)
       dict['Transaction ID'] = generate_finance_trans_id_field(num_records)
@@ -238,6 +238,7 @@ def generate_table_finance_build(dict, num_records):
       dict['Comments'] = generate_finance_comment_field(num_records)
       return dict
 
+# Main function to run the finance table generator
 def generate_table_finance(min_rand_record_lim = 1, max_rand_record_lim = 100000):
       finance_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       finance_data = gtsf.table_generate_id_records(finance_num_records)
@@ -246,7 +247,3 @@ def generate_table_finance(min_rand_record_lim = 1, max_rand_record_lim = 100000
 
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
-
-finance_df = pd.DataFrame(generate_table_finance(1,1000))
-finance_df.to_csv("data archive/finance data.csv", index=False)
-print(finance_df)

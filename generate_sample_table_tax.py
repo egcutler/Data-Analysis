@@ -9,6 +9,7 @@ import generate_tables_support_functions as gtsf
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
+# Tax type dictionary for random generator
 dict_tax_types = {
       'ADJ' : 'Adjustment',
       'BEN/BENF' : 'Benefit(s)',
@@ -68,15 +69,19 @@ dict_tax_types = {
       'ADMIN' : 'Administrative'
 }
 
+# Tax entry cd list for random generator
 list_entrycd = [
       'DIV', 'INT'
 ]
 
+# Tax currency list for random generator
 list_cur = [
       'USD', 'EUR', 'JPY', 'GBP', 'AUD', 'CAD', 'CHF', 'CNY', 'SEK', 'NZD'
 ]
 
+# Tax debit and credit list for random generator
 list_debit_and_credit = ['Debit','Credit']
+
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Tax Functions for Generator                     ---------- 
@@ -191,6 +196,7 @@ def generate_tax_trans_date_field(num_records, min_date = datetime(2010,1,1), ma
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
+# Function to run each field to build the tax table
 def generate_table_tax_build(dict, num_records):  
       dict['Tax Account'] = generate_tax_account_field(num_records)
       dict['Sec ID'] = generate_tax_sec_id_field(num_records)
@@ -205,6 +211,7 @@ def generate_table_tax_build(dict, num_records):
       dict['Transaction Date'] = generate_tax_trans_date_field(num_records)
       return dict
 
+# Main function to run the tax table generator
 def generate_table_tax(min_rand_record_lim = 1, max_rand_record_lim = 100000):
       tax_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       tax_data = gtsf.table_generate_id_records(tax_num_records)

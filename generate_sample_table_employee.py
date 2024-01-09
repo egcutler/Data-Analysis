@@ -9,18 +9,20 @@ import generate_tables_support_functions as gtsf
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-# Expanded lists of first and last names
+# Employee first name list for random generator
 first_names = ["John", "Jane", "Alex", "Emily", "David", "Sarah", "Michael", "Olivia", 
                "Daniel", "Emma", "Chris", "Anna", "James", "Sophia", "Robert", "Isabella", 
                "William", "Mia", "Joseph", "Amelia", "Richard", "Evelyn", "Charles", 
                "Abigail", "Thomas", "Harper", "Mary", "Ethan", "Jessica", "Benjamin"]
 
+# Employee last name list for random generator
 last_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis", 
               "Garcia", "Rodriguez", "Wilson", "Martinez", "Anderson", "Taylor", 
               "Thomas", "Hernandez", "Moore", "Martin", "Jackson", "Thompson", "White",
               "Lopez", "Lee", "Gonzalez", "Harris", "Clark", "Lewis", "Robinson", 
               "Walker", "Perez", "Hall"]
 
+# Employee job dictionary for random generator
 dict_jobs = {
       'Business Analyst' : ['Operations Manager', 'Project Manager'],
       'Data Engineer' : ['Operations Manager', 'Project Manager', 'Engineer Manager'],
@@ -50,6 +52,7 @@ dict_jobs = {
 #----------              Employee Functions for Generator                ---------- 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
+
 # Generate the Employee ID field
 def generate_emp_id_field(num_records, len_id_char = 7):
       dict_list = []
@@ -167,6 +170,7 @@ def generate_emp_security_clearance_field(num_records, min = 1, max = 5):
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
+# Function to run each field to build the employee table
 def generate_table_employee_build(dict, num_records):  
       dict['Employee ID'] = generate_emp_id_field(num_records)
       dict['Emp First Name'] = generate_emp_first_name_field(num_records)
@@ -181,6 +185,7 @@ def generate_table_employee_build(dict, num_records):
       dict['Security Clearance'] = generate_emp_security_clearance_field(num_records)
       return dict
 
+# Main function to run the employee table generator
 def generate_table_employee(min_rand_record_lim = 1, max_rand_record_lim = 100000):
       emp_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       emp_data = gtsf.table_generate_id_records(emp_num_records)

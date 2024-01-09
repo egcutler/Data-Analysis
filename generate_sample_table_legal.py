@@ -11,7 +11,7 @@ import generate_tables_support_functions as gtsf
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-# Generate the Legal ID Field
+# Generate the Legal ID field
 def generate_legal_account_field(num_records, len_id_char = 8):
       dict_list = []
       if type(len_id_char) == str:
@@ -29,12 +29,14 @@ def generate_legal_account_field(num_records, len_id_char = 8):
             dict_list.append(random.randint(min, max))
       return dict_list
 
+# Generate the Legal firm field
 def generate_legal_firm_field(num_records):
       dict_list = []
       for _ in range(num_records):
             dict_list.append(gtsf.generate_legal_firm_name())
       return dict_list
 
+# Generate the Legal type and definition fields
 def generate_legal_type_and_def_field(num_records):
       dict_list_type = []
       dict_list_def = []
@@ -203,6 +205,7 @@ def generate_legal_tefra_id_field(num_records, len_id_char = 7):
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
+# Function to run each field to build the legal table
 def generate_table_legal_build(dict, num_records):
       dict['Legal Account'] = generate_legal_account_field(num_records, 8)
       dict['Legal Firm'] = generate_legal_firm_field(num_records)
@@ -221,7 +224,7 @@ def generate_table_legal_build(dict, num_records):
       dict['TEFRA ID'] = generate_legal_tefra_id_field(num_records)
       return dict
 
-      
+# Main function to run the legal table generator  
 def generate_table_legal(min_rand_record_lim = 1, max_rand_record_lim = 100000):
       le_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       le_data = gtsf.table_generate_id_records(le_num_records)
