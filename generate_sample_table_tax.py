@@ -213,7 +213,3 @@ def generate_table_tax(min_rand_record_lim = 1, max_rand_record_lim = 100000):
 
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
-
-tax_df = pd.DataFrame(generate_table_tax(1,100))
-tax_df.to_csv("data archive/tax data.csv", index=False)
-print(tax_df)
