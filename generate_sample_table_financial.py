@@ -25,7 +25,9 @@ finance_list_type = [
 ]
 
 finance_list_payment_method = [
-      
+      'Bank transfer', 'Credit card', 'Bank transfer', 'Credit card', 
+      'PayPal', 'Cash', 'Bank transfer', 'Credit card', 'Bank transfer', 
+      'Bank transfer'
 ]
 
 finance_list_cur = [
@@ -109,6 +111,11 @@ def generate_random_financial_type_field(num_records):
 # Generate the Financial Client field
 
 # Generate the Financial Payment Method field
+def generate_finance_payment_method_field(num_records):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(random.choice(finance_list_payment_method))
+      return dict_list
 
 # Generate the Financial Currency field
 def generate_finance_currency_field(num_records, priority_item = 'USD', weight_usd = 10, weight_oth = 1):
@@ -156,7 +163,7 @@ def generate_table_finance_build(dict, num_records):
       dict['Amount'] = generate_random_financial_ammount_field(num_records, dict['Category'])
       dict['Amount Type'] = generate_random_financial_type_field(num_records)
       #dict['Client Name'] =
-      #dict['Payment Method'] =
+      dict['Payment Method'] = generate_finance_payment_method_field(num_records)
       dict['Currency'] = generate_finance_currency_field(num_records)
       #dict['Balance'] = 
       #dict['Tax Amount'] =
