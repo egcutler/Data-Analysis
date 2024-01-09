@@ -224,7 +224,9 @@ def generate_finance_comment_field(num_records):
 def generate_table_finance_build(dict, num_records):  
       dict['Finance Account'] = generate_finance_account_field(num_records)
       dict['Transaction ID'] = generate_finance_trans_id_field(num_records)
+      # - - - Date Format: YYYYMMDD - - -
       dict['Financial Date'] = generate_random_financial_date_field(num_records)
+      # - - - - - - - - - - - - - - - - -
       dict['Category'], dict['Description'] = generate_random_financial_desc_fields(num_records)
       dict['Amount'] = generate_random_financial_ammount_field(num_records, dict['Category'])
       dict['Amount Type'] = generate_random_financial_type_field(num_records)

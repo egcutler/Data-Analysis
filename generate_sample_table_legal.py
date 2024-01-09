@@ -4,6 +4,48 @@ import string
 from datetime import datetime, timedelta
 import generate_tables_support_functions as gtsf
 
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+#----------              Legal List for Support Functions                 ---------
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+
+# Legal surname list for random generator
+legal_list_surnames = [
+    "Anderson", "Baker", "Carter", "Davis", "Evans", "Fisher", "Garcia", 
+    "Harris", "Jackson", "King", "Lewis", "Martin", "Nelson", "Owens", 
+    "Parker", "Quinn", "Roberts", "Smith", "Taylor", "Underwood", "Vasquez", 
+    "Williams", "Young", "Zimmerman"
+]
+
+# Legal term list for random generator
+legal_list_terms = [
+    "Legal", "Law", "Justice", "Advocates", "Solicitors", "Counsel", 
+    "Barristers", "Attorneys", "Partners", "Associates", "Consultants", 
+    "Advisors", "Counselors", "Litigators", "Defenders", "Prosecutors"
+]
+
+# Legal type dictionary for random generator
+dict_leg_type = {
+      'BANK' : 'Bank Division',
+      'CREDIT' : 'Credit Account',
+      'TRADR' : 'Trader credential account',
+      'AFFRS' : 'Affairs',
+      'AFF' : 'Available Funds File',
+      'CORP' : 'Corporation Division',
+      'AG' : 'Agriculture',
+      'ADVIS' : 'Legal Advisor',
+      'BENE' : 'Beneficiary credentail for investment',
+      'AGENT' : 'An agent bank acts as a bank performing some \
+specific duties on behalf of another party',
+      'GUNTE' : 'The bank guarantee means that the lender will \
+ensure that the liabilities of a debtor will be met. In other \
+words, if the debtor fails to settle a debt, the bank will cover it',
+      'TTEE' : 'In the case of the certificate of deposit, the \
+trustee is most likely someone charged with taking care of the \
+money until the person it is intended for comes of an age to receive it',
+      'AFD' : 'Allowance For Depreciation'
+}
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -33,7 +75,7 @@ def generate_legal_account_field(num_records, len_id_char = 8):
 def generate_legal_firm_field(num_records):
       dict_list = []
       for _ in range(num_records):
-            dict_list.append(gtsf.generate_legal_firm_name())
+            dict_list.append(gtsf.generate_legal_firm_name(legal_list_surnames, legal_list_terms))
       return dict_list
 
 # Generate the Legal type and definition fields
@@ -41,7 +83,7 @@ def generate_legal_type_and_def_field(num_records):
       dict_list_type = []
       dict_list_def = []
       for _ in range(num_records):
-            le_type, le_type_def = gtsf.generate_legal_type_and_def()
+            le_type, le_type_def = gtsf.generate_legal_type_and_def(dict_leg_type)
             dict_list_type.append(le_type)
             dict_list_def.append(le_type_def)
       return dict_list_type, dict_list_def
@@ -211,10 +253,11 @@ def generate_table_legal_build(dict, num_records):
       dict['Legal Firm'] = generate_legal_firm_field(num_records)
       dict['Legal Type'], dict['Legal Type Def'] = generate_legal_type_and_def_field(num_records)
       dict['Legal Status'] = generate_legal_status_field(num_records)
-      # Date Format: YYYYMMDD
+      # - - - Date Format: YYYYMMDD - - -
       dict['LE Creation Date'] = generate_legal_creation_date_field(num_records)
       dict['LE Modified Date'] = generate_legal_modified_date_field(num_records, dict['LE Creation Date'])
       dict['LE Closed Date'] = generate_legal_closed_date_field(num_records, dict['Legal Status'], dict['LE Modified Date'])
+      # - - - - - - - - - - - - - - - - -
       dict['Legal Tax Category'] = generate_legal_tax_cat_field(num_records)
       dict['IRS TIN ID'] = generate_legal_irs_tin_id_field(num_records)
       dict['MPID'] = generate_legal_mpid_field(num_records, 6)

@@ -208,7 +208,9 @@ def generate_table_tax_build(dict, num_records):
       dict['Credit and Debit'] = generate_tax_debit_and_credit_field(num_records)
       dict['Tax Type'] = generate_tax_type_field(num_records)
       dict['Tax Type Definition'] = generate_tax_type_desc_field(num_records, dict['Tax Type'])
+      # - - - Date Format: YYYYMMDD - - -
       dict['Transaction Date'] = generate_tax_trans_date_field(num_records)
+      # - - - - - - - - - - - - - - - - -
       return dict
 
 # Main function to run the tax table generator

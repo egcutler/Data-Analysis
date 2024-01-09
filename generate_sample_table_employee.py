@@ -179,7 +179,9 @@ def generate_table_employee_build(dict, num_records):
       dict['Job Title'] = generate_emp_job_title_field(num_records)
       dict['Employee Email'] = generate_emp_email_field(num_records, dict['Emp First Name'], dict['Emp Last Name'])
       dict['Employee Status'] = generate_emp_status_field(num_records)
+      # - - - Date Format: YYYYMMDD - - -
       dict['Hire Date'] = generate_emp_hire_date_field(num_records)
+      # - - - - - - - - - - - - - - - - -
       dict['Termination Date'] = generate_emp_termination_field(num_records, dict['Employee Status'], dict['Hire Date'])
       dict['Manager First Name'], dict['Manager Last Name'], dict['Manager Position'] = generate_emp_manager_fields(num_records, dict['Emp First Name'], dict['Emp Last Name'], dict['Job Title'])
       dict['Security Clearance'] = generate_emp_security_clearance_field(num_records)

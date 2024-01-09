@@ -3,6 +3,33 @@ import random
 from datetime import datetime, timedelta
 import generate_tables_support_functions as gtsf
 
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+#----------              Business List for Support Functions              ---------
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+
+# Business names (adjectives, nouns and keywords) list for random generator
+bus_list_adjectives = [
+    "Acme", "Apex", "Global", "Infinite", "Dynamic", "Epic", "Swift", "Mega", 
+    "Prime", "Tech", "Fusion", "Alpha", "Omega", "Brilliant", "Vibrant", 
+    "Ultimate", "Superior", "Elite", "Innovative", "Creative", "Excellent", 
+    "Proactive", "Strategic", "Diverse", "Flexible", "Pioneer", "Visionary"
+]
+bus_list_nouns = [
+    "Solutions", "Systems", "Enterprises", "Innovations", "Industries", 
+    "Services", "Technologies", "Ventures", "Group", "Labs", "Corp", "Co", 
+    "Networks", "Enterprises", "Enterprises", "Consulting", "Solutions", 
+    "Dynamics", "Solutions", "Solutions", "Technologies", "Group", "Innovations", 
+    "Enterprises", "Enterprises", "Enterprises", "Consulting"
+]
+bus_list_keywords = [
+    "Advanced", "Digital", "Tech", "Innovative", "Global", "Sustainable", 
+    "Creative", "Power", "Future", "Precision", "First", "Smart", "Synergy", 
+    "Synergistic", "Strategic", "Revolutionary", "Cutting-Edge", "Dynamic", 
+    "Dynamic", "Ingenious", "Transformative", "Inspire", "Inspiration", "Progressive", 
+    "Evolve", "Evolution", "Impactful", "Forward", "Strive", "Strive", "Vision", "Visionary"
+]
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -44,7 +71,10 @@ def generate_random_status_field(num_records, weightAct = 60, weightCls = 10, we
 def generate_random_company_name_field(num_records):
       dict_list = []
       for _ in range(num_records):
-            dict_list.append(gtsf.generate_company_name())
+            adjective = random.choice(bus_list_adjectives)
+            noun = random.choice(bus_list_nouns)
+            keyword = random.choice(bus_list_keywords)
+            dict_list.append(f"{adjective} {keyword} {noun}")
       return dict_list
 
 # Generate the Business Account Type field
@@ -110,6 +140,7 @@ def generate_random_system_cat_field(num_records, min_cat = 0, max_cat = 5):
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
+# Function to run each field to build the business table
 def generate_table_business_build(dict, num_records):  
       dict_list_id = dict['ID_Record']
       dict['Account'] = generate_account_field(dict_list_id, num_records)
@@ -118,17 +149,17 @@ def generate_table_business_build(dict, num_records):
       dict['Business Status'] = generate_random_status_field(num_records)
       dict['Company Name'] = generate_random_company_name_field(num_records)
       dict['Account Type'] = generate_random_account_type_field(num_records,9)
-      # Date Format: YYYYMMDD
+      # - - - Date Format: YYYYMMDD - - -
       dict['Creation Date'] = generate_random_creation_date_field(num_records)
       dict['Modified Date'] = generate_random_modified_date_field(num_records, dict['Creation Date'])
       dict['Closed Date'] = generate_random_closed_date_field(num_records, dict['Business Status'], dict['Modified Date'])
-      # - - - - - - - - - - -
+      # - - - - - - - - - - - - - - - - -
       dict['Business TAG'] = generate_random_tag_field(num_records,3)
       dict['Security Category'] = generate_random_system_cat_field(num_records)
       return dict
 
 
-
+# Main function to run the business table generator
 def generate_table_business(min_rand_record_lim = 1, max_rand_record_lim = 100000):
       bus_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       bus_data = gtsf.table_generate_id_records(bus_num_records)
