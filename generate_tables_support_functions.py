@@ -82,6 +82,24 @@ def generate_phone_number():
       digit = str(random.randint(1,9))
       return digit*10
 
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+#----------              Log Functions for Generator                     ---------- 
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+
+# Function to generate a random log IP Address
+def generate_log_ip_address():
+    random_ip = ".".join(str(random.randint(0, 255)) for _ in range(4))
+    return random_ip
+
+def generate_log_hostname():
+    chars = string.ascii_lowercase + string.digits
+    length = random.randint(7, 15)
+    hostname = ''.join(random.choice(chars) for _ in range(length))
+    hostname += '.com'
+    return hostname
+
 # ---------------------------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------
 # --------------                    Legal Support Fields                                     --------------

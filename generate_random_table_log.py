@@ -12,7 +12,7 @@ import generate_tables_support_functions as gtsf
 # Log Event Type dictionary for random generator
 log_dict_event = {
       "User Activity" : "Logged the user activity",
-      "Server Event" : "Logged the server activity"
+      "Server Event" : "Logged the server activity",
       "Data Change" : "Logged a change in data",
       "File Change" : "Logged a change in a file",
       "System Error" : "Logged a system error",
@@ -152,6 +152,19 @@ def generate_log_userid_field(num_records, min_dig_id = 1, max_dig_id = 100000):
             dict_list.append("U" + "0"*zero_count + temp_dig_id)
       return dict_list
 
+# Generate the Log IP Address Field
+def generate_log_ip_address_field(num_records):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_log_ip_address())
+      return dict_list
+
+# Generate the Log Hostname field
+def generate_log_hostname_field(num_records):
+      dict_list = []
+      for _ in range(num_records):
+            dict_list.append(gtsf.generate_log_hostname())
+      return dict_list
 
 
 #----------------------------------------------------------------------------------
@@ -164,10 +177,14 @@ def generate_table_log_build(dict, num_records):
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
+      dict['IP Address'] = generate_log_ip_address_field(num_records)
+      dict['Hostname'] = generate_log_hostname_field(num_records)
+      
+      
       #dict['Event Type'] =
       #dict['Description'] =
-      #dict['IP Address'] =
-      #dict['Hostname']
+
+
       #dict['Severity Level'] =
       #dict['Status'] =
       #dict['Reference ID'] =

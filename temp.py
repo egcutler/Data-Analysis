@@ -1,11 +1,10 @@
-def prioritize_us(item):
-    # Assign highest priority to 'US'
-    return (item != 'US', item)
+import random
 
-# Example list
-country_list = ['USA', 'UK', 'CAN', 'AUS', 'GER', 'FRA', 'JPN', 'CHN', 'RUS', 'BRA', 'IND', 'US']
+def generate_random_ip():
+    # Generate four random numbers in the range 0-255
+    random_ip = ".".join(str(random.randint(0, 255)) for _ in range(4))
+    return random_ip
 
-# Sorting the list with 'US' as the first element if it exists
-country_list.sort(key=prioritize_us)
-
-print(country_list)
+# Generate and print a random IP address
+random_ip_address = generate_random_ip()
+print(random_ip_address)
