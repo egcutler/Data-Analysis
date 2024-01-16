@@ -309,7 +309,7 @@ def generate_log_filechange_fields(num_records):
             list_old.append("--Old value--")
       return dict_list_event, dict_list_desc, list_old, list_new
 
-# Generate the Log File Change Fields
+# Generate the Log Security Fields
 def generate_log_security_fields(num_records):
       dict_list_event = []
       dict_list_desc = []
@@ -319,7 +319,40 @@ def generate_log_security_fields(num_records):
             dict_list_event.append(temp_key)
             dict_list_desc.append(log_dict_security[temp_key])
       return dict_list_event, dict_list_desc
+
+# Generate the Log User Web Activity Fields
+def generate_log_user_web_fields(num_records):
+      dict_list_event = []
+      dict_list_desc = []
+      list_u = list(log_dict_user_web.keys())
+      for x in range(num_records):
+            temp_key = random.choice(list_u)
+            dict_list_event.append(temp_key)
+            dict_list_desc.append(log_dict_user_web[temp_key])
+      return dict_list_event, dict_list_desc
+
+# Generate the Log User Server Activity Fields
+def generate_log_user_server_fields(num_records):
+      dict_list_event = []
+      dict_list_desc = []
+      list_u = list(log_dict_user_server.keys())
+      for x in range(num_records):
+            temp_key = random.choice(list_u)
+            dict_list_event.append(temp_key)
+            dict_list_desc.append(log_dict_user_server[temp_key])
+      return dict_list_event, dict_list_desc
             
+# Generate the Log User Account Activity Fields
+def generate_log_user_account_fields(num_records):
+      dict_list_event = []
+      dict_list_desc = []
+      list_u = list(log_dict_user_accout.keys())
+      for x in range(num_records):
+            temp_key = random.choice(list_u)
+            dict_list_event.append(temp_key)
+            dict_list_desc.append(log_dict_user_accout[temp_key])
+      return dict_list_event, dict_list_desc
+                    
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Generate the Log Table                     ---------- 
@@ -380,7 +413,8 @@ def generate_table_log_security(dict, num_records):
       dict['Log Security'], dict['Log Security Description'] = generate_log_security_fields(num_records)
       return dict
 
-def generate_table_log_useractivity(dict, num_records):  
+# Log Table Generator: user web activity
+def generate_table_log_user_web_activity(dict, num_records):  
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -390,6 +424,35 @@ def generate_table_log_useractivity(dict, num_records):
       dict['Status'] = generate_log_status_field(num_records, dict['Log Level'])
       dict['Reference ID'] = generate_log_referenceid_field(num_records)
       dict['Source'] = generate_log_source_field(num_records)
+      dict['Log User Activity'], dict['Log User Description'] = generate_log_user_web_fields(num_records)
+      return dict
+
+# Log Table Generator: user server activity
+def generate_table_log_user_server_activity(dict, num_records):  
+      dict['Log ID'] = generate_log_id_field(num_records)
+      dict['Time Stamp'] = generate_log_timestamp_field(num_records)
+      dict['User ID'] = generate_log_userid_field(num_records)
+      dict['IP Address'] = generate_log_ip_address_field(num_records)
+      dict['Hostname'] = generate_log_hostname_field(num_records)
+      dict['Log Level'] = generate_log_severity_field(num_records)
+      dict['Status'] = generate_log_status_field(num_records, dict['Log Level'])
+      dict['Reference ID'] = generate_log_referenceid_field(num_records)
+      dict['Source'] = generate_log_source_field(num_records)
+      dict['Log User Activity'], dict['Log User Description'] = generate_log_user_server_fields(num_records)
+      return dict
+
+# Log Table Generator: user account activity
+def generate_table_log_user_account_activity(dict, num_records):  
+      dict['Log ID'] = generate_log_id_field(num_records)
+      dict['Time Stamp'] = generate_log_timestamp_field(num_records)
+      dict['User ID'] = generate_log_userid_field(num_records)
+      dict['IP Address'] = generate_log_ip_address_field(num_records)
+      dict['Hostname'] = generate_log_hostname_field(num_records)
+      dict['Log Level'] = generate_log_severity_field(num_records)
+      dict['Status'] = generate_log_status_field(num_records, dict['Log Level'])
+      dict['Reference ID'] = generate_log_referenceid_field(num_records)
+      dict['Source'] = generate_log_source_field(num_records)
+      dict['Log User Activity'], dict['Log User Description'] = generate_log_user_account_fields(num_records)
       return dict
 
 def generate_table_log_error(dict, num_records):  
@@ -407,7 +470,7 @@ def generate_table_log_error(dict, num_records):
 def generate_table_log(min_rand_record_lim = 1, max_rand_record_lim = 1000):
       log_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       log_data = gtsf.table_generate_id_records(log_num_records)
-      log_data = generate_table_log_security(log_data, log_num_records)
+      log_data = generate_table_log_user_account_activity(log_data, log_num_records)
       return log_data
 
 #----------------------------------------------------------------------------------
