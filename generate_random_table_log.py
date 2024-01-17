@@ -1,6 +1,5 @@
-import pandas as pd
 import random
-from datetime import datetime, timedelta
+from datetime import datetime
 import generate_tables_support_functions as gtsf
 
 #----------------------------------------------------------------------------------
@@ -504,16 +503,12 @@ def generate_table_log_error_codes(dict, num_records):
       dict['Log Error Code'], dict['Log Error Code Description'] = generate_log_error_codes_fields(num_records)
       return dict
 
-def generate_table_log(min_rand_record_lim = 1, max_rand_record_lim = 1000):
-      log_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
-      log_data = gtsf.table_generate_id_records(log_num_records)
-      log_data = generate_table_log_error_codes(log_data, log_num_records)
-      return log_data
-
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
 
-# Random Finance Table
-log_df = pd.DataFrame(generate_table_log())
-log_df.to_csv("data archive/log data.csv", index=False)
-print(log_df)
+def generate_table_log(min_rand_record_lim = 1, max_rand_record_lim = 1000):
+      log_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
+      log_data = gtsf.table_generate_id_records(log_num_records)
+      log_data = generate_table_log_datachange(log_data, log_num_records)
+      return log_data
+
