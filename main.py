@@ -7,6 +7,7 @@ import generate_sample_table_employee as gste
 import generate_sample_table_tax as gstt
 import generate_sample_table_financial as gstf
 import generate_random_table_log as grtl
+import data_integrity_support_files as disf
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -79,3 +80,27 @@ log_df8.to_csv("data archive/Log Errors.csv", index=False)
 id_dict_copy = id_dict.copy()
 log_df9 = pd.DataFrame(grtl.generate_table_log_error_codes(id_dict_copy, num_records))
 log_df9.to_csv("data archive/Log Error Codes.csv", index=False)
+
+
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+#----------              File Prechecks                                   ---------
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+
+path = (r'/root/workspace/github.com/egcutler/Data-Analysis/data archive')
+filename = 'business data'
+partial_name = 'business'
+filetype = '.csv'
+field_list = ['Account','Branch','External ID']
+
+precheck_folder = disf.FolderPreCheck(path)
+if precheck_folder.check_files_with_partial_name(partial_name, filetype):
+      precheck_file = disf.FilePreCheck(path, filename, filetype)
+      precheck_file.file_exist_precheck()
+      precheck_file.fields_exist_precheck(field_list)
+      id_lcase_check = precheck_file.check_fields_with_partialname("id")
+      id_ucase_check = precheck_file.check_fields_with_partialname("ID")
+      if id_lcase_check == False and id_ucase_check == False:
+            raise Exception("Programm terminated...no valid ID fields present")
+

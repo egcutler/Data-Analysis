@@ -243,4 +243,5 @@ class FilePreCheck:
                         print("...Field(s) partial name check: Passed")
                         return len(matches) > 0
                   print("...Field(s) partial name check: Failed")
+                  print(f"   Partial Name: {partial_name}")
                   return len(matches) > 0
