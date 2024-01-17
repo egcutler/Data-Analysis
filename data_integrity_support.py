@@ -51,6 +51,53 @@ file_types = {
 # --------------                    -----                                 --------------
 # ---------------------------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------
+class FolderPreCheck:
+      def __init__(self, path):
+            """_summary_
+
+            Args:
+                path (_type_): _description_
+
+            Raises:
+                an: _description_
+                FileNotFoundError: _description_
+                ValueError: _description_
+                ValueError: _description_
+            """
+            self.file_path = Path(path)
+            
+      def search_files_with_partial_name(self, partial_name, file_type):
+            """
+            Check if a file with a partial name exists in the specified path. Return a
+            printed details for True/False conditions.
+            """
+            file_pattern = f"{partial_name}*{file_type}"
+            matching_files = list(self.file_path.glob(file_pattern))
+            if len(matching_files) == 0:
+                  print(f'''
+                  No files found with:
+                  -Pathway: "{self.file_path}"
+                  -Partial Name: "{partial_name}"
+                  ''')
+            else:
+                  print(f'''
+                  {len(matching_files)} files found with: 
+                  -Pathway "{self.file_path}"
+                  -Partial name "{partial_name}"
+                  
+                  Found files:
+                  {matching_files}
+                  ''')
+            
+      def check_files_with_partial_name(self, partial_name, file_type):
+            """
+            Check if a file with a partial name exists in the specified path. Return
+            a True/False value for parameter application
+            """
+            file_pattern = f"{partial_name}*{file_type}"
+            matching_files = list(self.file_path.glob(file_pattern))
+            return len(matching_files)
+                  
 
 
 class FilePreCheck:
@@ -63,7 +110,10 @@ class FilePreCheck:
             """
             self.file_path = Path(path)
             self.file_name = filename
-            self.file_type = filetype
+            if filetype.startswith("."):
+                  self.file_type = filetype
+            else:
+                  self.file_type = "." + filetype
             
       def file_exist_precheck(self):
             """
@@ -85,7 +135,6 @@ class FilePreCheck:
             else:
                   print('...File existance check: Passed')
 
-
       def fields_exist_precheck(self, fields):
             """
             Check if desired fields exist in the file.
@@ -101,11 +150,6 @@ class FilePreCheck:
                   '.xlsx'                 : pd.read_excel,
                   'xlsx'                  : pd.read_excel,
                   'Comma-Separated Values': pd.read_csv,
-                  'Comma Separated Values': pd.read_csv,
-                  'Comma-Separated Value' : pd.read_csv,
-                  'Comma Separated Value' : pd.read_csv,
-                  '.csv'                  : pd.read_csv,
-                  'csv'                   : pd.read_csv,
                   'JavaScript'            : pd.read_json,
                   '.json'                 : pd.read_json,
                   'json'                  : pd.read_json
@@ -131,4 +175,4 @@ class FilePreCheck:
             else:
                   raise ValueError(f"Unsupported file type: {file_type}")
  
-      
+# create another one to see if a field(s) exist where a given word is provided
