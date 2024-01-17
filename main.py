@@ -103,4 +103,3 @@ if precheck_folder.check_files_with_partial_name(partial_name, filetype):
       id_ucase_check = precheck_file.check_fields_with_partialname("ID")
       if id_lcase_check == False and id_ucase_check == False:
             raise Exception("Programm terminated...no valid ID fields present")
-
