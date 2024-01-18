@@ -1,15 +1,5 @@
 # ---------------
 import pandas as pd
-from pathlib import Path
-import pandas as pd
-import generate_tables_support_functions as gtsf
-import generate_sample_table_business as gstb
-import generate_sample_table_legal as gstl
-import generate_sample_table_address as gsta
-import generate_sample_table_employee as gste
-import generate_sample_table_tax as gstt
-import generate_sample_table_financial as gstf
-import generate_random_table_log as grtl
 import data_integrity_support_files as disf
 import data_integrity_data_checks as didc
 
