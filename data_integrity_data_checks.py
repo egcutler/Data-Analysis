@@ -365,9 +365,11 @@ class Data_Check_Formats:
       def validate_against_reference(self, column, reference_data):
             if not set(self.df[column]).issubset(set(reference_data)):
                   print(f"Reference data issue in column: {column}")
-
+                  
+# This function is still under construction
 class Data_Check_Time_Series:
-
+      def __init__(self, df):
+            self.df = df
 
       def analyze_time_series(self, time_column):
             """
@@ -377,12 +379,16 @@ class Data_Check_Time_Series:
             """
             pass
 
+ # This function is still under construction
 class Data_Check_Correlations:
+      def __init__(self, df):
+            self.df = df
+            
       def analyze_correlation(self):
             """
             Identify unexpected correlations between columns.
             - Computes and prints the correlation matrix of the DataFrame.
             """
-            # This function is still under construction
-            correlation_matrix = self.df.corr()
-            print(correlation_matrix)
+            pass
+            #correlation_matrix = self.df.corr()
+            #print(correlation_matrix)

@@ -4,12 +4,6 @@ import data_integrity_support_files as disf
 import data_integrity_data_checks as didc
 
 
-path = (r'/root/workspace/github.com/egcutler/Data-Analysis/data archive')
-filename = 'business data'
-partial_name = 'business'
-filetype = '.csv'
-field_list = ['Account','Branch','External ID']
-
 def df_with_prechecks():
       print('---------------------------------------')
       precheck_folder = disf.FolderPreCheck(path)
@@ -51,6 +45,20 @@ def data_integrity_check(df):
       #datacheck_format.check_ip_address_format_field('External ID')
       #datacheck_format.check_domain_name_format_field('External ID')
 
+
+
+
+
+
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+
+
+path = (r'/root/workspace/github.com/egcutler/Data-Analysis/data archive')
+filename = 'business data'
+partial_name = 'business'
+filetype = '.csv'
+field_list = ['Account','Branch','External ID']
 def main():
       df = df_with_prechecks()
       data_integrity_check(df)
