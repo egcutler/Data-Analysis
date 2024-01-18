@@ -14,52 +14,51 @@ import data_integrity_support_files as disf
 import data_integrity_data_checks as didc
 
 
-# ---------------------------------------------------------------------------------------------------------
-# ---------------------------------------------------------------------------------------------------------
-# --------------                    Prechecks                                                --------------
-# ---------------------------------------------------------------------------------------------------------
-# ---------------------------------------------------------------------------------------------------------
-
 path = (r'/root/workspace/github.com/egcutler/Data-Analysis/data archive')
 filename = 'business data'
 partial_name = 'business'
 filetype = '.csv'
 field_list = ['Account','Branch','External ID']
 
-precheck_folder = disf.FolderPreCheck(path)
-if precheck_folder.check_files_with_partial_name(partial_name, filetype):
-      precheck_file = disf.FilePreCheck(path, filename, filetype)
-      precheck_file.file_exist_precheck()
-      precheck_file.fields_exist_precheck(field_list)
-      id_lcase_check = precheck_file.check_fields_with_partialname("id")
-      id_ucase_check = precheck_file.check_fields_with_partialname("ID")
-      if id_lcase_check == False and id_ucase_check == False:
-            raise Exception("Programm terminated...no valid ID fields present")
-      df = pd.read_csv(f"{path}/{filename}{filetype}")
+def df_with_prechecks():
+      print('---------------------------------------')
+      precheck_folder = disf.FolderPreCheck(path)
+      if precheck_folder.check_files_with_partial_name(partial_name, filetype):
+            precheck_file = disf.FilePreCheck(path, filename, filetype)
+            precheck_file.file_exist_precheck()
+            precheck_file.fields_exist_precheck(field_list)
+            id_lcase_check = precheck_file.check_fields_with_partialname("id")
+            id_ucase_check = precheck_file.check_fields_with_partialname("ID")
+            if id_lcase_check == False and id_ucase_check == False:
+                  raise Exception("Programm terminated...no valid ID fields present")
+            print('---------------------------------------')
+            return pd.read_csv(f"{path}/{filename}{filetype}")
+      
 
-# ---------------------------------------------------------------------------------------------------------
-# ---------------------------------------------------------------------------------------------------------
-# --------------                    Data Quality Checks                                      --------------
-# ---------------------------------------------------------------------------------------------------------
-# ---------------------------------------------------------------------------------------------------------
 #precheck_file.search_fields_with_partialname("a")
 
-datacheck = didc.Data_Check(df)
-datacheck.id_unique_count_thresholds('External ID')
-datacheck.active_ids('External ID', "Business Status")
-datacheck.null_check()
-print('-------------')
-datacheck.check_duplicate_rows()
-datacheck.check_multiple_data_types()
-expected_types = {
-      'Branch': str,             
-      'External ID': str,
-      'Account': int,            
-      'Business Status': str,           
-      'Creation Date': str        
-}
-datacheck.check_explicit_data_types(expected_types)
-datacheck.check_data_len_range('Company Name', max_len=64)
+def data_integrity_check(df):
+      print('---------------------------------------')
+      datacheck = didc.Data_Check(df)
+      datacheck.id_unique_count_thresholds('External ID')
+      datacheck.active_ids('External ID', "Business Status")
+      datacheck.null_check()
+      datacheck.check_duplicate_rows()
+      datacheck.check_multiple_data_types()
+      expected_types = {
+            'Branch': str,             
+            'External ID': str,
+            'Account': int,            
+            'Business Status': str,           
+            'Creation Date': str        
+      }
+      datacheck.check_explicit_data_types(expected_types)
+      datacheck.check_data_len_range('Company Name', max_len=64)
+      print('---------------------------------------')
 
 
-
+def main():
+      df = df_with_prechecks()
+      data_integrity_check(df)
+      
+main()
