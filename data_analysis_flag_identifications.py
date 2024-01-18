@@ -36,7 +36,6 @@ def df_with_prechecks():
       
 
 #precheck_file.search_fields_with_partialname("a")
-
 def data_integrity_check(df):
       print('---------------------------------------')
       datacheck = didc.Data_Check(df)
@@ -55,7 +54,12 @@ def data_integrity_check(df):
       datacheck.check_explicit_data_types(expected_types)
       datacheck.check_data_len_range('Company Name', max_len=64)
       print('---------------------------------------')
-
+      datacheck_format = didc.Data_Check_Formats(df)
+      #datacheck_format.check_employee_email_format_field('External ID')
+      #datacheck_format.check_street_address_format_field('External ID')
+      #datacheck_format.check_zip_code_format_field('External ID')
+      #datacheck_format.check_ip_address_format_field('External ID')
+      #datacheck_format.check_domain_name_format_field('External ID')
 
 def main():
       df = df_with_prechecks()

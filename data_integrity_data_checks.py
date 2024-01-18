@@ -1,6 +1,6 @@
 # ----------
 import pandas as pd
-from pathlib import Path
+import re
 
 # ---------------------------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------
@@ -281,17 +281,86 @@ class Data_Check:
                   print("...Field length check: Passed")
 
 
+class Data_Check_Formats:
+      def __init__(self, df):
+            self.df = df
+
+      # Employee email address format validation
+      def check_employee_email_format_field(self, column, return_list = "n"):
+            pattern = r"^[a-zA-Z]+\.[a-zA-Z]+\d?@mailtype\.com$"
+            invalid_emails = self.df[~self.df[column].astype(str).str.match(pattern)][column]
+            if not invalid_emails.empty:
+                  # Creating a list of invalid emails
+                  invalid_email_list = invalid_emails.tolist()
+                  # Count of invalid emails
+                  invalid_email_count = len(invalid_email_list)
+                  print("...Employee email format check: Failed")
+                  print(f"   {invalid_email_count} emails flagged as wrong format")
+                  if return_list.lower() == "y":
+                        return invalid_email_list
+            else:
+                  print("...Email format check: Passed")
+    
+      # Street address format validation
+      def check_street_address_format_field(self, column, return_list="n"):
+            # Define a simple street address regex pattern or use a more complex one depending on the requirement
+            pattern = r"^\d+\s[A-z]+\s[A-z]+"
+            invalid_addresses = self.df[~self.df[column].astype(str).str.match(pattern)][column]
+
+            if not invalid_addresses.empty:
+                  # Creating a list of invalid addresses
+                  invalid_address_list = invalid_addresses.tolist()
+                  # Count of invalid addresses
+                  invalid_address_count = len(invalid_address_list)
+                  print("...Street address format check: Failed")
+                  print(f"   {invalid_address_count} addresses flagged as wrong format")
+                  if return_list.lower() == "y":
+                        return invalid_address_list
+            else:
+                  print("...Street address format check: Passed")
 
 
-class Data_Check_String_Format:
+      # Zip Code format validation (5 or 9 digit)
+      def check_zip_code_format_field(self, column, return_list="n"):
+            pattern = r"^\d{5}(-\d{4})?$"
+            invalid_zip_codes = self.df[~self.df[column].astype(str).str.match(pattern)][column]
+            
+            if not invalid_zip_codes.empty:
+                  invalid_zip_code_list = invalid_zip_codes.tolist()
+                  print("...Zip code format check: Failed")
+                  print(f"   {len(invalid_zip_code_list)} zip codes flagged as wrong format")
+                  if return_list.lower() == "y":
+                        return invalid_zip_code_list
+            else:
+                  print("...Zip code format check: Passed")
 
-      # email addresses, phone numbers, postal code
-      def validate_string_pattern(self, column, pattern):
-            import re
-            if self.df[column].dtype == 'object':
-                  if not all(re.match(pattern, str(x)) for x in self.df[column].dropna()):
-                        print(f"String pattern issue in column: {column}")
+      # IP address format validation
+      def check_ip_address_format_field(self, column, return_list="n"):
+            pattern = r"^(\d{1,3}\.){3}\d{1,3}$"
+            invalid_ips = self.df[~self.df[column].astype(str).str.match(pattern)][column]
+            
+            if not invalid_ips.empty:
+                  invalid_ip_list = invalid_ips.tolist()
+                  print("...IP address format check: Failed")
+                  print(f"   {len(invalid_ip_list)} IP addresses flagged as wrong format")
+                  if return_list.lower() == "y":
+                        return invalid_ip_list
+            else:
+                  print("...IP address format check: Passed")
 
+      # Domain name (website) format validation
+      def check_domain_name_format_field(self, column, return_list="n"):
+            pattern = r"^(https?://)?(www\.)?[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$"
+            invalid_domains = self.df[~self.df[column].astype(str).str.match(pattern)][column]
+            
+            if not invalid_domains.empty:
+                  invalid_domain_list = invalid_domains.tolist()
+                  print("...Domain name format check: Failed")
+                  print(f"   {len(invalid_domain_list)} domain names flagged as wrong format")
+                  if return_list.lower() == "y":
+                        return invalid_domain_list
+            else:
+                  print("...Domain name format check: Passed")
 
       def validate_against_reference(self, column, reference_data):
             if not set(self.df[column]).issubset(set(reference_data)):
@@ -314,5 +383,6 @@ class Data_Check_Correlations:
             Identify unexpected correlations between columns.
             - Computes and prints the correlation matrix of the DataFrame.
             """
+            # This function is still under construction
             correlation_matrix = self.df.corr()
             print(correlation_matrix)
