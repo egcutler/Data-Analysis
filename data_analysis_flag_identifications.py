@@ -42,7 +42,7 @@ if precheck_folder.check_files_with_partial_name(partial_name, filetype):
 # --------------                    Data Quality Checks                                      --------------
 # ---------------------------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------
-#precheck_file.search_fields_with_partialname("ID")
+#precheck_file.search_fields_with_partialname("a")
 
 datacheck = didc.Data_Check(df)
 datacheck.id_unique_count_thresholds('External ID')
@@ -50,3 +50,16 @@ datacheck.active_ids('External ID', "Business Status")
 datacheck.null_check()
 print('-------------')
 datacheck.check_duplicate_rows()
+datacheck.check_multiple_data_types()
+expected_types = {
+      'Branch': str,             
+      'External ID': str,
+      'Account': int,            
+      'Business Status': str,           
+      'Creation Date': str        
+}
+datacheck.check_explicit_data_types(expected_types)
+datacheck.check_data_len_range('Company Name', max_len=64)
+
+
+

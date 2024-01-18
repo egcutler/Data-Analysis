@@ -90,19 +90,19 @@ class Data_Check:
 
             # Check against low unique ID threshold
             if count_distinct_ids < threshold_low_id:
-                  print(f'Warning: Distinct ID count {count_distinct_ids} is below minimum threshold ({threshold_low_id})!')
+                  print(f'   Warning: Distinct ID count {count_distinct_ids} is below minimum threshold ({threshold_low_id})!')
                   flag_count += 1
             # Check against high unique ID threshold
             if count_distinct_ids > threshold_high_id:
-                  print(f'Warning: Distinct ID count {count_distinct_ids} is above maximum threshold ({threshold_high_id})!')
+                  print(f'   Warning: Distinct ID count {count_distinct_ids} is above maximum threshold ({threshold_high_id})!')
                   flag_count += 1
             # Check against high row count threshold
             if record_count > threshold_high_row:
-                  print(f'Warning: Record count {record_count} is above maximum threshold ({threshold_high_row})!')
+                  print(f'   Warning: Record count {record_count} is above maximum threshold ({threshold_high_row})!')
                   flag_count += 1
             # Check against low row count threshold
             if record_count < threshold_low_row:
-                  print(f'Warning: Record count {record_count} is below minimum threshold ({threshold_low_row})!')
+                  print(f'   Warning: Record count {record_count} is below minimum threshold ({threshold_low_row})!')
                   flag_count += 1
             # Passed/Failed message    
             if flag_count == 0:
@@ -138,18 +138,18 @@ class Data_Check:
             flag_count = 0
             # Check against active account threshold
             if count_act_ids < min_act_threshold:
-                  print(f'FlWarningag: Active IDs below minimum threshold ({min_act_threshold})!')
+                  print(f'   Warning: Active IDs below minimum threshold ({min_act_threshold})!')
                   flag_count += 1
             if count_cld_ids > max_cld_threshold:
-                  print(f'Warning: Closed IDs above maximum threshold ({max_cld_threshold})!')
+                  print(f'   Warning: Closed IDs above maximum threshold ({max_cld_threshold})!')
                   flag_count += 1
             # Check against active to total ratio threshold
             elif act_ratio < act_ratio_threshold:
-                  print(f'Warning: Ratio of Active to Total IDs ({act_ratio:.2f}) is below threshold ({act_ratio_threshold})!')
+                  print(f'   Warning: Ratio of Active to Total IDs ({act_ratio:.2f}) is below threshold ({act_ratio_threshold})!')
                   flag_count += 1
             # Check against active to total ratio threshold
             elif cld_ratio < cld_ratio_threshold:
-                  print(f'Warning: Ratio of Active to Total IDs ({act_ratio:.2f}) is below threshold ({act_ratio_threshold})!')
+                  print(f'   Warning: Ratio of Active to Total IDs ({act_ratio:.2f}) is below threshold ({act_ratio_threshold})!')
                   flag_count += 1
             # Passed/Failed message    
             if flag_count == 0:
@@ -177,7 +177,7 @@ class Data_Check:
             for column in self.df.columns:
                   null_count = self.df[column].isnull().sum()
                   if null_count > null_threshold:
-                        print(f'Warning: field {column} has a null count of {null_count}, exceeding threshold {null_threshold}!')
+                        print(f'   Warning: field {column} has a null count of {null_count}, exceeding threshold {null_threshold}!')
                         flag_count += 1
             if flag_count > 0:
                   print(f"...{flag_count} null column threshold warnings triggered")
@@ -190,7 +190,36 @@ class Data_Check:
             duplicates = self.df[self.df.duplicated()]
             if not duplicates.empty:
                   print("Duplicate rows found:\n", duplicates)
+
                   
+      def check_multiple_data_types(self):
+            """
+            Checks each column in the DataFrame to see if it contains more than one data type.
+            Prints the names of columns with multiple data types.
+            """
+            print_list = {}
+            flag_count = 0
+            for column in self.df.columns:
+                  # -Get the set of unique data types for non-null values in the column
+                  # -Method with dropna used to remove missing (NA/null) values from a Series or DataFrame.
+                  #  Important for data type validation because missing values don't have a data type in the 
+                  #  traditional sense and can lead to incorrect type checking results.
+                  # -type(x) returns each data type for x iterated over each value in the data column
+                  # -{} wrapping creates a set, removing all duplicates
+                  unique_types = {type(x) for x in self.df[column].dropna()}
+
+                  # Check if there is more than one unique data type
+                  if len(unique_types) > 1:
+                        #print(f"   Warning: column '{column}' has multiple data types {unique_types}!")
+                        print_list[column] = unique_types
+                        flag_count += 1
+            if flag_count > 0:
+                  print("...Fields with mulitple data type checks: Failed")
+                  print(f"   {flag_count} fields with multiple data type warnings triggered")
+                  for k, v in print_list:
+                        print(f"   Warning: column '{k}' has multiple data types {v}!")
+            else:
+                  print(f'...Fields with multiple data types check: Passed')
 
       # Example of expected_type format:            
       # expected_types = {
@@ -200,35 +229,57 @@ class Data_Check:
       #     'column4 name': bool,            # expecting column4 to contain boolean values
       #      etc.
       # }
-      def validate_data_types(self, expected_types):
+      def check_explicit_data_types(self, expected_types):
             """
             Ensure that each column contains data of the expected type.
             - Parameter expected_types: Dictionary with column names as keys and expected data types as values.
-            - Flags columns with unexpected data types.
+            - Flags columns with unexpected data types and shows all data types present in these columns.
             """
-            
+            print_list = []
+            flag_count = 0
             for column, expected_type in expected_types.items():
-                  # Method with dropna used to remove missing (NA/null) values from a Series or DataFrame.
-                  # -Important for data type validation because missing values don't have a data type in the 
-                  #  traditional sense and can lead to incorrect type checking results.
-                  # -isinstance() is used to check if the object (x) is an instance of a the class 
-                  #  (expected_type in this case) for checking the data type. Returns True/False.
-                  # -all() checks if all the elements in the iterable are True.
-                  if not all(isinstance(x, expected_type) for x in self.df[column].dropna()):
-                        print(f"Data type issue in column: {column}")
+                  # Get the set of unique data types for non-null values in the column
+                  unique_types = {type(x).__name__ for x in self.df[column].dropna()}
 
-                        
-      def validate_data_range(self, column, min_val, max_val):
+                  # Check if all non-null elements in the column are of the expected type
+                  if not all(isinstance(x, expected_type) for x in self.df[column].dropna()):
+                        # Append the column and its unique data types to the print_list
+                        print_list.append((column, unique_types))
+                        flag_count += 1
+            
+            if len(print_list) > 0:
+                  print("...Fields with incorrect data type check: Failed")
+                  print(f"   {flag_count} warning(s) triggered:")
+                  for col, types in print_list:
+                        types_str = ', '.join(sorted(types))  # Convert set of types to a sorted, comma-separated string
+                        print(f"   Warning: data type issue in column {col} has data types {types_str}!")
+            else:
+                  print("...Fields with incorrect data type checks: Passed")     
+
+
+      def check_data_len_range(self, column, min_len=0, max_len=100):
             """
-            Ensure that values in a column fall within a specified range.
+            Ensure that the length of string values in a column fall within a specified length range.
             - Parameter column: The column to check.
-            - Parameter min_val: Minimum acceptable value.
-            - Parameter max_val: Maximum acceptable value.
-            - Flags values outside the specified range.
+            - Parameter min_len: Minimum acceptable length (inclusive).
+            - Parameter max_len: Maximum acceptable length (inclusive).
+            - Flags string values outside the specified length range.
             """
-            if self.df[column].dtype in ['int64', 'float64']:
-                  if not self.df[(self.df[column] < min_val) | (self.df[column] > max_val)].empty:
-                        print(f"Data range issue in column: {column}")
+            string_values = self.df[column].astype(str)
+            max_val = 0
+            min_val = float('inf')
+
+            # Check if any value length is outside the specified range
+            if any((len(value) < min_len) or (len(value) > max_len) for value in string_values):
+                  for value in string_values:
+                        max_val = max(max_val, len(value))
+                        min_val = min(min_val, len(value))
+                  print("...Field length check: Failed")
+                  print(f"   Field '{column}' has values outside the length range [{min_len}, {max_len}]")
+                  print(f"   Max length value = {max_val} and Min length value = {min_val}")
+            else:
+                  print("...Field length check: Passed")
+
 
 
 
