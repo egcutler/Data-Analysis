@@ -53,6 +53,8 @@ file_types_pd = {
       '.json'                 : pd.read_json,
       'json'                  : pd.read_json
 }
+
+
 # ---------------------------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------
 # --------------                    Data Classes                                             --------------
@@ -157,3 +159,109 @@ class Data_Check:
                   print(f"   Active status count: {count_act_ids}")
                   print(f"   Closed status count: {count_cld_ids}")
                   print(f"   Total status count: {count_id_tot}")
+
+      def null_check(self, null_threshold = 100):
+            """
+            Check for null values in the DataFrame.
+            - Flags fields that are entirely null.
+            - Flags fields where the count of null values exceeds the specified threshold.
+            - Parameter null_threshold: Threshold for the acceptable count of null values in a field.
+            """
+            # Check for columns that are entirely null
+            all_null_columns = self.df.columns[self.df.isnull().all()]
+
+            if len(all_null_columns) > 0:
+                  print(f'Fields entirely null: {list(all_null_columns)}')
+            # Check for columns where null count exceeds the threshold
+            flag_count = 0
+            for column in self.df.columns:
+                  null_count = self.df[column].isnull().sum()
+                  if null_count > null_threshold:
+                        print(f'Warning: field {column} has a null count of {null_count}, exceeding threshold {null_threshold}!')
+                        flag_count += 1
+            if flag_count > 0:
+                  print(f"...{flag_count} null column threshold warnings triggered")
+
+      def check_duplicate_rows(self):
+            """
+            Identify duplicate rows in the DataFrame.
+            - Flags entire rows that are duplicates.
+            """
+            duplicates = self.df[self.df.duplicated()]
+            if not duplicates.empty:
+                  print("Duplicate rows found:\n", duplicates)
+                  
+
+      # Example of expected_type format:            
+      # expected_types = {
+      #     'column1 name': str,             # expecting column1 to contain strings
+      #     'column2 name': int,             # expecting column2 to contain integers
+      #     'column3 name': float,           # expecting column3 to contain floating point numbers
+      #     'column4 name': bool,            # expecting column4 to contain boolean values
+      #      etc.
+      # }
+      def validate_data_types(self, expected_types):
+            """
+            Ensure that each column contains data of the expected type.
+            - Parameter expected_types: Dictionary with column names as keys and expected data types as values.
+            - Flags columns with unexpected data types.
+            """
+            
+            for column, expected_type in expected_types.items():
+                  # Method with dropna used to remove missing (NA/null) values from a Series or DataFrame.
+                  # -Important for data type validation because missing values don't have a data type in the 
+                  #  traditional sense and can lead to incorrect type checking results.
+                  # -isinstance() is used to check if the object (x) is an instance of a the class 
+                  #  (expected_type in this case) for checking the data type. Returns True/False.
+                  # -all() checks if all the elements in the iterable are True.
+                  if not all(isinstance(x, expected_type) for x in self.df[column].dropna()):
+                        print(f"Data type issue in column: {column}")
+
+                        
+      def validate_data_range(self, column, min_val, max_val):
+            """
+            Ensure that values in a column fall within a specified range.
+            - Parameter column: The column to check.
+            - Parameter min_val: Minimum acceptable value.
+            - Parameter max_val: Maximum acceptable value.
+            - Flags values outside the specified range.
+            """
+            if self.df[column].dtype in ['int64', 'float64']:
+                  if not self.df[(self.df[column] < min_val) | (self.df[column] > max_val)].empty:
+                        print(f"Data range issue in column: {column}")
+
+
+
+class Data_Check_String_Format:
+
+      # email addresses, phone numbers, postal code
+      def validate_string_pattern(self, column, pattern):
+            import re
+            if self.df[column].dtype == 'object':
+                  if not all(re.match(pattern, str(x)) for x in self.df[column].dropna()):
+                        print(f"String pattern issue in column: {column}")
+
+
+      def validate_against_reference(self, column, reference_data):
+            if not set(self.df[column]).issubset(set(reference_data)):
+                  print(f"Reference data issue in column: {column}")
+
+class Data_Check_Time_Series:
+
+
+      def analyze_time_series(self, time_column):
+            """
+            Check for anomalies in time-series data.
+            - Parameter time_column: The column containing time-series data.
+            - Implement specific time series checks.
+            """
+            pass
+
+class Data_Check_Correlations:
+      def analyze_correlation(self):
+            """
+            Identify unexpected correlations between columns.
+            - Computes and prints the correlation matrix of the DataFrame.
+            """
+            correlation_matrix = self.df.corr()
+            print(correlation_matrix)

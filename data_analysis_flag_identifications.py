@@ -47,4 +47,6 @@ if precheck_folder.check_files_with_partial_name(partial_name, filetype):
 datacheck = didc.Data_Check(df)
 datacheck.id_unique_count_thresholds('External ID')
 datacheck.active_ids('External ID', "Business Status")
-
+datacheck.null_check()
+print('-------------')
+datacheck.check_duplicate_rows()
