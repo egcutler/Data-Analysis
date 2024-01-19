@@ -89,8 +89,13 @@ list_debit_and_credit = ['Debit','Credit']
 #----------------------------------------------------------------------------------
 # Generate the Tax Account field
 def generate_tax_account_field(num_records, len_id_char = 8):
+      """
+      Generate a list of tax account numbers with a specified character length.
+      :param num_records: Number of account numbers to generate.
+      :param len_id_char: Length of each account number in characters (default is 8).
+      :return: List of tax account numbers.
+      """
       dict_list = []
-
       if type(len_id_char) == str:
             if len_id_char.isdigit():
                   zeros_req = int(len_id_char)-1
@@ -108,6 +113,13 @@ def generate_tax_account_field(num_records, len_id_char = 8):
 
 # Generate the Tax Security ID field
 def generate_tax_sec_id_field(num_records, min = 100000, max = 9999999):
+      """
+      Generate a list of security IDs for tax purposes.
+      :param num_records: Number of security IDs to generate.
+      :param min: Minimum value for security ID.
+      :param max: Maximum value for security ID.
+      :return: List of security IDs.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(gtsf.generate_random_int(min, max))
@@ -115,6 +127,12 @@ def generate_tax_sec_id_field(num_records, min = 100000, max = 9999999):
 
 # Generate the Tax CUSIP field
 def generate_tax_cusip_field(num_records, len_id_char = 7):
+      """
+      Generate a list of CUSIP (Committee on Uniform Securities Identification Procedures) numbers.
+      :param num_records: Number of CUSIP numbers to generate.
+      :param len_id_char: Length of each CUSIP number in characters (default is 7).
+      :return: List of CUSIP numbers.
+      """
       dict_list = []
       if type(len_id_char) == str:
             if len_id_char.isdigit():
@@ -133,6 +151,11 @@ def generate_tax_cusip_field(num_records, len_id_char = 7):
 
 # Generate the Tax Entry CD field
 def generate_tax_entrycd_field(num_records):
+      """
+      Generate a list of entry codes for tax transactions.
+      :param num_records: Number of entry codes to generate.
+      :return: List of entry codes.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(random.choice(list_entrycd))
@@ -140,6 +163,14 @@ def generate_tax_entrycd_field(num_records):
 
 # Generate the Tax Currency field
 def generate_tax_currency_field(num_records, priority_item = 'USD', weight_usd = 10, weight_oth = 1):
+      """
+      Generate a list of currencies with weighted preference for a specific currency.
+      :param num_records: Number of currencies to generate.
+      :param priority_item: Currency to prioritize (default 'USD').
+      :param weight_usd: Weight for the prioritized currency (default 10).
+      :param weight_oth: Weight for other currencies (default 1).
+      :return: List of currencies.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(gtsf.generate_random_unique_weighted_list(list_cur, priority_item, weight_usd, weight_oth))
@@ -147,6 +178,13 @@ def generate_tax_currency_field(num_records, priority_item = 'USD', weight_usd =
 
 # Generate the Tax Net Amount field
 def generate_tax_net_amount_field(num_records, min = 1, max = 99999):
+      """
+      Generate a list of net amounts for tax transactions.
+      :param num_records: Number of net amounts to generate.
+      :param min: Minimum value for net amount.
+      :param max: Maximum value for net amount.
+      :return: List of net amounts.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(gtsf.generate_random_int(min, max))
@@ -154,6 +192,13 @@ def generate_tax_net_amount_field(num_records, min = 1, max = 99999):
 
 # Generate the Tax Withholding Amount field
 def generate_tax_withholding_amount_field(num_records, min = 1, max = 9999):
+      """
+      Generate a list of withholding amounts for tax transactions.
+      :param num_records: Number of withholding amounts to generate.
+      :param min: Minimum value for withholding amount.
+      :param max: Maximum value for withholding amount.
+      :return: List of withholding amounts.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(gtsf.generate_random_int(min, max))
@@ -161,6 +206,11 @@ def generate_tax_withholding_amount_field(num_records, min = 1, max = 9999):
 
 # Generate the Tax Debit and Credit field
 def generate_tax_debit_and_credit_field(num_records):
+      """
+      Generate a list of debit and credit statuses for tax transactions.
+      :param num_records: Number of statuses to generate.
+      :return: List of debit and credit statuses.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(random.choice(list_debit_and_credit))
@@ -168,6 +218,11 @@ def generate_tax_debit_and_credit_field(num_records):
 
 # Generate the Tax Type field
 def generate_tax_type_field(num_records):
+      """
+      Generate a list of tax types.
+      :param num_records: Number of tax types to generate.
+      :return: List of tax types.
+      """
       dict_list = []
       tax_types = list(dict_tax_types.keys())
       for _ in range(num_records):
@@ -176,6 +231,12 @@ def generate_tax_type_field(num_records):
 
 # Generate the Tax Type Description field
 def generate_tax_type_desc_field(num_records, tax_type_list):
+      """
+      Generate descriptions for the given tax types.
+      :param num_records: Number of descriptions to generate.
+      :param tax_type_list: List of tax types.
+      :return: List of tax type descriptions.
+      """
       dict_list = []
       for x in range(num_records):
             dict_list.append(dict_tax_types[tax_type_list[x]])
@@ -183,6 +244,13 @@ def generate_tax_type_desc_field(num_records, tax_type_list):
 
 # Generate the Tax Transaction Date field
 def generate_tax_trans_date_field(num_records, min_date = datetime(2010,1,1), max_date = datetime.now()):
+      """
+      Generate a list of transaction dates for tax purposes within a specified range.
+      :param num_records: Number of transaction dates to generate.
+      :param min_date: Minimum date for the range.
+      :param max_date: Maximum date for the range.
+      :return: List of transaction dates.
+      """
       min_date = gtsf.function_date_int_to_datetime(min_date)
       max_date = gtsf.function_date_int_to_datetime(max_date)
       dict_list = []
@@ -198,6 +266,12 @@ def generate_tax_trans_date_field(num_records, min_date = datetime(2010,1,1), ma
 
 # Function to run each field to build the tax table
 def generate_table_tax_build(dict, num_records):  
+      """
+      Populate a dictionary with various tax-related data fields to build a tax table.
+      :param dict: Dictionary to populate with tax data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with tax data fields.
+      """
       dict['Tax Account'] = generate_tax_account_field(num_records)
       dict['Sec ID'] = generate_tax_sec_id_field(num_records)
       dict['CUSIP'] = generate_tax_cusip_field(num_records)
@@ -215,6 +289,12 @@ def generate_table_tax_build(dict, num_records):
 
 # Main function to run the tax table generator
 def generate_table_tax(min_rand_record_lim = 1, max_rand_record_lim = 100000):
+      """
+      Generate a table of tax data with random data.
+      :param min_rand_record_lim: Minimum limit for random record length.
+      :param max_rand_record_lim: Maximum limit for random record length.
+      :return: Dictionary representing the generated tax table.
+      """
       tax_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       tax_data = gtsf.table_generate_id_records(tax_num_records)
       tax_data = generate_table_tax_build(tax_data, tax_num_records)

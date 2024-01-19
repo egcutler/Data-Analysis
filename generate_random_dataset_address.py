@@ -45,6 +45,12 @@ country_abbreviations = [
 
 # Generate the Address Account field
 def generate_address_account_field(num_records, len_id_char = 8):
+      """
+      Generate a list of random integers representing address account fields.
+      :param num_records: Number of records to generate.
+      :param len_id_char: Length of each integer in characters (default is 8).
+      :return: List of random integers representing address accounts.
+      """
       dict_list = []
       if type(len_id_char) == str:
             if len_id_char.isdigit():
@@ -63,6 +69,11 @@ def generate_address_account_field(num_records, len_id_char = 8):
 
 # Generate the Address line fields
 def generate_address_fields(num_records):
+      """
+      Generate address components for a specified number of records.
+      :param num_records: Number of records to generate address components for.
+      :return: Four lists containing address street, city, state, and zipcode.
+      """
       dict_addr_street_list = []
       dict_addr_city_list = []
       dict_addr_state_list = []
@@ -78,6 +89,14 @@ def generate_address_fields(num_records):
 
 # Generate the Address Original Country field
 def generate_address_original_country_field(num_records, priority_item = 'US', weight_us = 10, weight_oth = 1):
+      """
+      Generate a list of country abbreviations with a weighted priority for a specific country.
+      :param num_records: Number of records to generate.
+      :param priority_item: Country abbreviation to prioritize (default 'US').
+      :param weight_us: Weight for the priority country (default 10).
+      :param weight_oth: Weight for other countries (default 1).
+      :return: List of country abbreviations.
+      """
       dict_list = [] 
       for _ in range(num_records):
             dict_list.append(gtsf.generate_random_unique_weighted_list(country_abbreviations, priority_item, weight_us, weight_oth))
@@ -85,6 +104,11 @@ def generate_address_original_country_field(num_records, priority_item = 'US', w
      
 # Generate the Address Registered Country field 
 def generate_address_registered_country_field(num_records):
+      """
+      Generate a list of 'US' country abbreviations for a specified number of records.
+      :param num_records: Number of records to generate.
+      :return: List of 'US' country abbreviations.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append('US')
@@ -98,6 +122,12 @@ def generate_address_registered_country_field(num_records):
 
 # Function to run each field to build the address table
 def generate_table_address_build(dict, num_records):  
+      """
+      Build an address table by generating various address-related fields.
+      :param dict: Dictionary to populate with address data.
+      :param num_records: Number of records to generate for the table.
+      :return: Dictionary populated with generated address data.
+      """
       dict['Address ID'] = generate_address_account_field(num_records)
       dict['Address Street'], dict['City'], dict['State'], dict['Zip Code'] = generate_address_fields(num_records)
       dict['Registered Country'] = generate_address_registered_country_field(num_records)
@@ -106,6 +136,12 @@ def generate_table_address_build(dict, num_records):
 
 # Main function to run the address table generator
 def generate_table_address(min_rand_record_lim = 1, max_rand_record_lim = 100000):
+      """
+      Generate a table of addresses with random data.
+      :param min_rand_record_lim: Minimum limit for random record length (default 1).
+      :param max_rand_record_lim: Maximum limit for random record length (default 100000).
+      :return: Dictionary representing the generated address table.
+      """
       addr_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       addr_data = gtsf.table_generate_id_records(addr_num_records)
       addr_data = generate_table_address_build(addr_data, addr_num_records)

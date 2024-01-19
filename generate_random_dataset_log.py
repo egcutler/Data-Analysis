@@ -182,6 +182,12 @@ log_dict_source = {
 
 # Generate the Log ID field
 def generate_log_id_field(num_records, len_id_char = 9):
+      """
+      Generate a list of unique log IDs with a specified character length.
+      :param num_records: Number of log IDs to generate.
+      :param len_id_char: Length of each log ID in characters (default is 9).
+      :return: List of log IDs.
+      """
       dict_list = []
       if type(len_id_char) == str:
             if len_id_char.isdigit():
@@ -200,6 +206,13 @@ def generate_log_id_field(num_records, len_id_char = 9):
 
 # Generate the Log Time Stamp field
 def generate_log_timestamp_field(num_records, min_date = datetime(2010,1,1), max_date = datetime.now()):
+      """
+      Generate a list of timestamps for log entries within a specified date range.
+      :param num_records: Number of timestamps to generate.
+      :param min_date: Minimum date for the range.
+      :param max_date: Maximum date for the range.
+      :return: List of timestamps.
+      """
       min_date = gtsf.function_date_int_to_datetime(min_date)
       max_date = gtsf.function_date_int_to_datetime(max_date)
       dict_list = []
@@ -209,6 +222,13 @@ def generate_log_timestamp_field(num_records, min_date = datetime(2010,1,1), max
 
 # Generate the Log User ID field
 def generate_log_userid_field(num_records, min_dig_id = 1, max_dig_id = 100000):
+      """
+      Generate a list of user IDs for log entries.
+      :param num_records: Number of user IDs to generate.
+      :param min_dig_id: Minimum value for user ID.
+      :param max_dig_id: Maximum value for user ID.
+      :return: List of user IDs.
+      """
       dict_list = []
       for _ in range(num_records):
             temp_dig_id = str(random.randint(min_dig_id,max_dig_id))
@@ -218,6 +238,11 @@ def generate_log_userid_field(num_records, min_dig_id = 1, max_dig_id = 100000):
 
 # Generate the Log IP Address Field
 def generate_log_ip_address_field(num_records):
+      """
+      Generate a list of IP addresses for log entries.
+      :param num_records: Number of IP addresses to generate.
+      :return: List of IP addresses.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(gtsf.generate_log_ip_address())
@@ -225,6 +250,11 @@ def generate_log_ip_address_field(num_records):
 
 # Generate the Log Hostname field
 def generate_log_hostname_field(num_records):
+      """
+      Generate a list of hostnames for log entries.
+      :param num_records: Number of hostnames to generate.
+      :return: List of hostnames.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(gtsf.generate_log_hostname())
@@ -232,6 +262,14 @@ def generate_log_hostname_field(num_records):
 
 # Generate the Log Severity Level field
 def generate_log_severity_field(num_records, priority_item = 'NORMAL', weight_main = 10, weight_oth = 1):
+      """
+      Generate a list of severity levels for log entries with weighted preference for a specific level.
+      :param num_records: Number of severity levels to generate.
+      :param priority_item: Severity level to prioritize (default 'NORMAL').
+      :param weight_main: Weight for the prioritized severity level (default 10).
+      :param weight_oth: Weight for other severity levels (default 1).
+      :return: List of severity levels.
+      """
       dict_list = []
       sev_list = list(log_dict_severity_level.keys())
       for _ in range(num_records):
@@ -240,6 +278,12 @@ def generate_log_severity_field(num_records, priority_item = 'NORMAL', weight_ma
 
 # Generate the Log Status  field
 def generate_log_status_field(num_records, severity_list):
+      """
+      Generate a list of statuses for log entries based on the severity level.
+      :param num_records: Number of statuses to generate.
+      :param severity_list: List of severity levels associated with each status.
+      :return: List of statuses.
+      """
       dict_list = []
       status_nonissue_list = list(log_dict_status_nonissue.keys())
       status_issue_list = list(log_dict_status_issue.keys())
@@ -252,6 +296,13 @@ def generate_log_status_field(num_records, severity_list):
 
 # Generate the Log Reference ID field
 def generate_log_referenceid_field(num_records, min_dig_id = 1, max_dig_id = 100000):
+      """
+      Generate a list of reference IDs for log entries.
+      :param num_records: Number of reference IDs to generate.
+      :param min_dig_id: Minimum value for reference ID.
+      :param max_dig_id: Maximum value for reference ID.
+      :return: List of reference IDs.
+      """
       dict_list = []
       for _ in range(num_records):
             temp_dig_id = str(random.randint(min_dig_id,max_dig_id))
@@ -261,6 +312,11 @@ def generate_log_referenceid_field(num_records, min_dig_id = 1, max_dig_id = 100
 
 # Generate the Log Module field
 def generate_log_source_field(num_records):
+      """
+      Generate a list of sources for log entries.
+      :param num_records: Number of sources to generate.
+      :return: List of sources.
+      """
       dict_list = []
       list_source = list(log_dict_source.keys())
       for _ in range(num_records):
@@ -269,6 +325,11 @@ def generate_log_source_field(num_records):
 
 # Generate the Log Event Fields
 def generate_log_event_fields(num_records):
+      """
+      Generate lists of log events and their descriptions.
+      :param num_records: Number of log events to generate.
+      :return: Two lists, one for log events and one for their descriptions.
+      """
       dict_list_event = []
       dict_list_desc = []
       list_event = list(log_dict_event.keys())
@@ -280,6 +341,11 @@ def generate_log_event_fields(num_records):
 
 # Generate the Log Data Change Fields
 def generate_log_datachange_fields(num_records):
+      """
+      Generate lists of data change events and their descriptions.
+      :param num_records: Number of data change events to generate.
+      :return: Lists for data change events, descriptions, old values, and new values.
+      """
       dict_list_event = []
       dict_list_desc = []
       list_dc = list(log_dict_data_change.keys())
@@ -295,6 +361,11 @@ def generate_log_datachange_fields(num_records):
 
 # Generate the Log File Change Fields
 def generate_log_filechange_fields(num_records):
+      """
+      Generate lists of file change events and their descriptions.
+      :param num_records: Number of file change events to generate.
+      :return: Lists for file change events, descriptions, old values, and new values.
+      """
       dict_list_event = []
       dict_list_desc = []
       list_fc = list(log_dict_file_change.keys())
@@ -310,6 +381,11 @@ def generate_log_filechange_fields(num_records):
 
 # Generate the Log Security Fields
 def generate_log_security_fields(num_records):
+      """
+      Generate lists of security events and their descriptions.
+      :param num_records: Number of security events to generate.
+      :return: Two lists, one for security events and one for their descriptions.
+      """
       dict_list_event = []
       dict_list_desc = []
       list_sec = list(log_dict_security.keys())
@@ -321,6 +397,11 @@ def generate_log_security_fields(num_records):
 
 # Generate the Log User Web Activity Fields
 def generate_log_user_web_fields(num_records):
+      """
+      Generate lists of user web activities and their descriptions.
+      :param num_records: Number of user web activities to generate.
+      :return: Two lists, one for user web activities and one for their descriptions.
+      """
       dict_list_event = []
       dict_list_desc = []
       list_u = list(log_dict_user_web.keys())
@@ -332,6 +413,11 @@ def generate_log_user_web_fields(num_records):
 
 # Generate the Log User Server Activity Fields
 def generate_log_user_server_fields(num_records):
+      """
+      Generate lists of user server activities and their descriptions.
+      :param num_records: Number of user server activities to generate.
+      :return: Two lists, one for user server activities and one for their descriptions.
+      """
       dict_list_event = []
       dict_list_desc = []
       list_u = list(log_dict_user_server.keys())
@@ -343,6 +429,11 @@ def generate_log_user_server_fields(num_records):
             
 # Generate the Log User Account Activity Fields
 def generate_log_user_account_fields(num_records):
+      """
+      Generate lists of user account activities and their descriptions.
+      :param num_records: Number of user account activities to generate.
+      :return: Two lists, one for user account activities and one for their descriptions.
+      """
       dict_list_event = []
       dict_list_desc = []
       list_u = list(log_dict_user_accout.keys())
@@ -354,6 +445,11 @@ def generate_log_user_account_fields(num_records):
                     
 # Generate the Log Error Activity Fields
 def generate_log_errors_fields(num_records):
+      """
+      Generate lists of error events and their descriptions.
+      :param num_records: Number of error events to generate.
+      :return: Two lists, one for error events and one for their descriptions.
+      """
       dict_list_event = []
       dict_list_desc = []
       list_u = list(log_dict_errors.keys())
@@ -365,6 +461,11 @@ def generate_log_errors_fields(num_records):
 
 # Generate the Log Error Activity Fields
 def generate_log_error_codes_fields(num_records):
+      """
+      Generate lists of error code events and their descriptions.
+      :param num_records: Number of error code events to generate.
+      :return: Two lists, one for error code events and one for their descriptions.
+      """
       dict_list_event = []
       dict_list_desc = []
       list_u = list(log_dict_error_codes.keys())
@@ -380,6 +481,12 @@ def generate_log_error_codes_fields(num_records):
 #----------------------------------------------------------------------------------
 
 def generate_table_log_general(dict, num_records):  
+      """
+      Populate a dictionary with various general log data fields to build a log table.
+      :param dict: Dictionary to populate with log data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with general log data fields.
+      """
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -393,6 +500,12 @@ def generate_table_log_general(dict, num_records):
       return dict
 
 def generate_table_log_datachange(dict, num_records):  
+      """
+      Populate a dictionary with log data fields related to data changes.
+      :param dict: Dictionary to populate with log data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with log data fields related to data changes.
+      """
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -407,6 +520,12 @@ def generate_table_log_datachange(dict, num_records):
       return dict
 
 def generate_table_log_filechange(dict, num_records):  
+      """
+      Populate a dictionary with log data fields related to file changes.
+      :param dict: Dictionary to populate with log data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with log data fields related to file changes.
+      """
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -421,6 +540,12 @@ def generate_table_log_filechange(dict, num_records):
       return dict
 
 def generate_table_log_security(dict, num_records):  
+      """
+      Populate a dictionary with log data fields related to security events.
+      :param dict: Dictionary to populate with log data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with log data fields related to security events.
+      """
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -435,6 +560,12 @@ def generate_table_log_security(dict, num_records):
 
 # Log Table Generator: user web activity
 def generate_table_log_user_web_activity(dict, num_records):  
+      """
+      Populate a dictionary with log data fields related to user web activity.
+      :param dict: Dictionary to populate with log data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with log data fields related to user web activity.
+      """
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -449,6 +580,12 @@ def generate_table_log_user_web_activity(dict, num_records):
 
 # Log Table Generator: user server activity
 def generate_table_log_user_server_activity(dict, num_records):  
+      """
+      Populate a dictionary with log data fields related to user server activity.
+      :param dict: Dictionary to populate with log data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with log data fields related to user server activity.
+      """
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -463,6 +600,12 @@ def generate_table_log_user_server_activity(dict, num_records):
 
 # Log Table Generator: user account activity
 def generate_table_log_user_account_activity(dict, num_records):  
+      """
+      Populate a dictionary with log data fields related to user account activity.
+      :param dict: Dictionary to populate with log data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with log data fields related to user server activity.
+      """
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -476,7 +619,13 @@ def generate_table_log_user_account_activity(dict, num_records):
       return dict
 
 # Log Table Generator: log errors
-def generate_table_log_errors(dict, num_records):  
+def generate_table_log_errors(dict, num_records): 
+      """
+      Populate a dictionary with log data fields related to log errors.
+      :param dict: Dictionary to populate with log data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with log data fields related to user server activity.
+      """
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -491,6 +640,12 @@ def generate_table_log_errors(dict, num_records):
 
 # Log Table Generator: log error codes
 def generate_table_log_error_codes(dict, num_records):  
+      """
+      Populate a dictionary with log data fields related to log error codes.
+      :param dict: Dictionary to populate with log data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with log data fields related to user server activity.
+      """
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -507,6 +662,12 @@ def generate_table_log_error_codes(dict, num_records):
 #---------------------------------------------------------------------------------- 
 
 def generate_table_log(min_rand_record_lim = 1, max_rand_record_lim = 1000):
+      """
+      Generate a table of log data with random data.
+      :param min_rand_record_lim: Minimum limit for random record length.
+      :param max_rand_record_lim: Maximum limit for random record length.
+      :return: Dictionary representing the generated log table.
+      """
       log_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       log_data = gtsf.table_generate_id_records(log_num_records)
       log_data = generate_table_log_datachange(log_data, log_num_records)

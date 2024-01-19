@@ -87,8 +87,13 @@ finance_comment_list = [
 
 # Generate the Financial Account field
 def generate_finance_account_field(num_records, len_id_char = 7):
+      """
+      Generate a list of financial account numbers with a specified character length.
+      :param num_records: Number of account numbers to generate.
+      :param len_id_char: Length of each account number in characters (default is 7).
+      :return: List of financial account numbers.
+      """
       dict_list = []
-
       if type(len_id_char) == str:
             if len_id_char.isdigit():
                   zeros_req = int(len_id_char)-1
@@ -96,7 +101,7 @@ def generate_finance_account_field(num_records, len_id_char = 7):
                   return Exception(f'Cannot convert the numeric string to a numeric value: {len_id_char}')
       else:
             zeros_req = len_id_char - 1
-            
+
       zeros = "0" * zeros_req
       min = int("1"+zeros)
       max = int("9"*len_id_char) 
@@ -106,6 +111,13 @@ def generate_finance_account_field(num_records, len_id_char = 7):
 
 # Generate the Financial Transction ID field
 def generate_finance_trans_id_field(num_records, min_dig_id = 1, max_dig_id = 100000):
+      """
+      Generate a list of unique financial transaction IDs.
+      :param num_records: Number of transaction IDs to generate.
+      :param min_dig_id: Minimum numeric value for transaction ID.
+      :param max_dig_id: Maximum numeric value for transaction ID.
+      :return: List of financial transaction IDs.
+      """
       dict_list = []
       for _ in range(num_records):
             temp_dig_id = str(random.randint(min_dig_id,max_dig_id))
@@ -115,6 +127,13 @@ def generate_finance_trans_id_field(num_records, min_dig_id = 1, max_dig_id = 10
 
 # Generate the Financial Date field
 def generate_random_financial_date_field(num_records, min_date = datetime(2010,1,1), max_date = datetime.now()):
+      """
+      Generate a list of dates for financial transactions within a specified range.
+      :param num_records: Number of dates to generate.
+      :param min_date: Minimum date for the range.
+      :param max_date: Maximum date for the range.
+      :return: List of dates for financial transactions.
+      """
       min_date = gtsf.function_date_int_to_datetime(min_date)
       max_date = gtsf.function_date_int_to_datetime(max_date)
       dict_list = []
@@ -124,6 +143,11 @@ def generate_random_financial_date_field(num_records, min_date = datetime(2010,1
 
 # Generate the Financial Description fields
 def generate_random_financial_desc_fields(num_records):
+      """
+      Generate lists of financial transaction categories and corresponding descriptions.
+      :param num_records: Number of records to generate.
+      :return: Two lists, one for transaction categories and one for descriptions.
+      """
       dict_list_cat = []
       dict_list_desc = []
       temp_list_cat = list(finance_dict_desc.keys())
@@ -135,6 +159,16 @@ def generate_random_financial_desc_fields(num_records):
 
 # Generate the Financial Amount field
 def generate_random_financial_ammount_field(num_records, financial_cat_list, min_emp = 50000, max_emp = 150000, min_oth = 100, max_oth = 10000):
+      """
+      Generate a list of financial transaction amounts based on category-specific ranges.
+      :param num_records: Number of amounts to generate.
+      :param financial_cat_list: List of financial transaction categories.
+      :param min_emp: Minimum amount for 'Employee' category.
+      :param max_emp: Maximum amount for 'Employee' category.
+      :param min_oth: Minimum amount for other categories.
+      :param max_oth: Maximum amount for other categories.
+      :return: List of financial transaction amounts.
+      """
       dict_list = []
       for x in range(num_records):
             if financial_cat_list[x] == "Employee":
@@ -145,6 +179,11 @@ def generate_random_financial_ammount_field(num_records, financial_cat_list, min
 
 # Generate the Financial Account Type field
 def generate_random_financial_type_field(num_records):
+      """
+      Generate a list of financial account types for a specified number of records.
+      :param num_records: Number of account types to generate.
+      :return: List of financial account types.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(random.choice(finance_list_type))
@@ -152,6 +191,11 @@ def generate_random_financial_type_field(num_records):
 
 # Generate the Financial Client field
 def generate_random_financial_client_name_field(num_records):
+      """
+      Generate a list of random client names for financial transactions.
+      :param num_records: Number of client names to generate.
+      :return: List of client names.
+      """
       dict_list = []
       for _ in range(num_records):
             adjective = random.choice(finance_list_name_adjectives)
@@ -162,6 +206,11 @@ def generate_random_financial_client_name_field(num_records):
 
 # Generate the Financial Payment Method field
 def generate_finance_payment_method_field(num_records):
+      """
+      Generate a list of payment methods for financial transactions.
+      :param num_records: Number of payment methods to generate.
+      :return: List of payment methods.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(random.choice(finance_list_payment_method))
@@ -169,6 +218,14 @@ def generate_finance_payment_method_field(num_records):
 
 # Generate the Financial Currency field
 def generate_finance_currency_field(num_records, priority_item = 'USD', weight_usd = 10, weight_oth = 1):
+      """
+      Generate a list of currencies with weighted preference for a specific currency.
+      :param num_records: Number of currencies to generate.
+      :param priority_item: Currency to prioritize (default 'USD').
+      :param weight_usd: Weight for the prioritized currency (default 10).
+      :param weight_oth: Weight for other currencies (default 1).
+      :return: List of currencies.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(gtsf.generate_random_unique_weighted_list(finance_list_cur, priority_item, weight_usd, weight_oth))
@@ -176,6 +233,13 @@ def generate_finance_currency_field(num_records, priority_item = 'USD', weight_u
 
 # Generate the Financial Balance field
 def generate_finance_budget_field(num_records, min_budg = 1000, max_budg = 100000):
+      """
+      Generate a list of financial balances within a specified range.
+      :param num_records: Number of balances to generate.
+      :param min_budg: Minimum balance amount.
+      :param max_budg: Maximum balance amount.
+      :return: List of financial balances.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(random.randint(min_budg, max_budg))
@@ -183,6 +247,13 @@ def generate_finance_budget_field(num_records, min_budg = 1000, max_budg = 10000
 
 # Generate the Financial Budget Code field
 def generate_finance_budget_code_field(num_records, min_dig_id = 1, max_dig_id = 100000):
+      """
+      Generate a list of unique budget codes for financial transactions.
+      :param num_records: Number of budget codes to generate.
+      :param min_dig_id: Minimum numeric value for budget code.
+      :param max_dig_id: Maximum numeric value for budget code.
+      :return: List of financial budget codes.
+      """
       dict_list = []
       for _ in range(num_records):
             temp_dig_id = str(random.randint(min_dig_id,max_dig_id))
@@ -192,6 +263,13 @@ def generate_finance_budget_code_field(num_records, min_dig_id = 1, max_dig_id =
 
 # Generate the Financial Reference Number field
 def generate_finance_reference_number_field(num_records, min_dig_id = 1, max_dig_id = 100000):
+      """
+      Generate a list of unique reference numbers for financial transactions.
+      :param num_records: Number of reference numbers to generate.
+      :param min_dig_id: Minimum numeric value for reference number.
+      :param max_dig_id: Maximum numeric value for reference number.
+      :return: List of financial reference numbers.
+      """
       dict_list = []
       for _ in range(num_records):
             temp_dig_id = str(random.randint(min_dig_id,max_dig_id))
@@ -201,6 +279,14 @@ def generate_finance_reference_number_field(num_records, min_dig_id = 1, max_dig
 
 # Generate the Financial Approval Status field
 def generate_finance_approval_status_field(num_records, weight_a = 10, weight_r = 1, weight_p = 1):
+      """
+      Generate a list of approval statuses for financial transactions with specified weighting.
+      :param num_records: Number of statuses to generate.
+      :param weight_a: Weight for 'Approved' status.
+      :param weight_r: Weight for 'Rejected' status.
+      :param weight_p: Weight for 'Pending' status.
+      :return: List of financial approval statuses.
+      """
       dict_list = []
       weight_list = [weight_a, weight_r, weight_p]
       for _ in range(num_records):
@@ -209,6 +295,11 @@ def generate_finance_approval_status_field(num_records, weight_a = 10, weight_r 
 
 # Generate the Financial Comments field
 def generate_finance_comment_field(num_records):
+      """
+      Generate a list of comments for financial transactions from a predefined list.
+      :param num_records: Number of comments to generate.
+      :return: List of financial comments.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(random.choice(finance_comment_list))
@@ -222,6 +313,12 @@ def generate_finance_comment_field(num_records):
 
 # Function to run each field to build the finance table
 def generate_table_finance_build(dict, num_records):  
+      """
+      Populate a dictionary with various finance-related data fields to build a finance table.
+      :param dict: Dictionary to populate with finance data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with finance data fields.
+      """
       dict['Finance Account'] = generate_finance_account_field(num_records)
       dict['Transaction ID'] = generate_finance_trans_id_field(num_records)
       # - - - Date Format: YYYYMMDD - - -
@@ -242,6 +339,12 @@ def generate_table_finance_build(dict, num_records):
 
 # Main function to run the finance table generator
 def generate_table_finance(min_rand_record_lim = 1, max_rand_record_lim = 100000):
+      """
+      Generate a table of finance data with random data.
+      :param min_rand_record_lim: Minimum limit for random record length.
+      :param max_rand_record_lim: Maximum limit for random record length.
+      :return: Dictionary representing the generated finance table.
+      """
       finance_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       finance_data = gtsf.table_generate_id_records(finance_num_records)
       finance_data = generate_table_finance_build(finance_data, finance_num_records)

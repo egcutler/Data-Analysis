@@ -39,6 +39,12 @@ bus_list_keywords = [
 
 # Generate the Business Account field
 def generate_account_field(dict_list_id, num_records):
+      """
+      Generate a list of formatted account numbers based on a list of IDs and total number of records.
+      :param dict_list_id: List of unique identifiers.
+      :param num_records: Total number of records.
+      :return: List of formatted account numbers.
+      """
       dict_list = []
       # Generating the Account Column
       for x in dict_list_id:
@@ -52,6 +58,11 @@ def generate_account_field(dict_list_id, num_records):
 
 # Generate the Business Branch field
 def generate_random_branch_field(num_records):
+      """
+      Generate a list of random branch identifiers for a specified number of records.
+      :param num_records: Number of branch identifiers to generate.
+      :return: List of branch identifiers.
+      """
       dict_list = []
       # Generating the Account Column
       for _ in range(num_records):
@@ -60,6 +71,14 @@ def generate_random_branch_field(num_records):
 
 # Generate the Business Status field
 def generate_random_status_field(num_records, weightAct = 60, weightCls = 10, weightHis = 10):
+      """
+      Generate a list of random business statuses with specified weighting.
+      :param num_records: Number of statuses to generate.
+      :param weightAct: Weight for 'ACTIVE' status.
+      :param weightCls: Weight for 'CLOSED' status.
+      :param weightHis: Weight for 'HISTORY' status.
+      :return: List of business statuses.
+      """
       dict_list = []
       status_list = ['ACTIVE', 'CLOSED', 'HISTORY']
       weight_list = [weightAct, weightCls, weightHis]
@@ -69,6 +88,11 @@ def generate_random_status_field(num_records, weightAct = 60, weightCls = 10, we
 
 # Generate the Business Company Name field
 def generate_random_company_name_field(num_records):
+      """
+      Generate a list of random company names for a specified number of records.
+      :param num_records: Number of company names to generate.
+      :return: List of company names.
+      """
       dict_list = []
       for _ in range(num_records):
             adjective = random.choice(bus_list_adjectives)
@@ -79,6 +103,12 @@ def generate_random_company_name_field(num_records):
 
 # Generate the Business Account Type field
 def generate_random_account_type_field(num_records, num_acct_types = 10):
+      """
+      Generate a list of random account types for a specified number of records.
+      :param num_records: Number of account types to generate.
+      :param num_acct_types: Number of unique account types to choose from.
+      :return: List of account types.
+      """
       dict_list = []
       acct_type_list = []
       for _ in range(num_acct_types):
@@ -89,6 +119,13 @@ def generate_random_account_type_field(num_records, num_acct_types = 10):
 
 # Generate the Business Creation Date field
 def generate_random_creation_date_field(num_records, min_date = datetime(1990,1,1), max_date = datetime.now()):
+      """
+      Generate a list of random creation dates within a specified date range.
+      :param num_records: Number of dates to generate.
+      :param min_date: Minimum date in the range.
+      :param max_date: Maximum date in the range.
+      :return: List of creation dates.
+      """
       min_date = gtsf.function_date_int_to_datetime(min_date)
       max_date = gtsf.function_date_int_to_datetime(max_date)
       dict_list = []
@@ -98,6 +135,13 @@ def generate_random_creation_date_field(num_records, min_date = datetime(1990,1,
 
 # Generate the Business Modified Date field
 def generate_random_modified_date_field(num_records, created_date_list, max_date = datetime.now()):
+      """
+      Generate a list of random modified dates based on creation dates and a maximum date.
+      :param num_records: Number of dates to generate.
+      :param created_date_list: List of creation dates.
+      :param max_date: Maximum date for modification.
+      :return: List of modified dates.
+      """
       max_date = gtsf.function_date_int_to_datetime(max_date)
       dict_list = []
       for x in range(0, num_records):
@@ -106,6 +150,14 @@ def generate_random_modified_date_field(num_records, created_date_list, max_date
 
 # Generate the Business Closed Date field
 def generate_random_closed_date_field(num_records, status_list, mod_date_list, max_date = datetime.now()):
+      """
+      Generate a list of random closed dates for businesses, based on their status and modification dates.
+      :param num_records: Number of dates to generate.
+      :param status_list: List of business statuses.
+      :param mod_date_list: List of modification dates.
+      :param max_date: Maximum date for closing.
+      :return: List of closed dates.
+      """
       max_date = gtsf.function_date_int_to_datetime(max_date)
       dict_list = []
       for x in range(0, num_records):
@@ -117,6 +169,12 @@ def generate_random_closed_date_field(num_records, status_list, mod_date_list, m
 
 # Generate the Business TAG field
 def generate_random_tag_field(num_records, num_tag = 10):
+      """
+      Generate a list of random business tags for a specified number of records.
+      :param num_records: Number of tags to generate.
+      :param num_tag: Number of unique tags to choose from.
+      :return: List of business tags.
+      """
       dict_list = []
       tag_list = []
       for _ in range(num_tag):
@@ -127,6 +185,13 @@ def generate_random_tag_field(num_records, num_tag = 10):
 
 # Generate the Business Security Category field
 def generate_random_system_cat_field(num_records, min_cat = 0, max_cat = 5):
+      """
+      Generate a list of random security categories within a specified range for a number of records.
+      :param num_records: Number of categories to generate.
+      :param min_cat: Minimum category value.
+      :param max_cat: Maximum category value.
+      :return: List of security categories.
+      """
       dict_list = []
       for _ in range(num_records):
             dict_list.append(random.randint(min_cat, max_cat))
@@ -142,6 +207,12 @@ def generate_random_system_cat_field(num_records, min_cat = 0, max_cat = 5):
 
 # Function to run each field to build the business table
 def generate_table_business_build(dict, num_records):  
+      """
+      Populate a dictionary with various business-related data fields to build a business table.
+      :param dict: Dictionary to populate with business data.
+      :param num_records: Number of records to generate for each field.
+      :return: Dictionary populated with business data fields.
+      """
       dict_list_id = dict['ID_Record']
       dict['Account'] = generate_account_field(dict_list_id, num_records)
       dict['Branch'] = generate_random_branch_field(num_records)
@@ -161,6 +232,12 @@ def generate_table_business_build(dict, num_records):
 
 # Main function to run the business table generator
 def generate_table_business(min_rand_record_lim = 1, max_rand_record_lim = 100000):
+      """
+      Generate a table of business data with random data.
+      :param min_rand_record_lim: Minimum limit for random record length.
+      :param max_rand_record_lim: Maximum limit for random record length.
+      :return: Dictionary representing the generated business table.
+      """
       bus_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       bus_data = gtsf.table_generate_id_records(bus_num_records)
       bus_data = generate_table_business_build(bus_data, bus_num_records)
