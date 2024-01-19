@@ -1,11 +1,4 @@
-# how many nulls
-# total unique and recrod count
-# how many active/closed
-
-
-
-
-
+import pandas as pd
 
 class Statistics_List:
     def __init__(self, df):
@@ -41,18 +34,10 @@ class Statistics_List:
                     value_counts[list] += 1
         return value_counts
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+# how many nulls
+# total unique and recrod count
+# how many active/closed
     
 # """
 # Detect outliers in a specified numerical column using Z-scores.

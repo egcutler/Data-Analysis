@@ -59,6 +59,17 @@ def data_integrity_check(df):
 # ---------------------------------------------------------------------------------------------------------
 
 def closed_date_quality(df, date_field_cls, date_field_open = "", date_field_mod = ""):
+      """
+      Update a dataframe with data analysis columns compare Closed Date field date value against
+      the date values of both/either a open (created) date field and a modified date field. If the
+      Closed Date field has a value before the other date fields, it is flagged as closed dates
+      should contain the latest date.
+      :param df: dataframe
+      :param date_field_cls: Closed Date field
+      :param date_field_open: Open Date field
+      :param date_field_mod: Modified Date field
+      :return: updated df with both/either flagged Closed Date vs Modified Date flags and/or Open Date flags.
+      """
       check = {
             'cls vs mod'  : 0,
             'cls vs open' : 0
