@@ -63,23 +63,17 @@ file_types_pd = {
 # ---------------------------------------------------------------------------------------------------------
 class FolderPreCheck:
       def __init__(self, path):
-            """_summary_
-
-            Args:
-                path (_type_): _description_
-
-            Raises:
-                an: _description_
-                FileNotFoundError: _description_
-                ValueError: _description_
-                ValueError: _description_
+            """
+            Initialize the FolderPreCheck object.
+            :param path: Path to the folder for checking files.
             """
             self.file_path = Path(path)
             
       def search_files_with_partial_name(self, partial_name, file_type):
             """
-            Check if a file with a partial name exists in the specified path. Return a
-            printed details for True/False conditions.
+            Check if a file with a partial name exists in the specified path. Print details if found.
+            :param partial_name: Partial name of the file to search for.
+            :param file_type: File extension/type to match in the search.
             """
             file_pattern = f"*{partial_name}*{file_type}"
             matching_files = list(self.file_path.glob(file_pattern))
@@ -101,8 +95,10 @@ class FolderPreCheck:
             
       def check_files_with_partial_name(self, partial_name, file_type):
             """
-            Check if a file with a partial name exists in the specified path. Return
-            a True/False value for parameter application
+            Check if a file with a partial name exists in the specified path. Return a True/False value.
+            :param partial_name: Partial name of the file to search for.
+            :param file_type: File extension/type to match in the search.
+            :return: List of matching files if found, otherwise raise FileNotFoundError.
             """
             file_pattern = f"*{partial_name}*{file_type}"
             matching_files = list(self.file_path.glob(file_pattern))
@@ -129,9 +125,9 @@ class FilePreCheck:
       def __init__(self, path, filename, filetype):
             """
             Initialize the FilePreCheck object.
-            -Parameter path: Path to the file directory.
-            -Parameter filename: Name of the file.
-            -Parameter filetype: Extension of the file.
+            :param path: Path to the file directory.
+            :param filename: Name of the file.
+            :param filetype: Extension of the file.
             """
             self.file_path = Path(path)
             self.file_name = filename
@@ -142,9 +138,8 @@ class FilePreCheck:
             
       def file_exist_precheck(self):
             """
-            Check if the file exists. If not, raise an exception.
-            """
-            
+            Check if the file exists. Raise an exception if not found.
+            """ 
             full_path = self.file_path / f"{self.file_name}{self.file_type}"
             if not full_path.exists():
                   raise FileNotFoundError(f'''
@@ -166,7 +161,7 @@ class FilePreCheck:
       def fields_exist_precheck(self, fields):
             """
             Check if desired fields exist in the file.
-            -Parameter fields: List of fields to check.
+            :param fields: List of fields to check in the file.
             """
             # Lowercase the file extension for consistency
             file_extension = self.file_type.lower()
@@ -190,9 +185,9 @@ class FilePreCheck:
       # create another one to see if a field(s) exist where a given word is provided
       def search_fields_with_partialname(self, partial_name):
             """
-            Search all field names in the dataset to see if the partial name is part of any of the fields.
-            - Parameter partial_name: Partial name to search for in field names.
-            - Returns: List of all matching field names.
+            Search for field names in the dataset containing the partial name.
+            :param partial_name: Partial name to search for in field names.
+            :return: List of all matching field names.
             """
             # Lowercase the file extension for consistency
             file_extension = self.file_type.lower()
@@ -220,9 +215,9 @@ class FilePreCheck:
       # create another one to see if a field(s) exist where a given word is provided
       def check_fields_with_partialname(self, partial_name):
             """
-            Search all field names in the dataset to see if the partial name is part of any of the fields.
-            - Parameter partial_name: Partial name to search for in field names.
-            - Returns: List of all matching field names.
+            Check if any field names in the dataset contain the partial name.
+            :param partial_name: Partial name to search for in field names.
+            :return: Boolean indicating if any matching field names are found.
             """
             # Lowercase the file extension for consistency
             file_extension = self.file_type.lower()

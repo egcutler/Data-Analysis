@@ -66,8 +66,8 @@ class Data_Check:
 
       def __init__(self, df):
             """
-            Initialize the FilePostCheck object with a DataFrame.
-            - Parameter df: The DataFrame to be checked.
+            Initialize the Data_Check object with a DataFrame.
+            :param df: The DataFrame to be checked.
             """
             self.df = df
 
@@ -76,11 +76,11 @@ class Data_Check:
             """
             Check the row count and unique ID count of the DataFrame.
             Flags are raised if the counts are outside the specified thresholds.
-            - Parameter id_col: Column name of the ID in the DataFrame.
-            - Parameter threshold_low_id: Minimum threshold for distinct ID count (default 10).
-            - Parameter threshold_high_id: Maximum threshold for distinct ID count (default 500000).
-            - Parameter threshold_low_row: Minimum threshold for record (row) count (default 10).
-            - Parameter threshold_high_row: Maximum threshold for record (row) count (default 500000).
+            :param id_col: Column name of the ID in the DataFrame.
+            :param threshold_low_id: Minimum threshold for distinct ID count (default 10).
+            :param threshold_high_id: Maximum threshold for distinct ID count (default 500000).
+            :param threshold_low_row: Minimum threshold for record (row) count (default 10).
+            :param threshold_high_row: Maximum threshold for record (row) count (default 500000).
             """
             ids = self.df[id_col].tolist()
             unique_ids = set(ids)
@@ -118,10 +118,10 @@ class Data_Check:
             Check the ACTIVE/CLOSED account statistics in the DataFrame.
             Flags are raised if the number of active accounts is below a specified threshold
             or if the ratio of ACTIVE to CLOSED accounts falls below another specified threshold.
-            - Parameter id_col: Column name of the ID in the DataFrame.
-            - Parameter status_col: Column name of the account status (ACTIVE/CLOSED).
-            - Parameter act_threshold: Minimum number of active accounts threshold (default 10).
-            - Parameter act_ratio_threshold: Minimum ratio of ACTIVE to CLOSED accounts (default 1).
+            :param id_col: Column name of the ID in the DataFrame.
+            :param status_col: Column name of the account status (ACTIVE/CLOSED).
+            :param act_threshold: Minimum number of active accounts threshold (default 10).
+            :param act_ratio_threshold: Minimum ratio of ACTIVE to CLOSED accounts (default 1).
             """
             # Creating a DataFrame with only ID and Active Columns
             df_ids = self.df[[id_col, status_col]]
@@ -163,9 +163,9 @@ class Data_Check:
       def null_check(self, null_threshold = 100):
             """
             Check for null values in the DataFrame.
-            - Flags fields that are entirely null.
-            - Flags fields where the count of null values exceeds the specified threshold.
-            - Parameter null_threshold: Threshold for the acceptable count of null values in a field.
+            Flags fields that are entirely null.
+            Flags fields where the count of null values exceeds the specified threshold.
+            :param null_threshold: Threshold for the acceptable count of null values in a field.
             """
             # Check for columns that are entirely null
             all_null_columns = self.df.columns[self.df.isnull().all()]
@@ -185,7 +185,7 @@ class Data_Check:
       def check_duplicate_rows(self):
             """
             Identify duplicate rows in the DataFrame.
-            - Flags entire rows that are duplicates.
+            Flags entire rows that are duplicates.
             """
             duplicates = self.df[self.df.duplicated()]
             if not duplicates.empty:
@@ -232,8 +232,8 @@ class Data_Check:
       def check_explicit_data_types(self, expected_types):
             """
             Ensure that each column contains data of the expected type.
-            - Parameter expected_types: Dictionary with column names as keys and expected data types as values.
-            - Flags columns with unexpected data types and shows all data types present in these columns.
+            :param expected_types: Dictionary with column names as keys and expected data types as values.
+            Flags columns with unexpected data types and shows all data types present in these columns.
             """
             print_list = []
             flag_count = 0
@@ -260,10 +260,10 @@ class Data_Check:
       def check_data_len_range(self, column, min_len=0, max_len=100):
             """
             Ensure that the length of string values in a column fall within a specified length range.
-            - Parameter column: The column to check.
-            - Parameter min_len: Minimum acceptable length (inclusive).
-            - Parameter max_len: Maximum acceptable length (inclusive).
-            - Flags string values outside the specified length range.
+            :param column: The column to check.
+            :param min_len: Minimum acceptable length (inclusive).
+            :param max_len: Maximum acceptable length (inclusive).
+            Flags string values outside the specified length range.
             """
             string_values = self.df[column].astype(str)
             max_val = 0
