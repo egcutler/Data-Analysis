@@ -1,7 +1,7 @@
 import pandas as pd
 import random
 from datetime import datetime, timedelta
-import generate_tables_support_functions as gtsf
+import generate_random_dataset_support_functions as gtsf
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
