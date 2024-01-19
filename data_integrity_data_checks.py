@@ -283,10 +283,22 @@ class Data_Check:
 
 class Data_Check_Formats:
       def __init__(self, df):
+            """
+            Initialize the Data_Check_Formats object with a DataFrame.
+            This class is intended for validating data formats in various fields of the DataFrame.
+            :param df: The DataFrame to be validated.
+            """
             self.df = df
 
       # Employee email address format validation
       def check_employee_email_format_field(self, column, return_list = "n"):
+            """
+            Validate the email address format in a specified column of the DataFrame.
+            The function checks against a specified regex pattern for email validation.
+            :param column: The column name containing the email addresses.
+            :param return_list: Set to "y" to return a list of invalid email addresses.
+            :return: Optional list of invalid email addresses if return_list is set to "y".
+            """
             pattern = r"^[a-zA-Z]+\.[a-zA-Z]+\d?@mailtype\.com$"
             invalid_emails = self.df[~self.df[column].astype(str).str.match(pattern)][column]
             if not invalid_emails.empty:
@@ -303,6 +315,13 @@ class Data_Check_Formats:
     
       # Street address format validation
       def check_street_address_format_field(self, column, return_list="n"):
+            """
+            Validate the street address format in a specified column of the DataFrame.
+            The function checks addresses against a regex pattern for standard street address validation.
+            :param column: The column name containing street addresses.
+            :param return_list: Set to "y" to return a list of invalid addresses.
+            :return: Optional list of invalid addresses if return_list is set to "y".
+            """
             # Define a simple street address regex pattern or use a more complex one depending on the requirement
             pattern = r"^\d+\s[A-z]+\s[A-z]+"
             invalid_addresses = self.df[~self.df[column].astype(str).str.match(pattern)][column]
@@ -322,6 +341,13 @@ class Data_Check_Formats:
 
       # Zip Code format validation (5 or 9 digit)
       def check_zip_code_format_field(self, column, return_list="n"):
+            """
+            Validate the zip code format in a specified column of the DataFrame.
+            The function checks zip codes against a regex pattern for standard 5 or 9 digit zip code validation.
+            :param column: The column name containing zip codes.
+            :param return_list: Set to "y" to return a list of invalid zip codes.
+            :return: Optional list of invalid zip codes if return_list is set to "y".
+            """
             pattern = r"^\d{5}(-\d{4})?$"
             invalid_zip_codes = self.df[~self.df[column].astype(str).str.match(pattern)][column]
             
@@ -336,6 +362,13 @@ class Data_Check_Formats:
 
       # IP address format validation
       def check_ip_address_format_field(self, column, return_list="n"):
+            """
+            Validate the IP address format in a specified column of the DataFrame.
+            The function checks IP addresses against a regex pattern for standard IP address validation.
+            :param column: The column name containing IP addresses.
+            :param return_list: Set to "y" to return a list of invalid IP addresses.
+            :return: Optional list of invalid IP addresses if return_list is set to "y".
+            """
             pattern = r"^(\d{1,3}\.){3}\d{1,3}$"
             invalid_ips = self.df[~self.df[column].astype(str).str.match(pattern)][column]
             
@@ -350,6 +383,13 @@ class Data_Check_Formats:
 
       # Domain name (website) format validation
       def check_domain_name_format_field(self, column, return_list="n"):
+            """
+            Validate the domain name format in a specified column of the DataFrame.
+            The function checks domain names against a regex pattern for standard domain name validation.
+            :param column: The column name containing domain names.
+            :param return_list: Set to "y" to return a list of invalid domain names.
+            :return: Optional list of invalid domain names if return_list is set to "y".
+            """
             pattern = r"^(https?://)?(www\.)?[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$"
             invalid_domains = self.df[~self.df[column].astype(str).str.match(pattern)][column]
             
@@ -363,31 +403,47 @@ class Data_Check_Formats:
                   print("...Domain name format check: Passed")
 
       def validate_against_reference(self, column, reference_data):
+            """
+            Validate the entries of a specified column against a set of reference data.
+            Flags entries in the column that are not found in the reference data.
+            :param column: The column name to be validated.
+            :param reference_data: The set of reference data to validate against.
+            """
             if not set(self.df[column]).issubset(set(reference_data)):
                   print(f"Reference data issue in column: {column}")
                   
-# This function is still under construction
+# This class and its functions are still under construction
 class Data_Check_Time_Series:
+      """
+      Initialize the Data_Check_Time_Series object with a DataFrame.
+      Intended for analyzing time series data within the DataFrame.
+      :param df: The DataFrame to be analyzed.
+      """
       def __init__(self, df):
             self.df = df
 
       def analyze_time_series(self, time_column):
             """
             Check for anomalies in time-series data.
-            - Parameter time_column: The column containing time-series data.
-            - Implement specific time series checks.
+            This function is currently under construction.
+            :param time_column: The column containing time-series data.
             """
             pass
 
- # This function is still under construction
+# This class and its functions are still under construction
 class Data_Check_Correlations:
+      """
+      Initialize the Data_Check_Correlations object with a DataFrame.
+      Intended for identifying unexpected correlations between columns in the DataFrame.
+      :param df: The DataFrame to be analyzed.
+      """
       def __init__(self, df):
             self.df = df
             
       def analyze_correlation(self):
             """
             Identify unexpected correlations between columns.
-            - Computes and prints the correlation matrix of the DataFrame.
+            This function is currently under construction and will compute and print the correlation matrix of the DataFrame.
             """
             pass
             #correlation_matrix = self.df.corr()
