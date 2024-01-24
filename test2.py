@@ -1,5 +1,6 @@
 import data_analysis as da
 
+
 path = (r'/root/workspace/github.com/egcutler/Data-Analysis/data archive')
 filename = 'business data'
 partial_name = 'business'
