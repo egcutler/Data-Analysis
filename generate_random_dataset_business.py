@@ -206,14 +206,15 @@ def generate_random_system_cat_field(num_records, min_cat = 0, max_cat = 5):
 #----------------------------------------------------------------------------------
 
 # Function to run each field to build the business table
-def generate_table_business_build(dict, num_records):  
+def generate_table_business_general(dict, id_field_name = 'ID_Record'):  
       """
       Populate a dictionary with various business-related data fields to build a business table.
       :param dict: Dictionary to populate with business data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with business data fields.
       """
-      dict_list_id = dict['ID_Record']
+      num_records = len(dict[id_field_name])
+      dict_list_id = dict[id_field_name]
       dict['Account'] = generate_account_field(dict_list_id, num_records)
       dict['Branch'] = generate_random_branch_field(num_records)
       dict['External ID'] = [branch + account for branch, account in zip(dict['Branch'], dict['Account'])]
@@ -229,19 +230,18 @@ def generate_table_business_build(dict, num_records):
       dict['Security Category'] = generate_random_system_cat_field(num_records)
       return dict
 
-
-# Main function to run the business table generator
-def generate_table_business(min_rand_record_lim = 1, max_rand_record_lim = 100000):
-      """
-      Generate a table of business data with random data.
-      :param min_rand_record_lim: Minimum limit for random record length.
-      :param max_rand_record_lim: Maximum limit for random record length.
-      :return: Dictionary representing the generated business table.
-      """
-      bus_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
-      bus_data = gtsf.table_generate_id_records(bus_num_records)
-      bus_data = generate_table_business_build(bus_data, bus_num_records)
-      return bus_data
-
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
+
+# def generate_table_business(min_rand_record_lim = 1, max_rand_record_lim = 100000):
+#       """
+#       Generate a table of business data with random data.
+#       :param min_rand_record_lim: Minimum limit for random record length.
+#       :param max_rand_record_lim: Maximum limit for random record length.
+#       :return: Dictionary representing the generated business table.
+#       """
+#       bus_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
+#       bus_data = gtsf.table_generate_id_records(bus_num_records)
+#       bus_data = generate_table_business_build(bus_data, bus_num_records)
+#       return bus_data
+

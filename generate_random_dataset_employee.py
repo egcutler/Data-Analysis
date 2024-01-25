@@ -241,13 +241,14 @@ def generate_emp_security_clearance_field(num_records, min = 1, max = 5):
 #----------------------------------------------------------------------------------
 
 # Function to run each field to build the employee table
-def generate_table_employee_build(dict, num_records): 
+def generate_table_employee_general(dict, id_field_name = 'ID_Record'): 
       """
       Populate a dictionary with various employee-related data fields to build an employee table.
       :param dict: Dictionary to populate with employee data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with employee data fields.
       """
+      num_records = len(dict[id_field_name])
       dict['Employee ID'] = generate_emp_id_field(num_records)
       dict['Emp First Name'] = generate_emp_first_name_field(num_records)
       dict['Emp Last Name'] = generate_emp_last_name_field(num_records)
@@ -263,19 +264,19 @@ def generate_table_employee_build(dict, num_records):
       dict['Security Clearance'] = generate_emp_security_clearance_field(num_records)
       return dict
 
-# Main function to run the employee table generator
-def generate_table_employee(min_rand_record_lim = 1, max_rand_record_lim = 100000):
-      """
-      Generate a table of employee data with random data.
-      :param min_rand_record_lim: Minimum limit for random record length.
-      :param max_rand_record_lim: Maximum limit for random record length.
-      :return: Dictionary representing the generated employee table.
-      """
-      emp_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
-      emp_data = gtsf.table_generate_id_records(emp_num_records)
-      emp_data = generate_table_employee_build(emp_data, emp_num_records)
-      return emp_data
-
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
+
+# # Main function to run the employee table generator
+# def generate_table_employee(min_rand_record_lim = 1, max_rand_record_lim = 100000):
+#       """
+#       Generate a table of employee data with random data.
+#       :param min_rand_record_lim: Minimum limit for random record length.
+#       :param max_rand_record_lim: Maximum limit for random record length.
+#       :return: Dictionary representing the generated employee table.
+#       """
+#       emp_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
+#       emp_data = gtsf.table_generate_id_records(emp_num_records)
+#       emp_data = generate_table_employee_build(emp_data, emp_num_records)
+#       return emp_data
 

@@ -28,45 +28,52 @@ num_records, id_dict = generate_table_basic(1, 10)
 #----------              Generator the random data tables                 ---------
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
+# Note: "id_dict_copy = id_dict.copy()" is repeated to avoid 
+#        each log iteration copying over to the next.
 
 # Random Business Table
-bus_df = pd.DataFrame(grdb.generate_table_business(1, 100))
+id_dict_copy = id_dict.copy()
+bus_df = pd.DataFrame(grdb.generate_table_business_general(id_dict_copy))
 
 # Random Legal Table
-le_df = pd.DataFrame(grdle.generate_table_legal(1, 100))
+id_dict_copy = id_dict.copy()
+le_df = pd.DataFrame(grdle.generate_table_legal_general(id_dict_copy))
 
 # Random Address Table
-addr_df = pd.DataFrame(grda.generate_table_address(1, 100))
+id_dict_copy = id_dict.copy()
+addr_df = pd.DataFrame(grda.generate_table_address_general(id_dict_copy))
 
 # Random Employee Table
-emp_df = pd.DataFrame(grde.generate_table_employee(1, 100))
+id_dict_copy = id_dict.copy()
+emp_df = pd.DataFrame(grde.generate_table_employee_general(id_dict_copy))
 
 # Random Tax Table
-tax_df = pd.DataFrame(grdt.generate_table_tax(1, 100))
+id_dict_copy = id_dict.copy()
+tax_df = pd.DataFrame(grdt.generate_table_tax_general(id_dict_copy))
 
 # Random Finance Table
-finance_df = pd.DataFrame(grdf.generate_table_finance(1, 100))
+id_dict_copy = id_dict.copy()
+finance_df = pd.DataFrame(grdf.generate_table_finance_general(id_dict_copy))
 
 # Random Log Table
-# "id_dict_copy = id_dict.copy()" is repeated to avoid each log iteration copying over to the next.
 id_dict_copy = id_dict.copy()
-log_df_g = pd.DataFrame(grdlo.generate_table_log_general(id_dict_copy, num_records))
+log_df_g = pd.DataFrame(grdlo.generate_table_log_general(id_dict_copy))
 id_dict_copy = id_dict.copy()
-log_df_dc = pd.DataFrame(grdlo.generate_table_log_datachange(id_dict_copy, num_records))
+log_df_dc = pd.DataFrame(grdlo.generate_table_log_datachange(id_dict_copy))
 id_dict_copy = id_dict.copy()
-log_df_fc = pd.DataFrame(grdlo.generate_table_log_filechange(id_dict_copy, num_records))
+log_df_fc = pd.DataFrame(grdlo.generate_table_log_filechange(id_dict_copy))
 id_dict_copy = id_dict.copy()
-log_df_sec = pd.DataFrame(grdlo.generate_table_log_security(id_dict_copy, num_records))
+log_df_sec = pd.DataFrame(grdlo.generate_table_log_security(id_dict_copy))
 id_dict_copy = id_dict.copy()
-log_df_wa = pd.DataFrame(grdlo.generate_table_log_user_web_activity(id_dict_copy, num_records))
+log_df_wa = pd.DataFrame(grdlo.generate_table_log_user_web_activity(id_dict_copy))
 id_dict_copy = id_dict.copy()
-log_df_sa = pd.DataFrame(grdlo.generate_table_log_user_server_activity(id_dict_copy, num_records))
+log_df_sa = pd.DataFrame(grdlo.generate_table_log_user_server_activity(id_dict_copy))
 id_dict_copy = id_dict.copy()
-log_df_ac = pd.DataFrame(grdlo.generate_table_log_user_account_activity(id_dict_copy, num_records))
+log_df_ac = pd.DataFrame(grdlo.generate_table_log_user_account_activity(id_dict_copy))
 id_dict_copy = id_dict.copy()
-log_df_le = pd.DataFrame(grdlo.generate_table_log_errors(id_dict_copy, num_records))
+log_df_le = pd.DataFrame(grdlo.generate_table_log_errors(id_dict_copy))
 id_dict_copy = id_dict.copy()
-log_df_ec = pd.DataFrame(grdlo.generate_table_log_error_codes(id_dict_copy, num_records))
+log_df_ec = pd.DataFrame(grdlo.generate_table_log_error_codes(id_dict_copy))
 
 
 #----------------------------------------------------------------------------------
@@ -90,15 +97,10 @@ finance_df = df_foreignkey_le.add_foreignkey_random(finance_df, col_placement=3)
 df_foreignkey_tax = grdr.Foreign_Keys(tax_df, db_fk_field_name='Tax Account', foreign_key_abbreviation_post=" ID")
 finance_df = df_foreignkey_tax.add_foreignkey_random(finance_df, col_placement=3)
 
-
 # Creating an intermediary Business-Legal Table:
 df_intermediary = grdr.Intermediary_Data()
 emp_interdb_df = df_intermediary.create_2db_relationship_df_random(df1=emp_df, df1_id_field_name='Employee ID', \
                                                                    df2=le_df, df2_id_field_name='Legal Account')
-
-
-
-
 
       
 #----------------------------------------------------------------------------------
@@ -107,8 +109,10 @@ emp_interdb_df = df_intermediary.create_2db_relationship_df_random(df1=emp_df, d
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-
-
+df_inserts_bus = grdac.Data_Analysis_Inserts(bus_df)
+bus_df = df_inserts_bus.replicate_field_values_with_random('External ID', dup_option_perc=30, num_to_dup_perc=35)
+bus_df = df_inserts_bus.replicate_field_values_with_value('Company Name', num_to_dup_perc=12)
+bus_df = df_inserts_bus.replicate_field_values_with_value('Modified Date', num_to_dup_perc=7)
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------

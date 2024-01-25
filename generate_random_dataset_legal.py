@@ -335,13 +335,14 @@ def generate_legal_tefra_id_field(num_records, len_id_char = 7):
 #----------------------------------------------------------------------------------
 
 # Function to run each field to build the legal table
-def generate_table_legal_build(dict, num_records):
+def generate_table_legal_general(dict, id_field_name = 'ID_Record'): 
       """
       Populate a dictionary with various legal-related data fields to build a legal table.
       :param dict: Dictionary to populate with legal data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with legal data fields.
       """
+      num_records = len(dict[id_field_name])
       dict['Legal Account'] = generate_legal_account_field(num_records, 8)
       dict['Legal Firm'] = generate_legal_firm_field(num_records)
       dict['Legal Type'], dict['Legal Type Def'] = generate_legal_type_and_def_field(num_records)
@@ -360,18 +361,18 @@ def generate_table_legal_build(dict, num_records):
       dict['TEFRA ID'] = generate_legal_tefra_id_field(num_records)
       return dict
 
-# Main function to run the legal table generator  
-def generate_table_legal(min_rand_record_lim = 1, max_rand_record_lim = 100000):
-      """
-      Generate a table of legal data with random data.
-      :param min_rand_record_lim: Minimum limit for random record length.
-      :param max_rand_record_lim: Maximum limit for random record length.
-      :return: Dictionary representing the generated legal table.
-      """
-      le_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
-      le_data = gtsf.table_generate_id_records(le_num_records)
-      le_data = generate_table_legal_build(le_data, le_num_records)
-      return le_data
-
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
+
+# # Main function to run the legal table generator  
+# def generate_table_legal(min_rand_record_lim = 1, max_rand_record_lim = 100000):
+#       """
+#       Generate a table of legal data with random data.
+#       :param min_rand_record_lim: Minimum limit for random record length.
+#       :param max_rand_record_lim: Maximum limit for random record length.
+#       :return: Dictionary representing the generated legal table.
+#       """
+#       le_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
+#       le_data = gtsf.table_generate_id_records(le_num_records)
+#       le_data = generate_table_legal_build(le_data, le_num_records)
+#       return le_data

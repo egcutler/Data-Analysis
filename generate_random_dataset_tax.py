@@ -265,13 +265,14 @@ def generate_tax_trans_date_field(num_records, min_date = datetime(2010,1,1), ma
 #----------------------------------------------------------------------------------
 
 # Function to run each field to build the tax table
-def generate_table_tax_build(dict, num_records):  
+def generate_table_tax_general(dict, id_field_name = 'ID_Record'):  
       """
       Populate a dictionary with various tax-related data fields to build a tax table.
       :param dict: Dictionary to populate with tax data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with tax data fields.
       """
+      num_records = len(dict[id_field_name])
       dict['Tax Account'] = generate_tax_account_field(num_records)
       dict['Sec ID'] = generate_tax_sec_id_field(num_records)
       dict['CUSIP'] = generate_tax_cusip_field(num_records)
@@ -287,18 +288,18 @@ def generate_table_tax_build(dict, num_records):
       # - - - - - - - - - - - - - - - - -
       return dict
 
-# Main function to run the tax table generator
-def generate_table_tax(min_rand_record_lim = 1, max_rand_record_lim = 100000):
-      """
-      Generate a table of tax data with random data.
-      :param min_rand_record_lim: Minimum limit for random record length.
-      :param max_rand_record_lim: Maximum limit for random record length.
-      :return: Dictionary representing the generated tax table.
-      """
-      tax_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
-      tax_data = gtsf.table_generate_id_records(tax_num_records)
-      tax_data = generate_table_tax_build(tax_data, tax_num_records)
-      return tax_data
-
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
+
+# # Main function to run the tax table generator
+# def generate_table_tax(min_rand_record_lim = 1, max_rand_record_lim = 100000):
+#       """
+#       Generate a table of tax data with random data.
+#       :param min_rand_record_lim: Minimum limit for random record length.
+#       :param max_rand_record_lim: Maximum limit for random record length.
+#       :return: Dictionary representing the generated tax table.
+#       """
+#       tax_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
+#       tax_data = gtsf.table_generate_id_records(tax_num_records)
+#       tax_data = generate_table_tax_build(tax_data, tax_num_records)
+#       return tax_data

@@ -312,13 +312,14 @@ def generate_finance_comment_field(num_records):
 #----------------------------------------------------------------------------------
 
 # Function to run each field to build the finance table
-def generate_table_finance_build(dict, num_records):  
+def generate_table_finance_general(dict, id_field_name = 'ID_Record'):  
       """
       Populate a dictionary with various finance-related data fields to build a finance table.
       :param dict: Dictionary to populate with finance data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with finance data fields.
       """
+      num_records = len(dict[id_field_name])
       dict['Finance Account'] = generate_finance_account_field(num_records)
       dict['Transaction ID'] = generate_finance_trans_id_field(num_records)
       # - - - Date Format: YYYYMMDD - - -
@@ -337,18 +338,18 @@ def generate_table_finance_build(dict, num_records):
       dict['Comments'] = generate_finance_comment_field(num_records)
       return dict
 
-# Main function to run the finance table generator
-def generate_table_finance(min_rand_record_lim = 1, max_rand_record_lim = 100000):
-      """
-      Generate a table of finance data with random data.
-      :param min_rand_record_lim: Minimum limit for random record length.
-      :param max_rand_record_lim: Maximum limit for random record length.
-      :return: Dictionary representing the generated finance table.
-      """
-      finance_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
-      finance_data = gtsf.table_generate_id_records(finance_num_records)
-      finance_data = generate_table_finance_build(finance_data, finance_num_records)
-      return finance_data
-
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
+
+# # Main function to run the finance table generator
+# def generate_table_finance(min_rand_record_lim = 1, max_rand_record_lim = 100000):
+#       """
+#       Generate a table of finance data with random data.
+#       :param min_rand_record_lim: Minimum limit for random record length.
+#       :param max_rand_record_lim: Maximum limit for random record length.
+#       :return: Dictionary representing the generated finance table.
+#       """
+#       finance_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
+#       finance_data = gtsf.table_generate_id_records(finance_num_records)
+#       finance_data = generate_table_finance_build(finance_data, finance_num_records)
+#       return finance_data

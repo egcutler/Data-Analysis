@@ -480,13 +480,14 @@ def generate_log_error_codes_fields(num_records):
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-def generate_table_log_general(dict, num_records):  
+def generate_table_log_general(dict, id_field_name = 'ID_Record'): 
       """
       Populate a dictionary with various general log data fields to build a log table.
       :param dict: Dictionary to populate with log data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with general log data fields.
       """
+      num_records = len(dict[id_field_name])
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -499,13 +500,14 @@ def generate_table_log_general(dict, num_records):
       dict['Log Event'], dict['Log Event Description']  = generate_log_event_fields(num_records)
       return dict
 
-def generate_table_log_datachange(dict, num_records):  
+def generate_table_log_datachange(dict, id_field_name = 'ID_Record'):  
       """
       Populate a dictionary with log data fields related to data changes.
       :param dict: Dictionary to populate with log data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with log data fields related to data changes.
       """
+      num_records = len(dict[id_field_name])
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -519,13 +521,14 @@ def generate_table_log_datachange(dict, num_records):
       dict['New Value'] = generate_log_datachange_fields(num_records)
       return dict
 
-def generate_table_log_filechange(dict, num_records):  
+def generate_table_log_filechange(dict, id_field_name = 'ID_Record'):  
       """
       Populate a dictionary with log data fields related to file changes.
       :param dict: Dictionary to populate with log data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with log data fields related to file changes.
       """
+      num_records = len(dict[id_field_name])
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -539,13 +542,14 @@ def generate_table_log_filechange(dict, num_records):
       dict['New Value'] = generate_log_filechange_fields(num_records)
       return dict
 
-def generate_table_log_security(dict, num_records):  
+def generate_table_log_security(dict, id_field_name = 'ID_Record'):  
       """
       Populate a dictionary with log data fields related to security events.
       :param dict: Dictionary to populate with log data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with log data fields related to security events.
       """
+      num_records = len(dict[id_field_name])
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -559,13 +563,14 @@ def generate_table_log_security(dict, num_records):
       return dict
 
 # Log Table Generator: user web activity
-def generate_table_log_user_web_activity(dict, num_records):  
+def generate_table_log_user_web_activity(dict, id_field_name = 'ID_Record'):  
       """
       Populate a dictionary with log data fields related to user web activity.
       :param dict: Dictionary to populate with log data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with log data fields related to user web activity.
       """
+      num_records = len(dict[id_field_name])
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -579,13 +584,14 @@ def generate_table_log_user_web_activity(dict, num_records):
       return dict
 
 # Log Table Generator: user server activity
-def generate_table_log_user_server_activity(dict, num_records):  
+def generate_table_log_user_server_activity(dict, id_field_name = 'ID_Record'):  
       """
       Populate a dictionary with log data fields related to user server activity.
       :param dict: Dictionary to populate with log data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with log data fields related to user server activity.
       """
+      num_records = len(dict[id_field_name])
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -599,13 +605,14 @@ def generate_table_log_user_server_activity(dict, num_records):
       return dict
 
 # Log Table Generator: user account activity
-def generate_table_log_user_account_activity(dict, num_records):  
+def generate_table_log_user_account_activity(dict, id_field_name = 'ID_Record'):  
       """
       Populate a dictionary with log data fields related to user account activity.
       :param dict: Dictionary to populate with log data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with log data fields related to user server activity.
       """
+      num_records = len(dict[id_field_name])
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -619,13 +626,14 @@ def generate_table_log_user_account_activity(dict, num_records):
       return dict
 
 # Log Table Generator: log errors
-def generate_table_log_errors(dict, num_records): 
+def generate_table_log_errors(dict, id_field_name = 'ID_Record'): 
       """
       Populate a dictionary with log data fields related to log errors.
       :param dict: Dictionary to populate with log data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with log data fields related to user server activity.
       """
+      num_records = len(dict[id_field_name])
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -639,13 +647,14 @@ def generate_table_log_errors(dict, num_records):
       return dict
 
 # Log Table Generator: log error codes
-def generate_table_log_error_codes(dict, num_records):  
+def generate_table_log_error_codes(dict, id_field_name = 'ID_Record'):  
       """
       Populate a dictionary with log data fields related to log error codes.
       :param dict: Dictionary to populate with log data.
       :param num_records: Number of records to generate for each field.
       :return: Dictionary populated with log data fields related to user server activity.
       """
+      num_records = len(dict[id_field_name])
       dict['Log ID'] = generate_log_id_field(num_records)
       dict['Time Stamp'] = generate_log_timestamp_field(num_records)
       dict['User ID'] = generate_log_userid_field(num_records)
@@ -661,15 +670,15 @@ def generate_table_log_error_codes(dict, num_records):
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
 
-def generate_table_log(min_rand_record_lim = 1, max_rand_record_lim = 1000):
-      """
-      Generate a table of log data with random data.
-      :param min_rand_record_lim: Minimum limit for random record length.
-      :param max_rand_record_lim: Maximum limit for random record length.
-      :return: Dictionary representing the generated log table.
-      """
-      log_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
-      log_data = gtsf.table_generate_id_records(log_num_records)
-      log_data = generate_table_log_datachange(log_data, log_num_records)
-      return log_data
+# def generate_table_log(min_rand_record_lim = 1, max_rand_record_lim = 1000):
+#       """
+#       Generate a table of log data with random data.
+#       :param min_rand_record_lim: Minimum limit for random record length.
+#       :param max_rand_record_lim: Maximum limit for random record length.
+#       :return: Dictionary representing the generated log table.
+#       """
+#       log_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
+#       log_data = gtsf.table_generate_id_records(log_num_records)
+#       log_data = generate_table_log_datachange(log_data, log_num_records)
+#       return log_data
 

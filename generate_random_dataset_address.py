@@ -121,31 +121,32 @@ def generate_address_registered_country_field(num_records):
 #----------------------------------------------------------------------------------
 
 # Function to run each field to build the address table
-def generate_table_address_build(dict, num_records):  
+def generate_table_address_general(dict, id_field_name = 'ID_Record'):
       """
       Build an address table by generating various address-related fields.
       :param dict: Dictionary to populate with address data.
       :param num_records: Number of records to generate for the table.
       :return: Dictionary populated with generated address data.
       """
+      num_records = len(dict[id_field_name])
       dict['Address ID'] = generate_address_account_field(num_records)
       dict['Address Street'], dict['City'], dict['State'], dict['Zip Code'] = generate_address_fields(num_records)
       dict['Registered Country'] = generate_address_registered_country_field(num_records)
       dict['Original Country'] = generate_address_original_country_field(num_records, weight_us=20)
       return dict
 
-# Main function to run the address table generator
-def generate_table_address(min_rand_record_lim = 1, max_rand_record_lim = 100000):
-      """
-      Generate a table of addresses with random data.
-      :param min_rand_record_lim: Minimum limit for random record length (default 1).
-      :param max_rand_record_lim: Maximum limit for random record length (default 100000).
-      :return: Dictionary representing the generated address table.
-      """
-      addr_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
-      addr_data = gtsf.table_generate_id_records(addr_num_records)
-      addr_data = generate_table_address_build(addr_data, addr_num_records)
-      return addr_data
-
 #----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------- 
+
+# # Main function to run the address table generator
+# def generate_table_address(min_rand_record_lim = 1, max_rand_record_lim = 100000):
+#       """
+#       Generate a table of addresses with random data.
+#       :param min_rand_record_lim: Minimum limit for random record length (default 1).
+#       :param max_rand_record_lim: Maximum limit for random record length (default 100000).
+#       :return: Dictionary representing the generated address table.
+#       """
+#       addr_num_records = gtsf.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
+#       addr_data = gtsf.table_generate_id_records(addr_num_records)
+#       addr_data = generate_table_address_build(addr_data, addr_num_records)
+#       return addr_data
