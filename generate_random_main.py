@@ -91,12 +91,12 @@ df_foreignkey_tax = grdr.Foreign_Keys(tax_df, db_fk_field_name='Tax Account', fo
 finance_df = df_foreignkey_tax.add_foreignkey_random(finance_df, col_placement=3)
 
 
-
-
 # Creating an intermediary Business-Legal Table:
 df_intermediary = grdr.Intermediary_Data()
-emp_interdb_df = df_intermediary.create_2db_relationship_df_random(df1=emp_df, df1_id_field_name='Employee ID', df2=le_df, df2_id_field_name='Legal Account')
-print(emp_interdb_df)
+emp_interdb_df = df_intermediary.create_2db_relationship_df_random(df1=emp_df, df1_id_field_name='Employee ID', \
+                                                                   df2=le_df, df2_id_field_name='Legal Account')
+
+
 
 
 
@@ -122,32 +122,35 @@ print(emp_interdb_df)
 #----------              Store Datasets                                   ---------
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
-
+pathway_output = "data archive/"
 # Random Business Table
-bus_df.to_csv("data archive/business data.csv", index=False)
+bus_df.to_csv(pathway_output + "business data.csv", index=False)
 
 # Random Legal Table
-le_df.to_csv("data archive/legal data.csv", index=False)
+le_df.to_csv(pathway_output + "legal data.csv", index=False)
 
 # Random Address Table
-addr_df.to_csv("data archive/address data.csv", index=False)
+addr_df.to_csv(pathway_output + "address data.csv", index=False)
 
 # Random Employee Table
-emp_df.to_csv("data archive/employee data.csv", index=False)
+emp_df.to_csv(pathway_output + "employee data.csv", index=False)
 
 # Random Tax Table
-tax_df.to_csv("data archive/tax data.csv", index=False)
+tax_df.to_csv(pathway_output + "tax data.csv", index=False)
 
 # Random Finance Table
-finance_df.to_csv("data archive/finance data.csv", index=False)
+finance_df.to_csv(pathway_output + "finance data.csv", index=False)
 
 # Log Tables
-log_df_g.to_csv("data archive/Log General Information.csv", index=False)
-log_df_dc.to_csv("data archive/Log Datachanges.csv", index=False)
-log_df_fc.to_csv("data archive/Log Filechanges.csv", index=False)
-log_df_sec.to_csv("data archive/Log Security Details.csv", index=False)
-log_df_wa.to_csv("data archive/Log User Web Activity.csv", index=False)
-log_df_sa.to_csv("data archive/Log User Server Activity.csv", index=False)
-log_df_ac.to_csv("data archive/Log User Account Activity.csv", index=False)
-log_df_le.to_csv("data archive/Log Errors.csv", index=False)
-log_df_ec.to_csv("data archive/Log Error Codes.csv", index=False)
+log_df_g.to_csv(pathway_output + "Log General Information.csv", index=False)
+log_df_dc.to_csv(pathway_output + "Log Datachanges.csv", index=False)
+log_df_fc.to_csv(pathway_output + "Log Filechanges.csv", index=False)
+log_df_sec.to_csv(pathway_output + "Log Security Details.csv", index=False)
+log_df_wa.to_csv(pathway_output + "Log User Web Activity.csv", index=False)
+log_df_sa.to_csv(pathway_output + "Log User Server Activity.csv", index=False)
+log_df_ac.to_csv(pathway_output + "Log User Account Activity.csv", index=False)
+log_df_le.to_csv(pathway_output + "Log Errors.csv", index=False)
+log_df_ec.to_csv(pathway_output + "Log Error Codes.csv", index=False)
+
+# Intermediary DBs
+emp_interdb_df.to_csv(pathway_output + "Employee System.csv", index=False)

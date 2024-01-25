@@ -36,7 +36,7 @@ class Intermediary_Data:
             new_relationship_df = pd.DataFrame()
             new_relationship_df[df1_id_field_name] = df1[df1_id_field_name]
             
-            random_rel_id = [random.randint(1,len(df1)) for _ in range(len(df1))]
+            random_rel_id = random.sample(range(1, len(df1) + 1), len(df1))
             new_relationship_df.insert(0, self.rel_id_name, random_rel_id)
             
             random_df2_id_list = [random.choice(df2[df2_id_field_name]) for _ in range(len(df1))]
@@ -45,12 +45,34 @@ class Intermediary_Data:
             return new_relationship_df
             
       
-      # Two databases establishing a data relationship where the db1 IDs - db2 IDs are randomized 
+      # Three databases establishing a data relationship where the db1 IDs - db2 IDs - db3 IDs are randomized 
       def create_3db_relationship_df_random(self, df1, df1_id_field_name, df2, df2_id_field_name, df3, df3_id_field_name):
             new_relationship_df = pd.DataFrame()
             new_relationship_df[df1_id_field_name] = df1[df1_id_field_name]
-
+            
+            random_rel_id = [random.randint(1,len(df1)) for _ in range(len(df1))]
+            new_relationship_df.insert(0, self.rel_id_name, random_rel_id)
+            
             random_df2_id_list = [random.choice(df2[df2_id_field_name]) for _ in range(len(df1))]
             new_relationship_df[df2_id_field_name] = random_df2_id_list
-            return new_relationship_df
             
+            random_df3_id_list = [random.choice(df3[df3_id_field_name]) for _ in range(len(df1))]
+            new_relationship_df[df3_id_field_name] = random_df3_id_list
+            
+            return new_relationship_df
+      
+      # Two databases establishing a data relationship with a trait category where the db1 IDs - db2 IDs are randomized 
+      def create_2db_relationship_df_random_trait(self, df1, df1_id_field_name, df2, df2_id_field_name, trait):
+            new_relationship_df = pd.DataFrame()
+            new_relationship_df[df1_id_field_name] = df1[df1_id_field_name]
+            
+            random_rel_id = random.sample(range(1, len(df1) + 1), len(df1))
+            new_relationship_df.insert(0, self.rel_id_name, random_rel_id)
+            
+            random_df2_id_list = [random.choice(df2[df2_id_field_name]) for _ in range(len(df1))]
+            new_relationship_df[df2_id_field_name] = random_df2_id_list
+            
+            random_trait_list = [random.choice(trait) for _ in range(len(df1))]
+            new_relationship_df['Relationship Trait'] = random_trait_list
+            
+            return new_relationship_df
