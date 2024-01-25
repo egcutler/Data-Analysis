@@ -75,22 +75,28 @@ log_df_ec = pd.DataFrame(grdlo.generate_table_log_error_codes(id_dict_copy, num_
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-# Linking the business table with the business id in other datasets
-df_foreignkey_bus = grdr.Foreign_Keys(bus_df, db_fk_field_name='External ID', foreign_key_abbreviation="Bus ")
+# Establishing the Business DB link by inserting its ID into other DBs
+df_foreignkey_bus = grdr.Foreign_Keys(bus_df, db_fk_field_name='External ID', foreign_key_abbreviation_pre="Bus ")
 le_df = df_foreignkey_bus.add_foreignkey_random(le_df,col_placement=3)
 addr_df = df_foreignkey_bus.add_foreignkey_random(addr_df,col_placement=3)
-emp_df = df_foreignkey_bus.add_foreignkey_random(emp_df, col_placement=3)
-tax_df = df_foreignkey_bus.add_foreignkey_random(tax_df, col_placement=3)
-finance_df = df_foreignkey_bus.add_foreignkey_random(finance_df, col_placement=3)
 
-# Creating an intermediary Business-Legal Table
-df_intermediary_db_bus_le = grdr.Intermediary_Data(bus_df, df1_id_field_name='External ID', df2=le_df, df2_id_field_name='Legal Account')
-bus_le_df = df_intermediary_db_bus_le.two_db_rel_new_con_rand()
-print(bus_le_df)
+# Establishing the Legal DB link by inserting its ID into other DBs
+df_foreignkey_le = grdr.Foreign_Keys(le_df, db_fk_field_name='Legal Account', foreign_key_abbreviation_post=" ID")
+addr_df = df_foreignkey_le.add_foreignkey_random(addr_df,col_placement=4)
+tax_df = df_foreignkey_le.add_foreignkey_random(tax_df, col_placement=3)
+finance_df = df_foreignkey_le.add_foreignkey_random(finance_df, col_placement=3)
 
-# Linking the legal table with the business id in other datasets
-df_foreignkey_le = grdr.Foreign_Keys(le_df, db_fk_field_name='External ID', foreign_key_abbreviation="Bus ")
+# Establishing the Tax DB link by inserting its ID into other DBs
+df_foreignkey_tax = grdr.Foreign_Keys(tax_df, db_fk_field_name='Tax Account', foreign_key_abbreviation_post=" ID")
+finance_df = df_foreignkey_tax.add_foreignkey_random(finance_df, col_placement=3)
 
+
+
+
+# Creating an intermediary Business-Legal Table:
+df_intermediary = grdr.Intermediary_Data()
+emp_interdb_df = df_intermediary.create_2db_relationship_df_random(df1=emp_df, df1_id_field_name='Employee ID', df2=le_df, df2_id_field_name='Legal Account')
+print(emp_interdb_df)
 
 
 

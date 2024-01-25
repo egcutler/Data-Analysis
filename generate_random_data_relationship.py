@@ -3,10 +3,11 @@ import random
 
 
 class Foreign_Keys:
-      def __init__(self, df, db_fk_field_name, foreign_key_abbreviation = ""):
+      def __init__(self, df, db_fk_field_name, foreign_key_abbreviation_pre = "", foreign_key_abbreviation_post = ""):
             self.df = df
             self.db_fk_field_name = db_fk_field_name
-            self.foreign_key_abbreviation = foreign_key_abbreviation
+            self.foreign_key_abbreviation_pre = foreign_key_abbreviation_pre
+            self.foreign_key_abbreviation_post = foreign_key_abbreviation_post
       
       def add_foreignkey_random(self, df2, col_placement = 3):
             if self.db_fk_field_name not in self.df.columns:
@@ -18,7 +19,7 @@ class Foreign_Keys:
             if self.db_fk_field_name in df2.columns:
                   df2 = df2.drop(columns=self.db_fk_field_name)
             
-            df2.insert(col_placement - 1, self.foreign_key_abbreviation + self.db_fk_field_name, random_fk_values)
+            df2.insert(col_placement - 1, self.foreign_key_abbreviation_pre + self.db_fk_field_name + self.foreign_key_abbreviation_post, random_fk_values)
             return df2
             
       
@@ -27,21 +28,29 @@ class Foreign_Keys:
       
 
 class Intermediary_Data:
-      def __init__(self, df1, df1_id_field_name, df2, df2_id_field_name):
-            self.df1 = df1
-            self.df2 = df2
-            self.df1_id_field_name = df1_id_field_name
-            self.df2_id_field_name = df2_id_field_name
+      def __init__(self, relationship_id_field_name = "Relationship ID"):
+            self.rel_id_name = relationship_id_field_name
       
       # Two databases establishing a data relationship where the db1 IDs - db2 IDs are randomized 
-      def two_db_rel_new_con_rand(self): #two_db_
+      def create_2db_relationship_df_random(self, df1, df1_id_field_name, df2, df2_id_field_name):
             new_relationship_df = pd.DataFrame()
-            new_relationship_df[self.df1_id_field_name] = self.df1[self.df1_id_field_name]
-            random_df2_id_list = [random.choice(self.df2[self.df2_id_field_name]) for _ in range(len(self.df1))]
-            new_relationship_df[self.df2_id_field_name] = random_df2_id_list
+            new_relationship_df[df1_id_field_name] = df1[df1_id_field_name]
+            
+            random_rel_id = [random.randint(1,len(df1)) for _ in range(len(df1))]
+            new_relationship_df.insert(0, self.rel_id_name, random_rel_id)
+            
+            random_df2_id_list = [random.choice(df2[df2_id_field_name]) for _ in range(len(df1))]
+            new_relationship_df[df2_id_field_name] = random_df2_id_list
+            
             return new_relationship_df
             
       
       # Two databases establishing a data relationship where the db1 IDs - db2 IDs are randomized 
-      def two_db_rel_new_con_type(self):
-            pass
+      def create_3db_relationship_df_random(self, df1, df1_id_field_name, df2, df2_id_field_name, df3, df3_id_field_name):
+            new_relationship_df = pd.DataFrame()
+            new_relationship_df[df1_id_field_name] = df1[df1_id_field_name]
+
+            random_df2_id_list = [random.choice(df2[df2_id_field_name]) for _ in range(len(df1))]
+            new_relationship_df[df2_id_field_name] = random_df2_id_list
+            return new_relationship_df
+            
