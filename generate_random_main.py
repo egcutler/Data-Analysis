@@ -25,9 +25,9 @@ def generate_table_basic(min_rand_record_lim = 1, max_rand_record_lim = 100000, 
       return id_dict
 
 # Max and Min random selection for id record generator to be used as a uniform value
-uniform_max = 1000
-uniform_min = 1000
-uniform_exact = 1000
+uniform_max = 10
+uniform_min = 10
+uniform_exact = 10
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Generator the random data tables                 ---------
@@ -128,8 +128,15 @@ da_inserts_addr = grdac.Data_Analysis_Inserts(addr_df)
 addr_df = da_inserts_addr.insert_value_by_override_perc('Zip Code', field_perc_to_dup=12)
 da_changes_addr = grdac.Data_Analysis_Changes(addr_df)
 addr_df = da_changes_addr.address_abbreviation_change('Address Street', field_perc_to_dup=90)
+addr_df = da_changes_addr.target_value_change_value('Original Country',field_perc_to_dup=50, target_value='RUS', change_value='GER')
+addr_df = da_changes_addr.not_target_record_change_record('Original Country',field_perc_to_dup=100, not_target_record='RUS', change_record='RUS')
 
-bus_df = da_changes_bus.target_value_change_value('Business Status',field_perc_to_dup=50, target_value='ACTIVE', change_value='CLOSED')
+bus_df = da_changes_bus.target_records_change_record_diff_fields(target_field1='Business TAG', target_value1='HAQ', \
+                                                                 target_field2='Business Status', target_value2='ACTIVE', \
+                                                                 target_field3='Account Type', target_value3='SNYM', \
+                                                                 target_field4='External ID', target_value4='5KHG06',
+                                                                 change_field='Security Category', change_value= 999999, \
+                                                                 field_perc_to_dup = 100)
 
 
 #----------------------------------------------------------------------------------
