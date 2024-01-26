@@ -6,7 +6,7 @@ class Data_Analysis_Inserts:
       def __init__(self, df):
             self.df = df
 
-      def replicate_field_values_with_random(self, field_name, dup_option_perc = random.randint(10,30), field_perc_to_dup = random.randint(10,30)):
+      def create_duplicates_within_field_random(self, field_name, dup_option_perc = random.randint(10,30), field_perc_to_dup = random.randint(10,30)):
             if field_name not in self.df.columns:
                   raise ValueError(f"{field_name} not in DataFrame")
             if dup_option_perc > 100 or dup_option_perc < 0.1:
@@ -27,7 +27,7 @@ class Data_Analysis_Inserts:
             return self.df
 
       
-      def replicate_field_values_with_value(self, field_name, field_perc_to_dup = random.randint(10,20), value = ""):
+      def insert_value_by_override_perc(self, field_name, field_perc_to_dup = random.randint(10,20), value = ""):
             if field_name not in self.df.columns:
                   raise ValueError(f"{field_name} not in DataFrame")
             if field_perc_to_dup > 100 or field_perc_to_dup < 0.1:
@@ -45,6 +45,31 @@ class Data_Analysis_Inserts:
 class Data_Analysis_Changes:
       def __init__(self, df):
             self.df = df
+            
+      def target_value_change_value(self, field_name, field_perc_to_dup = random.randint(10,20), target_value="", change_value = ""):
+            if field_perc_to_dup is None:
+                  field_perc_to_dup = random.randint(10, 20)
+            if field_name not in self.df.columns:
+                  raise ValueError(f"{field_name} not in DataFrame")
+            if field_perc_to_dup > 100 or field_perc_to_dup < 0.1:
+                  raise Exception(f"field_perc_to_dup value of {field_perc_to_dup} is not between 0.1% - 100%")
+            
+            # Generate index list for each record the targeted value occurs
+            index_loc = []  
+            for index in range(len(self.df)):
+                  if target_value.lower() in self.df.at[index, field_name].lower():
+                        index_loc.append(index)
+            
+            # Apply the percentage operator on the index list
+            random.shuffle(index_loc)
+            duplication_field_perc_num = round(len(index_loc) * (field_perc_to_dup/100))  
+            index_positions_to_override = index_loc[:duplication_field_perc_num]
+            # Remove duplicates
+            index_positions_to_override = list(set(index_positions_to_override))
+            # Override targeted values at the percentaged index positions with the change value
+            for index in index_positions_to_override:
+                  self.df.at[index, field_name] = self.df.at[index, field_name].replace(target_value, change_value)
+            return self.df
       
       def address_abbreviation_change(self, field_name, field_perc_to_dup = random.randint(10,20)):
             if field_name not in self.df.columns:
@@ -52,9 +77,9 @@ class Data_Analysis_Changes:
             if field_perc_to_dup > 100 or field_perc_to_dup < 0.1:
                   raise Exception(f"field_perc_to_dup value of {field_perc_to_dup} is not between 0.1% - 100%")
             
+            index_loc = []
             addr_list = list(addr_abbr_dict.keys())
             addr_list = [value.lower() for value in addr_list]
-            index_loc = []
             for index in range(len(self.df)):
                   df_value = self.df.at[index, field_name].lower()
                   for addr_type in addr_list:
@@ -62,10 +87,9 @@ class Data_Analysis_Changes:
                               index_loc.append(index)
             
             # Override values at the selected positions with address abbreviations
+            random.shuffle(index_loc)
             duplication_field_perc_num = round(len(index_loc) * (field_perc_to_dup/100))
-            index_positions_to_override = []
-            for _ in range(duplication_field_perc_num):
-                  index_positions_to_override.append(random.choice(index_loc))
+            index_positions_to_override = index_loc[:duplication_field_perc_num]
             index_positions_to_override = list(set(index_positions_to_override))
             for index in index_positions_to_override:
                   original_value = self.df.at[index, field_name]
@@ -76,14 +100,11 @@ class Data_Analysis_Changes:
                         self.df.at[index, field_name] = original_value.lower().replace(full.lower(), abbr_value.lower())
                         original_value = self.df.at[index, field_name]
                   self.df.at[index, field_name] = self.df.at[index, field_name].title()
+                  
             return self.df
             
       
-      def company_abbreviation_change(self):
-            pass
-      
-      def name_abbreviation_change(self):
-            pass
+
 
       
 class Data_Analysis_Err_Conditions:

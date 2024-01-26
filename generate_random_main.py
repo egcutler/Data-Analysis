@@ -46,10 +46,6 @@ le_df = pd.DataFrame(grdle.generate_table_legal_general(id_dict_copy))
 id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 addr_df = pd.DataFrame(grda.generate_table_address_general(id_dict_copy))
 
-# Random Employee Table
-id_dict_copy = generate_table_basic(uniform_min, uniform_max)
-emp_df = pd.DataFrame(grde.generate_table_employee_general(id_dict_copy))
-
 # Random Tax Table
 id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 tax_df = pd.DataFrame(grdt.generate_table_tax_general(id_dict_copy))
@@ -57,6 +53,10 @@ tax_df = pd.DataFrame(grdt.generate_table_tax_general(id_dict_copy))
 # Random Finance Table
 id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 finance_df = pd.DataFrame(grdf.generate_table_finance_general(id_dict_copy))
+
+# Random Employee Table
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
+emp_df = pd.DataFrame(grde.generate_table_employee_general(id_dict_copy))
 
 # Random Log Table
 id_dict_copy = generate_table_basic(uniform_min, uniform_max)
@@ -113,16 +113,23 @@ emp_interdb_df = df_intermediary.create_2db_relationship_df_random(df1=emp_df, d
 #----------------------------------------------------------------------------------
 
 da_inserts_bus = grdac.Data_Analysis_Inserts(bus_df)
-bus_df = da_inserts_bus.replicate_field_values_with_random('External ID', dup_option_perc=30, field_perc_to_dup=35)
-bus_df = da_inserts_bus.replicate_field_values_with_value('Company Name', field_perc_to_dup=12)
-bus_df = da_inserts_bus.replicate_field_values_with_value('Modified Date', field_perc_to_dup=7)
+bus_df = da_inserts_bus.create_duplicates_within_field_random('External ID', dup_option_perc=30, field_perc_to_dup=35)
+bus_df = da_inserts_bus.insert_value_by_override_perc('Company Name', field_perc_to_dup=12)
+bus_df = da_inserts_bus.insert_value_by_override_perc('Modified Date', field_perc_to_dup=7)
+da_changes_bus = grdac.Data_Analysis_Changes(bus_df)
 
 da_inserts_le = grdac.Data_Analysis_Inserts(le_df)
-
+le_df = da_inserts_le.create_duplicates_within_field_random('Legal Account', dup_option_perc=15, field_perc_to_dup=25)
+le_df = da_inserts_le.insert_value_by_override_perc('Legal Firm', field_perc_to_dup=12)
+le_df = da_inserts_le.insert_value_by_override_perc('LE Modified Date', field_perc_to_dup=12)
+da_changes_le = grdac.Data_Analysis_Changes(le_df)
 
 da_inserts_addr = grdac.Data_Analysis_Inserts(addr_df)
+addr_df = da_inserts_addr.insert_value_by_override_perc('Zip Code', field_perc_to_dup=12)
 da_changes_addr = grdac.Data_Analysis_Changes(addr_df)
 addr_df = da_changes_addr.address_abbreviation_change('Address Street', field_perc_to_dup=90)
+
+bus_df = da_changes_bus.target_value_change_value('Business Status',field_perc_to_dup=50, target_value='ACTIVE', change_value='CLOSED')
 
 
 #----------------------------------------------------------------------------------
