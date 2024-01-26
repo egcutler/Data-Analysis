@@ -16,63 +16,66 @@ import generate_random_data_analysis_conditions as grdac
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-def generate_table_basic(min_rand_record_lim = 1, max_rand_record_lim = 1000):
-      num_records = grdfs.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
+def generate_table_basic(min_rand_record_lim = 1, max_rand_record_lim = 100000, exact_num = 0):
+      if exact_num == 0:
+            num_records = grdfs.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
+      else:
+            num_records = exact_num
       id_dict= grdfs.table_generate_id_records(num_records)
-      return num_records, id_dict
+      return id_dict
 
-num_records, id_dict = generate_table_basic(1, 10)
-
+# Max and Min random selection for id record generator to be used as a uniform value
+uniform_max = 1000
+uniform_min = 1000
+uniform_exact = 1000
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Generator the random data tables                 ---------
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
-# Note: "id_dict_copy = id_dict.copy()" is repeated to avoid 
-#        each log iteration copying over to the next.
 
 # Random Business Table
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 bus_df = pd.DataFrame(grdb.generate_table_business_general(id_dict_copy))
 
 # Random Legal Table
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 le_df = pd.DataFrame(grdle.generate_table_legal_general(id_dict_copy))
 
 # Random Address Table
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 addr_df = pd.DataFrame(grda.generate_table_address_general(id_dict_copy))
 
 # Random Employee Table
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 emp_df = pd.DataFrame(grde.generate_table_employee_general(id_dict_copy))
 
 # Random Tax Table
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 tax_df = pd.DataFrame(grdt.generate_table_tax_general(id_dict_copy))
 
 # Random Finance Table
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 finance_df = pd.DataFrame(grdf.generate_table_finance_general(id_dict_copy))
 
 # Random Log Table
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 log_df_g = pd.DataFrame(grdlo.generate_table_log_general(id_dict_copy))
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 log_df_dc = pd.DataFrame(grdlo.generate_table_log_datachange(id_dict_copy))
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 log_df_fc = pd.DataFrame(grdlo.generate_table_log_filechange(id_dict_copy))
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 log_df_sec = pd.DataFrame(grdlo.generate_table_log_security(id_dict_copy))
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 log_df_wa = pd.DataFrame(grdlo.generate_table_log_user_web_activity(id_dict_copy))
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 log_df_sa = pd.DataFrame(grdlo.generate_table_log_user_server_activity(id_dict_copy))
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 log_df_ac = pd.DataFrame(grdlo.generate_table_log_user_account_activity(id_dict_copy))
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 log_df_le = pd.DataFrame(grdlo.generate_table_log_errors(id_dict_copy))
-id_dict_copy = id_dict.copy()
+id_dict_copy = generate_table_basic(uniform_min, uniform_max)
 log_df_ec = pd.DataFrame(grdlo.generate_table_log_error_codes(id_dict_copy))
 
 
@@ -109,10 +112,18 @@ emp_interdb_df = df_intermediary.create_2db_relationship_df_random(df1=emp_df, d
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-df_inserts_bus = grdac.Data_Analysis_Inserts(bus_df)
-bus_df = df_inserts_bus.replicate_field_values_with_random('External ID', dup_option_perc=30, num_to_dup_perc=35)
-bus_df = df_inserts_bus.replicate_field_values_with_value('Company Name', num_to_dup_perc=12)
-bus_df = df_inserts_bus.replicate_field_values_with_value('Modified Date', num_to_dup_perc=7)
+da_inserts_bus = grdac.Data_Analysis_Inserts(bus_df)
+bus_df = da_inserts_bus.replicate_field_values_with_random('External ID', dup_option_perc=30, field_perc_to_dup=35)
+bus_df = da_inserts_bus.replicate_field_values_with_value('Company Name', field_perc_to_dup=12)
+bus_df = da_inserts_bus.replicate_field_values_with_value('Modified Date', field_perc_to_dup=7)
+
+da_inserts_le = grdac.Data_Analysis_Inserts(le_df)
+
+
+da_inserts_addr = grdac.Data_Analysis_Inserts(addr_df)
+da_changes_addr = grdac.Data_Analysis_Changes(addr_df)
+addr_df = da_changes_addr.address_abbreviation_change('Address Street', field_perc_to_dup=90)
+
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------

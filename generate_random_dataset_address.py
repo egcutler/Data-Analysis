@@ -36,6 +36,25 @@ country_abbreviations = [
       'US', 'UK', 'CAN', 'AUS', 'GER', 'FRA', 'JPN', 'CHN', 'RUS', 'BRA', 'IND'
 ]
 
+addr_abbr_dict = {
+    'Road': 'Rd',
+    'Street': ['Str', 'St'],
+    'Avenue': 'Ave',
+    'Boulevard': 'Blvd',
+    'Drive': 'Dr',
+    'Court': 'Ct',
+    'Lane': 'Ln',
+    'Terrace': 'Ter',
+    'Place': 'Pl',
+    'Square': 'Sq',
+    'Trail': 'Trl',
+    'Parkway': 'Pkwy',
+    'Alley': 'Aly',
+    'Center': 'Ctr',
+    'Crossing': 'Xing',
+    'Loop': 'Lp'
+}
+
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------

@@ -202,6 +202,29 @@ def generate_legal_type_and_def(dict_leg_type):
 # --------------                    Address Support Fields                                   --------------
 # ---------------------------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------
+addr_street_type_list = [
+    'Road',
+    'Street',
+    'Avenue',
+    'Boulevard',
+    'Drive',
+    'Court',
+    'Lane',
+    'Terrace',
+    'Place',
+    'Circle',
+    'Highway',
+    'Square',
+    'Trail',
+    'Parkway',
+    'Alley',
+    'Center',
+    'Mill',
+    'Gardens'
+    'Crescent',
+    'Crossing',
+    'Loop'
+]
 
 # Function to generate a random address
 def generate_random_address(street_names, city_names, states):
@@ -213,11 +236,12 @@ def generate_random_address(street_names, city_names, states):
     :return: A string representing a random address.
     """
     street_name = random.choice(street_names)
+    street_type = random.choice(addr_street_type_list)
     city_name = random.choice(city_names)
     state = random.choice(states)
     street_number = random.randint(100, 9999)
     zip_code = f"{random.randint(10000, 99999)}"
-    return f"{street_number} {street_name} St., {city_name}, {state}, {zip_code}"
+    return f"{street_number} {street_name} {street_type}, {city_name}, {state}, {zip_code}"
 
 # Priorization function for weighted function support giving one element priority
 def prioritize_element(item, priority_item):
