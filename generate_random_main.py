@@ -131,12 +131,14 @@ addr_df = da_changes_addr.address_abbreviation_change('Address Street', field_pe
 addr_df = da_changes_addr.target_value_change_value('Original Country',field_perc_to_dup=50, target_value='RUS', change_value='GER')
 addr_df = da_changes_addr.not_target_record_change_record('Original Country',field_perc_to_dup=100, not_target_record='RUS', change_record='RUS')
 
-bus_df = da_changes_bus.target_records_change_record_diff_fields(target_field1='Business TAG', target_value1='HAQ', \
-                                                                 target_field2='Business Status', target_value2='ACTIVE', \
-                                                                 target_field3='Account Type', target_value3='SNYM', \
-                                                                 target_field4='External ID', target_value4='5KHG06',
-                                                                 change_field='Security Category', change_value= 999999, \
-                                                                 field_perc_to_dup = 100)
+da_inserts_tax = grdac.Data_Analysis_Inserts(tax_df)
+da_changes_tax = grdac.Data_Analysis_Changes(tax_df)
+
+da_inserts_finance = grdac.Data_Analysis_Inserts(finance_df)
+da_changes_finance = grdac.Data_Analysis_Changes(finance_df)
+
+da_inserts_emp = grdac.Data_Analysis_Inserts(emp_df)
+da_changes_emp = grdac.Data_Analysis_Changes(emp_df)
 
 
 #----------------------------------------------------------------------------------
@@ -144,7 +146,8 @@ bus_df = da_changes_bus.target_records_change_record_diff_fields(target_field1='
 #----------              Create Data Integirty Error Conditions           ---------
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
-
+da_errors_bus = grdac.Data_Analysis_Err_Conditions(bus_df)
+bus_df = da_errors_bus.closed_date_misalignment('Creation Date', 'Closed Date', 'Modified Date', apply_perc=99)
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------

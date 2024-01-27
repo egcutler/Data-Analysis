@@ -1,6 +1,8 @@
-import pandas as pa
+import pandas as pd
 import random
 from generate_random_dataset_address import addr_abbr_dict
+import generate_random_dataset_support_functions as grdsf
+import datetime
 
 class Data_Analysis_Inserts:
       def __init__(self, df):
@@ -139,7 +141,6 @@ class Data_Analysis_Changes:
             
             # Generate index list for each record the targeted value occurs
             index_loc = [] 
-            print(f'///// {case_degree}')
             if case_degree == 4: 
                   for index in range(len(self.df)):
                         if target_value1.lower() in self.df.at[index, target_field1].lower() and \
@@ -162,22 +163,15 @@ class Data_Analysis_Changes:
                   for index in range(len(self.df)):
                         if target_value1.lower() in self.df.at[index, target_field1].lower():
                               index_loc.append(index)
-            print(f'///// {index_loc}')
             # Apply the percentage operator on the index list
             random.shuffle(index_loc)
             duplication_field_perc_num = round(len(index_loc) * (field_perc_to_dup/100))  
             index_positions_to_override = index_loc[:duplication_field_perc_num]
-            print(f'///// {index_positions_to_override}')
             # Override change field at the percentaged index positions with the change value
             for index in index_positions_to_override:
                   self.df.at[index, change_field] = change_value
             return self.df
             
-                        
-                        
-                        
-                        
-      
       def address_abbreviation_change(self, field_name, field_perc_to_dup = random.randint(10,20)):
             if field_name not in self.df.columns:
                   raise ValueError(f"{field_name} not in DataFrame")
@@ -211,15 +205,65 @@ class Data_Analysis_Changes:
             return self.df
             
       
-
-
-      
 class Data_Analysis_Err_Conditions:
       def __init__(self, df):
             self.df = df
       
-      def closed_date_misalignment(self):
-            pass
+      def closed_date_misalignment(self, open_date_field, closed_date_field, modified_date_field=None, apply_perc=None, cond_between_open_mod="Y"):
+            if apply_perc is None:
+                  apply_perc = random.randint(10, 20)
+            if not (0.1 <= apply_perc <= 100):
+                        raise ValueError(f"apply_perc value of {apply_perc} is not between 0.1% - 100%")
+            for field in [open_date_field, closed_date_field, modified_date_field]:
+                  if field and field not in self.df.columns and field != None:
+                        raise ValueError(f"{field} not in DataFrame")
+
+            # Determine the start date
+            date_fields = [open_date_field]
+            if modified_date_field:
+                  date_fields.append(modified_date_field)
+            start_date = pd.to_datetime(self.df[date_fields].min().min())
+            if start_date == "" or start_date == None:
+                  start_date = datetime.date.today()
+
+            # Calculate the number of records to modify
+            num_records_to_modify = round(len(self.df) * (apply_perc / 100))
+
+            # Select random indices to modify
+            indices_to_modify = random.sample(range(len(self.df)), num_records_to_modify)
+
+            for index in indices_to_modify:
+                  if self.df.at[index, open_date_field] and (modified_date_field and self.df.at[index, modified_date_field] and not pd.isna(self.df.at[index, modified_date_field])):
+                        end_date = pd.to_datetime(self.df.at[index, modified_date_field or open_date_field])
+                        if cond_between_open_mod == "Y" and self.df.at[index, open_date_field]: 
+                              start_date = pd.to_datetime(self.df.at[index, open_date_field])
+                        
+                        # Generate the random date    
+                        generated_date = grdsf.random_date(start_date, end_date)
+                         # Convert the generated date to datetime64[ns] type
+                        compatible_date = pd.to_datetime(generated_date)
+                        # Assign the converted date to the DataFrame
+                        self.df.at[index, closed_date_field] = compatible_date
+                        #self.df.at[index, closed_date_field] = grdsf.random_date(start_date, end_date)
+                  elif self.df.at[index, open_date_field] and (not modified_date_field or not self.df.at[index, modified_date_field]):
+                        end_date = pd.to_datetime(self.df.at[index, open_date_field])
+                        # Generate the random date    
+                        generated_date = grdsf.random_date(start_date, end_date)
+                         # Convert the generated date to datetime64[ns] type
+                        compatible_date = pd.to_datetime(generated_date)
+                        # Assign the converted date to the DataFrame
+                        self.df.at[index, closed_date_field] = compatible_date
+                        #self.df.at[index, closed_date_field] = grdsf.random_date(start_date, end_date)
+                  else:
+                        end_date = datetime.date.today()
+                        # Generate the random date    
+                        generated_date = grdsf.random_date(start_date, end_date)
+                         # Convert the generated date to datetime64[ns] type
+                        compatible_date = pd.to_datetime(generated_date)
+                        # Assign the converted date to the DataFrame
+                        self.df.at[index, closed_date_field] = compatible_date
+                        #self.df.at[index, closed_date_field] = grdsf.random_date(start_date, end_date)
+            return self.df
       
       def address_incorrect_format(self):
             pass

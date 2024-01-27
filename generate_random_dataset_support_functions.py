@@ -1,7 +1,8 @@
 import pandas as pd
 import random
 import string
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
+
 
 # ---------------------------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------
@@ -134,6 +135,26 @@ def generate_phone_number():
       """
       digit = str(random.randint(1,9))
       return digit*10
+
+def random_date(start_date, end_date=date.today()):
+      """
+      Generates a random date between start_date and end_date.
+
+      :param start_date: The start date as a datetime.date object.
+      :param end_date: The end date as a datetime.date object.
+      :return: A random date between start_date and end_date.
+      """
+      if isinstance(start_date, datetime):
+            start_date = start_date.date()
+      if isinstance(end_date, datetime):
+            end_date = end_date.date()
+      if start_date > end_date:
+            raise ValueError("start_date must be before end_date")
+            
+      time_between_dates = end_date - start_date
+      days_between_dates = time_between_dates.days
+      random_number_of_days = random.randrange(days_between_dates)
+      return start_date + timedelta(days=random_number_of_days)
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
