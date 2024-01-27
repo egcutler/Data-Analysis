@@ -147,7 +147,7 @@ da_changes_emp = grdac.Data_Analysis_Changes(emp_df)
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 da_errors_bus = grdac.Data_Analysis_Err_Conditions(bus_df)
-bus_df = da_errors_bus.closed_date_misalignment('Creation Date', 'Closed Date', 'Modified Date', apply_perc=99)
+bus_df = da_errors_bus.closed_date_misalignment('Creation Date', 'Closed Date', '', apply_perc=99)
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------

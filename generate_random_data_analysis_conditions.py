@@ -239,6 +239,9 @@ class Data_Analysis_Err_Conditions:
                               start_date = pd.to_datetime(self.df.at[index, open_date_field])
                         
                         # Generate the random date    
+                        if start_date == end_date:
+                              start_date = start_date - pd.Timedelta(days=10)
+                              
                         generated_date = grdsf.random_date(start_date, end_date)
                          # Convert the generated date to datetime64[ns] type
                         compatible_date = pd.to_datetime(generated_date)
@@ -248,6 +251,9 @@ class Data_Analysis_Err_Conditions:
                   elif self.df.at[index, open_date_field] and (not modified_date_field or not self.df.at[index, modified_date_field]):
                         end_date = pd.to_datetime(self.df.at[index, open_date_field])
                         # Generate the random date    
+                        if start_date == end_date:
+                              start_date = start_date - pd.Timedelta(days=10)
+                              
                         generated_date = grdsf.random_date(start_date, end_date)
                          # Convert the generated date to datetime64[ns] type
                         compatible_date = pd.to_datetime(generated_date)
