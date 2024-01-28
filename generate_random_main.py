@@ -159,6 +159,7 @@ da_errors_tax = grdac.Data_Analysis_Err_Conditions(tax_df)
 da_errors_finance = grdac.Data_Analysis_Err_Conditions(finance_df)
 
 da_errors_emp = grdac.Data_Analysis_Err_Conditions(emp_df)
+emp_df = da_errors_emp.email_incorrect_format('Employee Email', apply_perc=15)
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------

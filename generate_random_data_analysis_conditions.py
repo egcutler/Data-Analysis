@@ -312,6 +312,44 @@ class Data_Analysis_Err_Conditions:
                   
             
       
-      def email_incorrect_format(self):
-            pass
-      
+      def email_incorrect_format(self, field_name, apply_perc=None):
+            if field_name not in self.df.columns:
+                  raise ValueError(f"{field_name} not in DataFrame")
+            if apply_perc is None:
+                  apply_perc = random.randint(10, 20)
+            if not (0.1 <= apply_perc <= 100):
+                        raise ValueError(f"apply_perc value of {apply_perc} is not between 0.1% - 100%")
+            
+            indexes = self.df.index[self.df[field_name].notnull()].tolist()
+            num_records_to_modify = round(len(indexes) * (apply_perc / 100))
+            # Ensure that num_records_to_modify is not greater than the length of indexes
+            num_records_to_modify = min(num_records_to_modify, len(indexes))
+            # Select random indices to modify
+            indices_to_modify = random.sample(indexes, num_records_to_modify)
+            
+            pattern = r'^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+            for index in indices_to_modify:
+                  # Check if variable is in basic street format
+                  if not re.match(pattern, self.df.at[index, field_name]):
+                        pass
+                  else:
+                        err_code = random.randint(1, 4)
+                        email = self.df.at[index, field_name]
+                        if err_code == 1:
+                              # remove .com
+                              self.df.at[index, field_name] = email.replace('.com', '')
+                        elif err_code == 2:
+                              # remove @
+                              self.df.at[index, field_name] = email.replace('@', '')
+                        elif err_code == 3:
+                              # remove everything after @
+                              at_index = email.find('@')
+                              if at_index != -1:
+                                    self.df.at[index, field_name] = email[:at_index]
+                        else:
+                              # remove everything before @
+                              at_index = email.find('@')
+                              if at_index != -1:
+                                    self.df.at[index, field_name] = email[at_index+1:]
+                                    
+            return self.df
