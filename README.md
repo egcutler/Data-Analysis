@@ -30,11 +30,12 @@ Project Name  | Description   |  Topic
 
 ## Technical Information
 
-This project utilizes a variety of Python and SQL scripts. From the Development Stages, the project is comprised of four components:
+This project utilizes a variety of Python and SQL scripts. From the development stages, the project is comprised of four components:
 ![title](https://github.com/egcutler/Data-Analysis/blob/main/Screenshots/Overview%20Diagram.png)
 * Generator: a generator that builds a database with a designed or random record infrastructure
 * Insertion: various conditions that are inserted into the generated database to provide dynamic structure
 * Data Integrity: various functions that conduct data checks and data cleaning for data integrity
 * Data Analysis: various functions that perform tasks related to simulated data analysis objectives
 
-
+A process diagram of the generator is detailed below:
+![title](https://github.com/egcutler/Data-Analysis/blob/main/Screenshots/Generator%20Diagram.png)
