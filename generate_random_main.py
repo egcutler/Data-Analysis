@@ -147,7 +147,18 @@ da_changes_emp = grdac.Data_Analysis_Changes(emp_df)
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 da_errors_bus = grdac.Data_Analysis_Err_Conditions(bus_df)
-bus_df = da_errors_bus.closed_date_misalignment('Creation Date', 'Closed Date', '', apply_perc=99)
+bus_df = da_errors_bus.closed_date_misalignment('Creation Date', 'Closed Date', '', apply_perc=15)
+
+da_errors_le = grdac.Data_Analysis_Err_Conditions(le_df)
+
+da_errors_addr = grdac.Data_Analysis_Err_Conditions(addr_df)
+addr_df = da_errors_addr.address_incorrect_format('Address Street', apply_perc=15)
+
+da_errors_tax = grdac.Data_Analysis_Err_Conditions(tax_df)
+
+da_errors_finance = grdac.Data_Analysis_Err_Conditions(finance_df)
+
+da_errors_emp = grdac.Data_Analysis_Err_Conditions(emp_df)
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------

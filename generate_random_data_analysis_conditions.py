@@ -3,6 +3,7 @@ import random
 from generate_random_dataset_address import addr_abbr_dict
 import generate_random_dataset_support_functions as grdsf
 import datetime
+import re
 
 class Data_Analysis_Inserts:
       def __init__(self, df):
@@ -228,7 +229,6 @@ class Data_Analysis_Err_Conditions:
 
             # Calculate the number of records to modify
             num_records_to_modify = round(len(self.df) * (apply_perc / 100))
-
             # Select random indices to modify
             indices_to_modify = random.sample(range(len(self.df)), num_records_to_modify)
 
@@ -271,8 +271,46 @@ class Data_Analysis_Err_Conditions:
                         #self.df.at[index, closed_date_field] = grdsf.random_date(start_date, end_date)
             return self.df
       
-      def address_incorrect_format(self):
-            pass
+      def address_incorrect_format(self, field_name, apply_perc=None):
+            if field_name not in self.df.columns:
+                  raise ValueError(f"{field_name} not in DataFrame")
+            if apply_perc is None:
+                  apply_perc = random.randint(10, 20)
+            if not (0.1 <= apply_perc <= 100):
+                        raise ValueError(f"apply_perc value of {apply_perc} is not between 0.1% - 100%")
+            
+
+            indexes = self.df.index[self.df[field_name].notnull()].tolist()
+            num_records_to_modify = round(len(indexes) * (apply_perc / 100))
+            # Ensure that num_records_to_modify is not greater than the length of indexes
+            num_records_to_modify = min(num_records_to_modify, len(indexes))
+            # Select random indices to modify
+            indices_to_modify = random.sample(indexes, num_records_to_modify)
+
+            pattern = r'^\d+\s[A-Za-z\s]+$'
+            for index in indices_to_modify:
+                  # Check if variable is in basic street format
+                  if not re.match(pattern, self.df.at[index, field_name]):
+                        pass
+                  else:
+                        addr_err_code = random.randint(1,2)
+                        if addr_err_code == 1:
+                              # Regular expression to find the digit part of the address, and replace it with only the first digit
+                              # ^\d+\s* matches the beginning of the string, one or more digits, followed by zero or more spaces
+                              match = re.search(r'^\d+', self.df.at[index, field_name])
+                              street_number = match.group()
+                              shortened_street_number = street_number[:1]
+                              self.df.at[index, field_name] = re.sub(r'^\d+', shortened_street_number, self.df.at[index, field_name])
+                        elif addr_err_code == 2:
+                              # Regular expression to remove the numeric part at the beginning of the address
+                              # ^\d+\s* matches the beginning of the string, one or more digits, followed by zero or more spaces
+                              self.df.at[index, field_name] = re.sub(r'^\d+\s*', '', self.df.at[index, field_name])
+                        else:
+                              pass
+            
+            return self.df
+                  
+            
       
       def email_incorrect_format(self):
             pass
