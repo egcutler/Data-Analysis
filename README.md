@@ -7,7 +7,7 @@ The concepts revolve around standard data analytics, data statistics, and data i
 or challenges associated with these fields.
 
 Data Analysis operation is based on these steps:
----- diagram to be inserted ----
+![title](https://github.com/egcutler/Data-Analysis/blob/main/Screenshots/Diagram%20Data%20Analysis%20Life%20Cycle.png)
 
 ![title](https://github.com/egcutler/Data-Analysis/blob/main/Screenshots/Overview%20Diagram.png)
 
