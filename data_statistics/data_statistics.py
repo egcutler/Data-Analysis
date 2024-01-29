@@ -11,7 +11,6 @@ class Statistics_List:
         :param field: The field name whose unique values are to be listed.
         :return: A set of unique values in the specified field.
         """
-        
         unique_values = set()
         for record in self.df[field]:
             if record not in unique_values:

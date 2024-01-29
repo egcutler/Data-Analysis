@@ -6,10 +6,24 @@ import datetime
 import re
 
 class Data_Analysis_Inserts:
+      """
+      This class provides methods for inserting specific types of data alterations into a pandas DataFrame. 
+      It includes functions to create duplicates within a field and insert specific values into a DataFrame.
+      """
       def __init__(self, df):
+            """
+            Initialize the Data_Analysis_Inserts object with a DataFrame.
+            :param df: The DataFrame to be manipulated.
+            """
             self.df = df
 
       def create_duplicates_within_field_random(self, field_name, dup_option_perc = random.randint(10,30), field_perc_to_dup = random.randint(10,30)):
+            """
+            Create duplicates within a specified field in the DataFrame.
+            :param field_name: The name of the field where duplicates are to be created.
+            :param dup_option_perc: Percentage of unique values to be duplicated (default random 10-30%).
+            :param field_perc_to_dup: Percentage of the field to be duplicated (default random 10-30%).
+            """
             if field_name not in self.df.columns:
                   raise ValueError(f"{field_name} not in DataFrame")
             if dup_option_perc > 100 or dup_option_perc < 0.1:
@@ -31,6 +45,12 @@ class Data_Analysis_Inserts:
 
       
       def insert_value_by_override_perc(self, field_name, field_perc_to_dup = random.randint(10,20), value = ""):
+            """
+            Insert a specific value into a field by overriding a percentage of its values.
+            :param field_name: The name of the field to be modified.
+            :param field_perc_to_dup: Percentage of the field to be overridden (default random 10-20%).
+            :param value: The value to be inserted (default empty).
+            """
             if field_name not in self.df.columns:
                   raise ValueError(f"{field_name} not in DataFrame")
             if field_perc_to_dup > 100 or field_perc_to_dup < 0.1:
