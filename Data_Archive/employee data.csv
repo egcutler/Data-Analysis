@@ -1,0 +1,11 @@
+ID_Record,Employee ID,Emp First Name,Emp Last Name,Emp Phone Number,Job Title,Employee Email,Employee Status,Hire Date,Termination Date,Manager First Name,Manager Last Name,Manager Position,Security Clearance
+5,2430111,Amelia,White,6666666666,Research Scientist,White.Amelia@fakemail.com,EMPLOYEED,1990-04-21,,Sarah,Harris,Engineer Manager,1
+6,3572241,Jessica,Robinson,5555555555,Engineer Specialist,Robinson.Jessica@fakemail.com,EMPLOYEED,2006-01-28,,Emily,Jones,Engineer Manager,1
+4,6824687,Amelia,Martinez,7777777777,Graphic Designer,Martinez.Ameliafakemail.com,EMPLOYEED,1990-05-28,,James,Lewis,Project Manager,4
+8,2652729,Sophia,Lewis,2222222222,Sales Representative,Lewis.Sophia@fakemail.com,EMPLOYEED,2016-05-01,,Chris,Johnson,Sales Manager,5
+6,6830384,Richard,Gonzalez,4444444444,Dev Ops Engineer,Gonzalez.Richard@fakemail.com,EMPLOYEED,2020-07-18,,Ethan,Williams,Operations Manager,1
+2,6357613,Alex,Lopez,8888888888,Human Resources,Lopez.Alex@fakemail.com,EMPLOYEED,2008-06-08,,Evelyn,Hall,Human Resources Manager,3
+9,4730988,Benjamin,Robinson,5555555555,Research Scientist,Robinson.Benjamin@fakemail.com,EMPLOYEED,2011-03-17,,William,Thomas,Marketing Manager,3
+6,4170373,Benjamin,Thomas,8888888888,Dev Ops Engineer,Thomas.Benjamin@fakemail.com,EMPLOYEED,2019-05-04,,Joseph,Clark,Project Manager,3
+4,2153242,Alex,Smith,3333333333,Accountant,Smith.Alexfakemail.com,EMPLOYEED,2014-02-27,,Isabella,Williams,Finance manager,5
+9,6518348,Charles,Garcia,5555555555,Graphic Designer,Garcia.Charles@fakemail.com,EMPLOYEED,2000-01-22,,Emily,Anderson,Operations Manager,5

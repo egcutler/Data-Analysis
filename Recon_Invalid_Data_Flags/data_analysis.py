@@ -1,9 +1,9 @@
  # ---------------
 import pandas as pd
-import data_integrity.data_integrity_support_files as disf
-import data_integrity.data_integrity_data_checks as didc
+import Data_Integrity.data_integrity_support_files as disf
+import Data_Integrity.data_integrity_data_checks as didc
 import numpy as np
-import data_statistics.data_statistics as ds
+import Data_Statistics.data_statistics as ds
 
 
 # ---------------------------------------------------------------------------------------------------------

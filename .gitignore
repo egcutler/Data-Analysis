@@ -1,2 +1,3 @@
 data archive/
 myenv/
+__pycache__
