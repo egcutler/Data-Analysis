@@ -25,9 +25,9 @@ def generate_table_basic(min_rand_record_lim = 1, max_rand_record_lim = 100000, 
       return id_dict
 
 # Max and Min random selection for id record generator to be used as a uniform value
-uniform_max = 10
-uniform_min = 10
-uniform_exact = 10
+uniform_max = 1000
+uniform_min = 1000
+uniform_exact = 1000
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Generator the random data tables                 ---------
@@ -166,7 +166,7 @@ emp_df = da_errors_emp.email_incorrect_format('Employee Email', apply_perc=15)
 #----------              Store Datasets                                   ---------
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
-pathway_output = "data archive/"
+pathway_output = "Recon_Invalid_Data_Flags/Data_Archive/"
 # Random Business Table
 bus_df.to_csv(pathway_output + "business data.csv", index=False)
 

@@ -213,7 +213,7 @@ class FilePreCheck:
                         raise Exception(f"Zero partial field matches found with {partial_name}.")
 
       # create another one to see if a field(s) exist where a given word is provided
-      def check_fields_with_partialname(self, partial_name):
+      def check_fields_with_partialname(self, partial_name, print_fails = "Y"):
             """
             Check if any field names in the dataset contain the partial name.
             :param partial_name: Partial name to search for in field names.
@@ -231,12 +231,15 @@ class FilePreCheck:
             if read_func:
                   df = read_func(full_path)
                   # Read the file and get the column names
-                  field_names = df.columns
+                  #field_names = df.columns.lower()
+                  field_names = [col.lower() for col in df.columns]
                   # Search for matches
-                  matches = [field for field in field_names if partial_name in field]
+                  matches = [field for field in field_names if partial_name.lower() in field]
                   if len(matches) > 0:
                         print("...Field(s) partial name check: Passed")
                         return len(matches) > 0
                   print("...Field(s) partial name check: Failed")
-                  print(f"   Partial Name: {partial_name}")
+                  if print_fails.upper() == "Y":
+                        print(f"   Partial Name: {partial_name}")
+                        
                   return len(matches) > 0
