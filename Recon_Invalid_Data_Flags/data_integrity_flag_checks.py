@@ -1,6 +1,6 @@
-import pandas as pd
 from Data_Integrity import data_integrity_data_checks as didc
 from Data_Integrity import data_integrity_support_files as disf
+import pandas as pd
 
 # ---------------------------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------

@@ -50,20 +50,20 @@ class Data_Analysis_Flags:
                         cls_mod_unique_valus = stat_check.list_unique_values(cls_mod_field)
                         cls_op_unique_valus = stat_check.list_unique_values(cls_op_field)
                         if print_flags == "Y":
-                              print(f"...{cls_mod_field}: {stat_check.count_value_occurrences(cls_mod_unique_valus, cls_mod_field)}")
-                              print(f"...{cls_op_field}: {stat_check.count_value_occurrences(cls_op_unique_valus, cls_op_field)}")
+                              print(f"...{cls_mod_field}: {stat_check.count_values_field_dict(cls_mod_unique_valus, cls_mod_field)}")
+                              print(f"...{cls_op_field}: {stat_check.count_values_field_dict(cls_op_unique_valus, cls_op_field)}")
                         
                         return self.df
                   elif check['cls vs mod'] == 0 and check['cls vs open'] == 1:
                         cls_op_unique_valus = stat_check.list_unique_values(cls_op_field)
                         if print_flags == "Y":
-                              print(f"...{cls_op_field}: {stat_check.count_value_occurrences(cls_op_unique_valus, cls_op_field)}")
+                              print(f"...{cls_op_field}: {stat_check.count_values_field_dict(cls_op_unique_valus, cls_op_field)}")
                         
                         return self.df
                   elif check['cls vs mod'] == 1 and check['cls vs open'] == 0:
                         cls_mod_unique_valus = stat_check.list_unique_values(cls_mod_field)
                         if print_flags == "Y":
-                              print(f"...{cls_mod_field}: {stat_check.count_value_occurrences(cls_mod_unique_valus, cls_mod_field)}")
+                              print(f"...{cls_mod_field}: {stat_check.count_values_field_dict(cls_mod_unique_valus, cls_mod_field)}")
                         
                         return self.df
 
@@ -93,6 +93,6 @@ class Data_Analysis_Flags:
             if print_flags == "Y":
                   stat_check = ds.Statistics(self.df)
                   cls_stat_unique_valus = stat_check.list_unique_values('Flag Closed Date vs Status')
-                  print(f"...Flag Closed Date vs Status: {stat_check.count_value_occurrences(cls_stat_unique_valus, 'Flag Closed Date vs Status')}")
+                  print(f"...Flag Closed Date vs Status: {stat_check.count_values_field_dict(cls_stat_unique_valus, 'Flag Closed Date vs Status')}")
             
             return self.df

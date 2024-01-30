@@ -17,7 +17,7 @@ class Statistics:
                 unique_values.add(record)
         return unique_values
         
-    def count_value_occurrences(self, list_to_count, field):
+    def count_values_field_dict(self, list_to_count, field):
         """
         Count how many times each value occurs in a specified field of a dataset.
 
@@ -32,6 +32,13 @@ class Statistics:
                 if list == record:
                     value_counts[list] += 1
         return value_counts
+    
+    def count_values_field(self, field_name):
+        if field_name not in self.df.columns:
+            raise ValueError(f"Field '{field_name}' not found in DataFrame.")
+        return self.df[field_name].value_counts()
+    
+
     
     def count_nulls_in_field(self, field_name):
         """
@@ -59,7 +66,16 @@ class Statistics:
             null_count = self.df[field].isnull().sum()
             null_counts[field] = null_count
         return null_counts
-
+    
+    def data_view(self):
+        # Viewing the first few rows
+        print(' ')
+        print('...Data Info:')
+        print(self.df.info())
+        # Basic statistical details
+        print(' ')
+        print('...Data Description:')
+        print(self.df.describe())
 
 
 # how many active/closed
