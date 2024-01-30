@@ -4,7 +4,7 @@ class Statistics:
     def __init__(self, df):
         self.df = df
         
-    def list_unique_values(self, field):
+    def list_unique_values(self, field_name):
         """
         List all unique values in a specified field of the dataset.
 
@@ -12,7 +12,7 @@ class Statistics:
         :return: A set of unique values in the specified field.
         """
         unique_values = set()
-        for record in self.df[field]:
+        for record in self.df[field_name]:
             if record not in unique_values:
                 unique_values.add(record)
         return unique_values

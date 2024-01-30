@@ -41,6 +41,7 @@ print('---------------------------------------')
 print('Flagged Closed Dates')
 df_flags = daf.Data_Analysis_Flags(df)
 df = df_flags.closed_date_other_date_flag(date_field_cls='Closed Date', date_field_mod='Modified Date', date_field_open='Creation Date')
+df = df_flags.closed_date_status_flag(status_field='Business Status', closed_date_field='Closed Date')
 
 # Output
 df.to_csv(path + "/" + filename + filetype, index=False)

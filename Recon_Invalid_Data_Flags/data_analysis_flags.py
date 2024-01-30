@@ -13,7 +13,7 @@ class Data_Analysis_Flags:
       def __init__ (self, df):
             self.df = df
             
-      def closed_date_other_date_flag(self, date_field_cls = "", date_field_open = "", date_field_mod = ""):
+      def closed_date_other_date_flag(self, date_field_cls = "", date_field_open = "", date_field_mod = "", print_flags = "Y"):
             """
             Update a dataframe with data analysis columns compare Closed Date field date value against
             the date values of both/either a open (created) date field and a modified date field. If the
@@ -49,22 +49,25 @@ class Data_Analysis_Flags:
                   if check['cls vs mod'] == 1 and check['cls vs open'] == 1:
                         cls_mod_unique_valus = stat_check.list_unique_values(cls_mod_field)
                         cls_op_unique_valus = stat_check.list_unique_values(cls_op_field)
-                        print("...Flag distributions: ")
-                        print(f"   {cls_mod_field}: {stat_check.count_value_occurrences(cls_mod_unique_valus, cls_mod_field)}")
-                        print(f"   {cls_op_field}: {stat_check.count_value_occurrences(cls_op_unique_valus, cls_op_field)}")
+                        if print_flags == "Y":
+                              print(f"...{cls_mod_field}: {stat_check.count_value_occurrences(cls_mod_unique_valus, cls_mod_field)}")
+                              print(f"...{cls_op_field}: {stat_check.count_value_occurrences(cls_op_unique_valus, cls_op_field)}")
+                        
                         return self.df
                   elif check['cls vs mod'] == 0 and check['cls vs open'] == 1:
                         cls_op_unique_valus = stat_check.list_unique_values(cls_op_field)
-                        print("...Flag distributions: ")
-                        print(f"   {cls_op_field}: {stat_check.count_value_occurrences(cls_op_unique_valus, cls_op_field)}")
+                        if print_flags == "Y":
+                              print(f"...{cls_op_field}: {stat_check.count_value_occurrences(cls_op_unique_valus, cls_op_field)}")
+                        
                         return self.df
                   elif check['cls vs mod'] == 1 and check['cls vs open'] == 0:
                         cls_mod_unique_valus = stat_check.list_unique_values(cls_mod_field)
-                        print("...Flag distributions: ")
-                        print(f"   {cls_mod_field}: {stat_check.count_value_occurrences(cls_mod_unique_valus, cls_mod_field)}")
+                        if print_flags == "Y":
+                              print(f"...{cls_mod_field}: {stat_check.count_value_occurrences(cls_mod_unique_valus, cls_mod_field)}")
+                        
                         return self.df
 
-      def closed_date_status_flag(self, status_field, closed_date_field):
+      def closed_date_status_flag(self, status_field, closed_date_field, print_flags = "Y"):
             """
             Mark rows based on the conditions:
             - "Y" if the closed date field is not null and the status field is 'ACTIVE' or 'A'
@@ -87,4 +90,9 @@ class Data_Analysis_Flags:
             # apply() with axis=1 is necessary because the check_conditions function needs to access multiple columns 
             # of data for each row. By setting axis=1, pandas passes each row (as a Series) to the function.
             self.df['Flag Closed Date vs Status'] = self.df.apply(check_conditions, axis=1)
+            if print_flags == "Y":
+                  stat_check = ds.Statistics(self.df)
+                  cls_stat_unique_valus = stat_check.list_unique_values('Flag Closed Date vs Status')
+                  print(f"...Flag Closed Date vs Status: {stat_check.count_value_occurrences(cls_stat_unique_valus, 'Flag Closed Date vs Status')}")
+            
             return self.df

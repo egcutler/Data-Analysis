@@ -12,7 +12,7 @@ import numpy as np
 def standard_stats(df):
       standard_stats = ds.Statistics(df)
       print(' ')
-      print('...Standard dataframe statistics')
+      print('Standard dataframe statistics')
       print('---------------------------------------')
       
       nulls_all = standard_stats.count_nulls_in_all_fields()
