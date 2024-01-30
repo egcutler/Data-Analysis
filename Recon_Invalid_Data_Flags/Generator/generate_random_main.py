@@ -28,6 +28,37 @@ def generate_table_basic(min_rand_record_lim = 1, max_rand_record_lim = 100000, 
 uniform_max = 1000
 uniform_min = 1000
 uniform_exact = 1000
+
+# Business Table Fields
+bus_fields = {
+      
+}
+
+# Legal Table Fields
+le_fields = {
+      
+}
+
+# Address Table Fields
+addr_fields = {
+      
+}
+
+# Tax Table Fields
+tax_fields = {
+      
+}
+
+# Finance_fields Table Fields
+finance_fields = {
+      
+}
+
+# Employee Table Fields
+emp_fields = {
+      
+}
+
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Generator the random data tables                 ---------

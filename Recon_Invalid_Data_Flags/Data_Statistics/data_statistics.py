@@ -1,6 +1,6 @@
 import pandas as pd
 
-class Statistics_List:
+class Statistics:
     def __init__(self, df):
         self.df = df
         
@@ -32,10 +32,36 @@ class Statistics_List:
                 if list == record:
                     value_counts[list] += 1
         return value_counts
+    
+    def count_nulls_in_field(self, field_name):
+        """
+        Count the number of null (NaN) values in a specific field of a DataFrame.
+
+        :param df: pandas DataFrame
+        :param field_name: Name of the field (column) in which to count nulls
+        :return: Number of null values in the specified field
+        """
+        if field_name not in self.df.columns:
+            raise ValueError(f"Field '{field_name}' not found in DataFrame.")
+
+        null_count = self.df[field_name].isnull().sum()
+        return null_count
+    
+    def count_nulls_in_all_fields(self):
+        """
+        Count the number of null (NaN) values in each field of a DataFrame and summarize in a dictionary.
+
+        :param df: pandas DataFrame
+        :return: Dictionary with field names as keys and number of null values as values
+        """
+        null_counts = {}
+        for field in self.df.columns:
+            null_count = self.df[field].isnull().sum()
+            null_counts[field] = null_count
+        return null_counts
 
 
-# how many nulls
-# total unique and recrod count
+
 # how many active/closed
     
 # """
