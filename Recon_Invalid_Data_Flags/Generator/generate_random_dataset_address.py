@@ -55,6 +55,57 @@ addr_abbr_dict = {
     'Loop': 'Lp'
 }
 
+addr_street_type_list = [
+    'Road',
+    'Street',
+    'Avenue',
+    'Boulevard',
+    'Drive',
+    'Court',
+    'Lane',
+    'Terrace',
+    'Place',
+    'Circle',
+    'Highway',
+    'Square',
+    'Trail',
+    'Parkway',
+    'Alley',
+    'Center',
+    'Mill',
+    'Gardens'
+    'Crescent',
+    'Crossing',
+    'Loop'
+]
+
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+#----------              Address Support Functions                       ---------- 
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
+
+# Function to generate a random address
+def generate_random_address(street_names, city_names, states):
+      """
+      Generate a random address.
+      :param street_names: List of possible street names.
+      :param city_names: List of possible city names.
+      :param states: List of possible states.
+      :return: A string representing a random address.
+      """
+      street_name = random.choice(street_names)
+      street_type = random.choice(addr_street_type_list)
+      city_name = random.choice(city_names)
+      state = random.choice(states)
+      street_number = random.randint(100, 9999)
+      zip_cond = random.randint(1,2)
+      if zip_cond == 1:
+            zip_code = str(f"{random.randint(10000, 99999)}")
+      else:    
+            zip_code = str(f"{random.randint(10000, 99999)}-{random.randint(1000, 9999)}")
+            
+      return f"{street_number} {street_name} {street_type}, {city_name}, {state}, {zip_code}"
 
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
@@ -99,7 +150,7 @@ def generate_address_fields(num_records):
       dict_addr_zipcode_list = []
   
       for _ in range(num_records):
-            addr = gtsf.generate_random_address(street_names, city_names, states).split(", ")
+            addr = generate_random_address(street_names, city_names, states).split(", ")
             dict_addr_street_list.append(addr[0])
             dict_addr_city_list.append(addr[1])
             dict_addr_state_list.append(addr[2])

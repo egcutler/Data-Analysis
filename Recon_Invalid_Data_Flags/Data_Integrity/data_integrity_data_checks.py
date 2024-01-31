@@ -298,7 +298,11 @@ class Data_Check_Formats:
             :return: Optional list of invalid email addresses if return_list is set to "y".
             """
             pattern = r"^[a-zA-Z]+\.[a-zA-Z]+\d?@mailtype\.com$"
-            invalid_emails = self.df[~self.df[column].astype(str).str.match(pattern)][column]
+            # Filter out NaN and empty string values before applying the regex
+            filtered_df = self.df[self.df[column].notna() & (self.df[column] != '')]
+            # Search for invalid zip codes based off regex pattern
+            invalid_emails = filtered_df[~filtered_df[column].astype(str).str.match(pattern)][column]
+
             if not invalid_emails.empty:
                   # Creating a list of invalid emails
                   invalid_email_list = invalid_emails.tolist()
@@ -321,8 +325,11 @@ class Data_Check_Formats:
             :return: Optional list of invalid addresses if return_list is set to "y".
             """
             # Define a simple street address regex pattern or use a more complex one depending on the requirement
-            pattern = r"^\d+\s[A-z]+\s[A-z]+"
-            invalid_addresses = self.df[~self.df[column].astype(str).str.match(pattern)][column]
+            pattern = r"^\d+\s[A-Za-z]+(\s[A-Za-z]+)?"
+            # Filter out NaN and empty string values before applying the regex
+            filtered_df = self.df[self.df[column].notna() & (self.df[column] != '')]
+            # Search for invalid zip codes based off regex pattern
+            invalid_addresses = filtered_df[~filtered_df[column].astype(str).str.match(pattern)][column]
 
             if not invalid_addresses.empty:
                   # Creating a list of invalid addresses
@@ -342,17 +349,21 @@ class Data_Check_Formats:
             """
             Validate the zip code format in a specified column of the DataFrame.
             The function checks zip codes against a regex pattern for standard 5 or 9 digit zip code validation.
+            It excludes NaN and empty string values.
             :param column: The column name containing zip codes.
             :param return_list: Set to "y" to return a list of invalid zip codes.
             :return: Optional list of invalid zip codes if return_list is set to "y".
             """
             pattern = r"^\d{5}(-\d{4})?$"
-            invalid_zip_codes = self.df[~self.df[column].astype(str).str.match(pattern)][column]
-            
+            # Filter out NaN and empty string values before applying the regex
+            filtered_df = self.df[self.df[column].notna() & (self.df[column] != '')]
+            # Search for invalid zip codes based off regex pattern
+            invalid_zip_codes = filtered_df[~filtered_df[column].astype(str).str.match(pattern)][column]
+
             if not invalid_zip_codes.empty:
                   invalid_zip_code_list = invalid_zip_codes.tolist()
                   print("...Zip code format check: Failed")
-                  print(f"   {len(invalid_zip_code_list)} zip codes flagged as wrong format")
+                  print(f"   {len(invalid_zip_code_list)} zip code(s) flagged as wrong format")
                   if return_list.lower() == "y":
                         return invalid_zip_code_list
             else:
@@ -368,7 +379,10 @@ class Data_Check_Formats:
             :return: Optional list of invalid IP addresses if return_list is set to "y".
             """
             pattern = r"^(\d{1,3}\.){3}\d{1,3}$"
-            invalid_ips = self.df[~self.df[column].astype(str).str.match(pattern)][column]
+            # Filter out NaN and empty string values before applying the regex
+            filtered_df = self.df[self.df[column].notna() & (self.df[column] != '')]
+            # Search for invalid zip codes based off regex pattern
+            invalid_ips = filtered_df[~filtered_df[column].astype(str).str.match(pattern)][column]
             
             if not invalid_ips.empty:
                   invalid_ip_list = invalid_ips.tolist()
@@ -389,7 +403,10 @@ class Data_Check_Formats:
             :return: Optional list of invalid domain names if return_list is set to "y".
             """
             pattern = r"^(https?://)?(www\.)?[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$"
-            invalid_domains = self.df[~self.df[column].astype(str).str.match(pattern)][column]
+            # Filter out NaN and empty string values before applying the regex
+            filtered_df = self.df[self.df[column].notna() & (self.df[column] != '')]
+            # Search for invalid zip codes based off regex pattern
+            invalid_domains = filtered_df[~filtered_df[column].astype(str).str.match(pattern)][column]
             
             if not invalid_domains.empty:
                   invalid_domain_list = invalid_domains.tolist()

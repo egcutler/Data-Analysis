@@ -25,9 +25,9 @@ def generate_table_basic(min_rand_record_lim = 1, max_rand_record_lim = 100000, 
       return id_dict
 
 # Max and Min random selection for id record generator to be used as a uniform value
-uniform_max = 1000
-uniform_min = 1000
-uniform_exact = 1000
+uniform_max = 10
+uniform_min = 10
+uniform_exact = 10
 
 # Business Table Fields
 bus_fields = {

@@ -27,7 +27,7 @@ class Statistics:
         """
         value_counts = {}
         for list in list_to_count:
-            value_counts[list] = 1
+            value_counts[list] = 0
             for record in self.df[field]:
                 if list == record:
                     value_counts[list] += 1

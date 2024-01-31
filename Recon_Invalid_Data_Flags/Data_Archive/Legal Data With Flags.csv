@@ -1,0 +1,1001 @@
+ID_Record,Legal Account,Bus External ID,Legal Firm,Legal Type,Legal Type Def,Legal Status,LE Creation Date,LE Modified Date,LE Closed Date,Legal Tax Category,IRS TIN ID,MPID,GIIN ID,FACTA ID,WCIS ID,TEFRA ID,Flag LE Closed Date vs LE Modified Date,Flag LE Closed Date vs LE Creation Date,Flag Closed Date vs Status
+877,40678084,0GZC0160,Garcia & Carter Law,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",HISTORY,2006-05-31,2015-12-13,2019-03-10,M,7961240,227279,884432,455481997,16294,4960888,N,N,N
+273,81909353,9JDQ0024,Quinn & Jackson Attorneys,ADVIS,Legal Advisor,ACTIVE,1990-07-19,2017-09-16,,D,5956513,610327,238842,226122626,57401,4139159,N,N,N
+373,53274249,6OVI0164,,AFD,Allowance For Depreciation,ACTIVE,2021-06-08,2022-06-21,,I,1825050,329848,195397,457272085,37525,4141169,N,N,N
+653,41074141,9CJW0036,Owens & Carter Associates,AFFRS,Affairs,ACTIVE,2007-04-18,2015-10-28,,G,8104528,103992,333793,597279439,86940,2563891,N,N,N
+913,77919704,1HPN0073,Owens & Martin Advisors,AFFRS,Affairs,CLOSED,2022-12-23,2023-06-10,2024-01-09,M,1955890,659973,806508,518096006,72533,7039350,N,N,N
+249,68701700,1QKE0066,,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",CLOSED,2005-01-16,2009-11-30,2017-04-14,I,7858130,350382,435518,571340258,81230,6733862,N,N,N
+710,86210698,7FSJ0915,Carter & Zimmerman Solicitors,BANK,Bank Division,ACTIVE,2003-05-22,2005-01-07,,Ba,9511317,662354,509210,727842417,22954,8091262,N,N,N
+485,46252134,0NQI0949,Anderson & Quinn Counsel,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2012-08-31,2024-01-12,,Bt,4391969,426916,214111,184760124,62145,6525656,N,N,N
+786,32344168,5XOC0394,Roberts & Quinn Partners,AFF,Available Funds File,ACTIVE,1993-10-08,,,Ba,4188585,534507,923157,687148240,52404,1747243,N,N,N
+994,32988815,1QFB0563,Owens & Taylor Partners,AFD,Allowance For Depreciation,ACTIVE,2005-08-30,,,Bt,2578542,753046,465034,790771784,96501,8669021,N,N,N
+338,53120024,5LQL0099,Harris & Quinn Partners,TRADR,Trader credential account,ACTIVE,1990-11-13,2008-01-02,,I,9284803,707061,573229,356605562,61835,1899109,N,N,N
+88,17488440,5MSU0058,Nelson & Underwood Litigators,BENE,Beneficiary credentail for investment,ACTIVE,2009-09-11,2020-11-04,,G,3327867,962784,871026,282454796,56533,2516753,N,N,N
+552,30258933,9AGP0073,Jackson & Zimmerman Solicitors,CREDIT,Credit Account,ACTIVE,2016-09-09,2021-10-09,,G,4541385,231920,488763,995776986,12655,3942722,N,N,N
+325,69715333,2SNM0325,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1991-10-11,1997-07-14,,I,8886283,660013,781366,410922280,45733,6126695,N,N,N
+230,82336394,8ETD0405,Roberts & Davis Partners,CREDIT,Credit Account,ACTIVE,1994-09-04,2012-01-18,,M,3812775,422084,254556,895880545,97257,7983972,N,N,N
+693,68571659,4KXU0325,Garcia & Underwood Defenders,BANK,Bank Division,HISTORY,2000-01-10,2014-05-27,2020-10-25,Bt,1080991,415631,682731,597448989,53089,9006981,N,N,N
+571,38991079,5DYL0914,Taylor & Fisher Prosecutors,AFFRS,Affairs,ACTIVE,2004-09-22,,,I,6752110,804253,298722,142469459,51608,8946439,N,N,N
+88,66547407,6DKP0312,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2003-11-27,2016-05-18,,N,8891407,585843,393571,656510958,21709,2381336,N,N,N
+953,20780939,1RYU0553,Harris & King Counselors,AFD,Allowance For Depreciation,ACTIVE,2013-03-04,2014-05-05,,Ba,7544528,346834,866713,973421544,48386,5014373,N,N,N
+157,79051114,2MZP0177,,BANK,Bank Division,HISTORY,2003-04-21,,2009-08-21,M,5587971,375941,296512,561972933,20455,1601549,N,N,N
+356,48100808,1AMH0810,Nelson & Jackson Consultants,AG,Agriculture,ACTIVE,1998-04-30,2007-09-20,,I,6268166,522421,925360,120882100,40119,5863262,N,N,N
+846,26403213,7COG0915,Jackson & Davis Counselors,CORP,Corporation Division,CLOSED,1999-01-14,2019-08-10,2020-04-05,M,4135358,939177,524076,361024099,74602,2593447,N,N,N
+101,87482300,0GYN0848,Parker & Carter Defenders,AFF,Available Funds File,ACTIVE,1990-07-24,2012-07-25,,Ba,8443475,623570,614838,393759106,46020,2766987,N,N,N
+356,64715863,5DLZ0725,Garcia & Martin Prosecutors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2007-08-26,,,I,5538806,842690,412554,610851313,56596,8587817,N,N,N
+328,62076593,1VZV0372,Underwood & Martin Counselors,ADVIS,Legal Advisor,ACTIVE,1995-03-30,2004-09-25,,Bt,9872703,239222,861593,825758141,54533,8618957,N,N,N
+228,53456759,4OKJ0493,Nelson & Zimmerman Law,TRADR,Trader credential account,HISTORY,2019-06-23,2020-02-26,2020-09-07,I,4235291,703460,749108,871597657,94733,1053234,N,N,N
+194,80188763,0ZNH0338,Williams & Taylor Law,AG,Agriculture,HISTORY,2015-03-08,2020-09-24,2023-10-24,Bt,4084651,386062,465129,426217053,51544,8456151,N,N,N
+71,14628418,5WKS0943,Carter & Williams Advisors,AFF,Available Funds File,CLOSED,2022-03-19,,2024-01-21,Ba,7558120,985259,651501,125769522,34138,5721738,N,N,N
+996,10263833,6PKV0559,Zimmerman & Quinn Solicitors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2017-09-05,,,N,3755861,405461,442072,423210366,55778,5134535,N,N,N
+886,16538415,8POP0632,Lewis & Carter Consultants,BANK,Bank Division,CLOSED,2019-08-15,2021-08-24,2022-05-15,Bt,4305507,784754,628828,563552248,17889,1549322,N,N,N
+337,19147842,3IFB0971,Parker & Roberts Legal,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",HISTORY,2000-07-14,2005-06-17,2018-08-07,D,5171987,928846,493780,493320950,30498,4300126,N,N,N
+619,57833378,1PRY0699,Smith & Zimmerman Barristers,AFFRS,Affairs,CLOSED,1999-01-10,2018-10-28,2021-07-09,N,1744650,800354,724926,181420650,55650,3821266,N,N,N
+915,37894022,8GER0715,Owens & King Defenders,AFFRS,Affairs,ACTIVE,2000-02-07,2018-05-12,,Bt,4172605,429658,875802,696444566,11955,3058929,N,N,N
+623,72538149,6JUD0418,Jackson & Vasquez Defenders,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,1998-09-02,2014-07-05,2019-04-29,N,8056779,325714,374015,945803586,53717,2382147,N,N,N
+440,82830839,4FAB0251,Garcia & Zimmerman Legal,AFF,Available Funds File,ACTIVE,1996-07-18,2022-12-05,,Ba,3064920,325448,929609,871574762,43090,9967415,N,N,N
+651,61989482,1UNX0592,Jackson & Anderson Associates,ADVIS,Legal Advisor,ACTIVE,2019-04-03,2019-06-03,,M,2663712,689074,489515,351947834,42874,6468084,N,N,N
+92,15016262,0DTZ0553,Carter & Smith Consultants,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",HISTORY,2007-12-07,2008-01-14,2013-03-18,Bt,8160813,322434,182180,297778261,96081,6838439,N,N,N
+938,64878326,3ZEV0639,Parker & Nelson Advisors,ADVIS,Legal Advisor,HISTORY,2002-03-20,2009-11-24,2016-02-02,D,7450962,515953,111447,901472778,18832,9116941,N,N,N
+950,39688039,4QFO0828,Quinn & Williams Associates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2020-10-08,2022-07-28,,I,4556968,525842,244739,387803657,75537,3567986,N,N,N
+986,84400855,1JSX0800,Young & Lewis Prosecutors,CORP,Corporation Division,ACTIVE,1996-01-19,2000-04-30,,I,4486303,492640,723393,488944458,33768,7115834,N,N,N
+66,67243915,1VGY0395,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2018-12-15,,,N,4996874,590356,270181,265485311,13052,9206052,N,N,N
+710,30005766,9RFG0850,Jackson & King Law,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2012-07-10,2023-07-11,,D,6983063,927847,877893,577747497,84202,6077636,N,N,N
+619,40635398,2KBE0157,Baker & Zimmerman Advisors,CREDIT,Credit Account,ACTIVE,2000-08-06,2020-08-13,,Bt,2043093,234420,118351,942176659,65157,8061098,N,N,N
+845,38563885,8AKC0470,,CREDIT,Credit Account,ACTIVE,2000-06-09,2002-03-08,,G,7747615,943067,492496,319903702,22630,6322592,N,N,N
+343,88675739,9WDK0921,Underwood & Vasquez Associates,AFFRS,Affairs,ACTIVE,1992-04-08,,,I,6541364,312305,699793,508845026,40085,7831391,N,N,N
+813,58335111,0WXQ0844,,AFFRS,Affairs,HISTORY,2012-05-28,2018-02-11,2020-06-25,M,1040322,509381,937516,556313979,61896,8130025,N,N,N
+708,33429565,5CPS0102,Martin & Evans Justice,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2013-04-07,2017-12-05,,Ba,1924586,989025,777843,706322966,33152,5696725,N,N,N
+659,88074438,8CUQ0628,Harris & Baker Advocates,CORP,Corporation Division,ACTIVE,2022-02-19,2023-07-06,,M,1858249,597678,284549,382106710,19465,7534758,N,N,N
+853,67449811,4EOH0713,Zimmerman & Anderson Barristers,AFD,Allowance For Depreciation,ACTIVE,1996-02-08,,,I,8946363,319751,401630,295053935,52861,8024193,N,N,N
+441,60974153,5JAL0420,Owens & Evans Consultants,ADVIS,Legal Advisor,CLOSED,2011-10-03,2014-09-25,2015-09-19,D,1793966,666148,185798,402655696,67190,7939192,N,N,N
+6,49961297,6ISN0506,Anderson & Baker Counselors,AG,Agriculture,ACTIVE,2020-11-23,2023-04-27,,Bt,9846005,396116,696907,425895123,42447,8234950,N,N,N
+233,29026094,0YSB0536,Baker & Davis Associates,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1996-08-26,2020-06-20,,Bt,4999056,111990,567825,867703812,10321,8242561,N,N,N
+346,17972223,6DWQ0277,Vasquez & Jackson Partners,AG,Agriculture,CLOSED,2019-06-25,2019-11-09,2020-02-23,Ba,3732774,595672,262202,657681437,88090,8371092,N,N,N
+273,48384435,6WDY0542,Harris & Martin Prosecutors,AFF,Available Funds File,ACTIVE,1996-03-09,2004-02-08,,Ba,2327585,460841,454060,581799472,73288,5373122,N,N,N
+818,96709480,5UBL0530,Nelson & Underwood Solicitors,BENE,Beneficiary credentail for investment,ACTIVE,1996-05-02,1998-12-04,,Ba,2269178,549480,773395,726878286,28217,1429035,N,N,N
+953,84446142,3OPT0807,Anderson & Zimmerman Justice,AFF,Available Funds File,ACTIVE,1993-05-01,2012-08-28,,Ba,8797046,629473,727789,248540511,63671,6979995,N,N,N
+445,78997439,0JFF0060,Jackson & Evans Solicitors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2011-02-06,2011-04-04,,Bt,7089955,987164,908802,210788694,98260,5050858,N,N,N
+717,28078006,3NAI0387,Parker & Martin Partners,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,HISTORY,1992-12-21,2022-09-06,2023-01-04,D,4557731,394594,674526,956176640,35373,1297976,N,N,N
+109,74302322,6TJK0012,Davis & Owens Litigators,AFF,Available Funds File,ACTIVE,2009-03-24,2010-02-18,,Ba,8734770,293129,495483,329382180,91786,7876624,N,N,N
+206,95056949,5MSU0058,Quinn & Harris Counselors,BENE,Beneficiary credentail for investment,ACTIVE,2022-08-08,2022-10-25,,M,7015600,283757,569465,898334860,58157,7257134,N,N,N
+933,43672606,9SSD0831,Roberts & Zimmerman Defenders,AG,Agriculture,ACTIVE,2011-09-10,2017-07-17,,Bt,8327189,127419,309940,437912889,79003,1785296,N,N,N
+454,83248986,6INB0879,Roberts & Fisher Defenders,BENE,Beneficiary credentail for investment,ACTIVE,2023-04-05,2023-06-06,,G,3543158,264949,171434,932079013,76293,6210160,N,N,N
+278,67272338,4YDY0467,Young & Owens Legal,CORP,Corporation Division,ACTIVE,1990-07-14,2015-05-06,,Ba,3712257,234638,403706,535846212,13249,2266748,N,N,N
+928,52046885,7GAZ0802,Zimmerman & Parker Partners,AG,Agriculture,ACTIVE,1994-08-20,2020-04-21,,M,5170909,435704,216116,685066143,63903,6142737,N,N,N
+710,88592430,4IFR0183,Nelson & Smith Litigators,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,1994-06-24,2006-03-10,,G,9216602,634879,349157,423802892,30334,4062395,N,N,N
+596,60284517,3XKP0503,Zimmerman & Lewis Prosecutors,CREDIT,Credit Account,HISTORY,2020-04-20,2020-06-19,2021-06-30,I,7332861,123386,560031,694891649,72366,6527958,N,N,N
+472,11192066,9DFJ0570,Quinn & Fisher Advocates,AFD,Allowance For Depreciation,ACTIVE,1996-06-07,2000-08-24,,Ba,5724305,177147,197831,603022375,78784,4446269,N,N,N
+130,60664996,4XIV0594,,AFF,Available Funds File,ACTIVE,2022-02-23,2023-05-24,,N,8687977,316533,400531,696961042,51770,3955519,N,N,N
+277,70972539,6HPI0813,Carter & Fisher Associates,TRADR,Trader credential account,ACTIVE,1992-09-22,2009-03-16,,Bt,9928793,102094,134788,486468709,86620,9850262,N,N,N
+639,41548069,0RXG0960,,AFD,Allowance For Depreciation,HISTORY,2008-04-15,2022-09-30,2023-09-04,Ba,3509389,395006,639134,655302039,31328,4172292,N,N,N
+215,81243037,8AVX0137,Vasquez & Quinn Associates,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",HISTORY,2007-06-01,2014-05-07,2022-09-02,Bt,3281781,840902,260478,958378966,67185,4810083,N,N,N
+547,21424926,7EIA0346,Garcia & Fisher Associates,BANK,Bank Division,ACTIVE,2016-10-14,2023-02-06,,D,7946797,863598,920403,354333643,71070,2025000,N,N,N
+593,92898143,8BRS0983,Garcia & Smith Prosecutors,CREDIT,Credit Account,ACTIVE,2023-03-06,2023-06-18,,I,6523182,869969,724937,670854131,60481,1692763,N,N,N
+126,64189844,4UGT0105,Young & Davis Counselors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1995-09-11,2022-05-03,,Bt,4258291,590832,954004,787650831,39420,5314058,N,N,N
+422,89955809,2RWA0510,Zimmerman & Evans Consultants,BENE,Beneficiary credentail for investment,ACTIVE,2001-05-16,2009-03-13,,D,9351447,159164,491775,246926320,47248,7662460,N,N,N
+699,65877123,8RPB0259,Nelson & Martin Associates,BENE,Beneficiary credentail for investment,ACTIVE,1991-11-15,1996-08-12,,D,1748478,798282,438857,326623976,69179,1432271,N,N,N
+640,19968148,4RUI0871,Young & Davis Advisors,TRADR,Trader credential account,ACTIVE,2005-08-12,,,Ba,7219417,525959,699043,182835177,73798,1734591,N,N,N
+912,27798686,1SUZ0604,,TRADR,Trader credential account,HISTORY,2015-09-05,2019-08-18,2022-05-24,Bt,8829365,991000,985343,840000299,39598,5875735,N,N,N
+713,65877123,5DGG0847,King & Jackson Legal,BENE,Beneficiary credentail for investment,ACTIVE,2010-12-18,2020-08-26,,I,8265656,172558,440977,738660041,37030,6241297,N,N,N
+988,32118244,9SWM0837,Davis & Anderson Advocates,AFFRS,Affairs,ACTIVE,1997-02-18,,,N,4133503,939642,484561,973488785,64700,3800407,N,N,N
+840,47665260,1FAZ0638,Nelson & Garcia Partners,AFD,Allowance For Depreciation,ACTIVE,2022-09-14,2023-01-04,,Ba,5678938,130509,746088,712935820,62117,4233859,N,N,N
+121,51327477,7GNJ0257,Young & Carter Solicitors,CORP,Corporation Division,ACTIVE,2006-09-28,2020-12-14,,I,1608849,774190,318529,886199592,51384,1797180,N,N,N
+874,52048326,7IMT0823,Evans & Owens Prosecutors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2003-09-11,2014-11-13,,N,2601905,105845,990600,888227673,71506,9230775,N,N,N
+641,20500952,5JKO0883,Underwood & Roberts Prosecutors,BANK,Bank Division,HISTORY,2020-12-12,2022-11-21,2023-09-25,N,4077844,479314,180467,789415123,59654,4837485,N,N,N
+807,56095484,8FSO0090,Zimmerman & Smith Associates,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",HISTORY,2004-06-02,2021-12-10,2023-07-05,Bt,2465054,114950,264162,951809099,39592,3366501,N,N,N
+990,91135906,0GYN0848,Lewis & Anderson Consultants,TRADR,Trader credential account,CLOSED,2018-03-19,2019-07-24,2022-05-01,I,9370039,581840,653630,484098928,53674,7131904,N,N,N
+557,91554021,0YXO0770,Taylor & Underwood Associates,ADVIS,Legal Advisor,ACTIVE,2015-11-25,2016-07-02,,I,2111719,136787,244002,398349810,55788,2240420,N,N,N
+509,63540920,0RLZ0542,Parker & Fisher Associates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,HISTORY,2020-05-31,2023-06-09,2024-01-27,Ba,7831948,368915,778399,255818987,15710,8050270,N,N,N
+438,81434054,4MTE0494,Vasquez & Williams Prosecutors,TRADR,Trader credential account,ACTIVE,1997-05-18,2010-10-02,,I,4774563,372143,372299,317830888,25307,3099079,N,N,N
+909,34062388,0LEX0507,,CORP,Corporation Division,ACTIVE,2013-05-30,2019-09-05,,D,3165361,507596,602405,759669257,80926,8785537,N,N,N
+530,67805941,9TBR0547,Young & Martin Advocates,AFF,Available Funds File,ACTIVE,2022-01-01,2022-11-12,,I,4669786,644504,833843,312522677,91213,7632310,N,N,N
+835,35771047,1KBM0358,Underwood & Harris Barristers,AFD,Allowance For Depreciation,ACTIVE,1994-06-26,2014-07-12,,Ba,3845688,727931,219200,715219513,95995,7032246,N,N,N
+545,44510644,7YKS0956,Owens & Anderson Law,BANK,Bank Division,ACTIVE,2015-07-15,2018-03-26,,G,9706311,750629,758607,936537385,51146,9512112,N,N,N
+838,62420566,8XBE0600,Roberts & Williams Counselors,ADVIS,Legal Advisor,ACTIVE,2007-04-27,2022-05-28,,Bt,8747083,214418,267076,413052519,45249,6954305,N,N,N
+691,53120024,8RPB0259,Williams & Nelson Counselors,CORP,Corporation Division,ACTIVE,2020-06-21,2023-10-17,,D,1371038,668177,190132,560283374,27161,3167392,N,N,N
+129,82132774,3HOR0691,Evans & Davis Counsel,ADVIS,Legal Advisor,HISTORY,2001-09-14,,2022-01-22,M,1642278,826876,472000,278538092,46794,9952161,N,N,N
+512,27123129,2KMH0627,Harris & Vasquez Prosecutors,TRADR,Trader credential account,ACTIVE,2009-07-09,2018-09-05,,Bt,3678919,697060,174232,775728895,32411,2004750,N,N,N
+585,52209813,5GAX0646,Harris & Jackson Advisors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2014-08-23,2017-11-22,,I,6245064,813028,710529,196351326,11840,3176038,N,N,N
+847,11192066,3HUD0850,Carter & Davis Advisors,AG,Agriculture,ACTIVE,2008-08-22,2023-07-08,,D,7637205,509906,943356,266786619,33188,9653377,N,N,N
+529,61441563,9OVE0088,Young & Harris Advocates,AFF,Available Funds File,ACTIVE,1991-08-15,2020-11-26,,I,4991154,594377,811224,268259093,77108,8883037,N,N,N
+308,15355224,8RSI0029,Taylor & Jackson Attorneys,ADVIS,Legal Advisor,ACTIVE,1998-07-15,2012-11-01,,Bt,8015910,256557,389927,529888789,63132,2510679,N,N,N
+96,33771779,8IAV0556,Quinn & Anderson Attorneys,AG,Agriculture,ACTIVE,1998-09-11,2017-11-15,,Ba,8676483,282300,835821,750378070,44949,9780728,N,N,N
+879,64878326,0VPD0009,Baker & Roberts Solicitors,TRADR,Trader credential account,ACTIVE,1995-07-13,2019-08-15,,I,6736860,501240,682540,212411953,99231,6923036,N,N,N
+377,20361857,1PBS0010,Nelson & King Counsel,AG,Agriculture,ACTIVE,2023-07-05,2023-08-25,,D,8082851,626606,779201,252219990,63860,5003238,N,N,N
+777,32173805,4RSX0571,Vasquez & Smith Defenders,CORP,Corporation Division,ACTIVE,2007-04-23,2023-09-21,,G,1957174,333791,286141,736610564,43977,5611731,N,N,N
+530,67583285,7QUK0308,Williams & Vasquez Justice,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",HISTORY,1996-04-18,,2023-06-03,N,6011400,333728,558871,339375914,80916,3178866,N,N,N
+154,61606535,8IAV0556,Owens & Harris Advisors,AFF,Available Funds File,ACTIVE,2009-01-21,2023-02-11,,I,9493385,699495,958710,220671520,74663,9725839,N,N,N
+7,92486693,4UJN0081,Jackson & Parker Consultants,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2005-04-29,,,I,5411702,195222,453012,928580096,83327,1868025,N,N,N
+367,72829139,4RZT0682,,BANK,Bank Division,ACTIVE,1991-07-08,,,G,1756503,224994,292338,251237601,74800,3162540,N,N,N
+10,46538524,7QYU0627,Roberts & Martin Associates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,HISTORY,1993-05-12,,2004-12-29,N,6021757,318884,238759,181000987,64844,3995754,N,N,N
+927,68766296,9NID0743,Jackson & Evans Solicitors,ADVIS,Legal Advisor,ACTIVE,1993-06-07,2014-11-29,,D,3033351,666912,303586,172710375,57983,2880529,N,N,N
+602,62640255,4BSY0249,Vasquez & Zimmerman Advocates,AFF,Available Funds File,ACTIVE,2018-05-27,2024-01-04,,Bt,1231367,622652,126351,897750192,50030,3693386,N,N,N
+698,79775376,9STJ0746,Fisher & Harris Justice,AFD,Allowance For Depreciation,CLOSED,2007-05-19,2017-12-26,2022-05-29,I,5991721,637343,708553,135207351,25073,5745984,N,N,N
+421,52405006,8BQQ0484,Carter & Jackson Justice,TRADR,Trader credential account,ACTIVE,1993-12-19,1996-02-25,,G,4907509,121970,545551,189569618,47861,1567882,N,N,N
+485,18572216,8RVG0014,Nelson & Parker Advocates,BENE,Beneficiary credentail for investment,ACTIVE,2012-10-14,2020-10-30,,M,5727527,421912,248121,939490316,84939,2432909,N,N,N
+810,19901546,1GIL0121,Underwood & Vasquez Counselors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,1990-02-15,2007-06-10,2018-06-17,M,1774707,890327,845020,629134456,55551,6482859,N,N,N
+871,36961268,4TAG0594,Lewis & King Law,BENE,Beneficiary credentail for investment,ACTIVE,2004-06-06,2013-09-03,,G,3370722,966856,423414,766223934,76258,9187594,N,N,N
+670,65134427,3UEQ0379,Taylor & Harris Counselors,CREDIT,Credit Account,ACTIVE,2013-07-22,2015-01-22,,G,7274019,970549,913672,796630943,53311,2842977,N,N,N
+849,21259723,2MWS0546,Davis & Taylor Advocates,AFF,Available Funds File,ACTIVE,1999-03-08,2005-04-21,,Ba,9210444,799073,424179,165867115,41155,4775993,N,N,N
+552,48937510,7COG0915,Williams & Harris Litigators,AFFRS,Affairs,ACTIVE,1999-07-19,1999-12-31,,N,3810162,909954,141493,758337635,69872,5312422,N,N,N
+823,83054319,2WAN0007,Roberts & Vasquez Advocates,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2019-03-13,,,Bt,2929174,698732,240873,432676627,30607,4908491,N,N,N
+996,23259595,2UZN0376,,CORP,Corporation Division,ACTIVE,2008-11-15,2023-07-19,,Bt,6312593,700680,206165,184854767,90737,6530272,N,N,N
+230,80850471,8XOQ0018,Carter & Owens Solicitors,AFFRS,Affairs,ACTIVE,2023-09-13,2023-11-18,,N,8728311,436606,837767,233915563,88256,5836125,N,N,N
+167,60165900,9UVJ0691,Harris & Owens Associates,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",HISTORY,2018-05-21,2022-03-14,2023-08-18,N,2005567,577113,107524,356529821,33196,3649361,N,N,N
+744,88306991,5DTH0369,,CORP,Corporation Division,ACTIVE,2002-07-28,2006-02-25,,I,5372354,817190,983524,148025938,23402,5050205,N,N,N
+587,75522338,6GQI0398,Underwood & Baker Attorneys,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2017-12-08,,,Bt,9064702,157324,213247,856737901,93935,3377058,N,N,N
+101,24350283,4LJX0315,Evans & Zimmerman Prosecutors,AG,Agriculture,ACTIVE,2007-06-28,2019-11-11,,G,1432147,194450,823538,431873008,93083,4790234,N,N,N
+859,87656751,5GUV0362,Baker & Lewis Counsel,AG,Agriculture,HISTORY,1998-02-12,2011-08-18,2011-11-13,Ba,6260533,473676,650804,589187674,43930,3433846,N,N,N
+141,69325069,5ZFR0727,Anderson & Garcia Justice,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2016-04-21,,,D,6312396,106432,972495,570667215,54342,3712931,N,N,N
+263,32881232,3PPE0940,Garcia & Zimmerman Legal,TRADR,Trader credential account,ACTIVE,1990-10-09,2004-01-01,,Bt,8928506,140209,475431,115270489,72750,2351000,N,N,N
+386,88467734,6RVF0006,Anderson & Williams Prosecutors,BANK,Bank Division,CLOSED,2018-10-12,,2021-04-25,M,8617436,654853,667639,253539891,48813,9025311,N,N,N
+830,88392265,7IDU0561,Davis & King Partners,BANK,Bank Division,ACTIVE,2009-03-12,2012-07-17,,I,4048264,214708,645809,695311368,79831,9855262,N,N,N
+252,64189844,6AOH0402,Quinn & Anderson Partners,TRADR,Trader credential account,ACTIVE,1991-01-14,2007-08-29,,M,8240711,777581,606590,997110711,80215,4972050,N,N,N
+345,71507569,1ASM0540,Quinn & Young Associates,AFD,Allowance For Depreciation,CLOSED,2004-07-18,2013-06-21,2017-01-27,Ba,3392542,858703,826258,761751631,53354,3694541,N,N,N
+35,67292498,2ZLK0306,Roberts & Fisher Defenders,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2006-04-29,2021-09-14,,N,3456352,250901,287337,917064919,72660,7016710,N,N,N
+648,16516942,2GGI1000,,CREDIT,Credit Account,HISTORY,2020-07-17,2023-01-03,2023-08-05,D,2133211,240472,335411,940568362,26931,6578620,N,N,N
+531,10112444,4UJN0081,Smith & Owens Associates,AFFRS,Affairs,HISTORY,1993-11-30,2014-07-03,2020-01-22,G,3168673,979343,717416,371801306,42897,2195242,N,N,N
+49,53456759,9TZU0480,Young & Evans Justice,AG,Agriculture,ACTIVE,2023-06-22,2024-01-01,,Bt,8907756,620403,950543,343949800,46682,4156332,N,N,N
+989,26602724,3HXG0936,Owens & Garcia Counsel,AG,Agriculture,ACTIVE,2021-10-03,2022-06-25,,G,2014769,731636,858238,562785239,80692,8856618,N,N,N
+875,29007347,5GRD0035,Martin & Smith Prosecutors,AFD,Allowance For Depreciation,ACTIVE,2005-09-23,2013-08-26,,N,6958516,238096,837904,385570432,13333,5633733,N,N,N
+81,64715863,0WJC0202,Parker & Garcia Law,AFD,Allowance For Depreciation,ACTIVE,2018-02-03,2022-09-04,,N,6947837,112312,717401,697194700,69861,3284573,N,N,N
+664,70579096,4EYY0758,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2015-03-17,2018-11-07,,M,7613372,717919,825552,597952843,96325,6839277,N,N,N
+243,21946987,5XOC0394,Martin & Lewis Partners,BANK,Bank Division,ACTIVE,2006-07-03,2013-03-11,,N,5173047,250996,790583,907004712,87463,3673292,N,N,N
+699,78620838,3QNA0386,Owens & Garcia Partners,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2019-08-06,2022-05-23,,N,7095934,609906,683308,762583247,42189,9523215,N,N,N
+949,58745687,1LTZ0168,Garcia & Lewis Litigators,CREDIT,Credit Account,ACTIVE,2002-12-12,2020-11-16,,I,1668016,663818,234301,912630718,85902,3264344,N,N,N
+269,27723222,5GCN0403,,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,1998-01-05,2013-08-26,,Ba,1386205,567519,638807,367472099,30283,1280222,N,N,N
+542,64189844,5TUD0882,Anderson & Jackson Partners,ADVIS,Legal Advisor,ACTIVE,1994-09-25,,,M,3979926,342475,421183,468409730,88653,6918248,N,N,N
+432,73841505,8UZR0040,Garcia & Evans Consultants,AFFRS,Affairs,ACTIVE,1998-11-04,2013-03-06,,I,4169108,659640,265735,253941647,72382,9176482,N,N,N
+477,67053989,1CIZ0964,Martin & Anderson Litigators,AFF,Available Funds File,CLOSED,1997-11-08,2002-06-20,2004-05-19,Ba,9656762,683573,848363,839809839,64270,1471477,N,N,N
+592,70955992,7BPN0848,Anderson & Smith Associates,ADVIS,Legal Advisor,ACTIVE,1992-08-24,1994-10-09,,I,6260769,887416,573276,615668153,28676,9174233,N,N,N
+429,20331878,9AIP0498,,TRADR,Trader credential account,HISTORY,2020-04-24,2021-11-29,2022-01-30,N,9276648,968748,986448,101903527,10269,2331031,N,N,N
+787,89643546,8QOK0186,Lewis & Baker Solicitors,AFD,Allowance For Depreciation,HISTORY,2015-11-29,2019-06-10,2021-02-02,M,7734364,236160,255956,926343586,37559,1490004,N,N,N
+841,31394607,5DVP0202,Nelson & Smith Prosecutors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",HISTORY,2008-04-23,2017-07-03,2020-11-02,G,6795197,232134,785896,403179650,77605,3382848,N,N,N
+401,31832459,0BPV0315,Williams & Carter Prosecutors,BENE,Beneficiary credentail for investment,ACTIVE,2014-05-07,,,Bt,8090049,679204,966572,787735712,64808,6522688,N,N,N
+482,67713469,4ECK0731,Parker & Young Advisors,BENE,Beneficiary credentail for investment,ACTIVE,2009-12-08,2017-02-01,,D,4310340,193251,125104,330621141,42680,5896649,N,N,N
+92,71760912,0MFV0233,Zimmerman & Parker Justice,AFD,Allowance For Depreciation,ACTIVE,2013-02-22,,,Bt,2177204,442772,751132,892772727,84291,2789331,N,N,N
+413,12127896,2ACP0703,Quinn & Fisher Partners,CORP,Corporation Division,ACTIVE,2020-06-22,2021-04-07,,I,4838849,329274,920594,153227715,18971,7702400,N,N,N
+125,57202235,5HTC0658,Lewis & Carter Counsel,TRADR,Trader credential account,HISTORY,1994-04-12,2020-10-13,2020-10-19,G,5921773,964651,305618,926998942,47841,2770944,N,N,N
+372,40231218,7JZU0477,Garcia & Smith Associates,BENE,Beneficiary credentail for investment,ACTIVE,2018-04-18,2021-08-23,,G,9649490,448826,206539,601409126,36490,8372048,N,N,N
+53,68244433,3VYG0673,King & Underwood Counselors,AFF,Available Funds File,ACTIVE,2006-03-15,,,Ba,6597777,498040,464287,664606843,38946,9707926,N,N,N
+794,48297731,3BWE0954,Quinn & Garcia Advocates,AFF,Available Funds File,HISTORY,2005-02-23,2018-03-12,2020-09-20,Bt,9344592,614451,247308,487066823,28214,6856781,N,N,N
+798,29867505,0VHG0143,Jackson & Lewis Attorneys,TRADR,Trader credential account,ACTIVE,2004-06-21,2009-09-13,,N,3459605,189508,186748,741949273,74588,3533772,N,N,N
+20,74122721,4WGQ0102,Vasquez & Young Advisors,BANK,Bank Division,ACTIVE,1990-09-04,2023-07-15,,I,3146720,808654,977469,933825955,51920,5101515,N,N,N
+70,46790922,2PXM0497,Vasquez & Taylor Attorneys,BENE,Beneficiary credentail for investment,ACTIVE,2008-06-17,2013-12-31,,Bt,5580315,200283,339865,870103172,34872,2774066,N,N,N
+455,85385775,4KNN0429,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2018-12-16,,,D,6370030,417678,864664,101188758,22849,8738773,N,N,N
+684,37828211,9FLR0577,Baker & Martin Defenders,AFFRS,Affairs,ACTIVE,2018-05-09,2019-11-15,,I,7317215,542169,436009,849389755,62618,5260709,N,N,N
+655,42743976,2GYQ0935,Vasquez & Davis Advisors,BANK,Bank Division,ACTIVE,2003-08-01,2023-08-15,,I,2927066,538948,335622,462359843,12520,8295077,N,N,N
+581,21998322,2DVD0053,Underwood & Williams Legal,AG,Agriculture,ACTIVE,1994-05-06,2013-09-24,,Bt,1703242,417716,253270,158937470,44691,3408644,N,N,N
+10,71470165,4MQA0375,Young & Zimmerman Law,AFFRS,Affairs,HISTORY,2010-09-14,2024-01-07,2024-01-14,I,7708786,771012,936449,107028297,20380,8726066,N,N,N
+315,92898143,1VTF0751,Underwood & Nelson Legal,BANK,Bank Division,ACTIVE,2009-01-22,2019-11-05,,M,5866916,669918,540758,425362524,26597,6219819,N,N,N
+325,54527957,7QUK0308,Jackson & Lewis Legal,BENE,Beneficiary credentail for investment,ACTIVE,2012-02-11,2013-08-28,,N,8839151,855597,670751,607323324,33560,9273618,N,N,N
+876,58582686,8PSB0298,Underwood & Martin Associates,AFF,Available Funds File,ACTIVE,2008-04-05,,,D,7589439,944647,879885,786580946,67333,5076636,N,N,N
+356,73291035,8KQL0840,Williams & Owens Advisors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2009-01-15,2009-07-04,,G,9980804,855896,593967,592791752,87529,6647854,N,N,N
+553,70935860,1XJN0390,Roberts & Zimmerman Justice,AG,Agriculture,ACTIVE,2011-08-06,2014-07-29,,M,3943308,354471,680313,223256725,91975,7530534,N,N,N
+661,59464053,1ORA0289,Smith & Anderson Legal,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,2006-08-30,2013-07-16,2014-09-22,Ba,6658844,940515,890501,774139243,50212,7412458,N,N,N
+701,76657548,7EIA0346,Nelson & Young Legal,TRADR,Trader credential account,ACTIVE,1993-12-09,1997-01-22,,Ba,8479355,415964,346808,690459403,52498,2891033,N,N,N
+532,81909353,1DJK0566,Carter & Smith Consultants,AFFRS,Affairs,HISTORY,2022-11-17,2023-04-11,2023-06-26,M,3319238,371720,740797,748571129,57645,5020715,N,N,N
+913,27798686,4ZQI0486,Harris & Quinn Associates,AFF,Available Funds File,ACTIVE,2007-01-20,2023-09-04,,Bt,3970213,546739,723025,263774497,96974,3084437,N,N,N
+510,79322264,1YDS0883,Underwood & Nelson Consultants,AG,Agriculture,ACTIVE,2005-05-08,2010-08-12,,Bt,5367013,671391,587316,582586154,89035,8218538,N,N,N
+91,41211205,2MTW0987,Carter & King Justice,ADVIS,Legal Advisor,ACTIVE,2004-05-02,2023-01-11,,N,4251098,739479,996963,889004362,84747,6087549,N,N,N
+309,91906029,3BCP0529,Zimmerman & Lewis Consultants,CORP,Corporation Division,ACTIVE,2004-04-25,2016-03-22,,N,3298322,782732,172753,433556448,73561,9427887,N,N,N
+164,84483665,8LLN0774,Fisher & Roberts Associates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2006-07-26,2010-04-04,,N,4492840,173999,404165,694122727,83807,6955527,N,N,N
+441,47780283,1DJK0566,Garcia & Parker Counselors,AFF,Available Funds File,ACTIVE,2000-07-24,2023-10-13,,Bt,6848319,615561,490223,885860792,72493,3914215,N,N,N
+202,30251121,4TVZ0748,Quinn & Underwood Defenders,CREDIT,Credit Account,ACTIVE,2017-02-03,2018-07-04,,Ba,1085494,626882,546126,776756426,41943,2205538,N,N,N
+949,17675772,9DFJ0570,Parker & Lewis Counselors,AG,Agriculture,ACTIVE,2009-01-31,2019-02-28,,Ba,7162702,391221,842190,231711077,48882,5411793,N,N,N
+115,62590777,7JZU0477,King & Vasquez Advocates,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,2023-09-04,,2024-01-27,Ba,7307439,995300,219765,790726392,50364,2617369,N,N,N
+675,35533433,9JDQ0024,Young & Garcia Counselors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2013-08-11,2020-10-27,,G,2854452,923491,717411,775270945,33534,4787909,N,N,N
+91,68055950,5DHE0533,Baker & Smith Partners,AFD,Allowance For Depreciation,ACTIVE,2011-10-29,2023-12-11,,I,1026603,256732,951384,702227508,90857,9945122,N,N,N
+12,64878326,1MTF0532,Anderson & Williams Law,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2021-03-09,2021-06-19,,M,9664885,602938,990250,177126302,45767,5069647,N,N,N
+164,22247056,7DFD0855,Owens & Jackson Associates,AG,Agriculture,HISTORY,2007-04-17,2023-03-16,2023-09-17,Ba,2404818,333112,528622,693448165,34521,7525075,N,N,N
+136,76421577,6UBV0602,Smith & Roberts Partners,AFF,Available Funds File,ACTIVE,2023-12-23,2024-01-15,,N,2153691,896025,439752,713345888,92287,8571756,N,N,N
+52,91845672,8XMS0970,Harris & Williams Consultants,BENE,Beneficiary credentail for investment,HISTORY,2010-04-27,,2022-07-16,I,2482986,227680,793145,174078318,82794,2070597,N,N,N
+147,51360087,8FJN0802,Garcia & Anderson Law,BENE,Beneficiary credentail for investment,ACTIVE,2016-05-10,2018-10-10,,I,9252640,405217,666509,600984664,40510,6579189,N,N,N
+31,99217961,1HUP0045,Nelson & Carter Partners,AFD,Allowance For Depreciation,ACTIVE,2008-02-01,2022-08-22,,D,5484062,396856,827417,319834608,86343,6164694,N,N,N
+319,56213876,1STD0746,Owens & Jackson Counsel,AG,Agriculture,ACTIVE,1992-01-30,2018-02-21,,Bt,4772408,410879,720542,876177387,69682,8966863,N,N,N
+703,84031182,0EXW0121,Lewis & Martin Justice,AG,Agriculture,ACTIVE,2015-10-17,2023-08-11,,Bt,7985499,171186,112627,267825136,25036,9050360,N,N,N
+756,30209934,2ZTS0791,Fisher & Vasquez Consultants,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2019-08-21,2021-03-09,,N,4953569,889505,734333,742241350,57598,9966160,N,N,N
+865,12797534,1ZJV0855,Quinn & Davis Counsel,CORP,Corporation Division,ACTIVE,1993-12-16,2001-04-29,,D,9101135,152860,173812,290124296,87204,7767086,N,N,N
+982,30175399,5UYR0441,Davis & Taylor Counselors,BANK,Bank Division,ACTIVE,1999-03-07,2013-12-28,,M,6661660,227948,455871,666526106,25662,1935453,N,N,N
+365,55061086,0EIN0154,King & Young Legal,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2003-11-19,2012-02-26,,Bt,8357466,461496,276634,470458602,48790,7831477,N,N,N
+17,88888345,5PTL0050,Martin & Nelson Attorneys,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1992-07-28,2010-02-22,,N,1422485,578671,276789,609547967,39786,8648057,N,N,N
+184,67193454,1WUC0892,Jackson & Quinn Attorneys,TRADR,Trader credential account,ACTIVE,1991-09-18,2020-08-05,,G,3009977,530097,403193,670556366,81426,6519735,N,N,N
+513,58467591,3TAF0126,Davis & Taylor Advisors,ADVIS,Legal Advisor,ACTIVE,1996-03-03,2005-10-02,,N,4869535,810566,409742,285464952,18581,6763078,N,N,N
+55,86270822,1TUP0619,Underwood & Evans Associates,TRADR,Trader credential account,ACTIVE,2024-01-06,,,Ba,3233737,227540,115394,794641612,60530,4641575,N,N,N
+247,24417104,1ZJV0855,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2015-09-29,2015-10-08,,D,1860409,463547,845649,345587879,74715,2894974,N,N,N
+594,82989756,2JLB0124,Davis & Jackson Law,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2009-05-06,2014-12-11,,D,3085875,413199,163028,975604077,85033,2653225,N,N,N
+921,19147842,8HBM0724,Fisher & Carter Law,AG,Agriculture,CLOSED,1993-07-07,1998-06-01,2007-09-01,Bt,5853125,583620,906280,531864724,89737,2932140,N,N,N
+725,66461688,5MME0557,Davis & Owens Barristers,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2016-01-25,2019-04-12,,N,5102954,949408,503274,143037803,75246,7353788,N,N,N
+316,72690192,0YXO0770,Jackson & Quinn Associates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2021-09-11,2022-08-27,,I,5855822,665806,736443,121459520,35320,1200443,N,N,N
+715,79230130,5LTM0852,Zimmerman & Harris Justice,BANK,Bank Division,ACTIVE,2006-03-20,2010-10-11,,N,9193223,673303,690494,889069712,71940,2857436,N,N,N
+604,37828211,5LHX0859,Baker & Vasquez Counselors,BENE,Beneficiary credentail for investment,ACTIVE,2006-08-04,2013-02-20,,D,8847819,879442,481628,439269644,95002,2373212,N,N,N
+28,17974327,2HEQ0785,,BENE,Beneficiary credentail for investment,ACTIVE,2003-09-11,2004-08-30,,Bt,7964622,652983,472255,158834241,69437,1713899,N,N,N
+153,26403213,2WLY0059,Roberts & Carter Prosecutors,AFD,Allowance For Depreciation,ACTIVE,2023-07-26,2023-10-03,,N,8943774,873380,188622,880825610,45205,5336162,N,N,N
+506,73841505,8MKK0551,Smith & Evans Law,BANK,Bank Division,HISTORY,2023-03-21,2023-05-24,2023-09-21,Bt,1190899,162748,645950,345648030,21760,7032075,N,N,N
+414,13396893,5OLI0208,,AFFRS,Affairs,ACTIVE,1999-12-30,2008-08-01,,G,5071027,432875,419006,832559111,30813,7598521,N,N,N
+443,53120024,6STC0470,Roberts & Zimmerman Barristers,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2017-09-22,,,Bt,9150936,388456,464247,848629186,29948,5368248,N,N,N
+357,90067681,7JQX0257,Underwood & Taylor Barristers,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,1995-10-24,2012-02-25,2019-08-31,M,5099926,203272,634292,962910716,37044,5980563,N,N,N
+553,30676139,1VTF0751,Jackson & King Counsel,TRADR,Trader credential account,ACTIVE,2014-11-28,2023-11-22,,I,8403188,589576,670326,456698859,64577,1792020,N,N,N
+157,23888046,9URB0602,,CREDIT,Credit Account,HISTORY,1990-10-14,2012-11-11,2014-09-02,Bt,5769841,880728,354138,517869285,74890,2823797,N,N,N
+229,87734958,3WSL0343,Anderson & Lewis Solicitors,AFD,Allowance For Depreciation,ACTIVE,2012-03-04,2019-05-16,,Bt,4901781,935438,841285,797395563,43744,6438947,N,N,N
+876,82154926,0LEX0507,Evans & Fisher Solicitors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2018-08-12,2020-04-01,,M,8657248,935186,571250,521344694,29939,3291040,N,N,N
+28,23259595,6ZTZ0980,Owens & Taylor Associates,AFFRS,Affairs,ACTIVE,1990-03-31,2002-05-28,,Ba,9545160,798931,619545,417942933,74196,9690626,N,N,N
+536,25919493,8IIO0923,Taylor & Baker Consultants,ADVIS,Legal Advisor,ACTIVE,2005-08-16,2013-02-08,,G,1448564,494969,962617,243322088,85101,5930879,N,N,N
+620,57392004,6IFK0782,Williams & Lewis Law,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2011-05-16,2021-01-18,,G,1993847,466383,410246,489729569,66128,4462937,N,N,N
+290,72453824,3JMA0401,,AG,Agriculture,ACTIVE,2011-04-21,2023-08-24,,D,4452678,807118,523470,173067064,66133,4624552,N,N,N
+847,81568473,3YMO0512,Jackson & Vasquez Justice,BANK,Bank Division,CLOSED,2014-07-31,2019-01-21,2023-06-07,N,4907841,450265,638709,196645772,23214,7733367,N,N,N
+666,10337657,2YCD0682,King & Parker Attorneys,TRADR,Trader credential account,ACTIVE,2009-11-02,2011-11-02,,N,9149026,431373,385957,333759288,38498,2912374,N,N,N
+344,28832125,8BQQ0484,Davis & Anderson Counselors,AG,Agriculture,HISTORY,1995-01-05,2008-12-02,2009-10-20,M,9929698,185598,361157,104406220,77152,4481061,N,N,N
+928,40510830,2OKQ0574,Martin & Harris Law,CREDIT,Credit Account,ACTIVE,2022-05-06,2023-08-27,,G,6580136,264101,181064,108650693,81645,4086716,N,N,N
+388,60209088,7OCC0576,Vasquez & Williams Barristers,AFFRS,Affairs,ACTIVE,2009-10-05,2016-03-01,,Ba,9168489,375871,194335,942748022,42380,3545675,N,N,N
+334,39613148,4LJX0315,Underwood & Smith Solicitors,CREDIT,Credit Account,ACTIVE,2011-01-17,2018-08-30,,M,3575886,114832,932227,251243721,66614,1717394,N,N,N
+46,98286561,2YEF0950,,AFD,Allowance For Depreciation,ACTIVE,1999-11-23,2011-01-08,,N,5361111,121274,977057,485243863,18359,4493465,N,N,N
+149,37828211,9RJV0233,Fisher & Garcia Advocates,BANK,Bank Division,ACTIVE,2016-03-30,,,M,1315747,937200,188239,947597040,88083,1663051,N,N,N
+546,84368459,1EEN0633,Quinn & Baker Barristers,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1997-03-11,1997-03-27,,G,5553748,961235,532550,909821626,30662,1266190,N,N,N
+855,17972223,8LBM0585,Nelson & Carter Attorneys,AG,Agriculture,CLOSED,2019-12-08,2022-12-14,2023-04-27,D,2620617,189215,539337,808777219,87329,7096369,N,N,N
+836,86072219,7IUA0141,Anderson & Smith Attorneys,CORP,Corporation Division,CLOSED,2010-04-27,,2014-02-06,Bt,8561624,860419,467944,584995763,46721,3266386,N,N,N
+996,83804122,3YIQ0945,Williams & Davis Defenders,BANK,Bank Division,HISTORY,1996-11-16,2023-05-03,2023-09-14,M,3959429,157805,905638,710145948,96006,7485988,N,N,N
+492,93395851,3HWF0360,Fisher & Lewis Advisors,TRADR,Trader credential account,ACTIVE,2011-05-02,2014-04-07,,N,9995881,772796,607195,899719023,13924,9602868,N,N,N
+292,44160303,0LEX0507,Jackson & Smith Prosecutors,TRADR,Trader credential account,ACTIVE,1999-05-10,,,Ba,7574640,503480,310216,559192762,55336,9085354,N,N,N
+130,63470824,2OKQ0574,Underwood & Garcia Defenders,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1998-10-08,2023-08-15,,G,5940282,594322,817262,712315137,27398,3214083,N,N,N
+827,22680175,3MBR0486,Parker & Quinn Advisors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2018-05-11,2021-12-26,,G,6273591,906444,175248,169843204,69253,5380266,N,N,N
+117,79998922,1WXN0696,Vasquez & Lewis Litigators,AFD,Allowance For Depreciation,ACTIVE,2018-09-18,,,M,9437499,814724,670836,356824720,25916,5312904,N,N,N
+323,27226088,7COK0046,,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2009-02-22,,,G,3642750,256556,506802,158680673,82252,2886326,N,N,N
+871,28711131,5JAL0420,Garcia & Young Advocates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2022-03-02,2023-12-19,,N,3495911,200186,291397,730231617,87380,4384032,N,N,N
+389,79547443,0YYE0388,,TRADR,Trader credential account,HISTORY,1999-03-12,,2023-04-06,D,5470493,447847,984553,456453473,37851,3906388,N,N,N
+729,94608608,4OTS0069,Davis & Carter Counselors,CREDIT,Credit Account,ACTIVE,2017-12-13,2019-05-31,,G,5947349,685629,880956,187822175,39511,9463011,N,N,N
+831,16669502,3YIQ0945,Jackson & Evans Counsel,TRADR,Trader credential account,ACTIVE,2006-04-17,2017-11-19,,Ba,7098772,662952,657259,237069083,84099,7506038,N,N,N
+262,12069736,6GEK0670,King & Jackson Counsel,CORP,Corporation Division,ACTIVE,1994-04-05,2000-08-04,,G,2894636,626842,945423,370881912,47125,3221768,N,N,N
+527,53059214,2FDG0351,Evans & Quinn Justice,TRADR,Trader credential account,ACTIVE,2009-11-16,2023-07-05,,G,1686235,434979,105868,796917336,61423,4851891,N,N,N
+559,87873245,0YSF0641,Carter & Vasquez Solicitors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2008-12-17,2014-12-30,,D,1092144,709291,154849,351462238,69007,2088229,N,N,N
+126,90403517,2TNQ0332,Harris & Evans Attorneys,AFFRS,Affairs,CLOSED,1991-07-04,2005-07-09,2023-05-12,Bt,7984775,798233,476427,515411140,74748,8034870,N,N,N
+102,14549167,3LHV0596,Harris & Roberts Advisors,AFFRS,Affairs,ACTIVE,2006-12-20,2008-02-10,,Ba,4798955,417531,879149,166116735,95607,7783775,N,N,N
+574,85031478,0CRD0950,Young & Lewis Barristers,CORP,Corporation Division,ACTIVE,2015-08-22,2019-04-09,,Ba,2092286,336026,220610,341732796,24159,8626829,N,N,N
+70,21822677,2OLI0365,Carter & Roberts Advocates,BENE,Beneficiary credentail for investment,ACTIVE,2022-11-16,2023-05-18,,D,3632065,270162,566394,462491959,33272,8003501,N,N,N
+29,32988815,3LHV0596,Jackson & Smith Attorneys,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",CLOSED,2004-04-03,2012-05-01,2012-12-27,G,2380460,777656,782830,805918044,69177,1404110,N,N,N
+110,21499615,3IUU0439,Smith & Martin Advisors,TRADR,Trader credential account,ACTIVE,1993-07-16,1996-09-20,,G,2055108,312057,232340,195833179,75399,9845797,N,N,N
+308,96377514,5TAD0949,Owens & King Solicitors,AFD,Allowance For Depreciation,ACTIVE,2003-10-16,,,D,1355041,782360,621123,157327920,51456,1089426,N,N,N
+642,83972745,2AEX0128,Parker & Harris Solicitors,TRADR,Trader credential account,CLOSED,1998-11-21,2000-04-04,2014-01-21,N,4732221,237225,214115,709595035,81135,3633489,N,N,N
+497,48585528,8YMC0634,Owens & Baker Advocates,AFD,Allowance For Depreciation,ACTIVE,2018-10-31,2021-02-19,,N,5279641,732435,707712,197583785,96553,1834361,N,N,N
+890,84846520,3RYS0252,,BENE,Beneficiary credentail for investment,ACTIVE,2007-02-04,2020-04-09,,I,7104503,853952,531259,232023130,75483,1291853,N,N,N
+477,26331440,1FYH0642,Zimmerman & Jackson Advisors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2020-01-08,2022-08-26,,I,2386317,528794,306183,824655698,66363,9598021,N,N,N
+257,35780302,5TAD0949,Underwood & Vasquez Advocates,AFF,Available Funds File,CLOSED,1994-03-24,2012-11-13,2023-12-20,Ba,7169689,597685,872084,370053055,94598,7256573,N,N,N
+302,71497604,7OCC0576,Lewis & Vasquez Advisors,BANK,Bank Division,ACTIVE,2009-08-10,2022-09-24,,G,9200420,694590,493589,901034381,67392,5521644,N,N,N
+804,34062388,4VMV0537,Nelson & Roberts Counsel,AG,Agriculture,HISTORY,2007-03-03,2018-06-14,2018-09-21,M,6891060,608991,790850,833299448,60836,5185293,N,N,N
+681,30969977,1AMH0810,,AFF,Available Funds File,ACTIVE,2004-03-06,2006-10-10,,D,4596093,752663,834661,397800527,56473,5175873,N,N,N
+627,28379432,5ERN0322,King & Anderson Advisors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2004-08-28,2017-11-07,,Bt,6486636,536531,986171,655817152,37006,1281215,N,N,N
+255,52062651,6VPA0438,,CREDIT,Credit Account,ACTIVE,2010-05-22,2016-06-10,,Bt,9277441,802553,760599,447664840,36354,3918785,N,N,N
+802,37454829,9EQT0592,Garcia & Harris Defenders,TRADR,Trader credential account,ACTIVE,2021-02-10,2021-05-09,,Bt,5501961,377722,264475,796558126,89016,3445817,N,N,N
+271,50456578,9FWR0602,Smith & King Counsel,CREDIT,Credit Account,CLOSED,2018-08-05,2023-01-05,2023-04-24,G,9274479,462138,227305,577823072,59078,6215301,N,N,N
+852,20545243,1FPF0787,Anderson & Baker Associates,BANK,Bank Division,ACTIVE,2022-09-06,2022-09-22,,Bt,9390165,827637,735787,287303614,46366,4276223,N,N,N
+230,49961297,6JUD0418,Young & Garcia Legal,AFFRS,Affairs,ACTIVE,2016-10-14,2017-09-14,,Ba,2451790,894680,498146,593836433,14386,4660746,N,N,N
+588,49580509,9AGP0073,Young & Roberts Law,CORP,Corporation Division,ACTIVE,2021-04-07,2022-05-15,,Bt,3474431,421706,196960,972144374,96851,4208768,N,N,N
+675,21424926,3BCP0529,Vasquez & Carter Justice,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1991-02-01,2023-03-25,,I,6409010,452783,820244,200243437,48584,3955084,N,N,N
+983,70786814,7LKI0573,Lewis & Baker Counselors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",HISTORY,2019-10-22,2023-07-16,2024-01-13,G,6834773,379917,549409,337488933,38371,2408347,N,N,N
+204,40678084,7MZP0652,Baker & Evans Law,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2012-05-17,2022-10-20,,D,3185753,747135,783050,518114289,78891,6510174,N,N,N
+256,79818353,4WTA0466,Vasquez & Zimmerman Partners,TRADR,Trader credential account,ACTIVE,1996-05-24,1998-11-07,,I,2783081,179867,718253,142295827,85043,3454917,N,N,N
+306,60493238,8JWL0804,Underwood & Owens Associates,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2004-04-18,2005-10-18,,I,6545269,221319,721895,230797198,95753,1347284,N,N,N
+254,59532503,5IDM0557,Williams & Taylor Advisors,AFFRS,Affairs,ACTIVE,2018-03-28,2023-11-04,,Ba,7274602,664778,175529,478174077,76658,5151022,N,N,N
+51,46191674,4OTS0069,,AG,Agriculture,ACTIVE,2002-06-04,2022-08-30,,N,1831319,870462,689378,440331123,28049,9089944,N,N,N
+947,84804428,6QUB0347,Underwood & Owens Legal,ADVIS,Legal Advisor,ACTIVE,2019-08-18,2023-04-23,,N,8586808,165426,980231,186217601,42326,3425486,N,N,N
+576,93588489,5GAX0646,,TRADR,Trader credential account,ACTIVE,1998-07-17,2015-08-06,,Bt,9016481,344946,225102,206985538,27045,5203376,N,N,N
+511,19147842,5YZS0230,King & Parker Counselors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2015-12-25,2016-01-15,,G,5619134,860621,306207,247018419,54346,6837716,N,N,N
+190,46171800,9QJN0543,Vasquez & Young Justice,CREDIT,Credit Account,CLOSED,2020-03-31,2020-12-29,2022-05-15,G,7140071,394824,468761,136009070,60311,7829960,N,N,N
+248,92428363,9SZU0926,Quinn & Davis Solicitors,CORP,Corporation Division,CLOSED,2023-04-17,2023-05-06,2023-08-28,D,4202517,309646,670536,722652232,32154,2157737,N,N,N
+118,10112444,6QUB0347,,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2001-09-24,,,N,7221182,822843,798780,158032107,81687,3321621,N,N,N
+713,32988815,0BMB0835,Roberts & Martin Consultants,AFD,Allowance For Depreciation,ACTIVE,2018-08-16,2019-12-13,,N,3071801,181999,262031,313500847,29810,1870287,N,N,N
+284,74266804,2FYP0527,Taylor & Davis Advisors,AG,Agriculture,ACTIVE,2010-11-07,2018-07-01,,Bt,1162445,143278,413656,398863616,44823,1071850,N,N,N
+742,99617086,4RZT0682,Fisher & Young Law,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2016-02-02,2017-08-02,,D,7419310,887780,760252,362659433,48431,6332773,N,N,N
+390,28722811,6KJB0563,Zimmerman & Williams Prosecutors,BENE,Beneficiary credentail for investment,ACTIVE,2006-09-24,2014-02-17,,G,3460348,497001,390456,241922167,88115,5345729,N,N,N
+784,45411502,3TTZ0002,Davis & Anderson Litigators,CREDIT,Credit Account,ACTIVE,1995-01-28,2001-03-19,,N,5891302,392104,839934,841029892,23344,2206542,N,N,N
+2,28722811,7GNJ0257,Nelson & Baker Defenders,BANK,Bank Division,ACTIVE,2015-01-25,2018-02-22,,Bt,1582053,471091,736456,813318773,69463,1036678,N,N,N
+750,15462815,4RSX0571,Parker & Quinn Counselors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2007-05-27,2016-08-24,,G,3052937,442926,185728,629724189,66551,7856954,N,N,N
+289,20036483,5UHL0931,Lewis & Anderson Prosecutors,CREDIT,Credit Account,ACTIVE,2004-07-14,2020-03-20,,M,9144063,795258,629843,570912800,19388,4217368,N,N,N
+575,16806072,5LQG0302,,AFFRS,Affairs,ACTIVE,1995-06-08,2010-11-24,,D,6164008,627357,339956,588883024,42016,2691963,N,N,N
+946,86128922,7ZYG0347,Parker & Vasquez Counselors,AG,Agriculture,ACTIVE,2015-02-21,2021-07-26,,D,6930159,809387,353373,381420514,70881,6980983,N,N,N
+103,32241319,4SBR0205,Garcia & Baker Legal,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1999-06-19,2004-02-01,,M,8779467,622630,341223,309897024,37110,4985486,N,N,N
+823,80878544,3JAZ0292,Taylor & Jackson Justice,AG,Agriculture,HISTORY,1999-11-01,2018-12-22,2019-10-07,M,8067388,781942,315376,258472442,50010,1652193,N,N,N
+162,72733273,6YYX0587,,AG,Agriculture,CLOSED,2016-08-20,2018-03-31,2022-11-04,Ba,6186361,491819,354518,300027903,24062,1321796,N,N,N
+683,53268269,5HJT0444,,AFF,Available Funds File,ACTIVE,1990-03-27,2009-09-24,,D,7584101,509294,697009,475372346,67753,2858086,N,N,N
+447,33699635,3KAJ0007,Carter & Baker Consultants,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",HISTORY,2022-04-17,2023-03-12,2023-07-15,G,1116206,457133,575393,288717926,46105,6954861,N,N,N
+988,42012906,1AMH0810,Evans & Zimmerman Attorneys,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,1991-11-03,2020-08-14,,M,8112518,930034,480067,457795643,45618,3374402,N,N,N
+234,96628970,3HOX0799,Williams & Garcia Barristers,ADVIS,Legal Advisor,ACTIVE,1991-12-04,1992-10-25,,N,4333824,658586,315183,450761292,96671,1851252,N,N,N
+498,34384230,1RYU0553,,TRADR,Trader credential account,ACTIVE,2021-10-18,2022-01-25,,Ba,3799756,124005,962047,881560162,66321,8348503,N,N,N
+401,38135045,6EWK0549,Fisher & Young Defenders,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1999-04-02,2018-03-19,,G,8500281,269749,721214,312895438,26423,4039666,N,N,N
+776,99206616,3EZT0096,Underwood & Taylor Legal,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",HISTORY,2012-01-22,2014-04-13,2016-10-13,I,4283357,682034,231298,303686122,98009,9972523,N,N,N
+557,52844763,0HLO0740,Garcia & Quinn Litigators,AG,Agriculture,ACTIVE,2008-09-09,2019-07-05,,M,8951565,119138,848994,704679310,99103,2433800,N,N,N
+915,81909353,1SIE0430,Jackson & Davis Legal,AG,Agriculture,CLOSED,1998-06-03,2019-02-20,2019-03-28,Bt,6794197,896297,360942,381533905,85270,9339498,N,N,N
+50,38563885,4QKH0877,King & Williams Counsel,AFFRS,Affairs,ACTIVE,1996-12-14,2008-11-03,,M,8980176,845139,343117,503555536,89648,8933439,N,N,N
+538,29867505,3IPH0340,Harris & Martin Counselors,BANK,Bank Division,CLOSED,1994-11-05,2003-08-27,2015-09-01,I,9173600,929185,777223,502921789,60920,6467252,N,N,N
+314,59581317,7IDU0561,Smith & Fisher Litigators,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2010-08-26,2015-04-07,,Bt,3733252,320055,583750,342050953,42843,3567478,N,N,N
+507,53456759,2GGI1000,Quinn & Underwood Law,CORP,Corporation Division,HISTORY,1992-02-03,2019-07-05,2020-03-16,M,2622940,731982,198048,903212784,94717,4409505,N,N,N
+121,73165150,5QLZ0554,Lewis & Nelson Counselors,AG,Agriculture,ACTIVE,2004-09-12,2020-01-20,,Bt,6203645,378482,644581,552100913,43181,7403234,N,N,N
+162,46885331,4UGT0105,Jackson & Parker Prosecutors,AFD,Allowance For Depreciation,ACTIVE,2002-08-22,2005-06-16,,G,9930436,830646,661664,102614163,42778,6182452,N,N,N
+172,26505047,8DWB0007,Lewis & Quinn Partners,AG,Agriculture,ACTIVE,2014-12-09,2017-04-21,,G,2396186,978277,526199,789968634,49818,8785104,N,N,N
+960,34573549,7FDR0839,,AG,Agriculture,ACTIVE,2001-03-18,2022-09-22,,G,6061789,723565,540416,236041953,49919,2606797,N,N,N
+789,52405006,7RRT0307,Carter & Underwood Consultants,BANK,Bank Division,ACTIVE,1997-12-11,2020-05-14,,I,2540558,245860,251904,689214034,93969,3921627,N,N,N
+343,48240182,4TAG0594,Smith & Baker Law,BANK,Bank Division,ACTIVE,2008-03-09,2012-04-12,,Ba,1047294,639120,807453,541030856,99423,3660817,N,N,N
+520,79702832,1XAG0964,,AFD,Allowance For Depreciation,ACTIVE,2016-12-17,2020-11-21,,N,4564757,921611,986025,292536421,79579,6232763,N,N,N
+202,91153179,6TNA0941,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,1996-09-17,2023-11-07,2023-12-06,I,2949122,211218,366705,580231999,76601,4271900,N,N,N
+32,80071652,4WZB0640,Young & Parker Litigators,TRADR,Trader credential account,ACTIVE,2002-11-02,,,Bt,5295992,393934,353255,103884243,70979,9911533,N,N,N
+237,56594566,9BVN0474,Owens & Davis Law,AFFRS,Affairs,HISTORY,2010-04-02,2017-10-10,2018-03-26,I,8034823,783207,986668,750818679,28373,7416930,N,N,N
+197,51558401,7YKS0956,Parker & Roberts Solicitors,CREDIT,Credit Account,ACTIVE,1994-03-17,1998-10-31,,M,7380436,167343,709615,820461723,98395,7218504,N,N,N
+802,24471856,1KLO0798,Jackson & Zimmerman Law,CORP,Corporation Division,ACTIVE,1993-03-01,1998-09-25,,M,4672255,556959,586255,986446255,11124,5331454,N,N,N
+505,59532503,0ZZY0023,,AFFRS,Affairs,ACTIVE,2016-10-24,2021-01-20,,I,6109639,872397,614171,121236627,40990,8537237,N,N,N
+296,95443082,2KAE0122,Vasquez & Davis Advisors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2010-05-08,2014-09-15,,M,1759997,321530,369375,675494501,71914,2707668,N,N,N
+727,63202186,5LAN0157,Davis & Young Justice,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",HISTORY,2022-09-27,2023-08-13,2023-10-12,D,5916636,472156,879998,736649637,45414,4490245,N,N,N
+691,16268282,2AEX0128,Anderson & King Counselors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2022-06-01,2023-07-19,,I,6678422,399108,715391,309933617,48894,1493217,N,N,N
+480,47665260,1MXE0985,,AFFRS,Affairs,ACTIVE,2019-09-08,2023-09-07,,G,9006205,589059,837030,990893737,20431,4934838,N,N,N
+650,30342357,4SQU0996,King & Owens Consultants,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2023-10-31,2024-01-29,,D,6111026,599571,156258,901274183,45515,9654703,N,N,N
+656,41466196,1FAZ0638,Harris & Martin Counselors,AFFRS,Affairs,ACTIVE,2012-03-18,2013-11-06,,M,5807247,149801,300276,757518447,86769,2291645,N,N,N
+964,21583926,3FXJ0725,Harris & Davis Legal,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2001-11-09,2021-06-28,,G,9871550,279928,473661,722550012,56938,9545506,N,N,N
+549,25457588,5RYT0676,Zimmerman & Jackson Law,AFF,Available Funds File,ACTIVE,2019-02-15,2022-12-19,,I,7855382,273881,917783,147975667,47104,9627220,N,N,N
+835,35930692,6WDY0542,Martin & Taylor Consultants,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",HISTORY,2016-06-02,,2021-02-17,Bt,8071356,571806,835932,786197640,52034,1561598,N,N,N
+573,92898143,8PVE0121,Evans & Carter Prosecutors,CORP,Corporation Division,CLOSED,2019-02-25,2023-05-13,2023-12-02,Ba,2745977,401385,633644,541320504,86979,3336488,N,N,N
+975,88592430,7TJJ0818,Vasquez & Zimmerman Advisors,BANK,Bank Division,ACTIVE,2005-08-10,2008-05-13,,D,2715327,634910,682674,516865399,30896,9069960,N,N,N
+119,21424926,5NQX0920,Vasquez & Harris Advisors,CREDIT,Credit Account,ACTIVE,2018-06-02,2019-01-17,,Ba,6924357,239029,729174,985549272,96954,7797816,N,N,N
+222,19511389,8VTB0384,,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2000-10-25,2015-10-11,,D,6940647,514611,885296,513602181,74522,2375036,N,N,N
+920,86266315,9HPR0315,Anderson & Owens Legal,CREDIT,Credit Account,ACTIVE,2023-04-12,2024-01-05,,D,4436781,340131,413254,313676004,53928,9257446,N,N,N
+40,60171557,1WOU0659,Williams & Zimmerman Attorneys,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2018-11-15,2021-08-27,,I,4982833,931088,258495,993377389,94330,7260337,N,N,N
+365,94084740,2TNQ0332,Nelson & Carter Defenders,CREDIT,Credit Account,ACTIVE,2022-10-19,2023-08-09,,I,6856924,909128,400115,787867781,84390,8602865,N,N,N
+31,62486800,8XDE0638,Zimmerman & King Legal,AFF,Available Funds File,HISTORY,1997-03-30,2018-03-30,2018-09-01,N,5555802,710972,661070,539772460,82800,6561995,N,N,N
+200,88413755,3DCE0190,Vasquez & Roberts Defenders,ADVIS,Legal Advisor,ACTIVE,2006-10-10,2010-07-19,,D,6022054,753207,161323,726076089,59577,8230936,N,N,N
+889,72131111,1IRH0954,Roberts & Quinn Legal,AFF,Available Funds File,ACTIVE,2022-07-21,2022-12-28,,I,3317815,971914,428395,374461694,90478,9041104,N,N,N
+90,47780283,5GOT0204,Anderson & Garcia Law,TRADR,Trader credential account,ACTIVE,1992-06-04,2009-07-20,,I,8440783,507154,858666,944075420,72102,8059351,N,N,N
+230,72131111,5DGG0847,,BANK,Bank Division,ACTIVE,1992-05-25,2012-05-14,,G,6110809,577363,830906,606409962,60741,2701971,N,N,N
+150,78917010,4SQU0996,,AFFRS,Affairs,ACTIVE,2020-05-01,2023-08-18,,M,9741179,910471,555517,674336167,83565,9637061,N,N,N
+110,33237681,3ICJ0481,Vasquez & Quinn Associates,TRADR,Trader credential account,ACTIVE,1994-11-25,1997-08-14,,D,9188386,842550,458580,367280771,99694,5305805,N,N,N
+721,52062651,1NBS0604,Roberts & Zimmerman Advocates,CORP,Corporation Division,CLOSED,2006-02-28,2018-08-10,2023-04-16,M,4606682,268011,985665,375088469,61699,9560455,N,N,N
+839,83503463,2AOZ0611,Young & Vasquez Justice,AG,Agriculture,ACTIVE,1990-01-18,1991-04-03,,N,8038628,852138,486145,656943774,58175,8339839,N,N,N
+451,58745687,6WZX0187,Evans & Carter Law,AFF,Available Funds File,ACTIVE,2003-01-31,2016-03-11,,M,1607658,840151,106311,875824819,85614,8828349,N,N,N
+124,17508686,9LMM0353,Fisher & Baker Litigators,BANK,Bank Division,ACTIVE,2023-01-25,,,M,4360063,270067,876678,857411754,58021,4537328,N,N,N
+264,20545243,6YQK0684,Baker & Williams Counsel,BANK,Bank Division,HISTORY,1996-08-05,2005-05-24,2019-05-09,D,9819482,865603,452180,799005947,67277,2274086,N,N,N
+746,17469048,1LOD0176,Owens & Martin Counsel,AG,Agriculture,ACTIVE,2005-05-31,2011-02-03,,Ba,9365031,738440,621227,233190265,83656,3851899,N,N,N
+511,53456759,6FXQ0025,Williams & Roberts Defenders,AFFRS,Affairs,ACTIVE,2021-09-02,,,M,7976454,472973,939435,269774474,74587,5512432,N,N,N
+985,87953468,2RGV0472,Owens & Roberts Associates,BANK,Bank Division,ACTIVE,2000-10-22,2013-08-20,,Bt,2167389,745899,901610,192146030,16513,8090811,N,N,N
+217,39510167,9NZN0352,,TRADR,Trader credential account,ACTIVE,2001-08-14,2023-01-31,,I,5643480,761222,904465,451879346,26984,8034629,N,N,N
+176,88190024,7JQX0257,Jackson & Underwood Legal,AG,Agriculture,ACTIVE,1994-03-25,1999-01-12,,Bt,6074792,664379,796517,511618904,65848,7911443,N,N,N
+370,39685992,6CEG0130,Garcia & Vasquez Prosecutors,TRADR,Trader credential account,ACTIVE,1996-07-03,2006-01-22,,M,5558011,722344,718331,627259788,39495,8311760,N,N,N
+863,76477587,7ATV0287,Taylor & Harris Defenders,TRADR,Trader credential account,ACTIVE,2008-06-20,2022-05-10,,N,4582709,661040,891833,943615739,38820,9437541,N,N,N
+398,80603877,4IZH0975,Jackson & Garcia Partners,CREDIT,Credit Account,ACTIVE,2012-12-07,2021-03-12,,D,9807264,655103,251289,423689338,99848,3672245,N,N,N
+633,95445697,2MZP0177,Roberts & Nelson Defenders,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2016-12-05,2019-04-25,,D,3854210,106236,998596,118058321,38166,2229802,N,N,N
+59,53134581,8PWZ0698,Young & Martin Consultants,AG,Agriculture,CLOSED,2005-01-27,2007-09-18,2009-08-31,I,3678716,527391,993572,612893916,62489,3043686,N,N,N
+106,28711131,3RIS0881,Young & Zimmerman Advocates,AG,Agriculture,ACTIVE,2010-08-30,2023-09-18,,G,5624146,565991,584663,161260682,47008,8436737,N,N,N
+966,29491027,5YBE0039,Carter & Anderson Defenders,AFF,Available Funds File,ACTIVE,2017-03-05,,,N,7416771,186761,526046,140573381,99185,3532617,N,N,N
+87,79158724,0WJC0202,Nelson & Lewis Partners,CREDIT,Credit Account,HISTORY,2001-07-10,2003-08-21,2019-01-15,N,4774036,905216,385512,147057465,49385,7264735,N,N,N
+915,80471878,7FZI0281,Young & Vasquez Counsel,CORP,Corporation Division,CLOSED,1991-12-26,1997-05-08,2009-05-12,I,1640492,264704,117120,895697566,97884,7129874,N,N,N
+782,47518072,6OWZ0648,Vasquez & Fisher Defenders,AFFRS,Affairs,ACTIVE,1998-08-04,2018-03-19,,Bt,6645195,510445,179482,663040667,80896,2595119,N,N,N
+369,46885331,0JOT0653,Davis & Evans Consultants,CORP,Corporation Division,HISTORY,1998-03-15,2001-07-13,2023-01-29,G,6639889,884013,574687,489008822,88984,7830837,N,N,N
+416,16427295,7DFD0855,Parker & Evans Barristers,TRADR,Trader credential account,ACTIVE,2008-09-22,2022-05-11,,N,9738341,851930,884346,907288211,19365,1324104,N,N,N
+640,88306991,6IFK0782,Smith & Taylor Legal,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",CLOSED,1990-08-09,1991-06-21,1998-08-26,M,3552155,413234,933389,937311863,23534,4534620,N,N,N
+866,75985297,9UVJ0691,Evans & Vasquez Partners,ADVIS,Legal Advisor,ACTIVE,1995-05-08,2009-03-22,,Ba,1349524,598246,629759,868504135,31798,1276370,N,N,N
+25,55308154,3MYC0236,Parker & Evans Solicitors,ADVIS,Legal Advisor,HISTORY,2020-04-27,2021-02-03,2023-10-06,Bt,2894889,955405,782304,849242732,52763,1977315,N,N,N
+45,83942587,3XSH0529,,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,1996-01-02,,,D,3434354,931534,964780,925149548,85622,5320833,N,N,N
+387,74366052,0WJC0202,Williams & Young Legal,AFFRS,Affairs,CLOSED,1999-04-13,2010-12-07,2020-02-25,G,4151753,415879,261174,457110993,75626,1841082,N,N,N
+488,37828211,9ATY0110,Zimmerman & Parker Counsel,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2008-01-09,2022-03-26,,Bt,8859083,119397,388206,917952894,93381,1985929,N,N,N
+610,66186145,8GHW0708,,BANK,Bank Division,ACTIVE,2018-09-09,,,G,4867003,690338,937529,201464840,57542,8594193,N,N,N
+321,95692685,3ZXA0547,,AFD,Allowance For Depreciation,ACTIVE,1997-04-02,2012-09-05,,Ba,2970471,173536,306969,944670306,84467,9763999,N,N,N
+434,46870983,8NXE0088,Williams & Underwood Counsel,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,CLOSED,2000-01-18,2012-06-02,2020-07-09,D,4313526,817924,949092,666996724,48060,5892087,N,N,N
+799,15035408,0RQU0588,Parker & Smith Justice,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2015-11-29,2022-02-19,,G,6111330,709872,393769,495372911,91777,2670060,N,N,N
+121,29783008,7BKF0681,Quinn & Martin Associates,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",CLOSED,2007-11-24,2010-01-01,2013-05-11,M,8477088,647924,373167,344116179,17390,6724239,N,N,N
+539,46313714,2GCO0725,Quinn & Young Justice,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1991-02-18,2015-04-16,,M,2902068,244041,127443,342388885,38282,9167588,N,N,N
+493,68247819,2OKQ0574,Owens & Baker Partners,CREDIT,Credit Account,ACTIVE,2014-12-15,,,Bt,7309166,403855,961520,938440490,24458,4453302,N,N,N
+473,38805296,0GTU0356,Zimmerman & Baker Solicitors,CREDIT,Credit Account,ACTIVE,1993-05-01,1999-07-14,,Bt,4594997,660261,281695,958882208,86669,9444910,N,N,N
+253,56014322,5BSO0691,Zimmerman & Smith Associates,AFF,Available Funds File,ACTIVE,2012-10-22,2019-05-05,,I,9256174,930524,413651,296205106,46137,1794672,N,N,N
+467,63866075,8XBE0600,Nelson & Williams Counselors,TRADR,Trader credential account,ACTIVE,2015-01-29,2019-04-01,,Bt,9260117,658232,690411,159600095,59054,6588807,N,N,N
+642,49179970,0KKZ0984,Owens & Williams Law,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2015-07-06,2016-12-20,,I,7284940,414117,711818,121295354,30938,6562653,N,N,N
+964,50130795,3IFW0330,Jackson & Underwood Law,TRADR,Trader credential account,HISTORY,2007-09-20,2014-02-17,2017-08-11,Ba,3520813,690439,670696,495749891,89688,6412881,N,N,N
+709,29982981,2FYP0527,,TRADR,Trader credential account,ACTIVE,1997-05-02,2014-10-03,,Bt,5891423,180000,221180,944079987,29868,9980983,N,N,N
+887,66411263,7RTG0659,,AFF,Available Funds File,CLOSED,2006-11-15,2009-08-20,2019-02-21,Bt,6386659,459322,627461,233058463,14582,6745425,N,N,N
+563,94378458,6VMV0866,Parker & Carter Law,AG,Agriculture,ACTIVE,2015-11-19,2019-03-12,,Bt,7906233,587196,903016,525303637,37158,8762910,N,N,N
+543,79170244,9AGP0073,Nelson & Fisher Advocates,ADVIS,Legal Advisor,ACTIVE,2022-03-27,2022-12-18,,Ba,5019464,857515,281703,941347242,49678,6100122,N,N,N
+883,76181667,1DPY0542,,TRADR,Trader credential account,HISTORY,2003-01-18,2020-06-14,2023-11-01,Bt,4251540,733202,388429,244964098,61423,3886115,N,N,N
+124,87408644,3ZRP0511,Williams & Owens Justice,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2005-05-14,,,G,3248198,226298,539826,126975282,79589,7340027,N,N,N
+811,10654445,0EIN0154,King & Anderson Litigators,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1991-11-25,2016-07-02,,G,8115828,387649,416663,965157199,43686,6963110,N,N,N
+762,20422515,9AIP0498,Zimmerman & Evans Barristers,ADVIS,Legal Advisor,ACTIVE,2007-05-03,2023-08-28,,D,9427187,580184,228606,728438289,45130,6773551,N,N,N
+125,99858025,1XXU0248,Evans & Carter Litigators,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",HISTORY,2021-05-13,2022-12-25,2023-04-10,I,7187786,830987,337639,877125692,70006,7167089,N,N,N
+966,87922137,0JZV0178,Quinn & Anderson Counselors,BANK,Bank Division,ACTIVE,2018-10-08,2020-06-15,,M,6103006,505115,456328,383602517,33357,1038529,N,N,N
+249,72306845,2APF0289,Anderson & Parker Attorneys,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2004-05-09,2019-04-01,,I,9553872,643261,709249,395598795,50433,3346697,N,N,N
+681,67693610,2KMH0627,King & Young Partners,AFFRS,Affairs,ACTIVE,2008-03-04,2022-10-29,,Ba,3463672,918541,832695,215256909,34781,9398850,N,N,N
+160,95405870,1DEU0295,Taylor & Baker Advisors,CORP,Corporation Division,CLOSED,2001-11-24,2012-02-09,2015-09-29,Ba,7081756,517716,149660,836282651,62612,3228296,N,N,N
+547,15016937,4LBC0874,Roberts & Garcia Attorneys,BANK,Bank Division,ACTIVE,2002-03-12,2010-10-30,,Ba,1921043,894207,894807,633224546,18030,6943482,N,N,N
+9,98706616,5DWC0836,Young & Fisher Defenders,CREDIT,Credit Account,ACTIVE,2005-02-13,2010-03-26,,Bt,1222262,261417,993041,892337144,43055,7345330,N,N,N
+486,82490331,4WSI0587,Martin & Baker Counsel,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1993-08-28,2012-12-09,,N,6211748,272055,388384,686815109,75528,5246763,N,N,N
+297,73115564,0USW0847,Underwood & Taylor Defenders,AFFRS,Affairs,ACTIVE,2008-05-24,2009-12-30,,Bt,6002670,864674,729250,466902583,78302,9342230,N,N,N
+828,73923649,8VYU0666,Zimmerman & Quinn Law,CREDIT,Credit Account,ACTIVE,1997-10-07,,,N,8089015,391373,417727,688701110,53804,3922556,N,N,N
+980,35513093,8LJA0288,Nelson & Garcia Defenders,AG,Agriculture,ACTIVE,2003-11-21,2005-08-05,,G,7819669,383572,254340,444251452,22203,8025318,N,N,N
+307,17599177,9LMM0353,Anderson & Young Partners,CORP,Corporation Division,CLOSED,1993-02-06,,2023-07-08,Bt,9776592,799195,434088,400672237,25289,2655136,N,N,N
+543,60700785,0ZOC0398,Smith & Williams Defenders,AG,Agriculture,ACTIVE,1999-05-31,2004-06-19,,I,5179411,692657,593825,514412879,45483,3010031,N,N,N
+685,32340144,0EWK0445,,AFFRS,Affairs,ACTIVE,1992-01-23,1993-12-10,,I,8071518,474037,652258,755857272,73065,8154933,N,N,N
+577,35328555,5XOC0394,Lewis & Anderson Legal,ADVIS,Legal Advisor,ACTIVE,2021-04-14,2021-06-19,,G,2980802,605888,760353,369439286,56581,9133853,N,N,N
+397,25250826,9XSJ0791,Taylor & Parker Solicitors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1994-01-02,1995-04-17,,I,8257093,392709,368937,141445672,77948,2143229,N,N,N
+748,85728586,3YMO0512,Evans & Taylor Barristers,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,1991-05-29,2008-09-27,,N,5755371,627226,621500,641412919,46928,5526790,N,N,N
+573,93908941,7BPN0848,,BENE,Beneficiary credentail for investment,CLOSED,2013-11-27,2014-11-03,2017-05-15,G,1352609,946461,545552,950024545,62417,8455289,N,N,N
+983,33429565,9LMM0353,King & Williams Counselors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2000-03-06,2021-08-21,,M,9681954,423828,773348,442852369,71452,5238255,N,N,N
+620,23100693,3NCQ0913,Williams & Martin Advocates,BENE,Beneficiary credentail for investment,ACTIVE,1995-09-26,1996-08-10,,Bt,3021500,581655,745012,330302517,26421,7254402,N,N,N
+387,91906029,5SZD0492,Harris & Evans Law,AFD,Allowance For Depreciation,ACTIVE,2003-12-31,2007-05-26,,Ba,6721426,934722,258513,852202202,46667,8937370,N,N,N
+541,90972615,4KXU0325,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2001-02-07,2016-06-16,,I,1583073,941217,600773,678037946,12235,4104778,N,N,N
+157,57371335,2PXM0497,Anderson & Parker Advocates,BANK,Bank Division,HISTORY,2001-11-05,2016-12-22,2018-01-03,D,1351044,933998,797066,855063410,65081,8185858,N,N,N
+607,64854647,1WOU0659,Fisher & King Consultants,BENE,Beneficiary credentail for investment,ACTIVE,2004-02-27,2006-01-05,,G,4243671,786926,581104,107585920,47167,4888993,N,N,N
+141,37222411,4SGY0300,Roberts & Smith Barristers,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2011-05-28,2017-12-30,,Ba,7761852,334405,586720,488091136,47067,5849958,N,N,N
+39,28591329,8CIA0108,Taylor & Quinn Counselors,TRADR,Trader credential account,ACTIVE,2000-07-22,2000-08-01,,Ba,2586547,828245,298757,649328847,48787,2758854,N,N,N
+543,29867505,8LJA0288,Anderson & Roberts Barristers,BANK,Bank Division,CLOSED,2015-04-12,2020-05-31,2023-10-27,Bt,5670371,287821,196133,404089602,42247,8129051,N,N,N
+223,59192846,0CUI0636,Williams & Owens Counselors,BENE,Beneficiary credentail for investment,HISTORY,2002-04-22,2014-05-28,2018-12-31,Ba,6165438,178795,725347,937846471,55025,9845684,N,N,N
+404,79158724,5WKS0943,Fisher & King Advocates,ADVIS,Legal Advisor,HISTORY,1991-10-24,,2021-10-15,Ba,8961869,894575,735545,191761484,40982,7439376,N,N,N
+394,76145682,4IEY0253,Davis & King Consultants,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2016-07-05,2022-10-02,,Ba,5190818,223177,268964,528574275,93904,5694344,N,N,N
+281,55778127,9HOQ0683,Smith & Williams Defenders,ADVIS,Legal Advisor,ACTIVE,2002-03-12,2021-12-03,,N,2174891,156899,469343,429368936,93905,4259667,N,N,N
+346,19117745,3ARO0774,Zimmerman & Garcia Attorneys,TRADR,Trader credential account,ACTIVE,2016-12-28,2023-09-26,,Bt,1636727,537569,466983,158608128,40928,7285887,N,N,N
+693,13396893,2ESG0487,Vasquez & Davis Advocates,AFD,Allowance For Depreciation,ACTIVE,1996-06-15,2022-07-30,,Ba,1382947,242008,236035,685811196,59553,4252987,N,N,N
+382,11152271,1BFY0319,Garcia & Roberts Associates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2018-04-11,2023-12-24,,I,8051346,387834,640749,786833316,94611,8922436,N,N,N
+347,54977552,7TQB0888,Parker & Williams Advisors,AFFRS,Affairs,HISTORY,2018-04-04,2023-10-04,2023-11-22,I,4820205,798263,950718,690474670,19222,3263703,N,N,N
+319,93908941,9GCT0118,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1994-09-07,2020-04-23,,D,8704496,631308,449770,454356362,62758,4749079,N,N,N
+354,62261818,2DWX0509,Martin & Young Advisors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2006-06-15,2023-06-11,,D,2619532,319829,940904,973677928,58834,4690049,N,N,N
+315,79261066,1OUM0205,Lewis & Evans Barristers,BENE,Beneficiary credentail for investment,ACTIVE,2004-07-18,,,N,8055172,612906,483033,170968344,72672,6454493,N,N,N
+949,80548707,9LIZ0616,Underwood & Lewis Associates,BENE,Beneficiary credentail for investment,CLOSED,2017-07-16,2017-12-25,2018-03-15,G,1236864,349952,189689,287255385,11028,3428552,N,N,N
+486,19456227,1EEN0633,Roberts & Jackson Partners,TRADR,Trader credential account,ACTIVE,2009-09-10,2019-05-22,,D,5942206,488798,999197,746664317,66206,4641642,N,N,N
+844,66894867,1YIE0920,Parker & Lewis Advocates,CREDIT,Credit Account,ACTIVE,2018-08-30,2023-10-08,,I,9161862,702332,579240,777352917,89899,6451747,N,N,N
+159,91527289,2WOT0842,Martin & King Counsel,CREDIT,Credit Account,CLOSED,1995-04-17,2018-02-09,2022-03-24,N,7460948,162187,665272,464731872,40524,8960424,N,N,N
+883,74963686,5RZC0809,Lewis & Martin Advocates,BENE,Beneficiary credentail for investment,ACTIVE,1996-08-22,1999-06-11,,N,1298459,907147,121153,613049439,25275,9713653,N,N,N
+110,40635398,1IKV0319,Martin & Taylor Litigators,AG,Agriculture,ACTIVE,2013-04-19,2021-05-26,,M,7488992,146559,370357,258875972,32261,1385073,N,N,N
+73,77919704,1EVW0817,Harris & Evans Attorneys,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2007-07-01,2017-03-14,,G,6698710,771937,892721,975206397,89011,3169998,N,N,N
+920,39197795,3FXJ0725,Fisher & King Solicitors,BANK,Bank Division,ACTIVE,2008-09-10,2019-06-29,,D,4054886,849175,183116,369873737,41996,3542201,N,N,N
+767,79158724,5MVM0071,Underwood & Davis Associates,BENE,Beneficiary credentail for investment,CLOSED,2007-09-22,,2021-11-26,Ba,3913791,788624,822199,692491128,44336,4801815,N,N,N
+675,89134368,8CUQ0628,Underwood & Lewis Counselors,AFFRS,Affairs,ACTIVE,2018-01-08,2020-03-21,,Ba,4078083,718059,734435,974113146,42437,2300636,N,N,N
+546,43354931,8VOU0842,Martin & Evans Legal,BENE,Beneficiary credentail for investment,ACTIVE,1995-09-28,2000-07-18,,M,5365617,200134,323754,449637516,69610,5556256,N,N,N
+824,72131111,9MRN0328,,AFFRS,Affairs,ACTIVE,2008-12-29,2012-11-13,,M,1851534,240482,570915,605473146,39637,8685825,N,N,N
+546,93874558,4WKY0197,Lewis & Evans Legal,CREDIT,Credit Account,CLOSED,1992-12-18,2000-05-18,2001-06-22,Ba,5706270,430107,761805,562592714,28150,8757131,N,N,N
+344,62317337,4HDZ0141,Evans & Zimmerman Advisors,CREDIT,Credit Account,ACTIVE,2002-12-09,2009-02-17,,D,5116767,406365,509285,151182556,57666,6235226,N,N,N
+560,14692902,8AVX0137,,TRADR,Trader credential account,CLOSED,1990-07-05,2010-02-16,2017-08-03,M,8924572,631944,489554,322794196,81691,4584779,N,N,N
+912,92446519,0FCQ0163,Harris & Parker Prosecutors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1999-04-22,2021-05-13,,D,5899744,890478,457091,707944173,10275,1256755,N,N,N
+652,56300201,9IAG0277,Underwood & Garcia Litigators,TRADR,Trader credential account,ACTIVE,1999-12-14,,,D,5177687,954770,390471,100118596,94714,4168875,N,N,N
+441,58437983,1IFR0520,Owens & Nelson Advisors,AFFRS,Affairs,ACTIVE,1994-01-23,2002-06-25,,D,9678835,903800,621895,252638000,53029,9838951,N,N,N
+418,40678084,8DEQ0410,Nelson & Davis Counsel,AFF,Available Funds File,ACTIVE,2016-07-25,2018-01-05,,N,6435755,142872,837191,775534227,15949,4121836,N,N,N
+486,83132469,0VHE0249,,CORP,Corporation Division,HISTORY,2005-10-17,2020-02-13,2021-11-01,I,2031348,156400,452706,615837409,52352,9154564,N,N,N
+556,57371335,1SLT0033,,ADVIS,Legal Advisor,ACTIVE,1997-12-19,1999-02-03,,N,6075286,109114,731722,250675749,98759,3881363,N,N,N
+23,14069153,0STJ0087,Parker & Quinn Legal,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2016-10-10,2017-03-07,,G,7347341,835267,524899,588016590,46138,6350302,N,N,N
+439,79667320,6AQP0997,Underwood & Zimmerman Associates,AFFRS,Affairs,CLOSED,2013-05-29,,2023-08-13,Bt,3545461,651694,990941,555907934,69376,2934053,N,N,N
+216,32118244,3CQZ0932,Davis & Quinn Law,ADVIS,Legal Advisor,ACTIVE,2022-12-20,2022-12-31,,G,9083729,754127,147077,469006512,19357,4314599,N,N,N
+146,88090007,5MPD0651,Taylor & Underwood Associates,CREDIT,Credit Account,ACTIVE,1996-08-29,2019-10-27,,D,3276103,788168,940948,757286554,73345,2461100,N,N,N
+646,87080903,2OKQ0574,Young & Taylor Justice,CORP,Corporation Division,ACTIVE,2018-11-26,,,I,9722113,943236,166104,253762223,34731,2452145,N,N,N
+589,38089816,5OLI0208,King & Young Justice,CREDIT,Credit Account,ACTIVE,2009-04-29,2019-01-19,,G,7145144,819563,746717,281137465,93168,4067266,N,N,N
+782,80404149,7COG0915,Nelson & Lewis Counselors,CORP,Corporation Division,CLOSED,2023-04-05,2023-08-22,2023-08-27,Bt,3661740,746520,261548,102872740,10776,8157536,N,N,N
+809,64189844,6AJO0468,Fisher & Zimmerman Counsel,CREDIT,Credit Account,ACTIVE,2012-09-20,2014-09-09,,M,1642662,558978,738872,175684126,95798,9668763,N,N,N
+313,12984892,4XKK0560,Taylor & Carter Counselors,TRADR,Trader credential account,ACTIVE,1990-03-07,2012-10-11,,D,2706235,542542,420732,472555484,49376,6932898,N,N,N
+855,14466056,3WVJ0817,King & Roberts Partners,AFFRS,Affairs,ACTIVE,2015-12-28,2021-10-05,,Ba,8491047,848162,303120,146017739,56117,9951393,N,N,N
+837,37090838,0VYF0770,Harris & Smith Partners,TRADR,Trader credential account,CLOSED,2004-01-14,2014-05-24,2022-10-27,Bt,6842641,293152,249363,763786649,33022,2970048,N,N,N
+466,11939016,2AWN0946,Taylor & Underwood Defenders,BANK,Bank Division,ACTIVE,2011-06-29,2017-10-30,,G,9683879,175002,600683,625244209,51908,6516755,N,N,N
+671,25919493,0JZV0178,Williams & Evans Counselors,TRADR,Trader credential account,ACTIVE,1994-06-17,2018-04-06,,M,6986499,739065,632919,990153148,27192,7414913,N,N,N
+340,46885331,7WLU1000,Smith & Young Prosecutors,AFD,Allowance For Depreciation,ACTIVE,2016-03-11,2023-09-04,,G,5046662,101671,657367,101166527,68869,5681929,N,N,N
+33,95348279,1EVW0817,Garcia & Vasquez Advisors,CORP,Corporation Division,HISTORY,2010-09-09,2021-12-13,2022-01-27,Ba,1492405,836192,500810,556930460,55492,7418559,N,N,N
+342,13287362,1WUC0892,Martin & Evans Defenders,CREDIT,Credit Account,ACTIVE,2001-04-02,2011-11-19,,D,2606071,612925,173232,734737155,10587,3355334,N,N,N
+252,96377514,3NJC0125,Jackson & Williams Prosecutors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2014-06-09,2020-04-04,,I,8461495,254258,675756,376757818,86766,1102746,N,N,N
+163,54396323,4FEE0867,Garcia & Smith Advisors,AG,Agriculture,ACTIVE,2001-12-21,2012-08-27,,I,8133576,237809,245713,534523844,75694,9809545,N,N,N
+252,32824233,2ZZR0031,Davis & Taylor Legal,BANK,Bank Division,ACTIVE,2006-08-05,2011-02-28,,D,2953967,600615,829606,790306834,83758,8848113,N,N,N
+533,67207429,8AVX0137,Owens & Martin Advisors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,2004-09-13,2022-08-01,2023-03-03,N,8609401,942949,108947,209864726,32334,9782551,N,N,N
+362,54396323,1TXK0449,Lewis & Smith Advocates,AFFRS,Affairs,ACTIVE,2007-09-09,2015-02-27,,M,9265196,792489,398174,398462101,31078,4450253,N,N,N
+3,56140258,7PJH0655,Anderson & Nelson Attorneys,AG,Agriculture,ACTIVE,2008-05-06,2011-09-16,,I,9795755,418305,189333,888550087,13128,8247732,N,N,N
+798,38211453,4IIP0362,Fisher & Nelson Defenders,ADVIS,Legal Advisor,ACTIVE,2017-12-29,2022-11-05,,I,1352796,115044,243349,282218708,21514,5080611,N,N,N
+688,99217961,2KMH0627,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2012-02-10,,,M,7279294,637648,274518,435096508,22255,9073521,N,N,N
+846,24175177,2COI0836,Nelson & Williams Counsel,AG,Agriculture,CLOSED,1992-10-24,2008-05-26,2010-03-19,D,6135650,193421,563235,229521331,83942,1275108,N,N,N
+379,67491586,9WDK0921,Young & Anderson Litigators,ADVIS,Legal Advisor,ACTIVE,2004-03-18,2016-03-03,,Bt,2338054,830628,171722,800740264,44384,6824644,N,N,N
+254,69020864,1BRT0384,Owens & Evans Defenders,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2006-03-12,2008-12-10,,Bt,5471725,221032,153144,880537476,39619,3281873,N,N,N
+100,66718516,3FJT0536,Williams & King Litigators,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2023-02-18,2023-09-16,,D,3772859,391844,216361,885226094,38826,7124208,N,N,N
+935,24800303,7MKI0230,Roberts & Williams Advocates,AG,Agriculture,ACTIVE,2012-04-30,2013-05-07,,M,3173028,946505,754352,769620886,55866,5402462,N,N,N
+957,48297731,9QJN0543,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2006-04-03,2013-06-08,,I,7050364,361659,333989,843727139,33312,4073248,N,N,N
+513,12555346,3RRR0693,Taylor & Davis Counselors,CORP,Corporation Division,ACTIVE,2012-11-29,2018-10-25,,D,8350078,710999,754615,730394781,40660,5347025,N,N,N
+411,54456704,9NHE0407,Jackson & Williams Counsel,AFFRS,Affairs,CLOSED,2000-09-29,2006-07-15,2013-12-30,M,1060843,783015,519890,235741600,44941,4824534,N,N,N
+751,98756652,5GRD0035,Williams & Underwood Solicitors,ADVIS,Legal Advisor,ACTIVE,2016-10-11,2022-02-04,,Ba,6150516,336312,842370,576162382,20470,7530939,N,N,N
+691,42394987,0ZMR0383,Parker & Williams Barristers,TRADR,Trader credential account,ACTIVE,2020-02-07,,,G,4175298,258043,400692,401842637,56699,3123333,N,N,N
+439,86660985,8AVX0137,Parker & Martin Advisors,CREDIT,Credit Account,HISTORY,2019-03-29,,2024-01-23,D,5140164,397485,246196,247348262,60357,2955482,N,N,N
+344,79261978,2TNQ0332,,TRADR,Trader credential account,ACTIVE,2010-01-15,2015-05-25,,M,3181831,504244,151844,206452454,81069,5163443,N,N,N
+540,37478937,1EEN0633,Anderson & Garcia Associates,CORP,Corporation Division,ACTIVE,2001-05-12,2018-04-13,,N,1303103,777051,276910,739293516,19869,7484994,N,N,N
+917,94269350,2QJG0912,Nelson & Roberts Legal,BENE,Beneficiary credentail for investment,ACTIVE,2009-01-04,,,D,8455713,362520,273480,444094984,66335,1044279,N,N,N
+694,64715863,2SQP0727,,AFFRS,Affairs,CLOSED,2014-01-11,2023-12-20,2024-01-21,D,8845599,188440,647338,914010788,86870,9050064,N,N,N
+616,90285358,2HEQ0785,Garcia & Evans Legal,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1992-10-15,2007-06-15,,N,8323663,226631,964760,265275472,66832,7713808,N,N,N
+351,23259595,8KOQ0172,Williams & Quinn Advisors,AFFRS,Affairs,ACTIVE,2020-03-30,2022-01-05,,M,6066891,632383,990970,887402661,44346,3625157,N,N,N
+464,48483391,7TQZ0059,Young & Harris Attorneys,ADVIS,Legal Advisor,HISTORY,2001-11-03,2007-08-30,2016-11-11,Ba,5670164,966607,818646,365086587,60459,5534303,N,N,N
+290,96021586,4VUI0789,Taylor & Harris Attorneys,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1996-09-05,1997-07-09,,M,9734402,398659,590019,652673982,40051,4878062,N,N,N
+457,50012147,6EOV0557,Owens & Carter Prosecutors,CREDIT,Credit Account,ACTIVE,2011-01-31,2013-04-27,,G,6489003,882124,268358,379061908,57896,9258855,N,N,N
+948,66731886,7ATV0287,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1993-09-09,2012-09-30,,G,7942280,196532,878928,469517012,68246,4572469,N,N,N
+658,65935365,1IWH0333,Garcia & Fisher Legal,AFFRS,Affairs,ACTIVE,2004-03-16,2012-12-05,,Bt,2724971,793659,761609,383520522,67777,9918731,N,N,N
+659,52596664,9ECZ0262,Zimmerman & Quinn Counsel,AFD,Allowance For Depreciation,CLOSED,2002-02-03,2008-03-26,2017-04-11,G,1497840,782881,607810,618285407,71768,6821879,N,N,N
+200,90542301,7XIO0351,Carter & Davis Counsel,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2003-04-04,2022-05-07,,Ba,5379722,545210,594766,328866493,13246,5492150,N,N,N
+1000,59581317,2JQJ0852,Anderson & Owens Barristers,AFD,Allowance For Depreciation,ACTIVE,2006-07-02,2012-03-03,,M,8225055,971584,774371,875808631,12529,1471344,N,N,N
+878,72861443,1QCP0593,Harris & Taylor Legal,CREDIT,Credit Account,ACTIVE,1991-11-16,,,Bt,4716690,665473,990306,501488017,89135,9218761,N,N,N
+184,33429565,8KKV0250,Jackson & Quinn Advisors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2011-11-02,2019-03-21,,Bt,1420147,180968,933262,820195173,61996,1448594,N,N,N
+578,12091446,4XBE0475,Harris & King Justice,AG,Agriculture,CLOSED,1998-11-18,2007-11-28,2023-08-01,I,8581209,553451,161090,993457470,73480,6414528,N,N,N
+439,19541315,3VYG0673,Taylor & Underwood Solicitors,AFFRS,Affairs,ACTIVE,2006-03-30,,,G,5072490,804602,511773,867926141,90737,6802911,N,N,N
+910,74438373,4QWI0716,Harris & Fisher Advisors,TRADR,Trader credential account,ACTIVE,2022-07-26,2023-07-18,,I,7608168,747028,727316,790058822,13290,9323680,N,N,N
+708,81434830,3YQY0157,Evans & Davis Counsel,AFFRS,Affairs,ACTIVE,1996-08-21,2015-02-12,,D,2689538,638834,796435,432366208,34128,9123602,N,N,N
+867,87311965,7GBM0421,Baker & Owens Barristers,AFFRS,Affairs,ACTIVE,2021-12-31,2022-12-09,,M,1676848,383038,282880,703770777,69304,9318935,N,N,N
+402,94416946,3UKR0350,Underwood & Baker Justice,CREDIT,Credit Account,ACTIVE,2024-01-18,2024-01-25,,Ba,3228576,174173,843109,798351478,26370,8851907,N,N,N
+785,13035121,1VTF0751,Anderson & Davis Litigators,AG,Agriculture,ACTIVE,2021-05-16,2022-03-01,,M,6926484,811725,607905,990233972,70722,3783702,N,N,N
+472,94632989,7TJY0256,Anderson & Vasquez Advocates,BANK,Bank Division,ACTIVE,2000-10-13,2003-10-21,,M,7511707,889718,376301,192659237,72043,5469063,N,N,N
+943,71712449,4NQV0817,Carter & Roberts Justice,AFF,Available Funds File,ACTIVE,2017-12-14,2023-01-04,,Ba,6492355,746110,518555,423818293,26221,7196931,N,N,N
+932,99217961,5SHH0476,,CREDIT,Credit Account,CLOSED,2020-03-03,,2023-09-22,Ba,8183651,958640,868478,572017664,94276,8055278,N,N,N
+954,26505047,3HOX0799,Owens & Carter Defenders,AFFRS,Affairs,ACTIVE,1999-04-30,2003-06-06,,I,6909972,211028,769903,409506332,59041,3072685,N,N,N
+774,80770863,1PNZ0846,Nelson & Fisher Associates,CREDIT,Credit Account,ACTIVE,2016-09-24,2022-03-14,,D,1991643,741967,854297,497237619,66240,6872453,N,N,N
+713,61082735,2VTE0907,King & Harris Attorneys,CREDIT,Credit Account,ACTIVE,1992-08-04,1999-06-06,,Bt,8738679,380910,129712,438213236,51329,5429711,N,N,N
+337,22953335,0RXG0960,Roberts & Smith Counselors,AG,Agriculture,ACTIVE,2007-10-16,2013-12-24,,M,5004628,841035,867364,344086477,12447,6907475,N,N,N
+286,72306845,7AIP0297,Smith & Davis Consultants,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2006-06-11,2006-09-09,,D,1868524,635953,123373,681050303,27713,2764221,N,N,N
+384,83141253,8RJM0901,King & Jackson Counsel,AFF,Available Funds File,ACTIVE,2005-09-01,2013-06-20,,D,6583568,828821,103919,514757717,15085,1279424,N,N,N
+926,84640094,3NCQ0913,Smith & Lewis Barristers,AFD,Allowance For Depreciation,ACTIVE,2015-01-12,2020-08-12,,N,8443498,726699,805750,312276084,25987,4087381,N,N,N
+594,57371335,5EEU0699,Carter & Owens Law,BANK,Bank Division,ACTIVE,1999-08-28,2006-09-18,,Bt,2410806,973263,217966,110248834,62753,9977872,N,N,N
+882,75855141,4NVI0462,Lewis & Evans Legal,AFFRS,Affairs,ACTIVE,1997-02-25,2016-09-09,,Ba,9320588,450407,853956,766793046,79295,1721579,N,N,N
+437,82111994,3DII0458,,AFD,Allowance For Depreciation,ACTIVE,2019-04-12,2021-02-09,,N,5718707,747189,600896,187193958,51265,5653170,N,N,N
+666,97488350,3IPH0340,Underwood & Baker Defenders,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2017-01-11,2023-02-17,,G,5434445,886505,818068,961728979,55896,9201513,N,N,N
+57,27409593,2GYQ0935,Evans & Jackson Legal,AFD,Allowance For Depreciation,CLOSED,1994-09-26,2002-11-29,2015-11-06,M,3479968,541998,710206,915906156,29152,9847350,N,N,N
+420,19403046,3PPE0940,Quinn & Lewis Advocates,BENE,Beneficiary credentail for investment,ACTIVE,1994-10-19,2012-01-19,,Bt,5966994,984265,926387,362518495,76205,9511235,N,N,N
+352,42932238,8RSI0029,King & Parker Advisors,CORP,Corporation Division,ACTIVE,1991-05-14,2015-09-10,,Bt,3406337,877805,443216,383130107,85033,4941578,N,N,N
+691,15070834,3RSC0838,Evans & Zimmerman Attorneys,ADVIS,Legal Advisor,ACTIVE,1998-06-02,,,N,1071938,994282,105396,899832793,75420,3875607,N,N,N
+251,80306283,4XKK0560,Young & Zimmerman Consultants,BANK,Bank Division,HISTORY,2015-01-24,2017-04-08,2019-02-28,I,2110024,563577,702753,442656041,54801,2296107,N,N,N
+102,53603886,9FXO0247,Smith & Underwood Litigators,ADVIS,Legal Advisor,ACTIVE,2002-02-01,,,G,6265973,673754,328513,327853653,12547,6712725,N,N,N
+44,64757097,4REM0855,Lewis & Parker Counselors,CORP,Corporation Division,HISTORY,2002-03-17,2004-04-02,2009-03-11,M,2679405,687883,917715,123026421,70633,2912509,N,N,N
+552,66243951,0GNH0723,,CORP,Corporation Division,CLOSED,1998-10-26,2003-05-15,2016-09-01,I,8424834,991372,130765,817487466,33804,4721809,N,N,N
+358,22921827,9CJW0036,Williams & King Law,AFFRS,Affairs,ACTIVE,2020-07-04,2021-12-11,,I,5157264,951092,663316,566811785,15064,6055291,N,N,N
+632,32018929,5NQX0920,Parker & Roberts Advocates,BANK,Bank Division,ACTIVE,1996-07-01,,,Ba,2663248,859987,532470,133632585,33878,6925882,N,N,N
+650,75185546,5OGV0146,Davis & Quinn Justice,BANK,Bank Division,ACTIVE,2008-02-25,2009-06-06,,G,1351054,783972,272398,506153924,21278,2902026,N,N,N
+765,81909353,2DVD0053,Jackson & Anderson Litigators,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,1994-09-22,2010-04-04,,M,2792115,829633,621059,990475108,65309,8740847,N,N,N
+682,80770863,0LCF0995,Martin & Owens Prosecutors,BANK,Bank Division,ACTIVE,2011-09-12,2013-02-23,,Bt,2170637,667912,765053,586490022,50709,4075984,N,N,N
+941,35771047,3FNE0235,Fisher & Smith Consultants,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",HISTORY,2019-05-28,2021-12-30,2023-07-06,N,2888653,266418,133887,377578118,51223,9005732,N,N,N
+468,11192066,3IYI0533,Roberts & Martin Barristers,BENE,Beneficiary credentail for investment,ACTIVE,1995-11-18,1997-01-02,,Ba,6210755,130306,417630,937060934,45409,8356887,N,N,N
+61,65098422,9BRZ0455,Jackson & Fisher Law,AFD,Allowance For Depreciation,CLOSED,2008-11-13,2012-01-25,2017-08-01,G,4645488,447715,278004,940004641,42638,7658060,N,N,N
+359,73995383,9BPI0713,Williams & Baker Associates,AFD,Allowance For Depreciation,ACTIVE,2008-05-31,2010-03-20,,D,3582982,541518,483147,647938417,48311,5838015,N,N,N
+658,90379657,5LEO0823,Lewis & Young Prosecutors,AFD,Allowance For Depreciation,ACTIVE,1997-04-22,2004-10-11,,Ba,5730004,463915,549903,170525782,83954,2344078,N,N,N
+554,61994877,4UGT0105,,AFD,Allowance For Depreciation,ACTIVE,2008-10-30,2009-07-05,,G,2161908,543732,220178,949917763,48108,7388872,N,N,N
+492,67768224,3CCP0017,,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2012-04-30,2017-09-04,,G,2939784,570365,951359,636811421,72100,5750982,N,N,N
+181,45013532,8RJM0901,Carter & Garcia Law,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,2018-05-01,2020-10-23,2021-11-29,G,6961689,276336,930200,475574210,75857,6841380,N,N,N
+280,89864109,2YEF0950,Parker & Davis Justice,CORP,Corporation Division,ACTIVE,2001-11-19,2016-12-10,,Ba,5566597,975316,928689,434088230,82443,4345091,N,N,N
+417,94608608,1LOD0176,King & Anderson Defenders,AFFRS,Affairs,ACTIVE,1997-09-27,2001-05-07,,G,6761795,954836,168636,430493155,45873,8598906,N,N,N
+508,79929030,5DHE0533,Harris & Jackson Law,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",HISTORY,2017-01-27,2020-12-02,2023-09-12,Ba,3887474,195570,733862,588974668,99870,3688594,N,N,N
+858,61606535,0LUT0287,King & Parker Associates,ADVIS,Legal Advisor,ACTIVE,2011-07-13,2020-08-13,,N,8056453,288038,410995,362620899,42269,4400132,N,N,N
+270,95113777,4LOW0912,Davis & Parker Consultants,CREDIT,Credit Account,ACTIVE,1994-12-12,2023-07-19,,Bt,7328556,401160,684360,336628237,33427,9173975,N,N,N
+205,23751502,0DLO0928,Taylor & Jackson Law,AG,Agriculture,ACTIVE,1990-10-19,1991-08-15,,N,7776047,451904,763535,416043724,78139,4213250,N,N,N
+32,62909194,0DNU0252,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2013-04-01,2022-06-29,,N,4539146,200210,366798,558268842,52415,8087910,N,N,N
+920,81725124,7JZU0477,Taylor & Martin Justice,BENE,Beneficiary credentail for investment,ACTIVE,2022-07-30,2023-10-15,,Ba,7263850,286577,438907,810530771,72111,6018002,N,N,N
+317,18447363,0OGZ0129,Zimmerman & Roberts Consultants,BANK,Bank Division,ACTIVE,1998-03-12,,,D,8650596,326163,279236,532049801,82231,1135821,N,N,N
+627,58648409,2EMY0830,Parker & King Counselors,AFFRS,Affairs,ACTIVE,2003-08-02,2020-03-03,,N,6213143,705865,598856,299020801,48917,7609037,N,N,N
+634,58383414,4RYQ0216,,AG,Agriculture,ACTIVE,2001-07-24,2007-04-16,,Bt,2198642,737045,303769,946357772,73374,5852352,N,N,N
+90,37586561,0QOZ0774,,ADVIS,Legal Advisor,CLOSED,2000-08-30,2017-06-29,2020-06-18,M,2581451,406498,810978,700684533,51406,1217161,N,N,N
+673,63335284,8FJN0802,Fisher & Davis Associates,BANK,Bank Division,ACTIVE,2001-08-23,2002-12-10,,Ba,2589427,175295,795912,601059133,35643,2161047,N,N,N
+350,53221655,5LCY0451,Taylor & Zimmerman Barristers,CREDIT,Credit Account,CLOSED,2017-11-22,2018-06-12,2019-12-07,G,6127297,679996,946847,966211435,18676,5499030,N,N,N
+842,10652545,7QVW0642,Anderson & Smith Defenders,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1990-10-10,2001-02-02,,D,1489870,483688,434556,874739357,26422,1150498,N,N,N
+73,87974880,5DVP0202,Carter & Owens Counselors,BANK,Bank Division,HISTORY,1993-01-17,1999-05-31,1999-11-25,N,8109525,625300,367559,334694317,11911,2045792,N,N,N
+743,28591329,7MZK0858,Taylor & Martin Defenders,TRADR,Trader credential account,ACTIVE,2008-05-02,2020-10-06,,M,9730192,644390,531147,786303871,66371,7294733,N,N,N
+378,37090838,4HPA0321,Roberts & Anderson Attorneys,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2013-10-08,2013-12-22,,M,3599941,486524,546433,664484941,58163,6770002,N,N,N
+790,99828659,4PMG0316,Martin & Parker Advocates,BENE,Beneficiary credentail for investment,ACTIVE,2017-09-17,2020-01-31,,M,6362909,300711,518775,973373315,61518,7425783,N,N,N
+376,25173645,0CZG0849,Evans & Smith Advisors,BENE,Beneficiary credentail for investment,ACTIVE,1992-11-29,2009-08-06,,Ba,9095452,961827,961461,126779097,52714,3071707,N,N,N
+888,92710956,8RSI0029,Parker & Garcia Litigators,TRADR,Trader credential account,CLOSED,2001-11-04,2009-04-15,2013-05-08,N,8376345,248219,269110,391408667,14085,4076562,N,N,N
+58,91906029,9PRM0097,Parker & Martin Defenders,TRADR,Trader credential account,HISTORY,2015-06-14,2015-12-03,2018-11-09,D,2728209,443268,636729,107433424,97985,4192790,N,N,N
+376,24035934,2AEX0128,Jackson & Davis Associates,AG,Agriculture,ACTIVE,1998-12-11,2009-04-28,,M,3135358,657180,132210,118415305,50239,8842301,N,N,N
+74,21688247,9AGP0073,,BENE,Beneficiary credentail for investment,ACTIVE,2014-12-21,2014-12-21,,M,1786387,495446,454724,225076735,69844,7329153,N,N,N
+14,95443082,4FEE0867,Baker & Martin Justice,BENE,Beneficiary credentail for investment,ACTIVE,1997-07-31,2020-07-04,,M,6914278,348905,686678,804134784,85675,5368896,N,N,N
+449,53561733,8OVU0121,Young & Owens Advisors,AFFRS,Affairs,ACTIVE,1992-01-22,1992-08-26,,I,4183988,575409,796214,695380493,72102,3809850,N,N,N
+66,59895526,4GYE0541,Baker & Williams Counsel,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,2013-03-06,,2021-08-31,N,2680768,730212,203456,523164944,20151,9959774,N,N,N
+600,99617086,2OLI0365,Nelson & Underwood Advocates,TRADR,Trader credential account,ACTIVE,2016-08-22,2023-08-20,,N,1076375,197782,763566,416203612,55034,9149878,N,N,N
+300,80770863,1GEZ0255,Taylor & Jackson Solicitors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,HISTORY,2010-05-28,2011-02-11,2022-10-16,I,7499776,701933,142544,534816159,87108,7488666,N,N,N
+405,23259595,6MFJ0145,Evans & Anderson Counselors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",HISTORY,2018-11-22,2019-04-11,2022-08-16,Bt,2199242,192416,692681,747212016,38503,4602872,N,N,N
+945,73525660,5FZP0726,Martin & Owens Consultants,BANK,Bank Division,ACTIVE,2002-08-30,2022-08-03,,Ba,2071396,842511,344802,756468146,83861,9691630,N,N,N
+719,95851287,8BQQ0484,Harris & Underwood Counsel,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,CLOSED,1996-06-23,2010-10-18,2015-11-17,N,3302689,405329,295959,724392544,72594,8200250,N,N,N
+119,77736520,0ZOC0398,Underwood & Owens Law,BENE,Beneficiary credentail for investment,ACTIVE,2007-03-16,2021-12-08,,N,8816793,839012,493514,711947516,32535,1573606,N,N,N
+676,27064697,9UGT0966,Smith & Baker Justice,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2003-04-08,2013-02-20,,Bt,3960512,688004,638758,449707337,69939,5712162,N,N,N
+836,95321064,1RYU0553,Vasquez & Jackson Litigators,CORP,Corporation Division,ACTIVE,1996-11-26,,,D,4102299,752769,655509,892952634,82934,8159196,N,N,N
+729,48803613,7TJJ0818,,TRADR,Trader credential account,ACTIVE,2003-11-03,2022-12-21,,Ba,2792112,683609,355485,500686277,29649,9951078,N,N,N
+131,90655537,8BQQ0484,Lewis & Nelson Solicitors,AFD,Allowance For Depreciation,ACTIVE,2000-03-01,2015-05-04,,I,6965201,476948,284301,175342581,94008,9367314,N,N,N
+510,13302231,8VTB0384,Nelson & Parker Defenders,CREDIT,Credit Account,HISTORY,1991-06-04,2012-10-23,2023-11-25,Ba,8734780,509839,758035,980458503,90210,4348154,N,N,N
+701,64143940,3RXL0336,Davis & Underwood Barristers,AG,Agriculture,ACTIVE,2006-09-15,2017-12-02,,G,9275436,726882,521803,955187123,15928,2841014,N,N,N
+429,77279818,8BQQ0484,Young & Taylor Advisors,BENE,Beneficiary credentail for investment,ACTIVE,2011-09-10,2023-04-11,,Bt,3706595,297542,210662,599101450,16009,3378261,N,N,N
+169,52005450,1TZM0910,,AG,Agriculture,HISTORY,1995-06-13,1998-11-07,2018-08-13,D,4448966,379191,342746,403891887,91537,5692192,N,N,N
+559,24432747,6RVF0006,Garcia & Jackson Justice,AFF,Available Funds File,ACTIVE,1995-11-03,2013-12-13,,D,8023536,382394,236431,370622819,80186,3315529,N,N,N
+931,76729093,3HSH0558,King & Garcia Consultants,AFF,Available Funds File,ACTIVE,1999-11-18,2003-08-30,,Bt,3582636,947872,893593,276689709,34641,9740713,N,N,N
+533,50041997,3HUD0850,Fisher & Baker Consultants,CREDIT,Credit Account,ACTIVE,2007-07-16,2016-08-23,,Ba,4716356,618916,142857,391511876,23784,8348783,N,N,N
+940,41977095,9CCY0365,Evans & Taylor Partners,TRADR,Trader credential account,ACTIVE,2011-11-09,2018-03-03,,M,5065737,498322,521603,435524763,54878,1259681,N,N,N
+137,39059525,7TJY0256,Anderson & Garcia Advocates,CORP,Corporation Division,ACTIVE,2017-08-14,2021-02-17,,D,8419688,124138,475063,335194354,99778,9626051,N,N,N
+236,46885331,9PGQ0230,Williams & Nelson Legal,AFF,Available Funds File,HISTORY,2006-02-13,2022-07-31,2022-12-28,G,3686184,178452,708879,246279060,11866,9198972,N,N,N
+291,31676836,5HJT0444,King & Fisher Counsel,AFD,Allowance For Depreciation,ACTIVE,2009-11-20,2023-10-19,,N,1655395,899497,624275,794722174,59236,9294475,N,N,N
+18,21345082,5FZP0726,Williams & Taylor Associates,AFF,Available Funds File,ACTIVE,1994-02-09,2016-10-20,,Bt,9605876,974345,111569,501449153,61071,9406119,N,N,N
+721,77919704,5GOT0204,,CREDIT,Credit Account,ACTIVE,2003-10-05,2004-04-29,,I,9842149,244995,264502,728714236,32216,3639047,N,N,N
+954,63866075,7ZLB0962,,BENE,Beneficiary credentail for investment,HISTORY,2008-10-27,2009-10-15,2015-06-25,M,7389006,830479,180614,679609228,41492,3402236,N,N,N
+49,42079898,2AWN0946,Quinn & Garcia Associates,CREDIT,Credit Account,ACTIVE,2013-01-28,2020-11-17,,I,9463313,172079,973149,442424354,10295,2798183,N,N,N
+257,82212702,3RYS0252,Carter & Parker Legal,BANK,Bank Division,ACTIVE,2014-02-16,2018-06-19,,Ba,5502886,581455,692759,331006113,72841,6888667,N,N,N
+892,77352694,8UZR0040,Jackson & Garcia Associates,AFFRS,Affairs,HISTORY,2004-06-29,2014-10-27,2022-04-12,G,8711712,562363,472092,160879534,66961,9346153,N,N,N
+918,80238462,9GTR0694,Anderson & Nelson Legal,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2019-02-22,2023-07-06,,I,3380018,257952,721521,850244368,38079,8370359,N,N,N
+438,82111994,1IVB0441,Roberts & Quinn Barristers,BENE,Beneficiary credentail for investment,CLOSED,1995-09-26,2001-08-01,2008-10-23,I,3794931,131724,653925,800001776,34696,4015234,N,N,N
+770,53580369,4OTS0069,Evans & Smith Prosecutors,AFF,Available Funds File,ACTIVE,2005-09-12,2018-06-05,,N,4984101,657459,718213,295742113,44286,8652208,N,N,N
+435,51064915,0JOQ0555,Parker & Martin Consultants,AFF,Available Funds File,ACTIVE,2000-06-22,2002-03-06,,G,1799792,578056,287909,484110126,95440,3428521,N,N,N
+534,64878326,0CZG0849,Jackson & Harris Consultants,BENE,Beneficiary credentail for investment,CLOSED,2002-05-18,2003-07-14,2017-07-30,N,3610306,235117,143771,696275590,97936,2266902,N,N,N
+462,95749791,7BVA0414,Quinn & Zimmerman Associates,BANK,Bank Division,ACTIVE,2010-05-23,2011-02-12,,I,9544605,313694,977470,729181286,48342,4958607,N,N,N
+550,52172378,9OFS0092,Smith & Baker Attorneys,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2016-02-27,2018-02-23,,D,3420302,367013,428413,369579311,46338,1730721,N,N,N
+236,68597943,2SCM0752,Baker & Anderson Associates,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2004-03-26,2014-02-17,,M,2400746,254657,522768,124886721,27956,2059130,N,N,N
+29,48384435,2NVO0845,Zimmerman & Nelson Attorneys,BENE,Beneficiary credentail for investment,ACTIVE,2022-05-09,,,G,5269633,681579,305949,636074414,14520,8293844,N,N,N
+945,75834784,7RRT0307,Parker & Martin Law,AFF,Available Funds File,ACTIVE,2015-04-21,2015-11-01,,Ba,9482587,164231,801047,172067769,94894,3022783,N,N,N
+187,60274308,2LJF0028,Martin & Harris Litigators,ADVIS,Legal Advisor,ACTIVE,2019-11-30,2023-05-16,,D,2692227,519940,541691,663004702,54931,7800226,N,N,N
+729,48384435,6RRP0552,Carter & Owens Counsel,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,1998-02-14,2020-04-22,2021-04-30,Ba,3718253,976198,520515,835100590,85711,6592096,N,N,N
+925,70689194,7MZP0652,Evans & Anderson Associates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1993-01-17,,,G,7260017,939268,461760,707663103,45230,9326690,N,N,N
+777,83129892,0LSZ0169,Parker & Roberts Law,BANK,Bank Division,HISTORY,2015-08-30,2022-05-17,2022-08-22,I,3848368,839620,731612,743399213,21298,9463304,N,N,N
+230,65877123,1LTZ0168,Carter & Williams Barristers,AFF,Available Funds File,ACTIVE,2014-02-22,2023-12-20,,Ba,3437446,629585,151947,411158000,12783,3578541,N,N,N
+838,25691640,1MTF0532,Owens & Davis Associates,TRADR,Trader credential account,ACTIVE,1990-11-25,1996-11-21,,N,1185243,548250,846866,771931391,28562,1409141,N,N,N
+302,52405006,7NSU0946,Fisher & Davis Barristers,BANK,Bank Division,HISTORY,2019-05-01,2023-04-29,2023-06-11,G,2031672,586632,940771,473673257,20104,8106718,N,N,N
+267,41943814,1DPY0542,Jackson & Martin Barristers,AG,Agriculture,ACTIVE,2002-05-14,2012-02-27,,G,9182866,835770,631903,606941364,63617,8727859,N,N,N
+941,54125434,4LBC0874,Lewis & Young Partners,BANK,Bank Division,ACTIVE,2004-11-16,2020-09-05,,N,5504923,700336,547818,376172878,37772,3929351,N,N,N
+727,24712552,2GYQ0935,Vasquez & Garcia Counselors,BANK,Bank Division,ACTIVE,1994-06-02,2022-09-20,,N,3073828,635201,781864,288680497,48906,6319174,N,N,N
+682,93167040,1HVI0383,Quinn & Smith Litigators,TRADR,Trader credential account,ACTIVE,1999-04-23,2004-11-13,,Ba,4997123,589328,398651,926345776,96154,9122945,N,N,N
+770,13287362,2ECV0598,Vasquez & Harris Consultants,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2019-11-26,2021-06-14,,G,5784981,564885,379463,433778337,98217,4597707,N,N,N
+365,61149426,3WSL0343,Anderson & Garcia Litigators,AFD,Allowance For Depreciation,HISTORY,2021-12-03,2021-12-14,2023-05-03,M,8370834,864385,509202,551976804,70893,2741773,N,N,N
+372,90505858,1FYH0642,Taylor & Evans Advisors,BENE,Beneficiary credentail for investment,ACTIVE,2024-01-23,,,G,9785829,660143,280095,400886314,97871,7424853,N,N,N
+751,17972223,6STC0470,Roberts & Parker Solicitors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2020-05-05,2022-02-21,,Bt,6294666,712994,221296,531095658,14138,5283896,N,N,N
+670,84170877,1AHT0982,Williams & Young Counsel,AG,Agriculture,ACTIVE,1991-02-19,2020-09-24,,N,4756489,618432,306640,842810072,71976,5962434,N,N,N
+235,98157893,0NQI0949,,ADVIS,Legal Advisor,ACTIVE,2019-08-25,2021-10-17,,G,6252939,465807,958729,624448357,92068,8185900,N,N,N
+604,91907768,0WXV0966,Jackson & Garcia Barristers,TRADR,Trader credential account,ACTIVE,2009-04-03,2019-04-20,,M,3911698,237101,539305,339374872,63194,9499918,N,N,N
+475,27123129,5ZLM0125,King & Quinn Associates,TRADR,Trader credential account,ACTIVE,2017-05-13,2017-07-06,,Bt,7729443,692288,920243,462612394,89832,9390629,N,N,N
+901,82747063,8SUQ0869,Evans & Nelson Prosecutors,AFF,Available Funds File,ACTIVE,2001-01-17,2002-03-09,,Bt,3195458,898985,106851,274869997,40280,7752948,N,N,N
+637,11271234,9SZU0926,Fisher & Garcia Justice,AFD,Allowance For Depreciation,CLOSED,1992-09-06,2010-02-20,2015-02-16,I,2082458,795305,510999,571446520,63818,1432719,N,N,N
+512,59192602,5GUV0362,Parker & Fisher Advocates,CORP,Corporation Division,ACTIVE,2022-11-12,2023-09-15,,D,9570840,493665,139344,113152517,20797,8225593,N,N,N
+883,51003400,9WDK0921,Lewis & Nelson Advocates,BANK,Bank Division,HISTORY,1997-03-14,2002-09-01,2009-09-30,G,5645086,144923,530992,160197476,80142,1619760,N,N,N
+398,49900301,1SIE0430,Evans & Roberts Attorneys,CORP,Corporation Division,ACTIVE,2016-02-25,2018-10-18,,D,7433008,576734,951496,739890242,50873,5784359,N,N,N
+233,35771047,9BQV0640,Quinn & Fisher Law,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",HISTORY,2013-03-28,2020-08-17,2023-03-27,Bt,3353489,981497,594944,514527093,78601,7449420,N,N,N
+638,57210307,0XGZ0810,Nelson & Young Legal,AG,Agriculture,ACTIVE,2006-05-02,2019-09-02,,Bt,8623629,296268,398382,588208606,41682,1636395,N,N,N
+474,80471878,1GTY0871,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2017-08-16,2018-09-21,,Ba,8225961,140000,416610,785247922,25805,8921497,N,N,N
+789,64189844,3FLE0650,Zimmerman & Jackson Defenders,BANK,Bank Division,HISTORY,2008-05-22,2015-10-16,2018-03-30,M,7510625,217777,697929,476897017,79862,1850462,N,N,N
+714,90602675,3ZNC0735,,AG,Agriculture,ACTIVE,2015-10-24,2020-03-23,,D,7272934,249419,698463,799924774,49229,1719278,N,N,N
+696,76224956,8TID0447,Anderson & Vasquez Advisors,AFD,Allowance For Depreciation,ACTIVE,2021-10-22,,,M,3955981,775997,141101,108430359,83302,1537776,N,N,N
+287,34573549,6OWZ0648,Young & Martin Litigators,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,1992-02-26,2007-05-15,,I,3990301,116666,876734,642458018,64147,9113557,N,N,N
+402,37542534,3FLE0650,Nelson & Anderson Advocates,AFF,Available Funds File,CLOSED,2001-10-08,2005-01-31,2005-08-10,Bt,6579420,533007,759810,535044101,98973,9319277,N,N,N
+587,80306283,3HOX0799,Evans & Garcia Barristers,CORP,Corporation Division,ACTIVE,2008-07-11,2019-07-17,,G,7259537,280840,358312,878346648,34140,8134492,N,N,N
+598,95528312,3LHV0596,Jackson & Nelson Advocates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2006-02-19,2006-07-15,,N,8614879,554780,619986,190931710,63728,4471246,N,N,N
+360,18401388,2SRB0373,Lewis & Quinn Solicitors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1998-10-30,2000-06-28,,N,2578039,470763,992274,803618160,48561,2224475,N,N,N
+962,37171780,0NQI0949,Parker & Quinn Counselors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,2020-03-24,2022-08-01,2023-05-25,Ba,4417987,700816,557186,470673367,93676,9515468,N,N,N
+791,48240182,5UPJ0264,,AFD,Allowance For Depreciation,ACTIVE,2003-06-25,2010-08-06,,G,5000109,484437,818570,749842894,21195,1078130,N,N,N
+677,14334820,0LCF0995,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2022-11-28,2023-06-10,,I,8664445,938914,715174,846763477,17115,3716749,N,N,N
+244,76657548,4PUJ0034,Owens & Evans Prosecutors,TRADR,Trader credential account,CLOSED,2022-02-07,2023-05-17,2023-09-22,Bt,3931999,659823,792510,202155361,77789,3497123,N,N,N
+756,32826157,0MCI0589,Smith & Young Solicitors,CREDIT,Credit Account,ACTIVE,1996-09-16,,,D,6294304,905196,579336,995784809,31488,5251566,N,N,N
+842,98313911,0FEW0827,Owens & Garcia Advocates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,HISTORY,1994-12-14,,2018-10-13,D,4892615,514407,809631,853740705,62368,3501806,N,N,N
+186,72538149,6VSL0765,,CORP,Corporation Division,HISTORY,2009-06-25,2019-06-26,2023-02-15,M,8753156,812021,112134,523418351,97358,7978454,N,N,N
+525,12175088,1UTE0454,Parker & King Barristers,AFF,Available Funds File,CLOSED,2000-01-09,2000-10-29,2012-03-29,G,7698766,342222,795556,967495237,99373,8806502,N,N,N
+487,11339176,7WLU1000,Vasquez & Roberts Legal,AFD,Allowance For Depreciation,ACTIVE,1992-01-06,2016-06-27,,G,7181111,918058,511465,958914828,39285,7299993,N,N,N
+936,29867505,1DJK0566,Lewis & Carter Partners,AFD,Allowance For Depreciation,ACTIVE,2004-02-15,2023-03-17,,D,5697644,391869,997422,682006959,76950,5141826,N,N,N
+537,47291057,9KQJ0109,Evans & Jackson Counselors,BENE,Beneficiary credentail for investment,ACTIVE,2001-03-25,,,M,3351189,162326,290423,305937001,53695,2157296,N,N,N
+533,36961268,6KJB0563,Underwood & Evans Counsel,AG,Agriculture,ACTIVE,2018-04-03,2019-09-16,,M,1512990,548645,339322,694952675,80924,7198783,N,N,N
+287,32826157,1VLT0486,Young & Martin Prosecutors,AFF,Available Funds File,CLOSED,2011-09-27,2017-07-28,2018-06-08,Bt,3877143,737154,290969,671683016,88613,1760474,N,N,N
+611,93100180,3ZRP0511,Baker & Roberts Law,AFF,Available Funds File,ACTIVE,2001-06-10,2016-03-23,,Bt,5396434,567653,227305,205686533,80436,3292484,N,N,N
+570,88306991,6RRP0552,,AFD,Allowance For Depreciation,HISTORY,2007-08-24,2011-12-03,2017-09-15,M,1846485,522907,893663,500267122,81830,4537330,N,N,N
+228,81792117,2DWX0509,Lewis & Jackson Attorneys,CORP,Corporation Division,CLOSED,2014-03-01,2023-06-20,2024-01-19,Ba,4667942,147173,712237,584739279,27077,1583640,N,N,N
+97,54600428,5SHH0476,Garcia & Davis Partners,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,1998-03-30,2005-07-28,,Ba,1324716,143402,274298,684477274,88713,8642791,N,N,N
+797,10275613,3MSD0129,Jackson & Garcia Associates,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2000-12-05,2008-01-03,,G,7176969,788161,369553,418061881,61967,4188812,N,N,N
+145,77175079,5UBL0530,Davis & Harris Prosecutors,ADVIS,Legal Advisor,ACTIVE,2023-05-21,2023-08-02,,Bt,4410181,811855,518606,488002184,40104,2477263,N,N,N
+566,66818712,3GQJ0617,Owens & Evans Legal,CORP,Corporation Division,ACTIVE,2018-11-10,2023-10-24,,Bt,4835039,294658,748375,284930644,34546,1530510,N,N,N
+380,52405006,2VLE0588,Young & Owens Consultants,BENE,Beneficiary credentail for investment,ACTIVE,1994-04-15,2011-08-19,,M,5176981,333455,761678,243668030,78107,1369768,N,N,N
+850,39523975,9EDZ0439,King & Vasquez Associates,AFFRS,Affairs,ACTIVE,2003-01-07,2019-12-22,,I,4165435,196545,679605,788440901,57983,4435344,N,N,N
+831,24471856,9RTI0130,Young & Quinn Partners,BENE,Beneficiary credentail for investment,ACTIVE,2009-05-15,2019-08-25,,Bt,2938300,843238,468850,687817289,86059,9542304,N,N,N
+560,61606535,1AMH0810,,TRADR,Trader credential account,ACTIVE,2016-02-03,2021-09-30,,Ba,6176671,430334,111267,463919976,36701,7252273,N,N,N
+910,48932959,9QJN0543,Nelson & Owens Attorneys,CREDIT,Credit Account,ACTIVE,1994-10-30,1995-08-27,,I,5520958,982357,916736,436555789,60086,7914959,N,N,N
+99,48297731,1JYM0334,Nelson & Lewis Litigators,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2022-11-07,,,M,8358480,525960,847226,862246215,87084,7641020,N,N,N
+287,81909353,3XYQ0167,Fisher & Evans Justice,ADVIS,Legal Advisor,HISTORY,1999-03-06,2010-05-28,2020-08-15,Ba,3512078,796558,177277,520162907,22406,8772864,N,N,N
+109,48937510,2FKU0313,Williams & Evans Defenders,AFF,Available Funds File,HISTORY,2002-10-06,2010-11-28,2012-04-12,D,4238370,530219,751474,719165350,35663,1406768,N,N,N
+923,47690810,2ZVV0188,Baker & Harris Consultants,BENE,Beneficiary credentail for investment,ACTIVE,2023-09-15,2023-11-08,,D,7576565,810549,831323,538842482,57054,3329493,N,N,N
+914,98067533,9BRZ0455,Smith & Lewis Litigators,TRADR,Trader credential account,ACTIVE,2015-02-04,,,Ba,7690500,991946,886282,962171818,28022,1662671,N,N,N
+954,34979907,0ZKT0356,Nelson & King Legal,TRADR,Trader credential account,ACTIVE,1998-10-16,2015-08-07,,G,9617600,542495,506573,284421254,24115,6672430,N,N,N
+725,75037137,4KLK0756,,AFD,Allowance For Depreciation,ACTIVE,1996-05-27,2006-03-30,,M,1988717,592347,980479,764367558,18883,7975864,N,N,N
+407,20552729,1LTR0627,Anderson & Garcia Advocates,BANK,Bank Division,ACTIVE,2001-08-19,2007-06-09,,M,2969098,926072,573255,989837022,14091,5719330,N,N,N
+536,80471878,6EEF0025,Parker & Roberts Advocates,BANK,Bank Division,ACTIVE,2015-03-13,2023-12-15,,Ba,4129460,155265,838727,624837527,32045,7072662,N,N,N
+405,74382849,3OPT0807,,ADVIS,Legal Advisor,ACTIVE,2010-12-04,2021-06-21,,G,9279884,237598,729868,194281265,60966,9399883,N,N,N
+938,47665260,0GZC0160,Garcia & Jackson Advisors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1992-02-12,2008-02-20,,I,2294911,124842,779466,318564997,19436,6241601,N,N,N
+254,62633340,8UZR0040,King & Zimmerman Advocates,CORP,Corporation Division,ACTIVE,1993-05-05,2021-02-24,,I,5584159,817417,506301,225343052,94206,2735772,N,N,N
+296,99263996,4OMQ0619,,AFD,Allowance For Depreciation,ACTIVE,1991-09-06,2016-01-26,,G,7263913,791695,367993,614008684,79226,8744660,N,N,N
+128,80471878,3JCJ0640,Underwood & Vasquez Prosecutors,AFFRS,Affairs,ACTIVE,2012-11-14,2018-06-01,,Bt,1552336,920532,753334,114373738,99670,2085696,N,N,N
+322,92898143,6AQP0997,,BENE,Beneficiary credentail for investment,ACTIVE,1990-12-29,2000-04-12,,N,8385472,666341,464588,729175402,95162,9100054,N,N,N
+807,28112248,3WVJ0817,,AFFRS,Affairs,ACTIVE,2002-02-24,2019-10-04,,Ba,2342716,495959,124549,450413416,49160,2436129,N,N,N
+124,33077872,3LMH0510,Parker & Zimmerman Partners,BENE,Beneficiary credentail for investment,ACTIVE,2007-04-30,2008-07-24,,D,1958321,694832,762937,643688876,15266,9182520,N,N,N
+353,85347687,7LJP0235,Jackson & Williams Law,AFD,Allowance For Depreciation,ACTIVE,2021-09-01,2023-02-14,,Ba,9928863,349308,838823,265970013,50153,7220208,N,N,N
+509,25919493,9ATY0110,King & Baker Advocates,AFD,Allowance For Depreciation,ACTIVE,1996-01-26,,,M,6710609,995990,428385,174148027,81557,8655214,N,N,N
+167,63866075,0BPV0315,Carter & Garcia Counsel,AFD,Allowance For Depreciation,ACTIVE,1998-01-14,1999-04-02,,G,1570690,597633,957156,425189165,61475,4695522,N,N,N
+167,34062388,0OPA0167,Williams & Vasquez Legal,BENE,Beneficiary credentail for investment,CLOSED,1994-02-11,2012-11-28,2020-11-17,Bt,3514324,296329,920940,775003055,14875,5839613,N,N,N
+791,33951740,5BSO0691,Martin & Evans Associates,TRADR,Trader credential account,ACTIVE,1999-02-21,2003-01-24,,I,2961765,780817,599937,332607626,17525,4539066,N,N,N
+10,13073399,3IFW0330,Davis & Roberts Law,TRADR,Trader credential account,CLOSED,2021-12-02,2023-01-22,2023-06-04,D,8505865,133512,178715,210417477,75945,9032952,N,N,N
+746,20097582,5ZPY0119,Nelson & Jackson Advocates,AFF,Available Funds File,ACTIVE,2016-11-20,2021-06-29,,G,7239415,520480,778079,347292616,89311,7489493,N,N,N
+36,73675299,6BOO0508,King & Underwood Defenders,AG,Agriculture,ACTIVE,2006-02-07,2008-02-24,,Ba,5539282,233503,318841,846474940,56401,5486414,N,N,N
+256,93908941,9UVJ0691,Davis & Fisher Advocates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2017-04-11,2023-07-14,,G,4780233,209036,234443,149310673,68821,7045213,N,N,N
+25,55030040,5RZC0809,Young & Baker Counsel,CORP,Corporation Division,HISTORY,2004-08-01,2021-01-02,2022-05-11,Ba,5758004,898138,284461,822319517,74285,5669490,N,N,N
+752,58745687,5CMW0070,Smith & Williams Solicitors,AFD,Allowance For Depreciation,ACTIVE,2015-09-25,2020-05-03,,I,8084471,725360,708624,675043740,19315,3507721,N,N,N
+716,52405006,3UQT0936,Williams & Martin Solicitors,AFF,Available Funds File,ACTIVE,1997-05-23,2021-11-19,,M,4136596,206964,175375,835177582,41335,3014231,N,N,N
+881,33485362,3RXL0336,Baker & Garcia Litigators,BANK,Bank Division,CLOSED,2016-07-16,2017-12-23,2020-12-25,I,9358732,855415,498893,384004487,52156,6776416,N,N,N
+88,97405000,0MGZ0244,Anderson & Carter Law,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,CLOSED,2022-11-27,2023-06-03,2023-10-21,I,2749996,117971,226004,500357722,83999,6949204,N,N,N
+552,69582047,7QVW0642,King & Williams Law,AFFRS,Affairs,ACTIVE,2001-12-01,2006-01-30,,I,9145884,145502,254788,213518093,25910,7180245,N,N,N
+936,66894867,3KRC0350,Smith & Roberts Associates,AFFRS,Affairs,ACTIVE,2012-03-27,,,N,1311883,138148,585048,610360698,92278,5056127,N,N,N
+823,13287362,3ZXA0547,Williams & Vasquez Partners,AFF,Available Funds File,CLOSED,2020-03-10,2023-04-12,2023-12-24,G,4734796,893377,903469,361503088,60209,6279266,N,N,N
+455,40742674,1SXF0619,Underwood & Lewis Legal,TRADR,Trader credential account,ACTIVE,2015-10-31,2019-04-13,,N,1956544,292019,483241,729855960,11698,3980780,N,N,N
+336,90873674,9OXP0677,Carter & Garcia Partners,CREDIT,Credit Account,ACTIVE,2013-01-18,2018-04-12,,Bt,2548221,316701,816284,191589718,99723,6836989,N,N,N
+565,86206711,8NKH0091,Garcia & Davis Justice,BANK,Bank Division,CLOSED,1992-08-12,1996-12-20,2002-07-01,Ba,8320775,688972,952045,329471026,43431,8994024,N,N,N
+818,21110510,3XAI0520,Vasquez & Owens Prosecutors,BANK,Bank Division,ACTIVE,1997-02-23,2001-09-21,,Bt,7702205,873101,457027,742462785,12006,1510203,N,N,N
+258,19541315,1MKV0256,Parker & Carter Justice,BENE,Beneficiary credentail for investment,HISTORY,2016-02-18,2021-12-28,2022-05-03,Bt,8138492,995981,443125,738658175,31643,9575008,N,N,N
+810,42376429,5SHH0476,Quinn & Zimmerman Counsel,AFD,Allowance For Depreciation,ACTIVE,2009-11-02,2015-12-31,,I,3059478,705054,733204,222553010,45210,2006460,N,N,N
+173,20787606,4QML0713,Nelson & Martin Consultants,TRADR,Trader credential account,HISTORY,2005-05-19,,2014-01-20,G,6709664,174473,351665,779028133,86702,2683091,N,N,N
+843,22235689,6RDK0398,Lewis & Baker Advisors,BANK,Bank Division,CLOSED,1999-07-28,,2023-12-27,Ba,7540403,421345,738553,710861794,65573,6430234,N,N,N
+7,75871739,8UXV0890,Quinn & Zimmerman Barristers,CREDIT,Credit Account,ACTIVE,2000-07-20,2019-10-21,,Bt,7223844,850368,698354,264282255,28346,1167246,N,N,N
+557,45272520,6GEK0670,Quinn & Smith Solicitors,CORP,Corporation Division,ACTIVE,2020-10-30,,,G,9154050,923593,269856,852937680,27529,5526704,N,N,N
+817,25672830,7MZP0652,Carter & Vasquez Prosecutors,CREDIT,Credit Account,ACTIVE,2004-10-05,2024-01-05,,I,7068904,141214,722131,152298100,57911,6962574,N,N,N
+333,85494016,9BDC0794,Taylor & Baker Barristers,AFFRS,Affairs,HISTORY,2003-02-27,2013-11-20,2017-08-11,M,1291046,866481,294608,185436200,79468,6309368,N,N,N
+848,95692685,2ECV0598,Owens & Smith Defenders,AG,Agriculture,CLOSED,2019-11-23,,2023-11-22,Bt,3999125,502021,442366,659443001,30932,3437594,N,N,N
+907,48235680,4VMV0537,Fisher & Parker Law,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2023-11-14,2024-01-12,,M,7943252,519814,703259,616913908,44585,3905467,N,N,N
+729,95075800,4IIP0362,Quinn & Owens Prosecutors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2011-08-05,2012-02-17,,M,8697309,209242,496821,966960426,91980,2475244,N,N,N
+852,70689194,6TNA0941,Roberts & Vasquez Counsel,TRADR,Trader credential account,CLOSED,2003-04-28,,2022-11-12,D,3039886,544800,941192,533547932,18727,6145164,N,N,N
+625,44344106,1ZNU0031,Taylor & Anderson Counsel,CREDIT,Credit Account,ACTIVE,2019-11-04,2020-04-17,,N,9156805,271637,639555,919771784,36765,2583197,N,N,N
+375,54527957,5DLZ0725,Baker & Lewis Justice,TRADR,Trader credential account,ACTIVE,1993-01-06,2015-07-31,,I,3508195,412501,350160,263461139,75484,9389601,N,N,N
+746,97583144,4XBE0475,Martin & Underwood Advocates,ADVIS,Legal Advisor,ACTIVE,2022-07-06,2022-12-03,,M,2178512,464250,988429,906485406,30246,1075276,N,N,N
+765,72308925,2TNQ0332,Baker & Harris Consultants,BENE,Beneficiary credentail for investment,ACTIVE,2017-04-21,2022-04-11,,N,2868659,547420,834788,636946588,13783,1068512,N,N,N
+994,77509694,7XJE0796,Harris & Evans Consultants,CREDIT,Credit Account,ACTIVE,2011-12-09,,,D,6165379,873253,911498,448483428,26836,9147340,N,N,N
+558,76657548,7BVA0414,Lewis & Williams Consultants,BANK,Bank Division,ACTIVE,1994-04-22,,,Bt,4147917,349881,937266,513879901,88728,6336842,N,N,N
+735,35085967,1DJK0566,Taylor & Harris Attorneys,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2012-06-28,,,D,3418573,319235,753605,275002397,88445,2482386,N,N,N
+744,71529413,5NPF0508,Vasquez & Fisher Legal,AFFRS,Affairs,CLOSED,2008-04-03,2020-09-12,2023-11-29,I,9274323,767682,759084,528567629,16909,9683219,N,N,N
+57,19147842,7TQZ0059,Lewis & Vasquez Advocates,BANK,Bank Division,HISTORY,2019-09-07,2022-03-06,2022-05-03,I,5399022,109962,494693,614116073,50596,8874537,N,N,N
+734,92808468,1YDS0883,Evans & Martin Attorneys,CREDIT,Credit Account,CLOSED,2021-04-27,2021-05-11,2021-06-01,Bt,7394988,796161,271651,502376125,58658,9537223,N,N,N
+638,10839112,8SZO0921,Baker & Nelson Prosecutors,AFD,Allowance For Depreciation,ACTIVE,2012-12-27,2019-06-11,,M,4852550,534457,785831,751195736,77338,6620985,N,N,N
+723,72306845,7TJY0256,Parker & Quinn Partners,TRADR,Trader credential account,ACTIVE,2003-11-08,2020-04-13,,M,4282935,142680,728450,167319095,24861,8723559,N,N,N
+498,96616297,1PCU0402,Jackson & Garcia Associates,AFD,Allowance For Depreciation,HISTORY,2015-12-09,2017-06-14,2023-03-14,M,9890028,566713,191621,401124471,82572,3057175,N,N,N
+444,81633087,9QPV0223,Zimmerman & Vasquez Associates,BENE,Beneficiary credentail for investment,ACTIVE,2015-06-11,2023-08-11,,G,8022823,121717,609817,441943706,89670,4620172,N,N,N
+775,86507678,0NLL0818,Martin & Young Law,CREDIT,Credit Account,ACTIVE,2003-10-13,2017-03-26,,D,1188482,710450,622527,137098655,15927,6705047,N,N,N
+998,72780711,9XSJ0791,Parker & Garcia Solicitors,BENE,Beneficiary credentail for investment,ACTIVE,2000-03-08,2008-01-22,,G,7099207,420591,726805,256599933,53679,8427059,N,N,N
+563,35610174,3ZNC0735,,ADVIS,Legal Advisor,ACTIVE,2003-03-07,,,N,1996016,403080,692858,632703948,14331,8238075,N,N,N
+669,32998666,9CCY0365,Quinn & Evans Prosecutors,AG,Agriculture,ACTIVE,2022-08-16,2022-12-10,,G,9932459,883604,201883,827284826,84114,9006618,N,N,N
+30,50401492,0YXM0831,Lewis & Davis Legal,BENE,Beneficiary credentail for investment,CLOSED,2019-07-10,2023-03-03,2023-07-07,N,7395067,292055,301232,382927763,64904,1533183,N,N,N
+530,50095645,9IGD0064,Nelson & Smith Prosecutors,AFFRS,Affairs,ACTIVE,2015-05-10,2023-09-27,,I,3927319,550895,677394,238112834,51537,4787130,N,N,N
+6,19147842,9KQJ0109,Lewis & Parker Consultants,AG,Agriculture,ACTIVE,2013-02-19,2015-11-17,,N,5172625,812828,611895,200711803,51757,9795157,N,N,N
+305,62633340,6RCL0413,Anderson & Martin Justice,ADVIS,Legal Advisor,ACTIVE,2014-07-27,2019-11-17,,M,3769028,564387,729785,746287533,77524,7898640,N,N,N
+604,37586561,2JNK0131,Fisher & Zimmerman Justice,AFD,Allowance For Depreciation,CLOSED,2023-01-07,2023-03-29,2023-08-20,M,3715860,933846,448927,487805533,51652,9244241,N,N,N
+434,54161705,3UKR0350,Davis & Evans Advocates,CORP,Corporation Division,HISTORY,1999-09-18,2022-06-05,2023-02-04,M,5277393,300619,991413,548524593,84610,7226706,N,N,N
+479,60988697,7IDU0561,King & Williams Legal,AFFRS,Affairs,ACTIVE,1992-03-09,,,N,6783665,813307,435908,776261513,33245,2301957,N,N,N
+737,91653594,8ETD0405,Young & Zimmerman Counsel,BENE,Beneficiary credentail for investment,ACTIVE,1994-07-28,,,I,1389231,146857,873057,875306336,65818,2513770,N,N,N
+398,56991414,3GDW0578,Garcia & King Justice,TRADR,Trader credential account,ACTIVE,2009-01-22,2014-05-20,,M,3570484,922430,520916,542673626,94103,2176877,N,N,N
+183,32826157,1SXF0619,Zimmerman & Smith Law,CREDIT,Credit Account,ACTIVE,2011-10-09,2017-12-21,,I,4708623,900584,965827,266431063,61108,2514241,N,N,N
+403,28894568,7ZZO0200,Smith & Martin Advisors,AG,Agriculture,ACTIVE,2002-10-17,2005-01-22,,I,9507775,132640,237468,298065930,94464,6902613,N,N,N
+984,80306283,5TAD0949,Harris & Underwood Justice,ADVIS,Legal Advisor,ACTIVE,2015-05-21,2019-08-08,,G,2617058,898509,325355,825215644,77973,1436982,N,N,N
+121,28185755,7TIS0923,Parker & Owens Counsel,TRADR,Trader credential account,ACTIVE,1994-01-18,2018-11-19,,Bt,8707311,404517,445203,675632917,96499,9489993,N,N,N
+461,57556729,1JSX0800,,AG,Agriculture,ACTIVE,2015-06-17,2023-07-25,,M,6219443,340698,575929,985219132,72412,6490660,N,N,N
+346,47813104,1FPF0787,,CREDIT,Credit Account,CLOSED,2006-05-17,2016-02-01,2018-01-23,M,7647773,867242,384173,850818551,91562,1617930,N,N,N
+815,34182062,3GSL0552,Parker & Zimmerman Associates,AFFRS,Affairs,ACTIVE,1994-09-18,2003-11-25,,M,3549792,612967,975400,912091277,46060,2853598,N,N,N
+69,10454443,6LTF0435,Evans & Nelson Counsel,AG,Agriculture,ACTIVE,2004-08-21,2010-08-12,,N,7214270,125182,757288,793335621,17445,9535984,N,N,N
+748,20500952,8TID0447,Vasquez & Evans Law,TRADR,Trader credential account,ACTIVE,2011-08-02,2019-02-28,,Ba,4179574,457765,854849,446913567,24409,6044366,N,N,N
+291,73726461,2GJK0101,Roberts & Jackson Law,AFF,Available Funds File,ACTIVE,1994-05-03,2003-07-24,,Ba,7038568,615631,232459,487736207,26561,1163339,N,N,N
+676,66813463,9BSF0119,,AFF,Available Funds File,CLOSED,1996-02-23,2007-03-29,2016-11-09,G,4786673,332709,281884,205835303,55079,4107518,N,N,N
+444,45989749,8YEN0337,Garcia & Carter Attorneys,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,HISTORY,2023-07-10,,2024-01-19,N,6271546,357853,858857,745491124,34295,1256786,N,N,N
+347,88945087,0JOQ0555,Williams & Jackson Consultants,CREDIT,Credit Account,ACTIVE,2005-12-08,2010-10-28,,Bt,4329307,511431,594926,813041372,71968,8181880,N,N,N
+559,47780283,0HLO0740,Fisher & Evans Law,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,1992-10-04,1997-04-28,,M,3686367,695387,882976,209772803,69256,6607480,N,N,N
+542,72538149,6WZX0187,Baker & Quinn Consultants,BENE,Beneficiary credentail for investment,ACTIVE,1999-09-16,2004-02-14,,D,4535270,704688,155981,645160522,82724,8486982,N,N,N
+108,11192066,7COG0915,Roberts & Anderson Counsel,BANK,Bank Division,HISTORY,2016-08-03,2017-05-07,2023-07-04,D,1384484,941917,809275,241449685,57264,7865237,N,N,N
+907,97405000,9STJ0746,Davis & Roberts Law,AG,Agriculture,ACTIVE,2001-08-05,2013-02-24,,Bt,4350270,271658,809285,813746539,34162,1161353,N,N,N
+508,62319030,3JCJ0640,Roberts & Garcia Advisors,TRADR,Trader credential account,ACTIVE,2021-04-09,2022-01-31,,Bt,5194070,639337,508258,957170269,42937,2775146,N,N,N
+840,17180297,0LEX0507,Vasquez & Williams Partners,AG,Agriculture,ACTIVE,2022-09-10,2023-08-19,,I,2494884,851225,600215,673937994,72636,2891524,N,N,N
+971,37828211,0DNU0252,Harris & Davis Attorneys,CREDIT,Credit Account,ACTIVE,2000-03-07,2021-10-02,,M,7612098,542929,360221,304995735,51605,1645208,N,N,N
+721,60422965,6STC0470,Fisher & Owens Solicitors,AG,Agriculture,ACTIVE,1996-04-07,2008-05-10,,I,6089432,673312,689452,264833072,52410,2109423,N,N,N
+116,95583720,9FWR0602,Williams & Garcia Law,BENE,Beneficiary credentail for investment,ACTIVE,1991-08-28,1998-06-11,,I,5857742,387999,684352,673903175,16221,6019849,N,N,N
+921,52405006,9AFH0747,Carter & Quinn Law,AG,Agriculture,ACTIVE,1999-08-23,2010-05-09,,I,5916125,263786,663889,924247086,35526,4982144,N,N,N
+939,73115564,7OMI0776,Lewis & Evans Litigators,AFFRS,Affairs,HISTORY,2002-05-07,2006-12-29,2021-04-14,N,8129216,475505,528424,733277498,60746,7630457,N,N,N
+698,85385775,4EYY0758,Anderson & Evans Advisors,AFF,Available Funds File,ACTIVE,1993-08-30,2019-10-25,,G,2409169,685910,457439,987725777,86076,7867470,N,N,N
+196,90690909,5GAX0646,,AFF,Available Funds File,ACTIVE,1993-10-31,1993-12-11,,G,7312548,747778,329373,137441897,88146,1124205,N,N,N
+176,66894867,3WSL0343,Roberts & Parker Justice,AG,Agriculture,ACTIVE,1992-05-28,2021-04-10,,G,8510078,628427,801614,133869626,97267,5760303,N,N,N
+653,42513296,3NAI0387,Jackson & Fisher Advisors,AFFRS,Affairs,CLOSED,1994-02-21,1995-05-18,1997-09-08,Bt,1429968,224464,411045,692267094,27930,2310138,N,N,N
+467,54312709,1SRV0278,Fisher & Quinn Partners,TRADR,Trader credential account,ACTIVE,2011-08-17,2012-01-03,,I,8999120,818480,666694,543816923,57745,9713183,N,N,N
+956,85318734,7VDQ0269,Harris & Smith Solicitors,AFD,Allowance For Depreciation,ACTIVE,2007-06-05,2008-03-06,,Bt,5048662,119162,174081,357303123,35669,7698796,N,N,N
+205,32988815,1KBM0358,Owens & Harris Advisors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2005-05-08,,,N,6215660,539642,607811,952029741,58629,9505345,N,N,N
+624,22710910,2WOT0842,Underwood & Anderson Advocates,AFD,Allowance For Depreciation,ACTIVE,2011-12-15,2016-03-21,,Ba,8525323,431826,417747,876628783,31921,6143812,N,N,N
+461,37828211,3ICJ0481,Williams & Smith Attorneys,ADVIS,Legal Advisor,ACTIVE,2005-06-17,2016-11-25,,N,8885179,735718,973347,359742627,97483,5864154,N,N,N
+51,15209281,4QWI0716,Taylor & Garcia Barristers,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2016-07-18,2019-01-17,,N,6409784,205403,804970,720310050,65772,4607492,N,N,N
+849,48937510,5UBL0530,Roberts & King Barristers,AFD,Allowance For Depreciation,ACTIVE,2020-09-25,2020-10-12,,N,9281100,392659,202810,490798142,90809,9703979,N,N,N
+616,27949585,9SZU0926,Jackson & Fisher Defenders,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,CLOSED,2003-10-06,2006-07-21,2022-03-11,N,8242188,534581,675314,152825349,86201,1792238,N,N,N
+950,45522817,2SCM0752,,TRADR,Trader credential account,ACTIVE,1998-02-16,2004-03-19,,D,2519228,643043,492955,300136021,26504,2519592,N,N,N
+800,53456759,5JKO0883,Jackson & Young Law,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2018-02-19,2019-01-18,,G,4240226,898357,572042,525738325,99460,6618087,N,N,N
+774,33141145,3LHV0596,Williams & Anderson Defenders,ADVIS,Legal Advisor,ACTIVE,2015-03-25,2021-12-25,,Bt,2292785,393082,756473,814053647,45002,1868468,N,N,N
+377,12497117,1FAZ0638,Garcia & Evans Advocates,AFD,Allowance For Depreciation,ACTIVE,2004-07-30,2004-11-23,,Bt,6432769,596529,119888,425571900,72051,3716230,N,N,N
+140,88007260,7RQN0405,Parker & Garcia Advisors,TRADR,Trader credential account,ACTIVE,2011-07-21,2023-08-27,,I,8941362,380574,580003,978764544,59557,9589400,N,N,N
+740,14378492,6YTG0875,King & Anderson Partners,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2022-10-02,2024-01-08,,M,5221925,338768,789532,231996693,52475,1140590,N,N,N
+550,68976534,0WJC0202,Taylor & Jackson Defenders,AFD,Allowance For Depreciation,ACTIVE,2021-11-14,,,Bt,6306916,735820,613599,643011930,37082,6560717,N,N,N
+146,73175446,3BCP0529,Williams & Nelson Legal,BENE,Beneficiary credentail for investment,HISTORY,2013-09-06,,2019-11-21,Bt,8462428,638826,440609,442488702,45227,9828515,N,N,N
+44,80471878,2WAN0007,Fisher & Davis Justice,AFD,Allowance For Depreciation,ACTIVE,1998-10-24,2015-07-21,,Bt,1948821,420040,243610,261080891,28607,2062012,N,N,N
+561,32988815,0WJC0202,Vasquez & Anderson Advocates,TRADR,Trader credential account,HISTORY,2007-11-23,2022-08-06,2022-08-09,M,8254804,297132,202236,571917906,94866,6829457,N,N,N
+731,51817631,9HPR0315,,AG,Agriculture,ACTIVE,2007-01-24,2020-06-03,,I,4722591,457424,181910,206936765,34661,2656491,N,N,N
+802,15355224,9EDZ0439,Williams & Young Law,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2005-10-26,,,D,6103019,559630,104315,488470501,61874,8426485,N,N,N
+794,57814916,2WLY0059,Evans & Vasquez Defenders,CREDIT,Credit Account,HISTORY,2000-06-04,2006-12-26,2020-12-08,M,4859336,987630,896430,174673722,97712,2616171,N,N,N
+987,23259595,0MCI0589,Carter & Garcia Partners,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",HISTORY,2011-05-22,2013-07-15,2015-11-06,G,2229104,301436,815472,468554638,63243,6436779,N,N,N
+430,36423981,5MLJ0217,Anderson & Roberts Barristers,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2020-01-16,2023-01-18,,G,3667667,250942,902086,617097536,69962,8035437,N,N,N
+830,35930692,8OKF0807,Baker & Owens Defenders,CREDIT,Credit Account,ACTIVE,2012-03-23,2016-08-06,,Ba,4432861,313103,191718,873403570,20363,2374004,N,N,N
+380,87623877,2AMT0588,,AG,Agriculture,ACTIVE,2018-08-14,2018-12-28,,G,7654710,375099,483058,572249829,77313,5205042,N,N,N
+500,33429565,3ZNC0623,Anderson & Harris Law,AG,Agriculture,ACTIVE,2000-12-01,2007-04-27,,Bt,6566129,302510,245072,436120262,93104,5424609,N,N,N
+332,69715333,3HUD0850,Williams & Zimmerman Legal,ADVIS,Legal Advisor,ACTIVE,1992-12-28,2011-06-17,,G,6195434,933228,640770,743578259,57609,5953664,N,N,N
+455,78901033,4HPA0321,Fisher & Davis Defenders,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2017-01-05,,,N,9337819,530519,276486,338132175,84115,7252725,N,N,N
+636,31676836,3XKP0503,Nelson & Young Associates,BENE,Beneficiary credentail for investment,ACTIVE,2004-08-01,2015-03-13,,N,9772939,894955,626968,786452405,69693,5592929,N,N,N
+470,37171780,0JIA0370,Underwood & Anderson Attorneys,AFF,Available Funds File,ACTIVE,2015-11-25,2022-05-20,,Ba,6027201,236759,523453,163190828,77484,1485161,N,N,N
+525,78731433,8SHV0457,Anderson & Garcia Associates,AFF,Available Funds File,HISTORY,2013-05-21,2021-06-22,2022-12-12,I,8338385,701259,698049,475046409,35260,9923880,N,N,N
+404,44514217,2WAN0007,Roberts & Underwood Attorneys,TRADR,Trader credential account,HISTORY,1991-04-01,1997-03-04,2020-01-25,D,6009228,411532,917829,875956523,64030,4520477,N,N,N
+449,68433278,8KKV0250,Nelson & Quinn Litigators,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",CLOSED,2017-08-18,2022-07-30,2023-09-04,N,5942545,875701,523325,756608980,51155,1563326,N,N,N
+343,70975614,4GYE0541,King & Garcia Partners,AG,Agriculture,ACTIVE,1998-05-29,2008-10-02,,Bt,2564955,668789,292734,963703993,90480,3526767,N,N,N
+172,13017177,8INO0928,Evans & Smith Legal,CORP,Corporation Division,ACTIVE,2019-03-27,2020-05-04,,Bt,2386887,112078,988322,123317615,63671,6100480,N,N,N
+481,27442307,9BLQ0598,Nelson & Roberts Defenders,CORP,Corporation Division,HISTORY,1999-03-22,2022-03-19,2023-01-13,D,5231400,932486,683189,158305966,70301,6464135,N,N,N
+540,18844395,6SFY0947,Quinn & Garcia Advisors,TRADR,Trader credential account,ACTIVE,2009-11-25,2010-03-14,,M,9726387,445977,520848,573156108,61620,5264763,N,N,N
+157,51363026,0EUI0941,Baker & Zimmerman Legal,AG,Agriculture,ACTIVE,2001-11-17,,,Bt,9663566,966563,512352,999813282,30797,5930856,N,N,N
+277,61280142,9ATY0110,,CORP,Corporation Division,ACTIVE,2003-08-04,2004-06-09,,M,2126531,809010,981183,911073712,64515,3088454,N,N,N
+61,76657548,4FAB0251,Harris & Nelson Advisors,CREDIT,Credit Account,ACTIVE,1995-07-16,2001-06-13,,I,2904048,745687,882342,726626394,34254,8883854,N,N,N
+60,18492606,7JZU0477,Smith & Parker Counselors,AFFRS,Affairs,ACTIVE,2010-03-04,2017-02-04,,N,8256486,974760,111368,528739777,42118,7988616,N,N,N
+241,48297731,0YSF0641,Smith & Quinn Law,ADVIS,Legal Advisor,ACTIVE,2015-08-04,2020-11-25,,D,4876174,864063,788464,918531841,27322,6436254,N,N,N
+829,92898143,8VCP0359,Garcia & Underwood Associates,AFF,Available Funds File,ACTIVE,2011-11-02,,,M,1144136,713066,137732,570853373,83395,5708794,N,N,N
+97,84832673,4QTQ0909,,CREDIT,Credit Account,ACTIVE,2002-04-04,2014-01-01,,D,8622739,522714,889136,206896180,22281,8610296,N,N,N
+289,87910940,4LBC0874,Williams & Lewis Advisors,BENE,Beneficiary credentail for investment,ACTIVE,2008-07-17,2012-10-24,,M,6586464,626936,831710,252142379,31380,2072643,N,N,N
+84,32988815,6AZE0745,Martin & Jackson Solicitors,CREDIT,Credit Account,CLOSED,2004-05-26,2017-10-04,2020-01-24,Ba,8474623,451591,695707,727676377,29466,2905824,N,N,N
+997,73923649,6QXO0889,Smith & Martin Solicitors,AFF,Available Funds File,ACTIVE,1990-08-06,1990-11-27,,I,6947963,136669,650891,555729286,85411,1803673,N,N,N
+715,72922651,6PKV0559,Underwood & Harris Attorneys,CORP,Corporation Division,ACTIVE,1991-03-25,2005-06-27,,N,9623767,925807,424310,339693389,82253,2466448,N,N,N
+498,28711131,8LBM0585,Vasquez & Lewis Advisors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1998-05-28,2005-04-25,,Ba,7327023,869320,507593,517926805,39776,2382697,N,N,N
+208,49583973,6WZX0187,,BENE,Beneficiary credentail for investment,ACTIVE,2022-03-23,2022-09-26,,Ba,3761903,607997,472991,426500824,50148,4615156,N,N,N
+503,82111994,3ILY0387,Nelson & Owens Law,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2006-01-16,2012-10-23,,Bt,3596490,396301,477343,219296094,30857,8463006,N,N,N
+553,29211455,4TTX0550,Young & Baker Associates,AFD,Allowance For Depreciation,ACTIVE,2008-11-03,,,M,7226526,530723,760951,992308143,79075,8090252,N,N,N
+830,62189574,8MKK0551,,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1991-08-10,2014-03-06,,I,8653695,478165,497226,678490863,47877,1382129,N,N,N
+512,29026094,3HXG0936,Baker & Jackson Prosecutors,BANK,Bank Division,ACTIVE,2018-12-13,2019-03-08,,G,4383902,130709,872979,757046644,89959,9360230,N,N,N
+530,22340420,1ADZ0030,Martin & Smith Litigators,AG,Agriculture,CLOSED,2004-10-27,2017-05-22,2020-09-19,G,8031196,806084,259758,850275537,19436,2716913,N,N,N
+152,66894867,1YIE0920,Underwood & Zimmerman Attorneys,AFFRS,Affairs,ACTIVE,2003-05-01,2003-09-18,,I,3069935,776057,786271,170899612,13324,8076066,N,N,N
+982,45624217,0MFV0233,Taylor & Baker Counsel,BANK,Bank Division,ACTIVE,2022-01-01,2023-08-16,,N,5877668,272393,451832,548764452,16796,1107610,N,N,N
+555,31100059,3UWL0354,Baker & Jackson Justice,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,1995-07-10,2014-02-16,,I,3448489,126049,558889,671959244,68075,2996804,N,N,N
+602,86299615,0KET0492,Vasquez & Martin Associates,TRADR,Trader credential account,ACTIVE,2006-04-09,,,N,5687407,942779,545935,270275912,57747,1747108,N,N,N
+395,80745939,9BQV0640,Anderson & Carter Litigators,ADVIS,Legal Advisor,ACTIVE,2017-03-13,2021-10-19,,Ba,1782462,661138,614714,362049278,97463,7387792,N,N,N
+415,94084740,9EDZ0439,Martin & Roberts Law,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,HISTORY,2005-11-04,2011-03-06,2020-01-11,G,1241594,783082,751106,443654151,61824,1994866,N,N,N
+121,20545243,7BKF0681,Martin & Anderson Advisors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2008-07-19,2011-03-07,,M,2747646,566357,832141,437452830,81859,5370376,N,N,N
+749,61902829,6GTB0669,Nelson & Smith Attorneys,BANK,Bank Division,ACTIVE,2010-04-29,2019-08-26,,Bt,2223140,748437,839292,865527608,98891,6926379,N,N,N
+105,82989756,5YQL0088,Nelson & Williams Consultants,BENE,Beneficiary credentail for investment,ACTIVE,1994-01-05,1998-11-09,,M,8290605,978375,331883,426392096,77803,1454426,N,N,N
+403,99858674,8DWB0007,Roberts & Harris Prosecutors,BANK,Bank Division,ACTIVE,2004-02-12,2023-05-29,,D,5907267,538484,784928,421131607,42468,7766783,N,N,N
+709,69715333,8MGK0315,Harris & King Counselors,ADVIS,Legal Advisor,ACTIVE,2016-01-25,2017-10-28,,Bt,3589245,222009,374333,558116469,68418,6608763,N,N,N
+848,51283716,7TJJ0818,King & Jackson Litigators,TRADR,Trader credential account,ACTIVE,2008-03-10,,,G,5644794,688440,728601,590517359,95408,2071775,N,N,N
+592,24471856,2RPP0509,,BANK,Bank Division,ACTIVE,2009-09-22,2013-05-09,,Bt,8453449,441347,960020,529834080,93249,3808135,N,N,N
+961,48384435,0NLL0818,Quinn & Williams Barristers,BANK,Bank Division,ACTIVE,2023-02-23,2023-12-24,,I,6408705,500856,112962,432199652,70720,6853957,N,N,N
+602,46885331,3IFW0330,Davis & Vasquez Advocates,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2011-12-01,2015-12-24,,N,7777053,209726,332479,113984903,92731,1978686,N,N,N
+181,28711131,9URB0602,Harris & Fisher Barristers,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2008-06-30,,,Ba,2256946,773347,858571,404714208,76954,5876669,N,N,N
+34,37171780,7LJP0235,Zimmerman & Carter Legal,AG,Agriculture,ACTIVE,1994-01-30,1996-10-03,,M,3520542,165591,167484,695922294,61762,7657616,N,N,N
+177,12498825,3IFB0971,Roberts & Baker Consultants,BENE,Beneficiary credentail for investment,CLOSED,2013-08-31,2015-06-30,2023-11-04,M,5021493,725329,903864,800403431,84280,2999324,N,N,N
+725,31502103,6JSS0789,Vasquez & Harris Litigators,BANK,Bank Division,HISTORY,2008-07-02,2014-09-13,2014-11-12,D,3554922,268054,865557,923887238,58364,2291550,N,N,N
+400,28902520,4HHR0598,Taylor & Martin Counselors,BENE,Beneficiary credentail for investment,ACTIVE,2006-12-03,,,I,5553919,912072,640297,334623343,98095,4811165,N,N,N
+410,71642403,0DMN0273,Fisher & Lewis Associates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2018-10-16,2019-03-31,,G,7394412,326843,757899,594156068,43889,7833963,N,N,N
+673,94078585,9AGP0073,Young & Fisher Attorneys,BANK,Bank Division,CLOSED,1991-11-08,2019-06-06,2020-10-11,D,6137932,239404,289215,851429752,10429,7777115,N,N,N
+546,33545401,4TFK0954,Taylor & Evans Partners,AFF,Available Funds File,ACTIVE,2017-07-14,2017-10-04,,Ba,2799143,501565,599663,201806337,10213,6250461,N,N,N
+747,52047810,8RJM0901,Davis & Underwood Litigators,TRADR,Trader credential account,ACTIVE,2023-03-23,2023-06-10,,I,9531243,423310,461402,277443691,60970,5742402,N,N,N
+351,51460112,8WPI0546,Martin & Garcia Solicitors,AG,Agriculture,ACTIVE,1992-02-11,2020-02-15,,Bt,8013558,223047,418197,264931842,16936,1276621,N,N,N
+312,63480411,8SLY0149,Vasquez & Davis Advocates,AFD,Allowance For Depreciation,ACTIVE,2009-08-03,,,G,3187655,396405,580276,404795129,28798,6654255,N,N,N
+859,17972223,3NCQ0913,Anderson & Parker Associates,CREDIT,Credit Account,ACTIVE,1994-05-19,2011-09-04,,Ba,2102906,490916,844885,313264673,78241,4925670,N,N,N
+799,55947333,7JZU0477,Lewis & King Attorneys,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",HISTORY,2016-03-29,2021-04-14,2021-10-08,M,8179372,919145,819272,457772955,87695,6798390,N,N,N
+1000,88675739,5RQV0258,King & Zimmerman Barristers,BANK,Bank Division,ACTIVE,2013-09-11,,,Ba,2908938,552312,827158,871217623,92678,9253461,N,N,N
+312,85014964,6MAD0799,,CREDIT,Credit Account,ACTIVE,1994-02-26,2008-04-18,,G,1512930,776854,462380,459259743,35305,2555032,N,N,N
+618,94100035,1BRT0384,,CREDIT,Credit Account,CLOSED,1998-09-08,2000-10-28,2013-07-23,M,1614784,696986,475180,178341232,71547,8255286,N,N,N
+970,46107877,9RFG0850,Anderson & King Partners,TRADR,Trader credential account,CLOSED,1999-12-16,,2021-09-07,G,7864905,836143,429146,933093388,89304,5617121,N,N,N
+131,96881023,1EVW0817,Nelson & Vasquez Justice,CREDIT,Credit Account,ACTIVE,1998-04-28,2007-07-06,,Bt,3703880,262280,562055,753975048,89737,9393405,N,N,N
+277,83303286,8INO0928,Smith & Williams Legal,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2011-07-21,2015-03-28,,I,1723578,352483,222308,528248176,48168,8275904,N,N,N
+545,85707929,9JTK0938,Smith & Harris Associates,AFF,Available Funds File,ACTIVE,2020-11-09,2021-07-27,,M,2765572,658379,987243,719613669,30926,9745214,N,N,N
+359,69715333,7ZAA0721,Fisher & Lewis Defenders,AFFRS,Affairs,ACTIVE,2008-09-11,2021-03-25,,N,9769520,119545,613423,434994304,59811,3371725,N,N,N
+836,27123129,3GQJ0617,Williams & Nelson Legal,AG,Agriculture,HISTORY,2005-04-26,2015-03-12,2020-02-10,Bt,4213994,343638,426868,906358103,33106,5093717,N,N,N
+470,88832905,0CWP0153,Davis & King Defenders,AFF,Available Funds File,CLOSED,2010-07-10,2015-03-05,2023-10-30,Ba,3377705,685437,794161,508870671,76657,8799020,N,N,N
+758,22921827,8CIA0108,Zimmerman & Taylor Litigators,BANK,Bank Division,ACTIVE,2003-06-14,2020-05-24,,G,9314977,318225,219575,521273965,25223,1773860,N,N,N
+494,48297731,4TBS0512,Anderson & Young Partners,BANK,Bank Division,ACTIVE,2000-06-09,2006-07-10,,Ba,2602042,503890,766372,551533493,42607,3072575,N,N,N
+59,11339176,2MWS0546,King & Parker Solicitors,TRADR,Trader credential account,ACTIVE,1992-08-19,2017-04-16,,D,3162519,413155,926502,670168642,11897,3947064,N,N,N
+259,63118447,5JDF0530,Nelson & Vasquez Barristers,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2023-07-09,2023-10-02,,G,6105712,789851,662606,477997043,72114,6959950,N,N,N
+472,93507249,1XGO0422,Nelson & Quinn Law,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",CLOSED,2008-04-21,,2024-01-24,Ba,4659280,731127,528196,308401611,19144,1779052,N,N,N
+512,35771047,8EQF0512,Zimmerman & Garcia Law,AG,Agriculture,ACTIVE,2011-12-31,2020-04-24,,G,1292503,247791,834406,512695270,94054,2412507,N,N,N
+578,17180297,3HWF0360,Nelson & Taylor Litigators,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1992-08-28,2001-05-28,,G,5271590,466236,335590,258134507,57200,6246807,N,N,N
+458,82989756,7IUA0141,Williams & Underwood Advisors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2021-07-02,2022-09-09,,G,9026657,331051,250119,599332297,50303,7333290,N,N,N
+817,82989756,4XKK0560,Nelson & Baker Justice,BENE,Beneficiary credentail for investment,ACTIVE,1994-11-06,1999-05-22,,Ba,8766484,381754,617553,186768362,43286,8158683,N,N,N
+73,76551515,6DJA0531,,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,CLOSED,1994-07-21,2015-03-31,2022-04-24,Bt,7917623,763991,713797,742394187,92368,4690880,N,N,N
+946,62374487,5DGG0847,Davis & Smith Justice,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1995-04-02,2007-04-23,,I,3911612,779989,939451,694927191,67521,9454175,N,N,N
+852,27123129,8NXE0088,Anderson & Williams Counsel,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2013-08-30,2014-07-28,,Bt,8407581,528206,115200,506053401,93318,7859199,N,N,N
+923,54396323,0JMT0729,,CREDIT,Credit Account,CLOSED,1991-11-05,1994-10-03,1996-04-05,M,5731212,431051,524444,324476584,68995,6521612,N,N,N
+273,36595547,0LHN0343,Martin & Taylor Legal,AFF,Available Funds File,ACTIVE,2010-08-03,2016-08-06,,G,5591548,656736,327613,442073347,13772,1591215,N,N,N
+497,92393246,1CAW0777,Nelson & Parker Associates,CORP,Corporation Division,ACTIVE,2010-09-30,2018-10-28,,G,6683114,689612,696002,963178299,71159,9931201,N,N,N
+598,12571700,3YMO0512,Evans & Smith Associates,BENE,Beneficiary credentail for investment,ACTIVE,1992-05-22,1997-03-09,,D,7241901,199188,471012,713576087,81743,9459119,N,N,N
+184,52062651,9XSJ0791,Quinn & Harris Legal,TRADR,Trader credential account,ACTIVE,2006-05-26,2015-03-17,,Ba,6015905,187002,748125,945476092,70222,8858820,N,N,N
+350,54196388,5YZS0230,Martin & Zimmerman Advisors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2020-03-02,2020-11-01,,N,3074750,587888,496608,774043742,71465,3745650,N,N,N
+848,21380250,2VTE0907,Davis & Martin Defenders,AFF,Available Funds File,ACTIVE,2003-05-30,2017-12-10,,Ba,1294469,153598,906230,911683640,92475,5871295,N,N,N
+238,73426409,4KNN0429,Nelson & Williams Prosecutors,TRADR,Trader credential account,ACTIVE,2005-05-24,2007-09-13,,I,2082090,249096,899529,125834748,22825,3476594,N,N,N
+590,87952297,2GGI1000,,CREDIT,Credit Account,ACTIVE,2011-12-06,2024-01-25,,N,3299628,452322,640662,322160324,31495,5204611,N,N,N
+457,29385482,4XQB0485,Young & Evans Law,BANK,Bank Division,ACTIVE,2015-10-08,2023-01-09,,I,7624359,316283,429800,726216013,86410,7134381,N,N,N
+143,70024192,6SIM0228,Taylor & Parker Prosecutors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2009-04-27,2016-02-15,,I,7888849,788289,994239,821371505,37502,4703687,N,N,N
+315,55049958,4WYH0578,Lewis & Carter Attorneys,BENE,Beneficiary credentail for investment,ACTIVE,2014-04-19,2023-01-12,,Ba,7135820,123224,285178,215392692,52171,4011768,N,N,N
+817,77519707,5QOE0961,Smith & Parker Legal,CREDIT,Credit Account,ACTIVE,2009-02-24,2019-09-12,,M,5601434,539440,965691,579215499,40061,1880647,N,N,N
+619,37828211,5QOE0961,Young & Garcia Associates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,CLOSED,2018-06-11,2019-06-01,2019-07-25,N,9743362,643111,500170,702301453,71757,9869579,N,N,N
+551,17972223,7XJA0291,Harris & Evans Prosecutors,TRADR,Trader credential account,ACTIVE,1998-11-19,2017-05-05,,I,2749446,931685,441731,911341704,23588,5082492,N,N,N
+799,63001592,0XXL0296,Lewis & Zimmerman Litigators,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1994-11-26,2003-12-08,,Ba,3987205,618847,890318,401828502,17937,4404868,N,N,N
+821,97405000,0BCQ0786,Taylor & Zimmerman Attorneys,TRADR,Trader credential account,CLOSED,2017-05-08,2018-11-18,2019-03-08,Bt,2460097,955754,613094,949883623,68615,8530830,N,N,N
+592,77897436,9OFS0092,Quinn & King Associates,ADVIS,Legal Advisor,ACTIVE,2017-11-21,2023-12-01,,D,5807753,423754,881785,756158679,98953,4537014,N,N,N
+238,81601466,0MCI0589,Underwood & King Counselors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2023-02-14,2023-07-31,,Ba,3833118,665492,471776,295490643,65001,7040507,N,N,N
+507,38563885,8ONQ0534,Zimmerman & Vasquez Consultants,ADVIS,Legal Advisor,ACTIVE,1998-03-11,1999-06-09,,Bt,7837236,914075,796434,835824303,70577,4705150,N,N,N
+24,47284938,7KAW0243,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1994-10-03,2019-01-21,,G,9078936,690070,813912,127235771,26779,4831687,N,N,N
+384,35608002,3ZNC0623,Davis & Baker Attorneys,BANK,Bank Division,ACTIVE,2014-02-18,2018-04-15,,N,6195000,583379,129241,859587257,33525,3242942,N,N,N
+339,47108351,6YTG0875,Vasquez & Parker Consultants,AFD,Allowance For Depreciation,ACTIVE,2001-02-27,2005-12-21,,N,8454852,639159,667768,862028872,17283,6300773,N,N,N
+650,68378856,1STD0746,Harris & Parker Legal,ADVIS,Legal Advisor,ACTIVE,2004-09-11,2010-10-16,,Bt,7012546,461751,760043,150748161,19952,7066657,N,N,N
+188,98455769,7GBM0421,Owens & Garcia Law,BENE,Beneficiary credentail for investment,ACTIVE,1999-05-23,2003-03-21,,M,2897393,108830,976854,200689562,52813,5215154,N,N,N
+7,70927607,2JQJ0852,Nelson & Williams Attorneys,BANK,Bank Division,ACTIVE,2009-03-16,2019-02-21,,Ba,6255892,443833,633222,731107810,14415,7880820,N,N,N
+408,80446904,6RRP0552,Underwood & Baker Justice,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2023-02-24,2023-10-31,,G,8277016,456810,590504,652830061,50018,4688102,N,N,N
+9,99598576,0CUI0636,Carter & Martin Legal,CREDIT,Credit Account,ACTIVE,1996-09-19,2017-03-18,,Ba,1456516,788543,786195,574376856,55836,8813662,N,N,N
+588,32915502,2MOU0173,Lewis & Fisher Associates,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2015-11-09,2021-12-08,,Bt,7502067,751163,101068,452537053,98879,3372029,N,N,N
+119,73902326,6PKV0559,,BENE,Beneficiary credentail for investment,CLOSED,1998-09-02,2017-10-25,2023-06-27,D,2076831,624957,545103,411738119,64108,2003679,N,N,N
+434,64511959,3ZEE0714,King & Davis Advocates,TRADR,Trader credential account,ACTIVE,2010-11-12,2018-05-24,,G,8620194,109867,925412,402674578,78024,9784332,N,N,N
+178,78885665,9ECZ0262,Baker & Garcia Counselors,AFFRS,Affairs,ACTIVE,2003-02-21,2017-12-06,,G,8243236,602438,876509,927836362,94124,8122367,N,N,N
+588,95538225,8YMC0634,Zimmerman & Underwood Justice,ADVIS,Legal Advisor,ACTIVE,2001-09-28,,,N,5439557,257346,450813,902824171,88750,8645212,N,N,N
+789,94378458,8PSB0298,Evans & Zimmerman Law,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1994-11-09,,,G,7792784,524650,201725,431620692,38297,2017305,N,N,N
+985,19439955,8VOX0380,King & Owens Justice,AFFRS,Affairs,ACTIVE,2002-02-02,2022-01-14,,N,5482877,406721,698236,729407493,28732,8675568,N,N,N
+849,89493422,3MSD0129,Nelson & Williams Justice,BENE,Beneficiary credentail for investment,ACTIVE,2000-05-25,2012-11-17,,Ba,6832063,652143,881545,847381295,23949,5679330,N,N,N
+64,92248988,1IVB0441,Fisher & Carter Legal,AFF,Available Funds File,ACTIVE,2006-06-14,,,D,6816956,434478,974571,264835889,14202,1092945,N,N,N
+592,19541315,5LQL0099,Young & Vasquez Prosecutors,BANK,Bank Division,ACTIVE,1991-04-18,1994-03-30,,M,3099806,876353,867885,686858330,48719,6707976,N,N,N
+576,29727761,0XGZ0810,Evans & Martin Advisors,AFD,Allowance For Depreciation,ACTIVE,1994-11-03,2001-12-03,,D,2950583,386386,510875,907606426,82382,8005565,N,N,N
+87,68195161,1GTY0871,Harris & Young Counsel,ADVIS,Legal Advisor,CLOSED,2007-11-09,2019-12-30,2023-10-22,N,6132745,149323,350643,321242438,74612,3048740,N,N,N
+444,94608608,5BSO0691,Baker & Zimmerman Legal,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2004-03-29,2013-04-12,,G,5051140,868743,409613,730708025,61692,3183468,N,N,N
+470,57782226,6AFD0085,Parker & King Legal,AFFRS,Affairs,ACTIVE,2012-07-25,2018-02-12,,Ba,7518592,969169,236459,586548180,82266,2311024,N,N,N
+940,17180297,5ZCA0552,Taylor & Lewis Counsel,BANK,Bank Division,ACTIVE,1990-01-31,,,G,5623005,587736,261760,851999200,44650,5385540,N,N,N
+628,77524664,7TQB0888,Evans & Jackson Justice,BENE,Beneficiary credentail for investment,ACTIVE,2011-03-26,2019-08-27,,Bt,1167552,763633,504792,823353275,54169,1711679,N,N,N
+298,35769945,8UZR0040,Zimmerman & Fisher Associates,BANK,Bank Division,ACTIVE,1999-06-10,2021-05-22,,I,4723265,320632,466098,209559753,10520,9549255,N,N,N
+996,82915360,3RYS0252,Young & Taylor Prosecutors,AFFRS,Affairs,ACTIVE,2020-10-30,2022-01-11,,D,2094550,444479,473808,893088275,55961,3065862,N,N,N
+89,49324675,1AMH0810,Anderson & Carter Defenders,AFD,Allowance For Depreciation,ACTIVE,1991-07-18,2010-02-08,,G,8956997,728514,502508,575354870,82035,5024285,N,N,N
+848,58010375,6GTB0669,Quinn & Zimmerman Law,TRADR,Trader credential account,CLOSED,1997-12-29,1999-10-18,2023-10-04,D,1541663,821617,164107,400874963,82712,8530997,N,N,N
+627,67953850,6BOO0508,Lewis & Martin Prosecutors,AFD,Allowance For Depreciation,ACTIVE,2010-05-19,2016-11-12,,Ba,7789428,440797,555981,421541741,15546,5679996,N,N,N
+427,77241645,6LKK0444,,AFF,Available Funds File,ACTIVE,2018-08-23,2020-03-03,,M,9474849,391402,398798,491223619,80012,9208902,N,N,N
+832,62587549,8POO0498,Zimmerman & Garcia Advocates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1998-10-29,2012-04-04,,G,5682212,189867,545008,438522530,74679,2518307,N,N,N
+168,20786595,5GUV0362,,AFF,Available Funds File,CLOSED,1992-09-30,2000-12-06,2012-06-27,N,9833208,356989,732084,726575408,61516,6141923,N,N,N
+952,67272338,3JJR0284,Evans & Anderson Counselors,AG,Agriculture,ACTIVE,2001-03-18,2012-09-03,,D,2475584,773939,144246,683688910,12922,3920737,N,N,N
+639,92966810,2FYP0527,,BENE,Beneficiary credentail for investment,ACTIVE,2019-06-20,2021-06-03,,I,1373192,596817,290960,210451305,60851,8849148,N,N,N
+250,92486693,8KKV0250,Fisher & Williams Partners,ADVIS,Legal Advisor,ACTIVE,2010-12-23,,,M,6189640,997858,716965,275097496,23335,6066978,N,N,N
+476,26171882,5ZFR0727,Evans & Smith Justice,BANK,Bank Division,ACTIVE,2022-07-02,2022-11-23,,Ba,7604532,535304,960224,527884382,10292,3269571,N,N,N
+516,36349897,5TQL0784,Zimmerman & Carter Partners,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,CLOSED,2009-02-21,2014-06-08,2019-08-06,I,6327717,171291,183628,420954415,61175,6581845,N,N,N
+992,30358728,7QNE0549,Vasquez & Underwood Advisors,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2005-09-30,,,M,2993848,347725,455531,335624173,36923,6412046,N,N,N
+724,77574403,5ZFR0727,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2021-04-26,2024-01-29,,M,1813628,777239,208746,571946085,71784,5605731,N,N,N
+632,31340527,8BBL0066,Davis & Owens Counselors,CORP,Corporation Division,ACTIVE,2007-01-30,2014-06-24,,Ba,2856238,584945,319772,510910206,41697,2112596,N,N,N
+869,51033295,1FPF0787,Lewis & Underwood Barristers,CREDIT,Credit Account,ACTIVE,2022-02-01,2023-04-04,,I,2569604,261898,376864,621149661,67081,1035327,N,N,N
+833,66552674,8IAV0556,Underwood & Martin Law,TRADR,Trader credential account,ACTIVE,1990-11-18,2005-11-25,,D,6302282,176018,420231,568855300,88109,3216507,N,N,N
+908,41160695,3BWE0954,Martin & Zimmerman Prosecutors,CREDIT,Credit Account,ACTIVE,1993-02-27,2000-02-14,,Bt,5518077,774593,795792,259025101,58973,5114287,N,N,N
+981,71036117,9RTI0130,Williams & Taylor Consultants,AG,Agriculture,ACTIVE,2014-06-29,,,M,2510160,810324,498411,513934441,12189,5521336,N,N,N
+110,25266403,1WOU0659,Taylor & Roberts Advisors,AG,Agriculture,ACTIVE,2019-06-08,2024-01-29,,G,2803101,330175,548330,610035290,48732,9403625,N,N,N
+828,70230158,3LMR0790,Nelson & Taylor Partners,TRADR,Trader credential account,ACTIVE,2014-10-19,2020-04-11,,N,8338574,735949,667965,582372408,44500,4748813,N,N,N
+523,27627521,8JWL0804,Owens & Williams Law,AFD,Allowance For Depreciation,ACTIVE,1993-04-09,2007-11-08,,D,1451008,657985,787218,952269685,91430,8680971,N,N,N
+383,49161774,4LOW0912,Davis & Carter Solicitors,AFD,Allowance For Depreciation,ACTIVE,2000-08-22,2001-11-06,,I,6875474,311168,498767,680516186,12465,3009110,N,N,N
+63,81086143,6RCL0413,Evans & Carter Advisors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2008-07-09,2021-10-08,,N,9477852,865145,507941,570347039,42292,1095455,N,N,N
+995,49948663,1RKQ0440,Smith & Young Defenders,ADVIS,Legal Advisor,ACTIVE,2014-11-21,2015-04-15,,M,8642680,520433,376625,625920255,71387,9762927,N,N,N
+295,59055148,9URB0602,Jackson & Baker Attorneys,ADVIS,Legal Advisor,ACTIVE,2021-02-17,2023-04-29,,G,4198102,293010,876726,791675822,59571,8539724,N,N,N
+855,89371774,8XMS0970,Anderson & Garcia Associates,AFF,Available Funds File,ACTIVE,1990-02-10,2019-04-22,,Ba,8448657,261890,617985,625789119,95945,7119575,N,N,N
+966,30575606,8GTS0254,Lewis & King Advocates,AFFRS,Affairs,ACTIVE,2013-04-23,2018-03-23,,M,6356360,154441,273277,147343231,73231,5212280,N,N,N
+850,11837642,0EWK0445,Owens & Carter Prosecutors,TRADR,Trader credential account,ACTIVE,2020-08-17,2022-04-03,,I,7679374,670041,586355,440935422,26795,9898970,N,N,N
+917,64470638,7GNJ0257,Taylor & Roberts Attorneys,AFFRS,Affairs,ACTIVE,1991-01-29,1994-09-08,,I,7946028,268794,696869,923546906,67742,7536964,N,N,N
+542,93450232,9UVJ0691,Williams & Carter Advocates,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2021-07-10,2023-01-01,,D,9429254,968512,696831,625922153,31477,5830643,N,N,N
+658,94416946,4WSI0587,Carter & King Litigators,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2013-04-22,,,G,6210668,656772,509975,308626256,35349,6354805,N,N,N
+146,41069180,5WRH0953,Lewis & Garcia Partners,BANK,Bank Division,ACTIVE,1999-03-08,2001-07-04,,Bt,9377123,287451,425505,293287520,28771,8831765,N,N,N
+964,66106388,9CHB0656,Jackson & Anderson Associates,AG,Agriculture,ACTIVE,2001-02-02,2017-02-03,,Bt,4837793,330831,755374,302744145,44936,8343673,N,N,N
+122,26496086,8NKH0091,Quinn & Owens Partners,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1991-01-26,2016-10-10,,G,2298011,559668,126622,690336508,89543,8467288,N,N,N
+796,84760669,3NOC0273,Fisher & Harris Consultants,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2002-12-29,2017-08-26,,Bt,3007181,884549,216250,666228973,40662,8562270,N,N,N
+6,14452826,9IIG0833,Davis & Roberts Law,CORP,Corporation Division,ACTIVE,2020-01-31,2023-07-12,,I,6623107,364421,252145,183115336,52244,8304333,N,N,N
+718,80238462,0MXY0710,Smith & Quinn Defenders,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2019-11-08,2022-03-27,,N,9159362,162161,216056,691831003,41044,2475848,N,N,N
+93,89209102,5LTM0852,Garcia & Lewis Attorneys,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2006-02-03,2008-09-29,,D,4425033,242231,858015,884151710,39236,1381826,N,N,N
+955,54910698,9MMV0729,Quinn & Evans Attorneys,CORP,Corporation Division,ACTIVE,1992-08-15,2006-09-19,,M,9884841,153893,533494,270820421,31214,3985407,N,N,N
+383,36916134,4QFO0828,Vasquez & Martin Attorneys,CORP,Corporation Division,ACTIVE,1999-09-21,2014-06-15,,N,6138526,122158,663133,477720910,69485,3522049,N,N,N
+209,72885781,0JFF0060,Young & Vasquez Justice,TRADR,Trader credential account,ACTIVE,2019-02-03,2020-10-24,,D,7621532,695514,764504,965419956,58365,4737385,N,N,N
+315,80770863,4HDZ0141,Taylor & King Associates,TRADR,Trader credential account,HISTORY,2001-01-28,2018-04-11,2023-08-21,Ba,7072382,131357,920983,863870094,99464,3548872,N,N,N
+823,73583913,5DVP0202,Lewis & Williams Litigators,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2009-07-02,2010-05-19,,Ba,8693738,297348,409281,556125197,36942,9862523,N,N,N
+292,91917757,6UHK0709,Davis & Jackson Prosecutors,AFF,Available Funds File,ACTIVE,2013-11-30,2023-03-18,,I,5429111,586141,374204,400915443,38037,4766684,N,N,N
+484,50986295,7RQN0405,Parker & Evans Defenders,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2019-05-26,2023-08-10,,G,4545266,595544,428654,742021988,25429,6704158,N,N,N
+362,28553724,5HJT0444,Anderson & Lewis Law,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1997-09-28,2008-11-12,,I,2271837,585795,875476,626016232,21644,5023852,N,N,N
+141,33429565,4RRH0553,Owens & Davis Defenders,CORP,Corporation Division,ACTIVE,1993-07-16,2022-04-17,,Ba,1629549,658344,332623,112998720,59293,4395879,N,N,N
+235,53652200,9BQV0640,Underwood & Fisher Litigators,BANK,Bank Division,ACTIVE,1994-04-21,1999-01-25,,M,1623214,585580,379753,836860547,76113,9188234,N,N,N
+529,94982548,3ZIY0110,Anderson & Nelson Defenders,AFFRS,Affairs,ACTIVE,1997-03-08,2015-05-08,,Ba,6805177,180280,169262,658429663,28633,3244734,N,N,N
+492,37171780,9FLR0577,,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1996-07-17,,,D,6456000,534098,213946,931934377,88546,6887656,N,N,N
+745,79177670,4SQU0996,Carter & Evans Advocates,AFD,Allowance For Depreciation,ACTIVE,2022-02-19,2022-10-02,,M,3982550,955579,674975,770375627,13298,3611852,N,N,N
+727,40585163,5EEU0699,Nelson & Young Defenders,ADVIS,Legal Advisor,HISTORY,2000-08-19,2005-03-13,2021-04-06,Ba,1440016,159927,248697,820228630,96834,2615689,N,N,N
+774,94860315,9FLR0577,Lewis & Smith Partners,AFF,Available Funds File,ACTIVE,1996-12-06,2023-08-31,,D,6211367,795744,336721,578475811,32555,9872847,N,N,N
+520,44262365,4WGQ0102,Garcia & Quinn Counselors,CREDIT,Credit Account,ACTIVE,1992-11-27,2004-09-27,,I,5790497,548798,272039,721293631,36049,8010669,N,N,N
+726,25712163,0KET0492,Quinn & Carter Prosecutors,CREDIT,Credit Account,ACTIVE,1992-10-23,2012-03-07,,N,7340340,448804,877030,571589295,29350,7422570,N,N,N
+598,17501495,3LMR0790,Roberts & Williams Prosecutors,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",CLOSED,1993-02-07,2009-08-21,2012-12-25,I,6129964,923291,652905,785279829,18978,3032650,N,N,N
+582,62824975,6VMV0866,Underwood & Evans Solicitors,AG,Agriculture,ACTIVE,2019-02-03,2023-11-12,,I,7976161,712560,611955,347379029,49180,2572875,N,N,N
+949,72306845,4MAK0323,Fisher & Evans Justice,AFD,Allowance For Depreciation,ACTIVE,2001-08-20,2014-10-28,,Bt,5262875,680495,543935,310724839,60481,4440433,N,N,N
+252,34317932,5TBY0461,,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,2017-10-23,,,G,6990752,970390,620030,612667907,31041,3043058,N,N,N
+617,80238462,6ZTZ0980,Garcia & Zimmerman Advocates,CREDIT,Credit Account,ACTIVE,1991-08-17,1992-08-15,,N,8339740,707763,631058,931519857,70758,4095762,N,N,N
+330,37171780,5EEU0699,Martin & Parker Law,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2011-04-11,2021-06-10,,Ba,9353645,612237,913501,504414326,21554,7507120,N,N,N
+549,12984892,6QXO0889,,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,2007-06-06,2023-09-03,,G,8056852,994752,791821,729358071,42848,9813898,N,N,N
+640,97475038,7RRT0307,Lewis & Evans Law,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1992-09-11,2008-11-06,,Ba,1321911,960583,908672,104231016,79312,5764780,N,N,N
+129,54845420,5TNQ0620,,CREDIT,Credit Account,HISTORY,1998-02-10,2005-04-13,2023-05-03,N,1080077,360321,361358,456589523,19210,9477750,N,N,N
+237,43641124,3ZIY0110,Taylor & Roberts Defenders,AFD,Allowance For Depreciation,ACTIVE,2011-01-05,2022-10-28,,Bt,5539231,170890,510933,288059039,81344,6894280,N,N,N
+288,35390240,7GNJ0257,Parker & King Defenders,GUNTE,"The bank guarantee means that the lender will ensure that the liabilities of a debtor will be met. In other words, if the debtor fails to settle a debt, the bank will cover it",ACTIVE,1993-09-17,2019-05-27,,Bt,5460297,249701,773646,116094925,85154,9886488,N,N,N
+850,26750452,8VOU0842,Zimmerman & Nelson Defenders,BENE,Beneficiary credentail for investment,CLOSED,2005-04-02,2005-08-09,2005-11-08,I,8450267,925322,892346,863870329,50538,1461640,N,N,N
+85,20896996,3CQZ0932,Anderson & Evans Counsel,AFFRS,Affairs,ACTIVE,1998-06-15,,,Bt,4109801,932022,513437,770529101,40077,2388864,N,N,N
+156,30209934,4BSY0249,Carter & Young Counselors,AGENT,An agent bank acts as a bank performing some specific duties on behalf of another party,ACTIVE,1992-10-10,,,G,6614224,683643,855781,310356487,41276,9300348,N,N,N
+822,22171807,3ZEE0714,Taylor & Garcia Consultants,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",CLOSED,1991-09-28,2001-12-22,2019-08-26,Bt,4927875,478431,628410,613951894,50501,7198895,N,N,N
+100,94751586,1ORA0289,Young & Garcia Associates,TTEE,"In the case of the certificate of deposit, the trustee is most likely someone charged with taking care of the money until the person it is intended for comes of an age to receive it",ACTIVE,2004-04-13,2023-12-09,,N,6989144,857978,708306,487564038,17934,1101332,N,N,N
+281,54312709,1IFR0520,Evans & Parker Litigators,TRADR,Trader credential account,CLOSED,2015-12-20,2020-07-01,2022-03-31,D,6599609,192233,108308,232349479,15642,5456659,N,N,N
+751,87541447,5NQX0920,Davis & Anderson Defenders,AFF,Available Funds File,ACTIVE,1997-07-30,2021-04-09,,G,7930412,600336,658949,922947930,18501,5220153,N,N,N

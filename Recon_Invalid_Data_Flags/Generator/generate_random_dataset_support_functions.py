@@ -156,6 +156,30 @@ def random_date(start_date, end_date=date.today()):
       random_number_of_days = random.randrange(days_between_dates)
       return start_date + timedelta(days=random_number_of_days)
 
+# Priorization function part A: for weighted function support giving one element priority
+def prioritize_element(item, priority_item):
+      """
+      Determine if an item is equal to a priority item, used for sorting purposes.
+      :param item: Item to compare.
+      :param priority_item: Item to prioritize.
+      :return: Tuple indicating whether the item is the priority item or not, and the item itself.
+      """
+      return (item != priority_item, item)
+
+# Priorization function part B: selecting a random value from a list with priorization on a single value
+def generate_random_unique_weighted_list(random_list, priority_item, weight_pri = 10, weight_oth = 1):
+      """
+      Generate a random choice from a list, giving priority to a specific item.
+      :param random_list: List of items to choose from.
+      :param priority_item: Item to prioritize in the list.
+      :param weight_pri: Weight for the priority item (default 10).
+      :param weight_oth: Weight for other items in the list (default 1).
+      :return: A randomly chosen item from the list, with priority given to the priority item.
+      """
+      weight_list = []
+      weight_list = [weight_pri if item == priority_item else weight_oth for item in random_list]
+      return random.choices(random_list, weights=weight_list, k=1)[0]
+
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 #----------              Log Functions for Generator                     ---------- 
@@ -217,73 +241,3 @@ def generate_legal_type_and_def(dict_leg_type):
       type = random.choice(list(dict_leg_type))
       type_def = dict_leg_type[type]
       return type, type_def
-
-# ---------------------------------------------------------------------------------------------------------
-# ---------------------------------------------------------------------------------------------------------
-# --------------                    Address Support Fields                                   --------------
-# ---------------------------------------------------------------------------------------------------------
-# ---------------------------------------------------------------------------------------------------------
-addr_street_type_list = [
-    'Road',
-    'Street',
-    'Avenue',
-    'Boulevard',
-    'Drive',
-    'Court',
-    'Lane',
-    'Terrace',
-    'Place',
-    'Circle',
-    'Highway',
-    'Square',
-    'Trail',
-    'Parkway',
-    'Alley',
-    'Center',
-    'Mill',
-    'Gardens'
-    'Crescent',
-    'Crossing',
-    'Loop'
-]
-
-# Function to generate a random address
-def generate_random_address(street_names, city_names, states):
-    """
-    Generate a random address.
-    :param street_names: List of possible street names.
-    :param city_names: List of possible city names.
-    :param states: List of possible states.
-    :return: A string representing a random address.
-    """
-    street_name = random.choice(street_names)
-    street_type = random.choice(addr_street_type_list)
-    city_name = random.choice(city_names)
-    state = random.choice(states)
-    street_number = random.randint(100, 9999)
-    zip_code = f"{random.randint(10000, 99999)}"
-    return f"{street_number} {street_name} {street_type}, {city_name}, {state}, {zip_code}"
-
-# Priorization function for weighted function support giving one element priority
-def prioritize_element(item, priority_item):
-      """
-      Determine if an item is equal to a priority item, used for sorting purposes.
-      :param item: Item to compare.
-      :param priority_item: Item to prioritize.
-      :return: Tuple indicating whether the item is the priority item or not, and the item itself.
-      """
-      return (item != priority_item, item)
-
-# Selecting a random value from a list with priorization on a single value
-def generate_random_unique_weighted_list(random_list, priority_item, weight_pri = 10, weight_oth = 1):
-      """
-      Generate a random choice from a list, giving priority to a specific item.
-      :param random_list: List of items to choose from.
-      :param priority_item: Item to prioritize in the list.
-      :param weight_pri: Weight for the priority item (default 10).
-      :param weight_oth: Weight for other items in the list (default 1).
-      :return: A randomly chosen item from the list, with priority given to the priority item.
-      """
-      weight_list = []
-      weight_list = [weight_pri if item == priority_item else weight_oth for item in random_list]
-      return random.choices(random_list, weights=weight_list, k=1)[0]

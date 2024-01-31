@@ -1,6 +1,7 @@
 import Data_Statistics.data_statistics as ds
 import pandas as pd
 import numpy as np
+import re
 
 
 
@@ -80,7 +81,7 @@ class Data_Analysis_Flags:
             :return: DataFrame with an additional column 'Mark' containing "Y" or "N" based on the conditions
             """
             active_check_list = ['ACTIVE', 'A']
-            closed_check_list = ['CLOSED', 'C']
+            closed_check_list = ['CLOSED', 'C', 'INACTIVE', 'I']
             def check_conditions(row):
                   if (pd.notnull(row[closed_date_field]) and row[status_field].upper() in active_check_list) or \
                   (pd.isnull(row[closed_date_field]) and row[status_field].upper() in closed_check_list):
@@ -96,3 +97,35 @@ class Data_Analysis_Flags:
                   print(f"...Flag Closed Date vs Status: {stat_check.count_values_field_dict(cls_stat_unique_valus, 'Flag Closed Date vs Status')}")
             
             return self.df
+      
+      def flag_non_standard_addresses(self, address_field, print_flags="Y"):
+            """
+            Flags rows in the DataFrame where the street address does not follow a standard format.
+
+            Args:
+                  address_field (str): The name of the column in the DataFrame containing street addresses.
+                  print_flags (str, optional): If set to 'Y', prints the count of unique flag values. Defaults to 'Y'.
+
+            Returns:
+                  pandas.DataFrame: The DataFrame with an additional column 'Flag Street Address'.
+            """
+            # Updated regex pattern to match standard address format (number followed by two words)
+            pattern = r"^\d+\s[A-Za-z]+(\s[A-Za-z]+)?"
+            # Function to flag non-standard addresses
+            def check_address(address):
+                  if pd.notna(address) and address != '' and not re.match(pattern, address):
+
+                        return 'Y'  # Non-standard address
+                  else:
+                        return 'N'  # Standard address
+
+            # Apply the function to the address field
+            self.df['Flag Street Address'] = self.df[address_field].apply(check_address)
+            # Print flag statistics if required
+            if print_flags.upper() == "Y":
+                  stat_check = ds.Statistics(self.df)
+                  str_addr_flag_unique_values = stat_check.list_unique_values('Flag Street Address')
+                  print(f"...Flag Street Addresses: {stat_check.count_values_field_dict(str_addr_flag_unique_values, 'Flag Street Address')}")
+
+            return self.df
+                  
