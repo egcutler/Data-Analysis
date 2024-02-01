@@ -80,8 +80,8 @@ class Data_Analysis_Flags:
             :param closed_date_field: Name of the closed date field (column)
             :return: DataFrame with an additional column 'Mark' containing "Y" or "N" based on the conditions
             """
-            active_check_list = ['ACTIVE', 'A']
-            closed_check_list = ['CLOSED', 'C', 'INACTIVE', 'I']
+            active_check_list = ['ACTIVE', 'A', 'EMPLOYEED', 'E']
+            closed_check_list = ['CLOSED', 'C', 'INACTIVE', 'I', 'TERMINATED', 'T']
             def check_conditions(row):
                   if (pd.notnull(row[closed_date_field]) and row[status_field].upper() in active_check_list) or \
                   (pd.isnull(row[closed_date_field]) and row[status_field].upper() in closed_check_list):
@@ -114,7 +114,6 @@ class Data_Analysis_Flags:
             # Function to flag non-standard addresses
             def check_address(address):
                   if pd.notna(address) and address != '' and not re.match(pattern, address):
-
                         return 'Y'  # Non-standard address
                   else:
                         return 'N'  # Standard address
@@ -128,4 +127,37 @@ class Data_Analysis_Flags:
                   print(f"...Flag Street Addresses: {stat_check.count_values_field_dict(str_addr_flag_unique_values, 'Flag Street Address')}")
 
             return self.df
+      
+      def flag_non_standard_email(self, email_field, print_flags="Y"):
+            """
+            Flags rows in the DataFrame where the email address does not follow a standard format.
+
+            Args:
+                  email_field (str): The name of the column in the DataFrame containing email addresses.
+                  print_flags (str, optional): If set to 'Y', prints the count of unique flag values. Defaults to 'Y'.
+
+            Returns:
+                  pandas.DataFrame: The DataFrame with an additional column 'Flag Email'.
+            """
+            # General email regex pattern
+            pattern = r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"
+            
+            # Function to flag non-standard email addresses
+            def check_email(email):
+                  if pd.notna(email) and email != '' and not re.match(pattern, email):
+                        return 'Y'  # Flag as non-standard
+                  else:
+                        return 'N'  # Flag as standard
+                  
+            # Apply the function to the email field
+            self.df['Flag Email'] = self.df[email_field].apply(check_email)
+            
+            # Print flag statistics if required
+            if print_flags.upper() == 'Y':
+                  flag_counts = self.df['Flag Email'].value_counts()
+                  print(f"...Flag Email: {flag_counts.to_dict()}")
+
+            return self.df
+            
+
                   

@@ -110,53 +110,70 @@ class Data_Check:
                   print(f"   Distinct ID count: {count_distinct_ids}")
                   print(f"   Record count: {record_count}")
 
-      def active_ids(self, id_col, status_col, min_act_threshold=10, max_cld_threshold = 500000, \
-                     act_ratio_threshold=0.5, cld_ratio_threshold=0.1):
+      def active_ids(self, id_col, status_col, min_act_threshold=10, max_cld_threshold=500000, \
+                  act_ratio_threshold=0.5, cld_ratio_threshold=0.1):
             """
             Check the ACTIVE/CLOSED account statistics in the DataFrame.
             Flags are raised if the number of active accounts is below a specified threshold
             or if the ratio of ACTIVE to CLOSED accounts falls below another specified threshold.
             :param id_col: Column name of the ID in the DataFrame.
             :param status_col: Column name of the account status (ACTIVE/CLOSED).
-            :param act_threshold: Minimum number of active accounts threshold (default 10).
-            :param act_ratio_threshold: Minimum ratio of ACTIVE to CLOSED accounts (default 1).
+            :param min_act_threshold: Minimum number of active accounts threshold (default 10).
+            :param max_cld_threshold: Maximum number of closed accounts threshold (default 500000).
+            :param act_ratio_threshold: Minimum ratio of ACTIVE to CLOSED accounts (default 0.5).
+            :param cld_ratio_threshold: Minimum ratio of CLOSED to TOTAL accounts (default 0.1).
             """
             # Creating a DataFrame with only ID and Active Columns
             df_ids = self.df[[id_col, status_col]]
+            
+            # Count Active and Closed IDs and calculate ratios
+            active_check_list = ['ACTIVE', 'A', 'EMPLOYEED', 'E']
+            closed_check_list = ['CLOSED', 'C', 'INACTIVE', 'I', 'TERMINATED', 'T']
+            status_unique_values = list(set(self.df[status_col].str.upper()))
 
-            # Count Active and Closed IDs
-            count_act_ids = df_ids[status_col].str.upper().eq('ACTIVE').sum()
-            count_cld_ids = df_ids[status_col].str.upper().eq('CLOSED').sum()
+            active_value = next((val for val in status_unique_values if val in active_check_list), None)
+            closed_value = next((val for val in status_unique_values if val in closed_check_list), None)
+
             count_id_tot = len(df_ids[status_col])
-
-            # Calculate the ratio of ACTIVE to CLOSED accounts
-            act_ratio = count_act_ids / count_id_tot if count_id_tot != 0 else float('inf')
-            cld_ratio = count_act_ids / count_id_tot if count_id_tot != 0 else float('inf')
+            
+            if not active_value:
+                  count_act_ids = 0
+                  act_ratio = 0
+            else:
+                  count_act_ids = df_ids[status_col].str.upper().eq(active_value).sum()
+                  act_ratio = count_act_ids / count_id_tot if count_id_tot != 0 else float('inf')
+                  
+            if not active_value:
+                  count_cld_ids = 0
+                  cld_ratio = 0
+            else:
+                  count_cld_ids = df_ids[status_col].str.upper().eq(closed_value).sum()
+                  cld_ratio = count_cld_ids / count_id_tot if count_id_tot != 0 else float('inf')
 
             flag_count = 0
-            # Check against active account threshold
+            # Check against thresholds
             if count_act_ids < min_act_threshold:
-                  print(f'   Warning: Active IDs below minimum threshold ({min_act_threshold})!')
+                  print(f'...Warning: Active IDs below minimum threshold ({min_act_threshold})!')
                   flag_count += 1
             if count_cld_ids > max_cld_threshold:
-                  print(f'   Warning: Closed IDs above maximum threshold ({max_cld_threshold})!')
+                  print(f'...Warning: Closed IDs above maximum threshold ({max_cld_threshold})!')
                   flag_count += 1
-            # Check against active to total ratio threshold
+            if act_ratio == 0:
+                  print(f'...Warning: Zero Active Type values were present!')
+                  flag_count += 1
             elif act_ratio < act_ratio_threshold:
-                  print(f'   Warning: Ratio of Active to Total IDs ({act_ratio:.2f}) is below threshold ({act_ratio_threshold})!')
+                  print(f'...Warning: Ratio of Active to Total IDs ({act_ratio:.2f}) is below threshold ({act_ratio_threshold})!')
                   flag_count += 1
-            # Check against active to total ratio threshold
+            if cld_ratio == 0:
+                  print(f'...Warning: Zero Closure Type values were present!')
+                  flag_count += 1
             elif cld_ratio < cld_ratio_threshold:
-                  print(f'   Warning: Ratio of Active to Total IDs ({act_ratio:.2f}) is below threshold ({act_ratio_threshold})!')
+                  print(f'...Warning: Ratio of Closed to Total IDs ({cld_ratio:.2f}) is below threshold ({cld_ratio_threshold})!')
                   flag_count += 1
-            # Passed/Failed message    
+
+            # Passed/Failed message
             if flag_count == 0:
                   print("...Active/Closed threshold checks: Passed")
-            else:
-                  print(f"...{flag_count} Active/Closed threshold warnings triggered")
-                  print(f"   Active status count: {count_act_ids}")
-                  print(f"   Closed status count: {count_cld_ids}")
-                  print(f"   Total status count: {count_id_tot}")
 
       def null_check(self, null_threshold = 100):
             """
@@ -169,7 +186,10 @@ class Data_Check:
             all_null_columns = self.df.columns[self.df.isnull().all()]
 
             if len(all_null_columns) > 0:
-                  print(f'Fields entirely null: {list(all_null_columns)}')
+                  print(f'...All null field check: Failed')
+                  print(f'   Fields entirely null: {list(all_null_columns)}')
+            else:
+                  print(f'...All null field check: Passed')
             # Check for columns where null count exceeds the threshold
             flag_count = 0
             for column in self.df.columns:
