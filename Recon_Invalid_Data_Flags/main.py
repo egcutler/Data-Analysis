@@ -1,6 +1,6 @@
-import data_integrity_flag_checks as difc
-import data_analysis_flags as daf
-import data_flag_statistics as ds
+import template_data_integrity_flag_checks as difc
+import template_data_analysis_flags as daf
+import template_data_flag_statistics as ds
 import pandas as pd
 
 
@@ -22,7 +22,7 @@ expected_types = {
       'Business Status': str,           
       'Creation Date': str        
 }
-
+print(f"=============  {filename}  =============")
 # Check the file source is there and contains the required information
 bus_df = difc.file_prechecks(path, filename, partial_file_name, filetype , field_list)
 
@@ -38,6 +38,7 @@ ds.standard_stats(bus_df)
 # Perform the data analysis flag checks
 print(' ')
 print('Data Analysis Flags')
+
 print('---------------------------------------')
 bus_df_flags = daf.Data_Analysis_Flags(bus_df)
 print('Flagged Closed Dates')
@@ -45,7 +46,8 @@ bus_df = bus_df_flags.closed_date_other_date_flag(date_field_cls='Closed Date', 
 print('Flagged Closed Dates vs Status')
 bus_df = bus_df_flags.closed_date_status_flag(status_field='Business Status', closed_date_field='Closed Date')
 print('---------------------------------------')
-
+print(f"========================================")
+print(' ')
 # Output
 output_path = (r'/root/workspace/github.com/egcutler/Data-Analysis/Recon_Invalid_Data_Flags/Data_Archive')
 output_filename = 'Business Data With Flags'
@@ -70,7 +72,7 @@ expected_types = {
       'LE Modified Date': str,
       'LE Closed Date': str        
 }
-
+print(f"=============  {filename}  =============")
 # Check the file source is there and contains the required information
 le_df = difc.file_prechecks(path, filename, partial_file_name, filetype , field_list)
 
@@ -93,7 +95,8 @@ le_df = le_df_flags.closed_date_other_date_flag(date_field_cls='LE Closed Date',
 print('Flagged Closed Dates vs Status')
 le_df = le_df_flags.closed_date_status_flag(status_field='Legal Status', closed_date_field='LE Closed Date')
 print('---------------------------------------')
-
+print(f"========================================")
+print(' ')
 # Output
 output_path = (r'/root/workspace/github.com/egcutler/Data-Analysis/Recon_Invalid_Data_Flags/Data_Archive')
 output_filename = 'Legal Data With Flags'
@@ -115,7 +118,7 @@ expected_types = {
       'Address ID': int,           
       'Address Street': str     
 }
-
+print(f"=============  {filename}  =============")
 # Check the file source is there and contains the required information
 addr_df = difc.file_prechecks(path, filename, partial_file_name, filetype , field_list)
 
@@ -137,7 +140,8 @@ addr_df_flags = daf.Data_Analysis_Flags(addr_df)
 print('Flagged Street Addresses')
 addr_df = addr_df_flags.flag_non_standard_addresses(address_field='Address Street')
 print('---------------------------------------')
-
+print(f"========================================")
+print(' ')
 # Output
 output_path = (r'/root/workspace/github.com/egcutler/Data-Analysis/Recon_Invalid_Data_Flags/Data_Archive')
 output_filename = 'Address Data With Flags'
@@ -160,7 +164,7 @@ expected_types = {
       'Emp First Name': str,           
       'Emp Last Name': str     
 }
-
+print(f"=============  {filename}  =============")
 # Check the file source is there and contains the required information
 emp_df = difc.file_prechecks(path, filename, partial_file_name, filetype , field_list)
 
@@ -181,7 +185,8 @@ emp_df_flags = daf.Data_Analysis_Flags(emp_df)
 print('Flagged Emails')
 emp_df = emp_df_flags.flag_non_standard_email(email_field='Employee Email')
 print('---------------------------------------')
-
+print(f"========================================")
+print(' ')
 # Output
 output_path = (r'/root/workspace/github.com/egcutler/Data-Analysis/Recon_Invalid_Data_Flags/Data_Archive')
 output_filename = 'Employee Data With Flags'

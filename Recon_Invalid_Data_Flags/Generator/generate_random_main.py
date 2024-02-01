@@ -16,18 +16,19 @@ import generate_random_data_analysis_conditions as grdac
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 
-def generate_table_basic(min_rand_record_lim = 1, max_rand_record_lim = 100000, exact_num = 0):
+def generate_table_basic(min_rand_record_lim=1, max_rand_record_lim=100000, exact_num=0, start_id = 1000):
       if exact_num == 0:
             num_records = grdfs.generate_random_record_length(min_rand_record_lim, max_rand_record_lim)
       else:
             num_records = exact_num
-      id_dict= grdfs.table_generate_id_records(num_records)
-      return id_dict
+      
+      return grdfs.table_generate_unique_id_records(num_records, start_id) 
+
 
 # Max and Min random selection for id record generator to be used as a uniform value
-uniform_max = 10
-uniform_min = 10
-uniform_exact = 10
+uniform_max = 200000
+uniform_min = 200000
+uniform_exact = 200000
 
 # Business Table Fields
 bus_fields = {
@@ -145,22 +146,22 @@ emp_interdb_df = df_intermediary.create_2db_relationship_df_random(df1=emp_df, d
 
 da_inserts_bus = grdac.Data_Analysis_Inserts(bus_df)
 bus_df = da_inserts_bus.create_duplicates_within_field_random('External ID', dup_option_perc=30, field_perc_to_dup=35)
-bus_df = da_inserts_bus.insert_value_by_override_perc('Company Name', field_perc_to_dup=12)
-bus_df = da_inserts_bus.insert_value_by_override_perc('Modified Date', field_perc_to_dup=7)
+bus_df = da_inserts_bus.insert_value_by_override_perc('Company Name', field_perc_to_dup=12, value="")
+bus_df = da_inserts_bus.insert_value_by_override_perc('Modified Date', field_perc_to_dup=7, value="")
 da_changes_bus = grdac.Data_Analysis_Changes(bus_df)
 
 da_inserts_le = grdac.Data_Analysis_Inserts(le_df)
-le_df = da_inserts_le.create_duplicates_within_field_random('Legal Account', dup_option_perc=15, field_perc_to_dup=25)
-le_df = da_inserts_le.insert_value_by_override_perc('Legal Firm', field_perc_to_dup=12)
-le_df = da_inserts_le.insert_value_by_override_perc('LE Modified Date', field_perc_to_dup=12)
+le_df = da_inserts_le.create_duplicates_within_field_random('Legal Account', dup_option_perc=21, field_perc_to_dup=25)
+le_df = da_inserts_le.insert_value_by_override_perc('Legal Firm', field_perc_to_dup=16, value="")
+le_df = da_inserts_le.insert_value_by_override_perc('LE Modified Date', field_perc_to_dup=12, value="")
 da_changes_le = grdac.Data_Analysis_Changes(le_df)
 
 da_inserts_addr = grdac.Data_Analysis_Inserts(addr_df)
-addr_df = da_inserts_addr.insert_value_by_override_perc('Zip Code', field_perc_to_dup=12)
+addr_df = da_inserts_addr.insert_value_by_override_perc('Zip Code', field_perc_to_dup=12, value="")
 da_changes_addr = grdac.Data_Analysis_Changes(addr_df)
-addr_df = da_changes_addr.address_abbreviation_change('Address Street', field_perc_to_dup=90)
-addr_df = da_changes_addr.target_value_change_value('Original Country',field_perc_to_dup=50, target_value='RUS', change_value='GER')
-addr_df = da_changes_addr.not_target_record_change_record('Original Country',field_perc_to_dup=100, not_target_record='RUS', change_record='RUS')
+addr_df = da_changes_addr.address_abbreviation_change('Address Street', field_perc_to_dup=22)
+addr_df = da_changes_addr.target_value_change_value('Original Country',field_perc_to_dup=11, target_value='RUS', change_value='GER')
+addr_df = da_changes_addr.not_target_record_change_record('Original Country',field_perc_to_dup=15, not_target_record='RUS', change_record='RUS')
 
 da_inserts_tax = grdac.Data_Analysis_Inserts(tax_df)
 da_changes_tax = grdac.Data_Analysis_Changes(tax_df)
@@ -178,9 +179,11 @@ da_changes_emp = grdac.Data_Analysis_Changes(emp_df)
 #----------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------
 da_errors_bus = grdac.Data_Analysis_Err_Conditions(bus_df)
-bus_df = da_errors_bus.closed_date_misalignment('Creation Date', 'Closed Date', '', apply_perc=15)
+bus_df = da_errors_bus.closed_date_misalignment(closed_date_field='Closed Date', open_date_field='Creation Date', modified_date_field='Modified Date', apply_perc=15)
 
 da_errors_le = grdac.Data_Analysis_Err_Conditions(le_df)
+le_df = da_errors_le.closed_date_misalignment(open_date_field='LE Creation Date', closed_date_field='LE Closed Date', apply_perc= 8)
+le_df = da_errors_le.closed_date_misalignment(modified_date_field='LE Modified Date', closed_date_field='LE Closed Date', apply_perc= 18)
 
 da_errors_addr = grdac.Data_Analysis_Err_Conditions(addr_df)
 addr_df = da_errors_addr.address_incorrect_format('Address Street', apply_perc=15)

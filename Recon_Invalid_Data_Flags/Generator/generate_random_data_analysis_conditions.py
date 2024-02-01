@@ -230,33 +230,80 @@ class Data_Analysis_Err_Conditions:
       def __init__(self, df):
             self.df = df
       
-      def closed_date_misalignment(self, open_date_field, closed_date_field, modified_date_field=None, apply_perc=None, cond_between_open_mod="Y"):
+      def closed_date_misalignment(self, closed_date_field, open_date_field=None, modified_date_field=None, apply_perc=None, cond_between_open_mod="Y"):
             if apply_perc is None:
                   apply_perc = random.randint(10, 20)
             if not (0.1 <= apply_perc <= 100):
                         raise ValueError(f"apply_perc value of {apply_perc} is not between 0.1% - 100%")
+            date_fields = []
             for field in [open_date_field, closed_date_field, modified_date_field]:
-                  if field and field not in self.df.columns and field != None:
+                  if field not in self.df.columns and field != None and field != "":
                         raise ValueError(f"{field} not in DataFrame")
-
-            # Determine the start date
-            date_fields = [open_date_field]
-            if modified_date_field:
-                  date_fields.append(modified_date_field)
-            start_date = pd.to_datetime(self.df[date_fields].min().min())
-            if start_date == "" or start_date == None:
-                  start_date = datetime.date.today()
+                  if field == open_date_field and field != None and field != "":
+                        date_fields.append(open_date_field)     
+                  if field == modified_date_field and field != None and field != "":
+                        date_fields.append(modified_date_field)
+            # Determine the earliest date to be used as the start date
+            min_date = self.df[date_fields].min().min()
+            # Check if the result is NaT (Not a Time) or pd.isnull(min_dates) to handle both NaT and None
+            if pd.isnull(min_date):
+                  min_date = pd.to_datetime(datetime.date.today())
+            else:
+                  min_date = pd.to_datetime(min_date)
 
             # Calculate the number of records to modify
             num_records_to_modify = round(len(self.df) * (apply_perc / 100))
             # Select random indices to modify
             indices_to_modify = random.sample(range(len(self.df)), num_records_to_modify)
-
-            for index in indices_to_modify:
-                  if self.df.at[index, open_date_field] and (modified_date_field and self.df.at[index, modified_date_field] and not pd.isna(self.df.at[index, modified_date_field])):
-                        end_date = pd.to_datetime(self.df.at[index, modified_date_field or open_date_field])
-                        if cond_between_open_mod == "Y" and self.df.at[index, open_date_field]: 
+            
+            open_case = 0
+            mod_case = 0
+            if open_date_field != "" and open_date_field != None:
+                  open_case = 1
+            if modified_date_field != "" and modified_date_field != None:
+                  mod_case = 1
+            for index in indices_to_modify:      
+                  start_date = min_date
+                  if open_case == 1 and mod_case == 1:
+                        # Prep df index iff argument conditions
+                        open_val_case = 0
+                        mod_val_case = 0
+                        if self.df.at[index, open_date_field] != "" and not pd.isna(self.df.at[index, open_date_field]) and self.df.at[index, open_date_field] != pd.NaT: 
+                              open_val_case = 1
+                        if self.df.at[index, modified_date_field] != "" and not pd.isna(self.df.at[index, modified_date_field]) and self.df.at[index, modified_date_field] != pd.NaT: 
+                              mod_val_case = 1
+                        # Prepare end date
+                        # (only for first iff condition: modify start date to be between open date field and modified date field)
+                        if cond_between_open_mod == "Y" and open_val_case == 1 and mod_val_case == 1: 
                               start_date = pd.to_datetime(self.df.at[index, open_date_field])
+                              end_date = pd.to_datetime(self.df.at[index, modified_date_field])
+                        elif open_val_case == 1 and mod_val_case == 1:
+                              end_date = pd.to_datetime(self.df.at[index, modified_date_field or open_date_field])
+                        elif open_val_case == 0 and mod_val_case == 1:
+                              end_date = pd.to_datetime(self.df.at[index, modified_date_field])
+                        else:
+                              end_date = pd.to_datetime(self.df.at[index, open_date_field])
+                        
+                        # Correcting equal dates condition   
+                        if start_date == end_date:
+                              start_date = start_date - pd.Timedelta(days=10)   
+                        generated_date = grdsf.random_date(start_date, end_date)
+                         # Convert the generated date to datetime64[ns] type
+                        compatible_date = pd.to_datetime(generated_date)
+                        # Assign the converted date to the DataFrame
+                        self.df.at[index, closed_date_field] = compatible_date
+                        #self.df.at[index, closed_date_field] = grdsf.random_date(start_date, end_date)
+                        
+                  elif open_case == 1 and mod_case != 1:
+                        # Check if open date record is populated
+                        open_val_case = 0
+                        if self.df.at[index, open_date_field] != "" and not pd.isna(self.df.at[index, open_date_field]) and self.df.at[index, open_date_field] != pd.NaT: 
+                              open_val_case = 1
+                        # Generate end date
+                        if open_val_case == 1:      
+                              end_date = pd.to_datetime(self.df.at[index, open_date_field])
+                        else:
+                              end_date = datetime.date.today()
                         
                         # Generate the random date    
                         if start_date == end_date:
@@ -268,8 +315,17 @@ class Data_Analysis_Err_Conditions:
                         # Assign the converted date to the DataFrame
                         self.df.at[index, closed_date_field] = compatible_date
                         #self.df.at[index, closed_date_field] = grdsf.random_date(start_date, end_date)
-                  elif self.df.at[index, open_date_field] and (not modified_date_field or not self.df.at[index, modified_date_field]):
-                        end_date = pd.to_datetime(self.df.at[index, open_date_field])
+                  elif open_case != 1 and mod_case == 1:
+                        # Check if open date record is populated
+                        open_val_case = 0
+                        if self.df.at[index, modified_date_field] != "" and not pd.isna(self.df.at[index, modified_date_field]) and self.df.at[index, modified_date_field] != pd.NaT: 
+                              open_val_case = 1
+                        # Generate end date
+                        if open_val_case == 1:      
+                              end_date = pd.to_datetime(self.df.at[index, modified_date_field])
+                        else:
+                              end_date = datetime.date.today()
+                              
                         # Generate the random date    
                         if start_date == end_date:
                               start_date = start_date - pd.Timedelta(days=10)

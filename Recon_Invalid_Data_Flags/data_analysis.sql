@@ -8,3 +8,4 @@ WITH
 );
 
 
+--NOW MAKE THE SQL THAT LINKS THE FOUR DB FLAGS AND MAKE A TABLEAU SHOWING THE STATS ON A DASHBOARD <------------------------------!!!!!!!!!!!

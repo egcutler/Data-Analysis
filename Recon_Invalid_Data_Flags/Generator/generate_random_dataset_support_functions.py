@@ -34,6 +34,21 @@ def table_generate_id_records(num_records, min_num = 1):
       """
       return {'ID_Record': [random.randint(min_num, num_records) for _ in range(num_records)]}
 
+# Generate a DataFrame with unique and random ID Column
+def table_generate_unique_id_records(num_records, start_id=1000):
+    """
+    Generate a dictionary with a key 'ID_Record' containing a list of unique, shuffled integers.
+    
+    The integers start from `start_id` and increase sequentially to create the specified number of records.
+    
+    :param num_records: Number of unique records to generate.
+    :param start_id: The starting ID value for the sequence of integers (default is 1000).
+    :return: Dictionary with a key 'ID_Record' and a value being a list of unique, shuffled integers.
+    """
+    id_list = [id for id in range(start_id, start_id + num_records)]
+    random.shuffle(id_list)
+    return {'ID_Record': id_list}
+
 # Random Integer Generator
 def generate_random_int(min, max):
       """
